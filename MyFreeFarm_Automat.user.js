@@ -1,4 +1,4 @@
-﻿// ==UserScript==
+// ==UserScript==
 // @name           MyFreeFarm Automat
 // @namespace      https://github.com/BastianKanaan/GMscripts_MyFreeFarm
 // @author         BastianKanaan
@@ -297,6 +297,7 @@ var botArbiter=new function(){
             case "donkey":                  priority=  5;fkt=autoDonkey;            break;
             case "lottery":                 priority=  5;fkt=autoLottery;           break;
             case "buyPetsParts":            priority=  5;fkt=autobuyPetsParts;      break;
+            case "vehicles":                priority=  5;fkt=autoVehicles;          break;
             case "activatePowerUp":         priority=  5;fkt=autoActivatePowerUp;   break;
             case "farmi":                   priority=  5;fkt=autoFarmi;             break;
             case "goOlympiaRun":            priority=  5;fkt=autoOlympiaRun;        break;
@@ -422,6 +423,15 @@ var botArbiter=new function(){
             //22102016
             if(settings.get("account","botUsebuyPetsParts") && $("divGoTobuyPetsParts")) {
                 botArbiter.add("buyPetsParts");
+            }
+            if(settings.get("account","garage1")>0) {
+                if (isNaN(unsafeWindow.farms_data.map.vehicles[1][settings.get("account","garage1")].remain)){
+                    botArbiter.add("vehicles");
+                }
+            } else if (settings.get("account","garage2")>0) {
+                if (isNaN(unsafeWindow.farms_data.map.vehicles[2][settings.get("account","garage2")].remain)){
+                    botArbiter.add("vehicles");
+                }
             }
             //27062017
             if ($("loginevent_link")){
