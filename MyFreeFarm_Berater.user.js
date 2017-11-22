@@ -648,7 +648,7 @@ GM_log("new_PRODUCT_QUEST:\n"+implode(new_PRODUCT_QUEST));
 */
 
 // Default values for Mimimum stock-amount of goods
-const INIT_valMinRack={"v":200,"ex":200,"e":50,"o":10,"z":0,"f1":25,"f2":10,"f3":10,"f4":0,"fw1":10,"fw2":10,"fw3":10,"fw4":10,"hr":1000,"md":10,"breed":10,"alpin":200,"tea":50};
+const INIT_valMinRack={"v":200,"ex":200,"e":50,"o":10,"z":0,"f1":25,"f2":10,"f3":10,"f4":0,"fw1":10,"fw2":10,"fw3":10,"fw4":10,"hr":1000,"md":10,"breed":10,"alpin":200,"tea":50,"fl":1000,"fla":100};
 // task_new_level
 const LEVEL_POINTS=[0,0,58,2420,6620,15620,27900,58700,101700,163100,211900
                    ,276900,359000,467000,730000,1190000,1750000,2680000,3900000,5660000,7850000
@@ -15355,6 +15355,9 @@ try{
                             }
                             break;
                         }
+                    case "map_sendvehicle":
+                        raiseEvent("gameMapSendVehicle");
+                        break;
                     case "megafield_plant":
                         raiseEvent("gameMegafieldPlanted");
                         break;
@@ -17683,7 +17686,7 @@ try{
                                         zones.setBlock(zoneNrS,"");
 
                                         tempZoneProductionDataSlot=[[{},{}],0,0,true];
-                                        if( (slot == 1)||(slot>1 && item.data.data.slots && item.data.data.slots[slot]) ) {
+                                        if( (slot == 1)||(slot>1 && (item.data.data.slots[slot]) ) ) {
                                             //unlocked
                                             if(item.data.data.breed[slot]){
                                                 iProd=1; iAmount=0; iPoints=0;

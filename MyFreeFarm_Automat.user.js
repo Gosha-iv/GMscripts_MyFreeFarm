@@ -300,7 +300,9 @@ var botArbiter=new function(){
             case "donkey":                  priority=  5;fkt=autoDonkey;            break;
             case "lottery":                 priority=  5;fkt=autoLottery;           break;
             case "buyPetsParts":            priority=  5;fkt=autobuyPetsParts;      break;
-            case "vehicles":                priority=  5;fkt=autoVehicles;          break;
+            case "vehicles1":
+            case "vehicles2":               priority=  5;fkt=autoVehicles;          break;
+
             case "activatePowerUp":         priority=  5;fkt=autoActivatePowerUp;   break;
             case "farmi":                   priority=  5;fkt=autoFarmi;             break;
             case "goOlympiaRun":            priority=  5;fkt=autoOlympiaRun;        break;
@@ -427,13 +429,29 @@ var botArbiter=new function(){
             if(settings.get("account","botUsebuyPetsParts") && $("divGoTobuyPetsParts")) {
                 botArbiter.add("buyPetsParts");
             }
-            if(settings.get("account","garage1")>0) {
+
+            if(settings.get("account","garage1")>0 && !zoneWaiting["garage1"]) {
                 if (isNaN(unsafeWindow.farms_data.map.vehicles[1][settings.get("account","garage1")].remain)){
-                    botArbiter.add("vehicles");
+                    botArbiter.add("vehicles1");
+                } else {
+                    var remain = unsafeWindow.farms_data.map.vehicles[1][settings.get("account","garage1")].remain + 120;
+                    GM_logInfo("autoVehicles", "", "", "Check garage 1 in "+remain+"s");
+                    window.setTimeout(function() { //TIMEOUT
+                        //botArbiter.add("vehicles1");
+                        botArbiter.check();
+                    }, (1000 * remain));
                 }
-            } else if (settings.get("account","garage2")>0) {
+            }
+            if (settings.get("account","garage2")>0 && !zoneWaiting["garage2"]) {
                 if (isNaN(unsafeWindow.farms_data.map.vehicles[2][settings.get("account","garage2")].remain)){
-                    botArbiter.add("vehicles");
+                    botArbiter.add("vehicles2");
+                } else {
+                    var remain = unsafeWindow.farms_data.map.vehicles[2][settings.get("account","garage2")].remain + 120;
+                    GM_logInfo("autoVehicles", "", "", "Check garage 2 in "+remain+"s");
+                    window.setTimeout(function() { //TIMEOUT
+                        //botArbiter.add("vehicles2");
+                        botArbiter.check();
+                    }, (1000 * remain));
                 }
             }
             //27062017
@@ -7455,16 +7473,18 @@ try{
                     garage=1;
                     vehicle=settings.get("account","garage1");
                 }
-            } else if (settings.get("account","garage2")>0) {
+            }
+            if (settings.get("account","garage2")>0 && !garage) {
                 if (isNaN(unsafeWindow.farms_data.map.vehicles[2][settings.get("account","garage2")].remain)){
                     garage=2;
                     vehicle=settings.get("account","garage2");
                 }
             }
-
             if(vehicle && (help=$("map_vehicle_shop"+garage))) {
                 action=function(){ click(help); }
                 listeningEvent="gameMapVehicle"+garage;
+            } else {
+                autoVehicles(runId, 9);  //exit
             }
             break; }
         case 3: { // open slot vehicle or go step, if choose "out of service"
@@ -7579,8 +7599,19 @@ try{
                 unsafeWindow.hideDiv('globaltransp');
                 autoVehicles(runId, 9);  //exit
             }else{
-              GM_logInfo("autoVehicles","runId="+runId+" step="+step,"","goto farm 1");
-              autoZoneFinish(runId, $("speedlink_farm1"));
+                var remain = unsafeWindow.farms_data.map.vehicles[garage][vehicle].remain + 120;
+                zoneWaiting["garage"+garage] = remain + now;
+                GM_logInfo("autoVehicles", "runId=" + runId + " step=" + step, "", "Check garage "+ garage+" in "+remain+"s");
+                window.setTimeout(function() { //TIMEOUT
+                    for (var fz in zoneWaiting) {
+                        if (!zoneWaiting.hasOwnProperty(fz)) { continue; }
+                        if (zoneWaiting[fz] <= now) { delete zoneWaiting[fz]; }
+                    }
+                    botArbiter.check();
+                }, (1000 * remain));
+
+                GM_logInfo("autoVehicles","runId="+runId+" step="+step,"","goto farm 1");
+                autoZoneFinish(runId, $("speedlink_farm1"));
             }
             break;}
         }
