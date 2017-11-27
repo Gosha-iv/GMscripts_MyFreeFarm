@@ -430,7 +430,13 @@ var botArbiter=new function(){
                 botArbiter.add("buyPetsParts");
             }
 
-            if(settings.get("account","garage1")>0 && !zoneWaiting["garage1"]) {
+            if(settings.get("account","garage1")>0) {
+                if (isNaN(unsafeWindow.farms_data.map.vehicles[1][settings.get("account","garage1")].remain)){
+                    botArbiter.add("vehicles1");
+                }
+            }
+
+            /*if(settings.get("account","garage1")>0 && !zoneWaiting["garage1"]) {
                 if (isNaN(unsafeWindow.farms_data.map.vehicles[1][settings.get("account","garage1")].remain)){
                     botArbiter.add("vehicles1");
                 } else {
@@ -441,8 +447,13 @@ var botArbiter=new function(){
                         botArbiter.check();
                     }, (1000 * remain));
                 }
+            }*/
+            if (settings.get("account","garage2")>0 ) {
+                if (isNaN(unsafeWindow.farms_data.map.vehicles[2][settings.get("account","garage2")].remain)){
+                    botArbiter.add("vehicles2");
+                }
             }
-            if (settings.get("account","garage2")>0 && !zoneWaiting["garage2"]) {
+            /*if (settings.get("account","garage2")>0 && !zoneWaiting["garage2"]) {
                 if (isNaN(unsafeWindow.farms_data.map.vehicles[2][settings.get("account","garage2")].remain)){
                     botArbiter.add("vehicles2");
                 } else {
@@ -453,7 +464,7 @@ var botArbiter=new function(){
                         botArbiter.check();
                     }, (1000 * remain));
                 }
-            }
+            }*/
             //27062017
             if ($("loginevent_link")){
                 for(var a in unsafeWindow.loginevent.data.config.rewards) {
@@ -7599,7 +7610,7 @@ try{
                 unsafeWindow.hideDiv('globaltransp');
                 autoVehicles(runId, 9);  //exit
             }else{
-                var remain = unsafeWindow.farms_data.map.vehicles[garage][vehicle].remain + 120;
+                /*var remain = unsafeWindow.farms_data.map.vehicles[garage][vehicle].remain + 120;
                 zoneWaiting["garage"+garage] = remain + now;
                 GM_logInfo("autoVehicles", "runId=" + runId + " step=" + step, "", "Check garage "+ garage+" in "+remain+"s");
                 window.setTimeout(function() { //TIMEOUT
@@ -7609,7 +7620,7 @@ try{
                     }
                     botArbiter.check();
                 }, (1000 * remain));
-
+                */
                 GM_logInfo("autoVehicles","runId="+runId+" step="+step,"","goto farm 1");
                 autoZoneFinish(runId, $("speedlink_farm1"));
             }
