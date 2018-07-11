@@ -4,8 +4,8 @@
 // @author         BastianKanaan
 // @description    Extends MyFreeFarm
 // @icon           data:image/png;base64,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
-// @date           28.06.2018
-// @version        2.10.81
+// @date           11.07.2018
+// @version        2.10.82
 // @license        GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)au\.myfreefarm\.com\/.*$/
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)veselaferma\.com\/.*$/
@@ -194,7 +194,7 @@ const CHANGELOG=[["2.0","29.05.2014",[["Migration nach openuserjs.org","Migratio
                 ,["2.10.78","15.05.2018",[["Questreihe 2 Baumerei aktualisiert","forestry-quests-series II updated"]]]
                 ,["2.10.79","17.05.2017",[["Bugfix","Bugfix"]]]
                 ,["2.10.80","29.05.2017",[["Anpassung an Spiel-Update: Weltbauertag","Fix for game update: world farmers day"]]]
-                ,["2.10.81","28.06.2017",[["Bugfix","Bugfix"]]]
+                ,["2.10.82","11.07.2017",[["Bugfix","Bugfix"]]]
                 ];
 if(!VERSIONfunctionFile){
     alert("Hi, I am the Berater-Script.\nThe function-file is missing.\nPlease install me again.");
@@ -288,7 +288,7 @@ var ALL_SLOTS={};
 // Growing duration in minutes (just where game data has to be overridden)
 // task_new_plant task_new_product task_fix_growtime
 //13102016
-const PRODUCT_GROWTIME=[{"7":480,"8":960,"19":240,"20":480,"21":600,"22":500,"23":800,"24":720,"92":0,"93":0,"111":1000,"130":180,"131":180,"132":90,"133":90,"134":200,"135":200,"136":100,"137":130,"138":150,"139":80,"140":80,"141":120,"142":120,"143":120,"145":300,"146":240,"147":300,"148":480,"149":220,"150":360,"159":0,"160":0,"161":210,"162":130,"163":260,"164":190,"165":160,"166":195,"167":250,"168":90,"169":150,"170":300,"300":420,"301":315,"302":480,"303":450,"304":480,"305":240,"306":240,"307":285,"308":240,"309":285,"310":240,"311":300,"312":240,"313":240,"314":240,"315":570,"316":240,"317":330,"318":240,"319":450,"320":330,"321":240,"322":300,"323":240,"324":240,"325":420,"326":315,"327":480,"328":450,"329":480,"330":120,"331":240,"332":240,"333":285,"334":240,"335":120,"336":285,"337":240,"338":300,"339":240,"340":240,"341":240,"342":570,"343":240,"344":120,"345":330,"346":240,"347":450,"348":330,"349":240,"351":480,"352":360,"353":720,"354":720,"355":1320,"356":2880,"357":480,"358":1440,"359":480,"360":1440,"361":180,"400":300,"401":240,"402":300,"403":240,"450":132,"451":56,"452":168,"453":132,"454":192,"455":144,"456":116,"457":120,"458":144,"459":132,"460":160,"461":168,"462":208,"463":180,"464":132,"465":168,"466":192,"467":208,"468":176,"469":192,"470":180,"471":152,"472":132,"473":144,"474":192,"475":160,"476":204,"477":224,"478":128,"479":160,"480":192,"481":180,"482":204,"483":144,"600":240,"601":180,"602":720,"603":480,"604":240,"605":340,"606":600,"607":140,"608":260,"609":480,"630":240,"631":210,"632":200,"633":200,"634":220,"635":420,"636":180,"637":160,"638":280,"639":600,"660":180,"661":340,"662":600,"663":260,"664":480,"665":260,"666":300,"667":720,"668":720,"669":280,"700":720,"701":360,"701":360,"702":720,"703":2880,"704":480,"705":300,"706":600,"707":360,"708":240,"709":1440,"750":480,"751":720,"752":1440,"753":600,"754":2160,"755":1440,"756":2520,"757":1200,"758":1920,"759":1080}
+const PRODUCT_GROWTIME=[{"7":480,"8":960,"19":240,"20":480,"21":600,"22":500,"23":800,"24":720,"92":0,"93":0,"111":1000,"130":180,"131":180,"132":90,"133":90,"134":200,"135":200,"136":100,"137":130,"138":150,"139":80,"140":80,"141":120,"142":120,"143":120,"145":300,"146":240,"147":300,"148":480,"149":220,"150":360,"159":0,"160":0,"161":210,"162":130,"163":260,"164":190,"165":160,"166":195,"167":250,"168":90,"169":150,"170":300,"300":420,"301":315,"302":480,"303":450,"304":480,"305":240,"306":240,"307":285,"308":240,"309":285,"310":240,"311":300,"312":240,"313":240,"314":240,"315":570,"316":240,"317":330,"318":240,"319":450,"320":330,"321":240,"322":300,"323":240,"324":240,"325":420,"326":315,"327":480,"328":450,"329":480,"330":120,"331":240,"332":240,"333":285,"334":240,"335":120,"336":285,"337":240,"338":300,"339":240,"340":240,"341":240,"342":570,"343":240,"344":120,"345":330,"346":240,"347":450,"348":330,"349":240,"351":480,"352":360,"353":720,"354":720,"355":1320,"356":2880,"357":480,"358":1440,"359":480,"360":1440,"361":180,"400":300,"401":240,"402":300,"403":240,"450":132,"451":56,"452":168,"453":132,"454":192,"455":144,"456":116,"457":120,"458":144,"459":132,"460":160,"461":168,"462":208,"463":180,"464":132,"465":168,"466":192,"467":208,"468":176,"469":192,"470":180,"471":152,"472":132,"473":144,"474":192,"475":160,"476":204,"477":224,"478":128,"479":160,"480":192,"481":180,"482":204,"483":144,"600":240,"601":180,"602":720,"603":480,"604":240,"605":340,"606":600,"607":140,"608":260,"609":480,"630":240,"631":210,"632":200,"633":200,"634":220,"635":420,"636":180,"637":160,"638":280,"639":600,"660":180,"661":340,"662":600,"663":260,"664":480,"665":260,"666":300,"667":720,"668":720,"669":280,"700":720,"701":360,"702":720,"703":2880,"704":480,"705":300,"706":600,"707":360,"708":240,"709":1440,"750":480,"751":720,"752":1440,"753":600,"754":2160,"755":1440,"756":2520,"757":1200,"758":1920,"759":1080}
                        ,{"1":600,"2":960,"3":2160,"4":480,"5":2750,"6":490,"7":1200,"8":2520,"9":2790,"10":1440,"41":300,"42":345,"43":360,"44":270,"45":300,"46":330,"47":420,"48":480,"49":510,"50":180,"51":210,"52":240,"53":480,"54":510,"55":540,"56":300,"57":375,"58":470,"59":360,"60":450,"61":420,"62":290,"63":410,"64":530,"65":480,"66":510,"67":540,"101":240,"102":700,"103":640,"104":360,"105":960,"106":90,"107":120,"108":1320,"109":570,"110":330,"111":160,"112":935,"113":120,"114":300,"115":180,"116":1040,"117":1920,"118":300,"119":1440,"120":2010,"121":480,"122":300,"123":840,"124":690,"125":120,"126":240,"127":255,"128":525,"129":375,"130":410,"131":480,"132":225,"133":120,"134":1080,"143":720,"144":480,"146":400,"148":1440,"149":240,"150":480,"151":720,"152":600,"153":360,"154":960,"200":300,"201":300,"202":300,"203":300,"204":300,"205":300,"206":300,"207":300,"208":300,"209":300,"210":300,"211":300,"212":300,"213":300,"214":300,"215":300,"500":0,"501":0,"502":0,"511":0,"512":0}
                        ];
 
@@ -607,7 +607,7 @@ const QUESTS =
                         [[[1,57,61],[1,132,34],[1,53,130]],,959000,[[6,50]]],
                         [[[1,60,106],[1,124,17]],,986400],
                         [[[1,64,116],[1,104,32]],,1013800],
-                        [[[1,24,156],[1,103,12],[1,60,74]],,1041200,[[1,1,10,5],[9,1,10],[9,1,29],[9,1,65],[9,1,66],[9,1,67]]],
+                        [[[1,24,156],[1,103,12],[1,42,74]],,1041200,[[1,1,10,5],[9,1,10],[9,1,29],[9,1,65],[9,1,66],[9,1,67]]],
                         [[[1,29,81],[1,101,56]],,1068600],
                         [[[1,67,102],[1,112,13]],,1096000],
                         [[[1,66,92],[1,127,35],[1,101,40]],,1123400,[[6,50]]],
@@ -1374,50 +1374,55 @@ function updateProductDataFarm(){
                 }
 
                 switch(prodTyp[0][v]){
-                case "hr":
-                    if(unsafeWindow.vet_data && unsafeWindow.vet_data.info){
-                        var vetdiv = $("farmersmarket_pos5_block");
-                        if( vetdiv.style.display=="block" || unsafeWindow.vet_data.info.level < PRODUCT_LEVEL["veterinary"][v] ){
-                            prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
+                    case "alpin":
+                        if(PRODUCT_QUEST[0][v]&&(questData[PRODUCT_QUEST[0][v][0]][PRODUCT_QUEST[0][v][1]]["nr"]<=PRODUCT_QUEST[0][v][2])){
+                            prodBlock[0][v]+="v";
                         }
-                        vetdiv=null;
-                    }else{
-                        prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
-                    }
-                break;
-                case "md":
-                    if(unsafeWindow.vet_data && unsafeWindow.vet_data.info){
-                        var vetdiv = $("farmersmarket_pos5_block");
-                        if( vetdiv.style.display=="block" || unsafeWindow.vet_data.info.level < PRODUCT_LEVEL["veterinary"][v] ){
-                            prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
-                        }
-                        vetdiv=null;
-                    }else{
-                        prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
-                    }
-                    //Fix Produkt Points Tinkturen
-                    prodPoints[0][v]=(prodPoints[0][v]?prodPoints[0][v]/prodYield[0][v]:0);
-                break;
-                case "ex":
-                    if(PRODUCT_QUEST[0][v]&&(questData[PRODUCT_QUEST[0][v][0]][PRODUCT_QUEST[0][v][1]]["nr"]<=PRODUCT_QUEST[0][v][2])){
-                        prodBlock[0][v]+="v";
-                    }
-                    // ToDo: this is a workaround - "q" would be enough. but with "q" only, all "ex" products are shown on the market-list. Even the not released
-                    // bugfix should be performed when populating the marketlist.
-                break;
-                case "breed": //13102016
-                    if (unsafeWindow.pets.data.block==0) {
-                        if (unsafeWindow.pets.data.data.level < PRODUCT_LEVEL["breeding"][v]) {
+                    break;
+                    case "breed": //13102016
+                        if (unsafeWindow.pets.data.block==0) {
+                            if (unsafeWindow.pets.data.data.level < PRODUCT_LEVEL["breeding"][v]) {
+                                prodBlock[0][v]+="v"+PRODUCT_LEVEL["breeding"][v];
+                            }
+                        } else {
                             prodBlock[0][v]+="v"+PRODUCT_LEVEL["breeding"][v];
                         }
-                    } else {
-                        prodBlock[0][v]+="v"+PRODUCT_LEVEL["breeding"][v];
-                    }
-                break;
-                default:
-                    if(USERLEVEL<unsafeWindow.produkt_level[v]){
-                        prodBlock[0][v]+="l"+unsafeWindow.produkt_level[v];
-                    }
+                    break;
+                    case "ex":
+                        if(PRODUCT_QUEST[0][v]&&(questData[PRODUCT_QUEST[0][v][0]][PRODUCT_QUEST[0][v][1]]["nr"]<=PRODUCT_QUEST[0][v][2])){
+                            prodBlock[0][v]+="v";
+                        }
+                        // ToDo: this is a workaround - "q" would be enough. but with "q" only, all "ex" products are shown on the market-list. Even the not released
+                        // bugfix should be performed when populating the marketlist.
+                    break;
+                    case "hr":
+                        if(unsafeWindow.vet_data && unsafeWindow.vet_data.info){
+                            var vetdiv = $("farmersmarket_pos5_block");
+                            if( vetdiv.style.display=="block" || unsafeWindow.vet_data.info.level < PRODUCT_LEVEL["veterinary"][v] ){
+                                prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
+                            }
+                            vetdiv=null;
+                        }else{
+                            prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
+                        }
+                    break;
+                    case "md":
+                        if(unsafeWindow.vet_data && unsafeWindow.vet_data.info){
+                            var vetdiv = $("farmersmarket_pos5_block");
+                            if( vetdiv.style.display=="block" || unsafeWindow.vet_data.info.level < PRODUCT_LEVEL["veterinary"][v] ){
+                                prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
+                            }
+                            vetdiv=null;
+                        }else{
+                            prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
+                        }
+                        //Fix Produkt Points Tinkturen
+                        prodPoints[0][v]=(prodPoints[0][v]?prodPoints[0][v]/prodYield[0][v]:0);
+                    break;
+                    default:
+                        if(USERLEVEL<unsafeWindow.produkt_level[v]){
+                            prodBlock[0][v]+="l"+unsafeWindow.produkt_level[v];
+                        }
                 }
                 if(PRODUCT_QUEST[0][v]&&(questData[PRODUCT_QUEST[0][v][0]][PRODUCT_QUEST[0][v][1]]["nr"]<=PRODUCT_QUEST[0][v][2])){
                     prodBlock[0][v]+="q";
