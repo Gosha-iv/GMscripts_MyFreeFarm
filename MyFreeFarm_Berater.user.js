@@ -4,8 +4,8 @@
 // @author         BastianKanaan
 // @description    Extends MyFreeFarm
 // @icon           data:image/png;base64,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
-// @date           27.07.2018
-// @version        2.10.83
+// @date           31.07.2018
+// @version        2.10.84
 // @license        GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)au\.myfreefarm\.com\/.*$/
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)veselaferma\.com\/.*$/
@@ -196,6 +196,7 @@ const CHANGELOG=[["2.0","29.05.2014",[["Migration nach openuserjs.org","Migratio
                 ,["2.10.80","29.05.2017",[["Anpassung an Spiel-Update: Weltbauertag","Fix for game update: world farmers day"]]]
                 ,["2.10.82","11.07.2017",[["Bugfix","Bugfix"]]]
                 ,["2.10.83","27.07.2017",[["Anpassung an Spiel-Update: Kuhrennen","Fix for game update: cow running"]]]
+                ,["2.10.84","31.07.2017",[["Produktion Kuhrennen","Production cowracing"],["Bugfix Monsterfurcht","Bugfix megafruit"]]]
                 ];
 if(!VERSIONfunctionFile){
     alert("Hi, I am the Berater-Script.\nThe function-file is missing.\nPlease install me again.");
@@ -286,7 +287,7 @@ const INIT_NPC_SAISON={"94":false,"95":false,"96":false,"98":false,"100":false,"
 const ALL_ZONES = {"farm":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36],"farmersmarket":["farmersmarket-0","farmersmarket-1","farmersmarket-2","farmersmarket-3","farmersmarket-4","farmersmarket-5","farmersmarket-6","farmersmarket-7","farmersmarket-8"],"forestry":["forest","sawmill","carpentry"],"city":["windmill"],"foodworld":["foodworld-0","foodworld-1","foodworld-2","foodworld-3","foodworld-4"],"megafield":["megafield"]};
 unsafeData.ALL_ZONES=ALL_ZONES.clone();
 // task_new_zone
-const DATA_zones = {"1":{"location":"farm","farmNr":0,"zoneNr":1,"productional":true},"2":{"location":"farm","farmNr":0,"zoneNr":2,"productional":true},"3":{"location":"farm","farmNr":0,"zoneNr":3,"productional":true},"4":{"location":"farm","farmNr":0,"zoneNr":4,"productional":true},"5":{"location":"farm","farmNr":0,"zoneNr":5,"productional":true},"6":{"location":"farm","farmNr":0,"zoneNr":6,"productional":true},"7":{"location":"farm","farmNr":1,"zoneNr":1,"productional":true},"8":{"location":"farm","farmNr":1,"zoneNr":2,"productional":true},"9":{"location":"farm","farmNr":1,"zoneNr":3,"productional":true},"10":{"location":"farm","farmNr":1,"zoneNr":4,"productional":true},"11":{"location":"farm","farmNr":1,"zoneNr":5,"productional":true},"12":{"location":"farm","farmNr":1,"zoneNr":6,"productional":true},"13":{"location":"farm","farmNr":2,"zoneNr":1,"productional":true},"14":{"location":"farm","farmNr":2,"zoneNr":2,"productional":true},"15":{"location":"farm","farmNr":2,"zoneNr":3,"productional":true},"16":{"location":"farm","farmNr":2,"zoneNr":4,"productional":true},"17":{"location":"farm","farmNr":2,"zoneNr":5,"productional":true},"18":{"location":"farm","farmNr":2,"zoneNr":6,"productional":true},"19":{"location":"farm","farmNr":3,"zoneNr":1,"productional":true},"20":{"location":"farm","farmNr":3,"zoneNr":2,"productional":true},"21":{"location":"farm","farmNr":3,"zoneNr":3,"productional":true},"22":{"location":"farm","farmNr":3,"zoneNr":4,"productional":true},"23":{"location":"farm","farmNr":3,"zoneNr":5,"productional":true},"24":{"location":"farm","farmNr":3,"zoneNr":6,"productional":true},"25":{"location":"farm","farmNr":4,"zoneNr":1,"productional":true},"26":{"location":"farm","farmNr":4,"zoneNr":2,"productional":true},"27":{"location":"farm","farmNr":4,"zoneNr":3,"productional":true},"28":{"location":"farm","farmNr":4,"zoneNr":4,"productional":true},"29":{"location":"farm","farmNr":4,"zoneNr":5,"productional":true},"30":{"location":"farm","farmNr":4,"zoneNr":6,"productional":true},"31":{"location":"farm","farmNr":5,"zoneNr":1,"productional":true},"32":{"location":"farm","farmNr":5,"zoneNr":2,"productional":true},"33":{"location":"farm","farmNr":5,"zoneNr":3,"productional":true},"34":{"location":"farm","farmNr":5,"zoneNr":4,"productional":true},"35":{"location":"farm","farmNr":5,"zoneNr":5,"productional":true},"36":{"location":"farm","farmNr":5,"zoneNr":6,"productional":true},"windmill":{"location":"city","cityNr":2,"zoneNr":1,"productional":true},"forest":{"location":"forestry","productional":true},"sawmill":{"location":"forestry","zoneNr":1,"productional":true},"carpentry":{"location":"forestry","zoneNr":2,"productional":true},"foodworld-0":{"location":"foodworld","productional":false},"foodworld-1":{"location":"foodworld","zoneNr":1,"productional":true},"foodworld-2":{"location":"foodworld","zoneNr":2,"productional":true},"foodworld-3":{"location":"foodworld","zoneNr":3,"productional":true},"foodworld-4":{"location":"foodworld","zoneNr":4,"productional":true},"farmersmarket-0":{"location":"farmersmarket","productional":false},"farmersmarket-1":{"location":"farmersmarket","zoneNr":1,"productional":true},"farmersmarket-2":{"location":"farmersmarket","zoneNr":2,"productional":true},"farmersmarket-3":{"location":"farmersmarket","zoneNr":3,"productional":true},"farmersmarket-4":{"location":"farmersmarket","zoneNr":4,"productional":true},"farmersmarket-5":{"location":"farmersmarket","zoneNr":5,"productional":true},"farmersmarket-6":{"location":"farmersmarket","zoneNr":6,"productional":true},"farmersmarket-7":{"location":"farmersmarket","productional":true},"farmersmarket-8":{"location":"farmersmarket","productional":true},"megafield":{"location":"megafield","zoneNr":1,"productional":true}};
+const DATA_zones = {"1":{"location":"farm","farmNr":0,"zoneNr":1,"productional":true},"2":{"location":"farm","farmNr":0,"zoneNr":2,"productional":true},"3":{"location":"farm","farmNr":0,"zoneNr":3,"productional":true},"4":{"location":"farm","farmNr":0,"zoneNr":4,"productional":true},"5":{"location":"farm","farmNr":0,"zoneNr":5,"productional":true},"6":{"location":"farm","farmNr":0,"zoneNr":6,"productional":true},"7":{"location":"farm","farmNr":1,"zoneNr":1,"productional":true},"8":{"location":"farm","farmNr":1,"zoneNr":2,"productional":true},"9":{"location":"farm","farmNr":1,"zoneNr":3,"productional":true},"10":{"location":"farm","farmNr":1,"zoneNr":4,"productional":true},"11":{"location":"farm","farmNr":1,"zoneNr":5,"productional":true},"12":{"location":"farm","farmNr":1,"zoneNr":6,"productional":true},"13":{"location":"farm","farmNr":2,"zoneNr":1,"productional":true},"14":{"location":"farm","farmNr":2,"zoneNr":2,"productional":true},"15":{"location":"farm","farmNr":2,"zoneNr":3,"productional":true},"16":{"location":"farm","farmNr":2,"zoneNr":4,"productional":true},"17":{"location":"farm","farmNr":2,"zoneNr":5,"productional":true},"18":{"location":"farm","farmNr":2,"zoneNr":6,"productional":true},"19":{"location":"farm","farmNr":3,"zoneNr":1,"productional":true},"20":{"location":"farm","farmNr":3,"zoneNr":2,"productional":true},"21":{"location":"farm","farmNr":3,"zoneNr":3,"productional":true},"22":{"location":"farm","farmNr":3,"zoneNr":4,"productional":true},"23":{"location":"farm","farmNr":3,"zoneNr":5,"productional":true},"24":{"location":"farm","farmNr":3,"zoneNr":6,"productional":true},"25":{"location":"farm","farmNr":4,"zoneNr":1,"productional":true},"26":{"location":"farm","farmNr":4,"zoneNr":2,"productional":true},"27":{"location":"farm","farmNr":4,"zoneNr":3,"productional":true},"28":{"location":"farm","farmNr":4,"zoneNr":4,"productional":true},"29":{"location":"farm","farmNr":4,"zoneNr":5,"productional":true},"30":{"location":"farm","farmNr":4,"zoneNr":6,"productional":true},"31":{"location":"farm","farmNr":5,"zoneNr":1,"productional":true},"32":{"location":"farm","farmNr":5,"zoneNr":2,"productional":true},"33":{"location":"farm","farmNr":5,"zoneNr":3,"productional":true},"34":{"location":"farm","farmNr":5,"zoneNr":4,"productional":true},"35":{"location":"farm","farmNr":5,"zoneNr":5,"productional":true},"36":{"location":"farm","farmNr":5,"zoneNr":6,"productional":true},"windmill":{"location":"city","cityNr":2,"zoneNr":1,"productional":true},"forest":{"location":"forestry","productional":true},"sawmill":{"location":"forestry","zoneNr":1,"productional":true},"carpentry":{"location":"forestry","zoneNr":2,"productional":true},"foodworld-0":{"location":"foodworld","productional":false},"foodworld-1":{"location":"foodworld","zoneNr":1,"productional":true},"foodworld-2":{"location":"foodworld","zoneNr":2,"productional":true},"foodworld-3":{"location":"foodworld","zoneNr":3,"productional":true},"foodworld-4":{"location":"foodworld","zoneNr":4,"productional":true},"farmersmarket-0":{"location":"farmersmarket","productional":false},"farmersmarket-1":{"location":"farmersmarket","zoneNr":1,"productional":true},"farmersmarket-2":{"location":"farmersmarket","zoneNr":2,"productional":true},"farmersmarket-3":{"location":"farmersmarket","zoneNr":3,"productional":true},"farmersmarket-4":{"location":"farmersmarket","zoneNr":4,"productional":true},"farmersmarket-5":{"location":"farmersmarket","zoneNr":5,"productional":true},"farmersmarket-6":{"location":"farmersmarket","zoneNr":6,"productional":true},"farmersmarket-7":{"location":"farmersmarket","productional":true},"farmersmarket-8":{"location":"farmersmarket","zoneNr":8,"productional":true},"megafield":{"location":"megafield","zoneNr":1,"productional":true}};
 // All single-slot-zones themselves and all slots of multi-slot-zones
 var ALL_SLOTS={};
 // [farm, forestry, recipes, powerups]
@@ -439,7 +440,7 @@ unsafeData.BUILDING2PRODUCT=BUILDING2PRODUCT.clone();
     Butterfly               9
 */
 //13102016
-const BUILDINGTYPE={"0":0,"1":1,"2":2,"3":2,"4":2,"5":2,"6":0,"7":3,"8":3,"9":3,"10":3,"11":2,"12":2,"13":3,"14":3,"15":2,"16":3,"17":0,"18":5,"19":0,"20":6,"21":3,"fl1":1,"fl2":4,"fl3":7,"fl4":4,"fl5":4,"fl6":8,"fl7":9,"fw1":4,"fw2":4,"fw3":4,"fw4":4};
+const BUILDINGTYPE={"0":0,"1":1,"2":2,"3":2,"4":2,"5":2,"6":0,"7":3,"8":3,"9":3,"10":3,"11":2,"12":2,"13":3,"14":3,"15":2,"16":3,"17":0,"18":5,"19":0,"20":6,"21":3,"fl1":1,"fl2":4,"fl3":7,"fl4":4,"fl5":4,"fl6":8,"fl7":9,"fl8":4,"fw1":4,"fw2":4,"fw3":4,"fw4":4};
 unsafeData.BUILDINGTYPE=BUILDINGTYPE.clone();
 // task_new_building
 const BUILDING_SIZE={"1":120,"forest":25,"fl1":36,"megafield":[11,9]};
@@ -447,7 +448,7 @@ unsafeData.BUILDING_SIZE=BUILDING_SIZE.clone();
 // task_new_building
 
 //13102016
-const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"megafield":99};
+const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":4,"megafield":99};
 
 unsafeData.BUILDING_SLOTS=BUILDING_SLOTS.clone();
 // Needed input of a zone
@@ -725,7 +726,7 @@ GM_log("new_PRODUCT_QUEST:\n"+implode(new_PRODUCT_QUEST));
 */
 
 // Default values for Mimimum stock-amount of goods
-const INIT_valMinRack={"v":200,"ex":200,"e":50,"o":10,"z":0,"f1":25,"f2":10,"f3":10,"f4":0,"fw1":10,"fw2":10,"fw3":10,"fw4":10,"hr":1000,"md":10,"breed":10,"alpin":200,"tea":50,"fl":1000,"fla":100};
+const INIT_valMinRack={"v":200,"ex":200,"e":50,"o":10,"z":0,"f1":25,"f2":10,"f3":10,"f4":0,"fw1":10,"fw2":10,"fw3":10,"fw4":10,"hr":1000,"md":10,"breed":10,"alpin":200,"tea":50,"cow":10,"fl":1000,"fla":100};
 // task_new_level
 const LEVEL_POINTS=[0,0,58,2420,6620,15620,27900,58700,101700,163100,211900
                    ,276900,359000,467000,730000,1190000,1750000,2680000,3900000,5660000,7850000
@@ -2173,6 +2174,7 @@ var zones=new function(){
                 case "farmersmarket-5": building="fl5";break;
                 case "farmersmarket-6": building="fl6";break;
                 case "farmersmarket-7": building="fl7";break;
+                case "farmersmarket-8": building="fl8";break;
                 case "windmill":        building="windmill";break;
                 case "forest":          building="forest";break;
                 case "sawmill":         building="sawmill";break;
@@ -2356,6 +2358,7 @@ var zones=new function(){
             fl5         Veterinary              Farmersmarket
             fl6         Speed eating            Farmersmarket
             fl7         Butterfly               Farmersmarket
+            fl8         cowracing               Farmersmarket
         */
         try{
             if(!data[zoneNrF]){
@@ -17441,7 +17444,7 @@ try{
                     zones.setBonusSpecial(zoneNrF,null);
                 }
                 if(unsafeWindow.farmersmarket_data.pos){
-                    for(var w=1;w<=7;w++) {
+                    for(var w=1;w<=8;w++) {
                         if(item=unsafeWindow.farmersmarket_data.pos[w]){
                             zoneNrF="farmersmarket-"+w;
                             currBlock=(item["block"]&&item["cost"]?"b":""); // locked due to missing payment
@@ -17547,12 +17550,13 @@ try{
                                     if(unsafeWindow.farmersmarket_data.megafruit.current) {
                                         zones.setBonus(zoneNrF,0);
                                         item = unsafeWindow.farmersmarket_data.megafruit;
-                                        slot = 0;
+                                         var SLOT={"water":1,"light":2,"fertilize":3};
+                                        //slot = 0;
                                         iProd=item.current.pid; iAmount=0; iPoints=0;
                                         tempZoneProductionData=[[{},{}],0,0,true];
                                         for (var i in item.current.data){
                                             if(!item.current.data.hasOwnProperty(i)){ continue; }
-                                            slot++;
+                                            slot = SLOT[i];
                                             zoneNrS=zoneNrF+"."+slot;
                                             zones.setBlock(zoneNrS,"");
 
@@ -17920,6 +17924,53 @@ try{
                                     }
                                 }
                                 zones.setProduction(zoneNrF,tempZoneProductionData.clone());
+                                break;}
+                                case 8:{ // cowracing food
+                                    zones.setBonus(zoneNrF,0);
+                                    if((!currBlock)&&(unsafeWindow.farmersmarket_data.cowracing&&unsafeWindow.farmersmarket_data.cowracing.production)){
+                                        tempZoneProductionData=[[{},{}],0,0,true];
+                                        if (!zones.getBuilding(zoneNrF)){
+                                            zones.setBuilding(zoneNrF,"fl8");
+                                        }
+                                        for(var slot=1;slot<=4;slot++){
+                                            zoneNrS=zoneNrF+"."+slot;
+                                            zones.setBlock(zoneNrS,"");
+                                            tempZoneProductionDataSlot=[[{},{}],0,0,true];
+                                            //item=unsafeWindow.farmersmarket_data.cowracing.animals.slots2[slot];
+                                            if(slot >= 3 && unsafeWindow.farmersmarket_data.cowracing.data.slots[slot]["block"]) { // slot blocked
+                                                zones.setBlock(zoneNrS,"b");
+                                            } else if(unsafeWindow.farmersmarket_data.cowracing.production[slot]){ // production running
+                                                item=unsafeWindow.farmersmarket_data.cowracing.production[slot]["1"];
+                                                iProd=(item["pid"]?parseInt(item["pid"],10):null);
+                                                if(isNaN(iProd)){ iProd=null; }
+                                                if(iProd!=null) { // production in slot is ready (item["remain"] == 0) or busy (item["remain"] > 0)
+                                                    iTime=nowServer+Math.round(item["remain"]); // Math.round, because it's sometimes returned as string
+                                                }else{
+                                                    iTime=NEVER;
+                                                    tempZoneProductionData[1]++;
+                                                    tempZoneProductionDataSlot[1]++;
+                                                }
+                                                tempZoneProductionData[2]++;
+                                                tempZoneProductionDataSlot[2]++;
+                                                if(iProd!=null){
+                                                    iAmount=prodYield[0][iProd];
+                                                    iPoints=iAmount*prodPoints[0][iProd];
+                                                    if(!tempZoneProductionData[0][0][iProd]){ tempZoneProductionData[0][0][iProd]=[]; }
+                                                    tempZoneProductionData[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                                    if(!tempZoneProductionDataSlot[0][0][iProd]){ tempZoneProductionDataSlot[0][0][iProd]=[]; }
+                                                    tempZoneProductionDataSlot[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                                }
+                                            } else { // slot empty
+                                                tempZoneProductionData[1]++;
+                                                tempZoneProductionDataSlot[1]++;
+                                                tempZoneProductionData[2]++;
+                                                tempZoneProductionDataSlot[2]++;
+                                            }
+                                            zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+                                        }
+                                        zones.setProduction(zoneNrF,tempZoneProductionData.clone());
+                                        showGoToVetFarmi(); // Determine, if Discharge-Sick-Animals-Icon is shown
+                                    }
                                 break;}
 
                             default: currBlock="blpqs"; // Block farm
@@ -18531,6 +18582,66 @@ try{
             doFarmersMarketData();
         }catch(err){GM_logError("butterfly.careBreed","","",err);}
 
+    });
+
+    /**********************************************************
+    * Kuh Rennen / cowracing
+    **********************************************************/
+    //Open Farmersmarket Pos8
+    unsafeOverwriteObjFunction("cowracing","buildProductionSlots",function(){
+        try{
+             unsafeWindow.cowracing._buildProductionSlots();
+        }catch(err){GM_logError("cowracing.buildProductionSlots","","",err);}
+        try{
+            raiseEvent("gameFarmersmarketOpened8");
+        }catch(err){GM_logError("buildProductionSlotsResponse","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("cowracing","harvestProduction",function(b,a){
+        try{
+            unsafeWindow.cowracing._harvestProduction(b,a);
+        }catch(err){GM_logError("cowracing.harvestProduction","","",err);}
+        try{
+            raiseEvent("gameFarmersmarketCropped");
+        }catch(err){GM_logError("harvestProductionResponse","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("cowracing","productionSelection",function(r){
+        try{
+            unsafeWindow.cowracing._productionSelection(r);
+        }catch(err){GM_logError("cowracing.productionSelection","","",err);}
+        try{
+            raiseEvent("gameFarmersmarketSlotOpened");
+        }catch(err){GM_logError("productionSelectionResponse","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("cowracing","productionSelectionCommit",function(b){
+        try{
+            unsafeWindow.cowracing._productionSelectionCommit(b);
+        }catch(err){GM_logError("cowracing.productionSelectionCommit","","",err);}
+        try{
+            raiseEvent("gameProductionSelectionCommit");
+        }catch(err){GM_logError("productionSelectionCommitResponse","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("cowracing","productionSelectionNavi",function(b,c){
+        try{
+            unsafeWindow.cowracing._productionSelectionNavi(b,c);
+        }catch(err){GM_logError("cowracing.productionSelectionNavi","","",err);}
+        try{
+            raiseEvent("gameProductionSelectionNavi");
+        }catch(err){GM_logError("productionSelectionNaviResponse","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("cowracing","startProduction",function(a){
+        try{
+            unsafeWindow.cowracing._startProduction(a);
+        }catch(err){GM_logError("cowracing.startProduction","","",err);}
+        try{
+            raiseEvent("gameFarmersmarketStarted");
+        }catch(err){GM_logError("startProductionCommitResponse","","",err);}
     });
 
     /**********************************************************
@@ -20822,7 +20933,7 @@ try{
     for(var v=1;v<=4;v++){
         createZoneTimer("globalZoneTimer_foodworld-"+v,"foodworld-"+v,"zonetimer","position:relative;",$("timeHolder"));
     }
-    for(var v=1;v<=7;v++){
+    for(var v=1;v<=8;v++){
         createZoneTimer("globalZoneTimer_farmersmarket-"+v,"farmersmarket-"+v,"zonetimer","position:relative;",$("timeHolder"));
     }
 
@@ -23104,6 +23215,7 @@ try{
         text["de"]["fl5"]="Tierarzt";
         text["de"]["fl6"]="Wettmampfen";
         text["de"]["fl7"]="Schmetterlingshaus";
+        text["de"]["fl8"]="KuhRennen";
         text["de"]["fw1"]="Getränkebude";
         text["de"]["fw2"]="Imbissbude";
         text["de"]["fw3"]="Konditorei";
@@ -23545,6 +23657,7 @@ try{
         text["en"]["fl5"]="Animal doctor";
         text["en"]["fl6"]="Speed eating";
         text["en"]["fl7"]="Butterfly terrarium";
+        text["en"]["fl8"]="Cowracing";
         text["en"]["fw1"]="Soda stall";
         text["en"]["fw2"]="Snack booth";
         text["en"]["fw3"]="Pastry shop";
