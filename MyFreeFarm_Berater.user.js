@@ -22650,6 +22650,7 @@ try{
         #map_stock_overview_link{position:absolute!important;top:372px!important;}\
         #weatherlink{top:-88px!important;}\
         #farm_speedlinks{top:11px!important;}\
+        #specialoffer_link{top:-37px!important;}\
         #teaser_links{top:-40px!important;-65px !important}"
     );
     GM_addStyle(
