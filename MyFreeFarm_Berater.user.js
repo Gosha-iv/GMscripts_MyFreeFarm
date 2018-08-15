@@ -4,8 +4,8 @@
 // @author         BastianKanaan
 // @description    Extends MyFreeFarm
 // @icon           data:image/png;base64,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
-// @date           15.05.2018
-// @version        2.10.78
+// @date           31.07.2018
+// @version        2.10.84
 // @license        GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)au\.myfreefarm\.com\/.*$/
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)veselaferma\.com\/.*$/
@@ -192,6 +192,11 @@ const CHANGELOG=[["2.0","29.05.2014",[["Migration nach openuserjs.org","Migratio
                 ,["2.10.76","17.10.2017",[["Schmetterlinge füttern","butterfly feeding"]]]
                 ,["2.10.77","09.11.2017",[["Bugfix","Bugfix"]]]
                 ,["2.10.78","15.05.2018",[["Questreihe 2 Baumerei aktualisiert","forestry-quests-series II updated"]]]
+                ,["2.10.79","17.05.2017",[["Bugfix","Bugfix"]]]
+                ,["2.10.80","29.05.2017",[["Anpassung an Spiel-Update: Weltbauertag","Fix for game update: world farmers day"]]]
+                ,["2.10.82","11.07.2017",[["Bugfix","Bugfix"]]]
+                ,["2.10.83","27.07.2017",[["Anpassung an Spiel-Update: Kuhrennen","Fix for game update: cow running"]]]
+                ,["2.10.84","31.07.2017",[["Produktion Kuhrennen","Production cowracing"],["Bugfix Monsterfurcht","Bugfix megafruit"]]]
                 ];
 if(!VERSIONfunctionFile){
     alert("Hi, I am the Berater-Script.\nThe function-file is missing.\nPlease install me again.");
@@ -266,28 +271,39 @@ const IMAGES={"leftarrow":"data:image/gif;base64,R0lGODlhIwAaAPcAAEQWBLyCVIROJKR
 // task_new_plant task_new_product
 //patch0803
 // 13102016
-const NPC=[[,0.5,1.1,1.34,2.75,3.95,8.05,17.8,18.5,"f85","f110","f180","f280",,,,,0.16,0.52,1.02,1.44,1.96,2.28,3.8,3.69,"f340",4.38,"f510","f590",12.4,"f650",3.49,5.19,8.75,6,15.63,16.88,37.5,3.9,52.44,51.75,60.25,58.13,66.19,18.2,"c79",150,,1200,,1200,,,,,4500,,14400,1200,,"c125",,"c23",,4800,4200,,,,,,,,750,2100,"c25",,,,,,,10800,12000,,1500,3300,,,,,"f650","f1500","f1500",5000,12000,"c10",,"c20",,"c5","c5","c5","c5",,"c5",,,10.12,3.72,"f155.1","f545.7",37.42,23.32,7.44,82.36,"f106.8","f148.8","f69.6","f196.8","f278.4","f408","f240","f324","f250","f864",47.15,140.56,125.88,,"f12.8","f73.5","f127","f106","f53.05","f113.75","f44","f33.33","f71.3","f73.2","f181.2","f321","f316","f491","f350","f484.2","f906.5","f421.7","f473.5","f749.98","f237.1","f675","f975",12.25,37.5,"f1025","f1100","f810",,"f231","f6500","f58","f137.67","f197.67","f342.5","f830","f700.5","f1063.2","f704.42","f734","f339.53",3.1,3.15,3.27,7.3,4.9,5.92,6.61,6.1,7.3,5.6,5.2,3.6,10,8.1,23.5,7.8,8.2,,,,,,,,,,,,,"f410","f490","f503","f589","f469","f1312","f598","f533","f480","f420","f1620","f1030","f675","f950","f2350","f2400","f2450","f3550","f3600","f3650","f8000","f8000",,,,,,,,,,,,,,,,,,,,,,,,,,,,,3.7,3,3.3,3.45,5.1,8.20,2.1,4.3,1.95,8.85,1.4,2.1,4.8,4.85,7.4,5,5.1,2.3,3.95,10.6,11,3.5,2.9,3.6,3.2,3.95,4.3,,,,,,,,,,,,,,,,,,,,,,,,"f1618","f1340","f1836","f1654","f1579",,,"f1839",,"f2655",,"f2165",,"f2877",,"f2462",,"f3093",,"f3289","f3138",,"f3622",,"f3300","f4636","f3980","f4872", "f4408", "f4157", "f2794",,, "f4678",,"f2910","f6309",,"f5230",,"f6554",,"f5624",,,"f6786",,"f7078","f6676",,"f600","f14.5","f9","f42","f22","f24","f185","f7.5","f92.5","f9.9","f12.8","f12.5",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"f7544",,"f4725",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"f315.9","f671.77","f273","f600.9","f666.53","f1581.6","f504","f308.75","f528.4","f568","f450","f320.25","f348","f405.6","f940","f1004","f541","f439.75","f1024","f893.66","f746.40","f543.5","f650","f495","f732.2","f447.6","f592.04","f822","f753.33","f368","f372.85","f416.67","f701.33","f1346",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"f610",,"f560","f610","f550",,"f700",,,,,,,,,,,,,,,,,,,,,,,,,,,,"f930","f890","f890","f3080",,"f820",,,,,,,,,,,,,,,,,,,,,,,,"f1140",,,"f720","f700","f290","f1340",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"f46","f11","f19","f38","f13.5","f9.5","f34.5","f21","f30","f50",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"f1450","f2310","f2930","f2100","f2780","f3260","f3850","f2330","f4330","f2140"],{},[],[]];
+const NPC=[[,0.5,1.1,1.34,2.75,3.95,8.05,17.8,18.5,"f85","f110","f180","f280",,,,,0.16,0.52,1.02,1.44,1.96,2.28,3.8,3.69,"f340",4.38,"f510","f590",12.4,"f650",3.49,5.19,8.75,6,15.63,16.88,37.5,3.9,52.44,51.75,60.25,58.13,66.19,18.2,"c79",150,,1200,,1200,,,,,4500,,14400,1200,,"c125",,"c23",,4800,4200,,,,,,,,750,2100,"c25",,,,,,,10800,12000,,1500,3300,,,,,"f650","f1500","f1500",5000,12000,"c10",,"c20",,"c5","c5","c5","c5",,"c5",,,10.12,3.72,"f155.1","f545.7",37.42,23.32,7.44,82.36,"f106.8","f148.8","f69.6","f196.8","f278.4","f408","f240","f324","f250","f864",47.15,140.56,125.88,,"f12.8","f73.5","f127","f106","f53.05","f113.75","f44","f33.33","f71.3","f73.2","f181.2","f321","f316","f491","f350","f484.2","f906.5","f421.7","f473.5","f749.98","f237.1","f675","f975",12.25,37.5,"f1025","f1100","f810",,"f231","f6500","f58","f137.67","f197.67","f342.5","f830","f700.5","f1063.2","f704.42","f734","f339.53",3.1,3.15,3.27,7.3,4.9,5.92,6.61,6.1,7.3,5.6,5.2,3.6,10,8.1,23.5,7.8,8.2,,,,,,,,,,,,,"f410","f490","f503","f589","f469","f1312","f598","f533","f480","f420","f1620","f1030","f675","f950","f2350","f2400","f2450","f3550","f3600","f3650","f8000","f8000",,,,,,,,,,,,,,,,,,,,,,,,,,,,,3.7,3,3.3,3.45,5.1,8.20,2.1,4.3,1.95,8.85,1.4,2.1,4.8,4.85,7.4,5,5.1,2.3,3.95,10.6,11,3.5,2.9,3.6,3.2,3.95,4.3,,,,,,,,,,,,,,,,,,,,,,,,"f1618","f1340","f1836","f1654","f1579",,,"f1839",,"f2655",,"f2165",,"f2877",,"f2462",,"f3093",,"f3289","f3138",,"f3622",,"f3300","f4636","f3980","f4872", "f4408", "f4157", "f2794",,, "f4678",,"f2910","f6309",,"f5230",,"f6554",,"f5624",,,"f6786",,"f7078","f6676",,"f600","f14.5","f9","f42","f22","f24","f185","f7.5","f92.5","f9.9","f12.8","f12.5",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"f7544",,"f4725",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"f315.9","f671.77","f273","f600.9","f666.53","f1581.6","f504","f308.75","f528.4","f568","f450","f320.25","f348","f405.6","f940","f1004","f541","f439.75","f1024","f893.66","f746.40","f543.5","f650","f495","f732.2","f447.6","f592.04","f822","f753.33","f368","f372.85","f416.67","f701.33","f1346",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"f610",,"f560","f610","f550",,"f700",,,,,,,,,,,,,,,,,,,,,,,,,,,,"f930","f890","f890","f3080",,"f820",,,,,,,,,,,,,,,,,,,,,,,,"f1140",,,"f720","f700","f290","f1340",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"f46","f11","f19","f38","f13.5","f9.5","f34.5","f21","f30","f50",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"f1450","f2310","f2930","f2100","f2780","f3260","f3850","f2330","f4330","f2140",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"f200","f170","f210","f190","f140","f380","f120","f240","f260","f290","f200","f320","f410","f350","f590","f160","f470","f440","f420","f600"],{},[],[]];
 
-    /*var new_NPC=NPC.clone();
-    new_NPC[0][750]='f1450';
-    console.log(implode(new_NPC));*/
+    /*
+    var new_NPC=NPC.clone();
+    for(var x=800; x<=819; x++){
+        new_NPC[0][x]='f'+unsafeWindow.produkt_price[''+x];
+    }
+    console.log(implode(new_NPC));
+    */
 
 // task_new_product
 const INIT_NPC_SAISON={"94":false,"95":false,"96":false,"98":false,"100":false,"101":false,"102":false,"103":false,"105":false};
 // task_new_zone
-const ALL_ZONES = {"farm":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36],"farmersmarket":["farmersmarket-0","farmersmarket-1","farmersmarket-2","farmersmarket-3","farmersmarket-4","farmersmarket-5","farmersmarket-6","farmersmarket-7"],"forestry":["forest","sawmill","carpentry"],"city":["windmill"],"foodworld":["foodworld-0","foodworld-1","foodworld-2","foodworld-3","foodworld-4"],"megafield":["megafield"]};
+const ALL_ZONES = {"farm":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36],"farmersmarket":["farmersmarket-0","farmersmarket-1","farmersmarket-2","farmersmarket-3","farmersmarket-4","farmersmarket-5","farmersmarket-6","farmersmarket-7","farmersmarket-8"],"forestry":["forest","sawmill","carpentry"],"city":["windmill"],"foodworld":["foodworld-0","foodworld-1","foodworld-2","foodworld-3","foodworld-4"],"megafield":["megafield"]};
 unsafeData.ALL_ZONES=ALL_ZONES.clone();
 // task_new_zone
-const DATA_zones = {"1":{"location":"farm","farmNr":0,"zoneNr":1,"productional":true},"2":{"location":"farm","farmNr":0,"zoneNr":2,"productional":true},"3":{"location":"farm","farmNr":0,"zoneNr":3,"productional":true},"4":{"location":"farm","farmNr":0,"zoneNr":4,"productional":true},"5":{"location":"farm","farmNr":0,"zoneNr":5,"productional":true},"6":{"location":"farm","farmNr":0,"zoneNr":6,"productional":true},"7":{"location":"farm","farmNr":1,"zoneNr":1,"productional":true},"8":{"location":"farm","farmNr":1,"zoneNr":2,"productional":true},"9":{"location":"farm","farmNr":1,"zoneNr":3,"productional":true},"10":{"location":"farm","farmNr":1,"zoneNr":4,"productional":true},"11":{"location":"farm","farmNr":1,"zoneNr":5,"productional":true},"12":{"location":"farm","farmNr":1,"zoneNr":6,"productional":true},"13":{"location":"farm","farmNr":2,"zoneNr":1,"productional":true},"14":{"location":"farm","farmNr":2,"zoneNr":2,"productional":true},"15":{"location":"farm","farmNr":2,"zoneNr":3,"productional":true},"16":{"location":"farm","farmNr":2,"zoneNr":4,"productional":true},"17":{"location":"farm","farmNr":2,"zoneNr":5,"productional":true},"18":{"location":"farm","farmNr":2,"zoneNr":6,"productional":true},"19":{"location":"farm","farmNr":3,"zoneNr":1,"productional":true},"20":{"location":"farm","farmNr":3,"zoneNr":2,"productional":true},"21":{"location":"farm","farmNr":3,"zoneNr":3,"productional":true},"22":{"location":"farm","farmNr":3,"zoneNr":4,"productional":true},"23":{"location":"farm","farmNr":3,"zoneNr":5,"productional":true},"24":{"location":"farm","farmNr":3,"zoneNr":6,"productional":true},"25":{"location":"farm","farmNr":4,"zoneNr":1,"productional":true},"26":{"location":"farm","farmNr":4,"zoneNr":2,"productional":true},"27":{"location":"farm","farmNr":4,"zoneNr":3,"productional":true},"28":{"location":"farm","farmNr":4,"zoneNr":4,"productional":true},"29":{"location":"farm","farmNr":4,"zoneNr":5,"productional":true},"30":{"location":"farm","farmNr":4,"zoneNr":6,"productional":true},"31":{"location":"farm","farmNr":5,"zoneNr":1,"productional":true},"32":{"location":"farm","farmNr":5,"zoneNr":2,"productional":true},"33":{"location":"farm","farmNr":5,"zoneNr":3,"productional":true},"34":{"location":"farm","farmNr":5,"zoneNr":4,"productional":true},"35":{"location":"farm","farmNr":5,"zoneNr":5,"productional":true},"36":{"location":"farm","farmNr":5,"zoneNr":6,"productional":true},"windmill":{"location":"city","cityNr":2,"zoneNr":1,"productional":true},"forest":{"location":"forestry","productional":true},"sawmill":{"location":"forestry","zoneNr":1,"productional":true},"carpentry":{"location":"forestry","zoneNr":2,"productional":true},"foodworld-0":{"location":"foodworld","productional":false},"foodworld-1":{"location":"foodworld","zoneNr":1,"productional":true},"foodworld-2":{"location":"foodworld","zoneNr":2,"productional":true},"foodworld-3":{"location":"foodworld","zoneNr":3,"productional":true},"foodworld-4":{"location":"foodworld","zoneNr":4,"productional":true},"farmersmarket-0":{"location":"farmersmarket","productional":false},"farmersmarket-1":{"location":"farmersmarket","zoneNr":1,"productional":true},"farmersmarket-2":{"location":"farmersmarket","zoneNr":2,"productional":true},"farmersmarket-3":{"location":"farmersmarket","zoneNr":3,"productional":true},"farmersmarket-4":{"location":"farmersmarket","zoneNr":4,"productional":true},"farmersmarket-5":{"location":"farmersmarket","zoneNr":5,"productional":true},"farmersmarket-6":{"location":"farmersmarket","zoneNr":6,"productional":true},"farmersmarket-7":{"location":"farmersmarket","productional":true},"megafield":{"location":"megafield","zoneNr":1,"productional":true}};
+const DATA_zones = {"1":{"location":"farm","farmNr":0,"zoneNr":1,"productional":true},"2":{"location":"farm","farmNr":0,"zoneNr":2,"productional":true},"3":{"location":"farm","farmNr":0,"zoneNr":3,"productional":true},"4":{"location":"farm","farmNr":0,"zoneNr":4,"productional":true},"5":{"location":"farm","farmNr":0,"zoneNr":5,"productional":true},"6":{"location":"farm","farmNr":0,"zoneNr":6,"productional":true},"7":{"location":"farm","farmNr":1,"zoneNr":1,"productional":true},"8":{"location":"farm","farmNr":1,"zoneNr":2,"productional":true},"9":{"location":"farm","farmNr":1,"zoneNr":3,"productional":true},"10":{"location":"farm","farmNr":1,"zoneNr":4,"productional":true},"11":{"location":"farm","farmNr":1,"zoneNr":5,"productional":true},"12":{"location":"farm","farmNr":1,"zoneNr":6,"productional":true},"13":{"location":"farm","farmNr":2,"zoneNr":1,"productional":true},"14":{"location":"farm","farmNr":2,"zoneNr":2,"productional":true},"15":{"location":"farm","farmNr":2,"zoneNr":3,"productional":true},"16":{"location":"farm","farmNr":2,"zoneNr":4,"productional":true},"17":{"location":"farm","farmNr":2,"zoneNr":5,"productional":true},"18":{"location":"farm","farmNr":2,"zoneNr":6,"productional":true},"19":{"location":"farm","farmNr":3,"zoneNr":1,"productional":true},"20":{"location":"farm","farmNr":3,"zoneNr":2,"productional":true},"21":{"location":"farm","farmNr":3,"zoneNr":3,"productional":true},"22":{"location":"farm","farmNr":3,"zoneNr":4,"productional":true},"23":{"location":"farm","farmNr":3,"zoneNr":5,"productional":true},"24":{"location":"farm","farmNr":3,"zoneNr":6,"productional":true},"25":{"location":"farm","farmNr":4,"zoneNr":1,"productional":true},"26":{"location":"farm","farmNr":4,"zoneNr":2,"productional":true},"27":{"location":"farm","farmNr":4,"zoneNr":3,"productional":true},"28":{"location":"farm","farmNr":4,"zoneNr":4,"productional":true},"29":{"location":"farm","farmNr":4,"zoneNr":5,"productional":true},"30":{"location":"farm","farmNr":4,"zoneNr":6,"productional":true},"31":{"location":"farm","farmNr":5,"zoneNr":1,"productional":true},"32":{"location":"farm","farmNr":5,"zoneNr":2,"productional":true},"33":{"location":"farm","farmNr":5,"zoneNr":3,"productional":true},"34":{"location":"farm","farmNr":5,"zoneNr":4,"productional":true},"35":{"location":"farm","farmNr":5,"zoneNr":5,"productional":true},"36":{"location":"farm","farmNr":5,"zoneNr":6,"productional":true},"windmill":{"location":"city","cityNr":2,"zoneNr":1,"productional":true},"forest":{"location":"forestry","productional":true},"sawmill":{"location":"forestry","zoneNr":1,"productional":true},"carpentry":{"location":"forestry","zoneNr":2,"productional":true},"foodworld-0":{"location":"foodworld","productional":false},"foodworld-1":{"location":"foodworld","zoneNr":1,"productional":true},"foodworld-2":{"location":"foodworld","zoneNr":2,"productional":true},"foodworld-3":{"location":"foodworld","zoneNr":3,"productional":true},"foodworld-4":{"location":"foodworld","zoneNr":4,"productional":true},"farmersmarket-0":{"location":"farmersmarket","productional":false},"farmersmarket-1":{"location":"farmersmarket","zoneNr":1,"productional":true},"farmersmarket-2":{"location":"farmersmarket","zoneNr":2,"productional":true},"farmersmarket-3":{"location":"farmersmarket","zoneNr":3,"productional":true},"farmersmarket-4":{"location":"farmersmarket","zoneNr":4,"productional":true},"farmersmarket-5":{"location":"farmersmarket","zoneNr":5,"productional":true},"farmersmarket-6":{"location":"farmersmarket","zoneNr":6,"productional":true},"farmersmarket-7":{"location":"farmersmarket","productional":true},"farmersmarket-8":{"location":"farmersmarket","zoneNr":8,"productional":true},"megafield":{"location":"megafield","zoneNr":1,"productional":true}};
 // All single-slot-zones themselves and all slots of multi-slot-zones
 var ALL_SLOTS={};
 // [farm, forestry, recipes, powerups]
 // Growing duration in minutes (just where game data has to be overridden)
 // task_new_plant task_new_product task_fix_growtime
 //13102016
-const PRODUCT_GROWTIME=[{"7":480,"8":960,"19":240,"20":480,"21":600,"22":500,"23":800,"24":720,"92":0,"93":0,"111":1000,"130":180,"131":180,"132":90,"133":90,"134":200,"135":200,"136":100,"137":130,"138":150,"139":80,"140":80,"141":120,"142":120,"143":120,"145":300,"146":240,"147":300,"148":480,"149":220,"150":360,"159":0,"160":0,"161":210,"162":130,"163":260,"164":190,"165":160,"166":195,"167":250,"168":90,"169":150,"170":300,"300":420,"301":315,"302":480,"303":450,"304":480,"305":240,"306":240,"307":285,"308":240,"309":285,"310":240,"311":300,"312":240,"313":240,"314":240,"315":570,"316":240,"317":330,"318":240,"319":450,"320":330,"321":240,"322":300,"323":240,"324":240,"325":420,"326":315,"327":480,"328":450,"329":480,"330":120,"331":240,"332":240,"333":285,"334":240,"335":120,"336":285,"337":240,"338":300,"339":240,"340":240,"341":240,"342":570,"343":240,"344":120,"345":330,"346":240,"347":450,"348":330,"349":240,"351":480,"352":360,"353":720,"354":720,"355":1320,"356":2880,"357":480,"358":1440,"359":480,"360":1440,"361":180,"400":300,"401":240,"402":300,"403":240,"450":132,"451":56,"452":168,"453":132,"454":192,"455":144,"456":116,"457":120,"458":144,"459":132,"460":160,"461":168,"462":208,"463":180,"464":132,"465":168,"466":192,"467":208,"468":176,"469":192,"470":180,"471":152,"472":132,"473":144,"474":192,"475":160,"476":204,"477":224,"478":128,"479":160,"480":192,"481":180,"482":204,"483":144,"600":240,"601":180,"602":720,"603":480,"604":240,"605":340,"606":600,"607":140,"608":260,"609":480,"630":240,"631":210,"632":200,"633":200,"634":220,"635":420,"636":180,"637":160,"638":280,"639":600,"660":180,"661":340,"662":600,"663":260,"664":480,"665":260,"666":300,"667":720,"668":720,"669":280,"700":720,"701":360,"701":360,"702":720,"703":2880,"704":480,"705":300,"706":600,"707":360,"708":240,"709":1440,"750":480,"751":720,"752":1440,"753":600,"754":2160,"755":1440,"756":2520,"757":1200,"758":1920,"759":1080}
+const PRODUCT_GROWTIME=[{"7":480,"8":960,"19":240,"20":480,"21":600,"22":500,"23":800,"24":720,"92":0,"93":0,"111":1000,"130":180,"131":180,"132":90,"133":90,"134":200,"135":200,"136":100,"137":130,"138":150,"139":80,"140":80,"141":120,"142":120,"143":120,"145":300,"146":240,"147":300,"148":480,"149":220,"150":360,"159":0,"160":0,"161":210,"162":130,"163":260,"164":190,"165":160,"166":195,"167":250,"168":90,"169":150,"170":300,"300":420,"301":315,"302":480,"303":450,"304":480,"305":240,"306":240,"307":285,"308":240,"309":285,"310":240,"311":300,"312":240,"313":240,"314":240,"315":570,"316":240,"317":330,"318":240,"319":450,"320":330,"321":240,"322":300,"323":240,"324":240,"325":420,"326":315,"327":480,"328":450,"329":480,"330":120,"331":240,"332":240,"333":285,"334":240,"335":120,"336":285,"337":240,"338":300,"339":240,"340":240,"341":240,"342":570,"343":240,"344":120,"345":330,"346":240,"347":450,"348":330,"349":240,"351":480,"352":360,"353":720,"354":720,"355":1320,"356":2880,"357":480,"358":1440,"359":480,"360":1440,"361":180,"400":300,"401":240,"402":300,"403":240,"450":132,"451":56,"452":168,"453":132,"454":192,"455":144,"456":116,"457":120,"458":144,"459":132,"460":160,"461":168,"462":208,"463":180,"464":132,"465":168,"466":192,"467":208,"468":176,"469":192,"470":180,"471":152,"472":132,"473":144,"474":192,"475":160,"476":204,"477":224,"478":128,"479":160,"480":192,"481":180,"482":204,"483":144,"600":240,"601":180,"602":720,"603":480,"604":240,"605":340,"606":600,"607":140,"608":260,"609":480,"630":240,"631":210,"632":200,"633":200,"634":220,"635":420,"636":180,"637":160,"638":280,"639":600,"660":180,"661":340,"662":600,"663":260,"664":480,"665":260,"666":300,"667":720,"668":720,"669":280,"700":720,"701":360,"702":720,"703":2880,"704":480,"705":300,"706":600,"707":360,"708":240,"709":1440,"750":480,"751":720,"752":1440,"753":600,"754":2160,"755":1440,"756":2520,"757":1200,"758":1920,"759":1080,"800":360,"801":240,"802":240,"803":480,"804":120,"805":600,"806":240,"807":720,"808":360,"809":360,"810":240,"811":480,"812":600,"813":180,"814":720,"815":360,"816":420,"817":300,"818":240,"819":360}
                        ,{"1":600,"2":960,"3":2160,"4":480,"5":2750,"6":490,"7":1200,"8":2520,"9":2790,"10":1440,"41":300,"42":345,"43":360,"44":270,"45":300,"46":330,"47":420,"48":480,"49":510,"50":180,"51":210,"52":240,"53":480,"54":510,"55":540,"56":300,"57":375,"58":470,"59":360,"60":450,"61":420,"62":290,"63":410,"64":530,"65":480,"66":510,"67":540,"101":240,"102":700,"103":640,"104":360,"105":960,"106":90,"107":120,"108":1320,"109":570,"110":330,"111":160,"112":935,"113":120,"114":300,"115":180,"116":1040,"117":1920,"118":300,"119":1440,"120":2010,"121":480,"122":300,"123":840,"124":690,"125":120,"126":240,"127":255,"128":525,"129":375,"130":410,"131":480,"132":225,"133":120,"134":1080,"143":720,"144":480,"146":400,"148":1440,"149":240,"150":480,"151":720,"152":600,"153":360,"154":960,"200":300,"201":300,"202":300,"203":300,"204":300,"205":300,"206":300,"207":300,"208":300,"209":300,"210":300,"211":300,"212":300,"213":300,"214":300,"215":300,"500":0,"501":0,"502":0,"511":0,"512":0}
                        ];
+/*
+var new_PRODUCT_GROWTIME=PRODUCT_GROWTIME.clone();
+   for(var v=800;v<=819;v++){
+       new_PRODUCT_GROWTIME[0][v]=Math.round(parseInt(unsafeWindow.produkt_zeit[v],10)/60);
+}
+console.log(implode(new_PRODUCT_GROWTIME))
+*/
 
 // Points earned at cropping (just where game data has to be overridden)
 // task_new_plant task_new_product task_fix_points
@@ -308,19 +324,27 @@ const PRODUCT_QUEST=[{"117":["main",2,15],"118":["main",2,25],"119":["main",2,35
 // Required products to produce in format -> "prodId": [[type_p1, prodId_p1, amount_p1], [type_p2, prodId_p2, amount_p2], ...]
 // [-1, amount] is money; [0, 0, amount] are coins
 // 13102016
-const PRODUCT_REQUIRE=[{"25":[[0,9,30]],"27":[[0,10,12]],"28":[[0,11,8]],"30":[[0,12,5]],"111":[[0,110,5]],"116":[[0,2,1980]],"117":[[0,7,550]],"118":[[0,4,1020]],"119":[[0,38,650]],"120":[[0,42,110]],"121":[[0,43,100]],"122":[[0,112,130],[0,116,35]],"123":[[0,113,220],[0,117,35]],"124":[[0,114,345],[0,118,35]],"125":[[0,115,80],[0,119,35]],"130":[[0,17,400]],"131":[[0,21,150]],"132":[[0,20,100],[0,10,2]],"133":[[0,19,100],[0,10,2]],"134":[[0,17,400],[0,6,25]],"135":[[0,21,150],[0,6,25]],"136":[[0,2,120]],"137":[[0,1,200]],"138":[[0,1,200],[0,23,30]],"139":[[0,18,150],[0,22,30]],"140":[[0,21,150],[0,22,30]],"141":[[0,26,100],[0,144,3]],"142":[[0,26,100],[0,25,3]],"143":[[0,26,100],[0,25,3],[0,144,3]],"144":[[0,21,450]],"145":[[0,33,300],[0,12,2]],"146":[[0,35,200],[0,10,4],[0,12,2]],"147":[[0,37,60],[0,12,2]],"148":[[0,31,250],[0,26,150],[0,27,7]],"149":[[0,21,300],[0,43,10],[0,22,50],[0,121,4]],"150":[[0,38,60],[0,119,6],[0,17,50]],"152":[[0,151,5]],"155":[[0,152,5],[0,28,6]],"156":[[0,152,8],[0,28,5]],"157":[[0,152,2],[0,28,9]],"161":[[0,1,300],[0,17,150]],"162":[[0,1,250],[0,20,200]],"163":[[0,22,190],[0,26,120]],"164":[[0,1,150],[0,10,30]],"165":[[0,10,10],[0,12,5]],"166":[[0,10,10],[0,27,7]],"167":[[0,40,60],[0,111,10]],"168":[[0,10,10],[0,42,25]],"169":[[0,6,300],[0,9,15],[0,121,3]],"170":[[0,1,200],[0,43,20],[0,121,4]],"200":[[-1,1200],[0,171,24],[0,172,20],[0,173,12]],"201":[[-1,1400],[0,171,25],[0,172,18],[0,174,15]],"202":[[-1,1500],[0,172,22],[0,173,19],[0,174,16]],"203":[[-1,1460],[0,172,19],[0,173,16],[0,175,29]],"204":[[-1,1510],[0,171,7],[0,173,18],[0,174,8],[0,176,21]],"205":[[-1,1622],[0,171,14],[0,173,22],[0,176,10],[0,177,12]],"206":[[-1,1787],[0,174,16],[0,176,9],[0,177,10],[0,178,9]],"207":[[-1,1894],[0,173,15],[0,175,10],[0,177,11],[0,179,8]],"208":[[-1,1950],[0,173,12],[0,175,13],[0,178,15],[0,180,18]],"209":[[-1,2110],[0,171,12],[0,176,21],[0,179,7],[0,181,9]],"210":[[-1,2250],[0,171,12],[0,175,5],[0,179,34],[0,182,11]],"211":[[-1,2357],[0,172,9],[0,176,12],[0,181,22],[0,183,18]],"212":[[-1,2488],[0,171,13],[0,182,13],[0,183,16],[0,184,6]],"213":[[-1,2595],[0,171,3],[0,179,8],[0,185,7],[0,186,9],[0,187,7]],"214":[[0,0,2],[0,171,10],[0,172,14],[0,173,13],[0,174,18]],"215":[[0,0,2],[0,171,12],[0,172,22],[0,174,10],[0,175,19]],"216":[[0,0,2],[0,173,14],[0,175,8],[0,177,19],[0,178,16]],"217":[[0,0,3],[0,171,19],[0,177,5],[0,178,17],[0,180,13]],"218":[[0,0,3],[0,180,9],[0,181,8],[0,182,9],[0,183,9]],"219":[[0,0,3],[0,179,4],[0,182,1],[0,185,6],[0,186,15],[0,187,7]],"220":[[-1,1500],[0,171,70],[0,172,180],[0,173,80],[0,174,80],[0,188,1]],"221":[[-1,1500],[0,171,80],[0,172,50],[0,173,65],[0,174,140],[0,189,1]],"300":[[-1,100],[0,250,240],[0,251,210]],"301":[[-1,200],[0,251,160],[0,252,200]],"302":[[-1,300],[0,252,230],[0,250,210]],"303":[[-1,400],[0,253,220],[0,252,150]],"304":[[-1,500],[0,253,150],[0,254,110]],"305":[[0,0,1],[0,254,90],[0,255,100]],"306":[[0,0,1],[0,256,80],[0,255,80]],"307":[[-1,600],[0,257,210],[0,256,160]],"308":[[0,0,1],[0,258,130],[0,257,160]],"309":[[-1,700],[0,259,190],[0,258,140]],"310":[[0,0,2],[0,260,90],[0,259,90]],"311":[[-1,800],[0,261,390],[0,260,390]],"312":[[0,0,2],[0,262,130],[0,261,150]],"313":[[-1,900],[0,263,180],[0,262,230]],"314":[[0,0,2],[0,264,90],[0,263,80]],"315":[[-1,1000],[0,265,100],[0,264,130]],"316":[[0,0,3],[0,266,130],[0,265,90]],"317":[[-1,1100],[0,267,290],[0,266,260]],"318":[[0,0,3],[0,268,160],[0,267,170]],"319":[[-1,1200],[0,269,130],[0,268,180]],"320":[[-1,1300],[0,270,90],[0,269,80]],"321":[[0,0,3],[0,271,50],[0,270,100]],"322":[[-1,1400],[0,272,380],[0,271,320]],"323":[[0,0,4],[0,273,190],[0,272,160]],"324":[[-1,1500],[0,272,321],[0,274,321]],"325":[[-1,1600],[0,250,480],[0,251,420]],"326":[[-1,1700],[0,251,320],[0,252,400]],"327":[[-1,1800],[0,250,420],[0,252,460]],"328":[[-1,1900],[0,252,300],[0,253,440]],"329":[[-1,2000],[0,253,300],[0,254,200]],"330":[[-1,2100],[0,273,71],[0,275,111]],"331":[[0,0,4],[0,254,180],[0,255,200]],"332":[[0,0,4],[0,255,160],[0,256,160]],"333":[[-1,2200],[0,256,320],[0,257,420]],"334":[[0,0,4],[0,257,320],[0,258,260]],"335":[[-1,2300],[0,272,111],[0,274,90]],"336":[[-1,2400],[0,258,280],[0,259,380]],"337":[[0,0,5],[0,259,180],[0,260,180]],"338":[[-1,2500],[0,260,780],[0,261,780]],"339":[[0,0,5],[0,261,300],[0,262,160]],"340":[[-1,2600],[0,262,460],[0,263,360]],"341":[[0,0,5],[0,263,160],[0,264,180]],"342":[[-1,2700],[0,264,260],[0,265,200]],"343":[[0,0,6],[0,265,180],[0,266,260]],"344":[[0,0,6],[0,256,71],[0,276,51]],"345":[[-1,2800],[0,266,520],[0,267,580]],"346":[[0,0,6],[0,267,340],[0,268,320]],"347":[[-1,2900],[0,268,360],[0,269,260]],"348":[[-1,3000],[0,269,160],[0,270,180]],"349":[[0,0,6],[0,270,200],[0,271,100]],"400":[[-1,3100],[0,271,640],[0,272,760]],"401":[[0,0,7],[0,272,320],[0,273,380]],"402":[[-1,3200],[0,272,181],[0,275,221]],"403":[[0,0,7],[0,257,111],[0,276,141]],"450":[[0,20,190],[0,10,15]],"451":[[0,33,120],[0,111,5]],"452":[[0,34,100],[0,9,15]],"453":[[0,35,150],[0,10,10]],"454":[[0,36,190],[0,10,12]],"455":[[0,37,200],[0,9,8]],"456":[[0,40,40],[0,10,8]],"457":[[0,351,20],[0,9,8]],"458":[[0,356,10],[0,10,12]],"459":[[0,361,18],[0,111,8]],"460":[[0,360,14],[0,10,15]],"461":[[0,357,18],[0,10,16]],"462":[[0,352,16],[0,9,20]],"463":[[0,353,20],[0,10,18]],"464":[[0,359,22],[0,111,14]],"465":[[0,355,12],[0,9,16]],"466":[[0,354,15],[0,111,8],[0,12,5]],"467":[[0,358,14],[0,10,12],[0,9,16]],"468":[[0,10,6],[0,356,20]],"469":[[0,6,40],[0,37,120],[0,352,60]],"470":[[0,351,120],[0,355,50],[0,359,80]],"471":[[0,10,12],[0,351,100],[0,360,40]],"472":[[0,10,20],[0,360,100]],"473":[[0,352,120],[0,357,120]],"474":[[0,6,20],[0,117,6],[0,154,50]],"475":[[0,9,20],[0,44,40],[0,153,40]],"476":[[0,6,15],[0,111,6],[0,115,25]],"477":[[0,1,200],[0,27,12],[0,351,80]],"478":[[0,39,20],[0,111,6]],"479":[[0,1,250],[0,9,10],[0,41,20]],"480":[[0,10,10],[0,12,10],[0,352,30]],"481":[[0,111,6],[0,355,12],[0,359,25]],"482":[[0,1,200],[0,9,8],[0,356,20]],"483":[[0,10,10],[0,111,8],[0,127,15]],"600":[[-1,200],[0,1,340],[0,10,3],[0,12,4]],"601":[[0,0,1],[0,6,60],[0,17,500],[0,111,12]],"602":[[-1,300],[0,1,500],[0,2,200],[0,3,200],[0,26,20]],"603":[[-1,600],[0,8,15],[0,108,100],[0,109,150]],"604":[[-1,400],[0,32,50],[0,33,30],[0,34,30]],"605":[[0,0,4],[0,9,12],[0,10,10],[0,27,10]],"606":[[-1,800],[0,3,220],[0,6,150],[0,18,200],[0,23,30]],"607":[[0,0,2],[0,5,220],[0,17,500],[0,24,200],[0,111,20]],"608":[[0,0,3],[0,1,400],[0,10,8],[0,37,20],[0,111,6]],"609":[[0,0,2],[0,35,30],[0,36,10],[0,37,20]],"630":[[0,0,2],[0,28,7],[0,30,12],[0,109,100]],"631":[[0,0,3],[0,11,17],[0,26,20],[0,29,20],[0,35,20]],"632":[[0,0,1],[0,7,20],[0,17,300],[0,28,10]],"633":[[0,0,4],[0,2,350],[0,11,12],[0,28,8]],"634":[[-1,300],[0,1,400],[0,6,50],[0,28,5]],"635":[[-1,400],[0,11,10],[0,17,420],[0,38,100]],"636":[[-1,200],[0,19,30],[0,30,5],[0,38,20]],"637":[[-1,600],[0,24,60],[0,34,200],[0,35,30],[0,111,18]],"638":[[0,0,2],[0,28,18],[0,153,40]],"639":[[-1,800],[0,9,13],[0,21,100],[0,26,80]],"660":[[0,0,4],[0,11,15],[0,17,450],[0,28,11]],"661":[[0,0,2],[0,4,250],[0,11,17],[0,20,30],[0,23,60]],"662":[[0,0,2],[0,4,300],[0,5,75],[0,36,25],[0,108,20]],"663":[[-1,800],[0,8,40],[0,11,11],[0,108,140],[0,109,200]],"664":[[0,0,1],[0,2,250],[0,7,25],[0,8,25]],"665":[[0,0,3],[0,1,460],[0,4,80],[0,11,17]],"666":[[-1,400],[0,3,100],[0,11,8],[0,18,0],[0,24,50]],"667":[[-1,300],[0,1,400],[0,7,30],[0,11,6]],"668":[[-1,200],[0,5,100],[0,6,30],[0,18,200]],"669":[[-1,600],[0,11,10],[0,28,7],[0,33,20]]
-,"750":[[0,700,30],[0,701,60],[0,702,30]]
-,"751":[[0,701,100],[0,702,70],[0,703,30]]
-,"752":[[0,702,100],[0,703,80],[0,704,120]]
-,"753":[[0,703,40],[0,704,60],[0,705,120]]
-,"754":[[0,704,330],[0,705,450],[0,706,30]]
-,"755":[[0,705,300],[0,706,80],[0,707,80]]
-,"756":[[0,706,100],[0,707,200],[0,708,100]]
-,"757":[[0,707,80],[0,708,100],[0,709,50]]
-,"758":[[0,708,110],[0,709,65],[0,700,80]]
-,"759":[[0,709,50],[0,700,80],[0,701,70]]
-
-
+const PRODUCT_REQUIRE=[{"25":[[0,9,30]],"27":[[0,10,12]],"28":[[0,11,8]],"30":[[0,12,5]],"111":[[0,110,5]],"116":[[0,2,1980]],"117":[[0,7,550]],"118":[[0,4,1020]],"119":[[0,38,650]],"120":[[0,42,110]],"121":[[0,43,100]],"122":[[0,112,130],[0,116,35]],"123":[[0,113,220],[0,117,35]],"124":[[0,114,345],[0,118,35]],"125":[[0,115,80],[0,119,35]],"130":[[0,17,400]],"131":[[0,21,150]],"132":[[0,20,100],[0,10,2]],"133":[[0,19,100],[0,10,2]],"134":[[0,17,400],[0,6,25]],"135":[[0,21,150],[0,6,25]],"136":[[0,2,120]],"137":[[0,1,200]],"138":[[0,1,200],[0,23,30]],"139":[[0,18,150],[0,22,30]],"140":[[0,21,150],[0,22,30]],"141":[[0,26,100],[0,144,3]],"142":[[0,26,100],[0,25,3]],"143":[[0,26,100],[0,25,3],[0,144,3]],"144":[[0,21,450]],"145":[[0,33,300],[0,12,2]],"146":[[0,35,200],[0,10,4],[0,12,2]],"147":[[0,37,60],[0,12,2]],"148":[[0,31,250],[0,26,150],[0,27,7]],"149":[[0,21,300],[0,43,10],[0,22,50],[0,121,4]],"150":[[0,38,60],[0,119,6],[0,17,50]],"152":[[0,151,5]],"155":[[0,152,5],[0,28,6]],"156":[[0,152,8],[0,28,5]],"157":[[0,152,2],[0,28,9]],"161":[[0,1,300],[0,17,150]],"162":[[0,1,250],[0,20,200]],"163":[[0,22,190],[0,26,120]],"164":[[0,1,150],[0,10,30]],"165":[[0,10,10],[0,12,5]],"166":[[0,10,10],[0,27,7]],"167":[[0,40,60],[0,111,10]],"168":[[0,10,10],[0,42,25]],"169":[[0,6,300],[0,9,15],[0,121,3]],"170":[[0,1,200],[0,43,20],[0,121,4]],"200":[[-1,1200],[0,171,24],[0,172,20],[0,173,12]],"201":[[-1,1400],[0,171,25],[0,172,18],[0,174,15]],"202":[[-1,1500],[0,172,22],[0,173,19],[0,174,16]],"203":[[-1,1460],[0,172,19],[0,173,16],[0,175,29]],"204":[[-1,1510],[0,171,7],[0,173,18],[0,174,8],[0,176,21]],"205":[[-1,1622],[0,171,14],[0,173,22],[0,176,10],[0,177,12]],"206":[[-1,1787],[0,174,16],[0,176,9],[0,177,10],[0,178,9]],"207":[[-1,1894],[0,173,15],[0,175,10],[0,177,11],[0,179,8]],"208":[[-1,1950],[0,173,12],[0,175,13],[0,178,15],[0,180,18]],"209":[[-1,2110],[0,171,12],[0,176,21],[0,179,7],[0,181,9]],"210":[[-1,2250],[0,171,12],[0,175,5],[0,179,34],[0,182,11]],"211":[[-1,2357],[0,172,9],[0,176,12],[0,181,22],[0,183,18]],"212":[[-1,2488],[0,171,13],[0,182,13],[0,183,16],[0,184,6]],"213":[[-1,2595],[0,171,3],[0,179,8],[0,185,7],[0,186,9],[0,187,7]],"214":[[0,0,2],[0,171,10],[0,172,14],[0,173,13],[0,174,18]],"215":[[0,0,2],[0,171,12],[0,172,22],[0,174,10],[0,175,19]],"216":[[0,0,2],[0,173,14],[0,175,8],[0,177,19],[0,178,16]],"217":[[0,0,3],[0,171,19],[0,177,5],[0,178,17],[0,180,13]],"218":[[0,0,3],[0,180,9],[0,181,8],[0,182,9],[0,183,9]],"219":[[0,0,3],[0,179,4],[0,182,1],[0,185,6],[0,186,15],[0,187,7]],"220":[[-1,1500],[0,171,70],[0,172,180],[0,173,80],[0,174,80],[0,188,1]],"221":[[-1,1500],[0,171,80],[0,172,50],[0,173,65],[0,174,140],[0,189,1]],"300":[[-1,100],[0,250,240],[0,251,210]],"301":[[-1,200],[0,251,160],[0,252,200]],"302":[[-1,300],[0,252,230],[0,250,210]],"303":[[-1,400],[0,253,220],[0,252,150]],"304":[[-1,500],[0,253,150],[0,254,110]],"305":[[0,0,1],[0,254,90],[0,255,100]],"306":[[0,0,1],[0,256,80],[0,255,80]],"307":[[-1,600],[0,257,210],[0,256,160]],"308":[[0,0,1],[0,258,130],[0,257,160]],"309":[[-1,700],[0,259,190],[0,258,140]],"310":[[0,0,2],[0,260,90],[0,259,90]],"311":[[-1,800],[0,261,390],[0,260,390]],"312":[[0,0,2],[0,262,130],[0,261,150]],"313":[[-1,900],[0,263,180],[0,262,230]],"314":[[0,0,2],[0,264,90],[0,263,80]],"315":[[-1,1000],[0,265,100],[0,264,130]],"316":[[0,0,3],[0,266,130],[0,265,90]],"317":[[-1,1100],[0,267,290],[0,266,260]],"318":[[0,0,3],[0,268,160],[0,267,170]],"319":[[-1,1200],[0,269,130],[0,268,180]],"320":[[-1,1300],[0,270,90],[0,269,80]],"321":[[0,0,3],[0,271,50],[0,270,100]],"322":[[-1,1400],[0,272,380],[0,271,320]],"323":[[0,0,4],[0,273,190],[0,272,160]],"324":[[-1,1500],[0,272,321],[0,274,321]],"325":[[-1,1600],[0,250,480],[0,251,420]],"326":[[-1,1700],[0,251,320],[0,252,400]],"327":[[-1,1800],[0,250,420],[0,252,460]],"328":[[-1,1900],[0,252,300],[0,253,440]],"329":[[-1,2000],[0,253,300],[0,254,200]],"330":[[-1,2100],[0,273,71],[0,275,111]],"331":[[0,0,4],[0,254,180],[0,255,200]],"332":[[0,0,4],[0,255,160],[0,256,160]],"333":[[-1,2200],[0,256,320],[0,257,420]],"334":[[0,0,4],[0,257,320],[0,258,260]],"335":[[-1,2300],[0,272,111],[0,274,90]],"336":[[-1,2400],[0,258,280],[0,259,380]],"337":[[0,0,5],[0,259,180],[0,260,180]],"338":[[-1,2500],[0,260,780],[0,261,780]],"339":[[0,0,5],[0,261,300],[0,262,160]],"340":[[-1,2600],[0,262,460],[0,263,360]],"341":[[0,0,5],[0,263,160],[0,264,180]],"342":[[-1,2700],[0,264,260],[0,265,200]],"343":[[0,0,6],[0,265,180],[0,266,260]],"344":[[0,0,6],[0,256,71],[0,276,51]],"345":[[-1,2800],[0,266,520],[0,267,580]],"346":[[0,0,6],[0,267,340],[0,268,320]],"347":[[-1,2900],[0,268,360],[0,269,260]],"348":[[-1,3000],[0,269,160],[0,270,180]],"349":[[0,0,6],[0,270,200],[0,271,100]],"400":[[-1,3100],[0,271,640],[0,272,760]],"401":[[0,0,7],[0,272,320],[0,273,380]],"402":[[-1,3200],[0,272,181],[0,275,221]],"403":[[0,0,7],[0,257,111],[0,276,141]],"450":[[0,20,190],[0,10,15]],"451":[[0,33,120],[0,111,5]],"452":[[0,34,100],[0,9,15]],"453":[[0,35,150],[0,10,10]],"454":[[0,36,190],[0,10,12]],"455":[[0,37,200],[0,9,8]],"456":[[0,40,40],[0,10,8]],"457":[[0,351,20],[0,9,8]],"458":[[0,356,10],[0,10,12]],"459":[[0,361,18],[0,111,8]],"460":[[0,360,14],[0,10,15]],"461":[[0,357,18],[0,10,16]],"462":[[0,352,16],[0,9,20]],"463":[[0,353,20],[0,10,18]],"464":[[0,359,22],[0,111,14]],"465":[[0,355,12],[0,9,16]],"466":[[0,354,15],[0,111,8],[0,12,5]],"467":[[0,358,14],[0,10,12],[0,9,16]],"468":[[0,10,6],[0,356,20]],"469":[[0,6,40],[0,37,120],[0,352,60]],"470":[[0,351,120],[0,355,50],[0,359,80]],"471":[[0,10,12],[0,351,100],[0,360,40]],"472":[[0,10,20],[0,360,100]],"473":[[0,352,120],[0,357,120]],"474":[[0,6,20],[0,117,6],[0,154,50]],"475":[[0,9,20],[0,44,40],[0,153,40]],"476":[[0,6,15],[0,111,6],[0,115,25]],"477":[[0,1,200],[0,27,12],[0,351,80]],"478":[[0,39,20],[0,111,6]],"479":[[0,1,250],[0,9,10],[0,41,20]],"480":[[0,10,10],[0,12,10],[0,352,30]],"481":[[0,111,6],[0,355,12],[0,359,25]],"482":[[0,1,200],[0,9,8],[0,356,20]],"483":[[0,10,10],[0,111,8],[0,127,15]],"600":[[-1,200],[0,1,340],[0,10,3],[0,12,4]],"601":[[0,0,1],[0,6,60],[0,17,500],[0,111,12]],"602":[[-1,300],[0,1,500],[0,2,200],[0,3,200],[0,26,20]],"603":[[-1,600],[0,8,15],[0,108,100],[0,109,150]],"604":[[-1,400],[0,32,50],[0,33,30],[0,34,30]],"605":[[0,0,4],[0,9,12],[0,10,10],[0,27,10]],"606":[[-1,800],[0,3,220],[0,6,150],[0,18,200],[0,23,30]],"607":[[0,0,2],[0,5,220],[0,17,500],[0,24,200],[0,111,20]],"608":[[0,0,3],[0,1,400],[0,10,8],[0,37,20],[0,111,6]],"609":[[0,0,2],[0,35,30],[0,36,10],[0,37,20]],"630":[[0,0,2],[0,28,7],[0,30,12],[0,109,100]],"631":[[0,0,3],[0,11,17],[0,26,20],[0,29,20],[0,35,20]],"632":[[0,0,1],[0,7,20],[0,17,300],[0,28,10]],"633":[[0,0,4],[0,2,350],[0,11,12],[0,28,8]],"634":[[-1,300],[0,1,400],[0,6,50],[0,28,5]],"635":[[-1,400],[0,11,10],[0,17,420],[0,38,100]],"636":[[-1,200],[0,19,30],[0,30,5],[0,38,20]],"637":[[-1,600],[0,24,60],[0,34,200],[0,35,30],[0,111,18]],"638":[[0,0,2],[0,28,18],[0,153,40]],"639":[[-1,800],[0,9,13],[0,21,100],[0,26,80]],"660":[[0,0,4],[0,11,15],[0,17,450],[0,28,11]],"661":[[0,0,2],[0,4,250],[0,11,17],[0,20,30],[0,23,60]],"662":[[0,0,2],[0,4,300],[0,5,75],[0,36,25],[0,108,20]],"663":[[-1,800],[0,8,40],[0,11,11],[0,108,140],[0,109,200]],"664":[[0,0,1],[0,2,250],[0,7,25],[0,8,25]],"665":[[0,0,3],[0,1,460],[0,4,80],[0,11,17]],"666":[[-1,400],[0,3,100],[0,11,8],[0,18,0],[0,24,50]],"667":[[-1,300],[0,1,400],[0,7,30],[0,11,6]],"668":[[-1,200],[0,5,100],[0,6,30],[0,18,200]],"669":[[-1,600],[0,11,10],[0,28,7],[0,33,20]],"750":[[0,700,30],[0,701,60],[0,702,30]],"751":[[0,701,100],[0,702,70],[0,703,30]],"752":[[0,702,100],[0,703,80],[0,704,120]],"753":[[0,703,40],[0,704,60],[0,705,120]],"754":[[0,704,330],[0,705,450],[0,706,30]],"755":[[0,705,300],[0,706,80],[0,707,80]],"756":[[0,706,100],[0,707,200],[0,708,100]],"757":[[0,707,80],[0,708,100],[0,709,50]],"758":[[0,708,110],[0,709,65],[0,700,80]],"759":[[0,709,50],[0,700,80],[0,701,70]]
+,"800":[[0,0,1],[0,1,400],[0,3,200],[0,6,60]]
+,"801":[[-1,30],[0,1,400],[0,2,260]]
+,"802":[[0,0,2],[0,17,420],[0,26,180]]
+,"803":[[0,0,3],[0,8,20],[0,109,80],[0,154,8]]
+,"804":[[-1,20],[0,5,60],[0,17,150]]
+,"805":[[-1,40],[0,2,250],[0,4,160]]
+,"806":[[0,0,5],[0,3,70],[0,6,50],[0,154,6]]
+,"807":[[-1,150],[0,4,100],[0,7,30]]
+,"808":[[0,0,7],[0,7,30],[0,8,20],[0,109,100]]
+,"809":[[-1,180],[0,5,80],[0,17,200],[0,26,80]]
+,"810":[[-1,250],[0,3,220],[0,17,330]]
+,"811":[[0,0,9],[0,2,160],[0,4,200],[0,7,50]]
+,"812":[[-1,500],[0,1,400],[0,8,50]]
+,"813":[[-1,500],[0,6,40],[0,26,80]]
+,"814":[[-1,1000],[0,5,220],[0,109,130]]
+,"815":[[0,0,15],[0,1,240],[0,154,18]]
+,"816":[[0,0,16],[0,6,50],[0,7,70],[0,8,20]]
+,"817":[[0,0,20],[0,2,250],[0,4,260],[0,26,180]]
+,"818":[[-1,1600],[0,5,30],[0,154,10]]
+,"819":[[-1,2000],[0,3,240],[0,109,180]]
 
 }
                       ,{"41":[[1,21,1]],"42":[[1,21,1]],"43":[[1,21,1]],"44":[[1,22,1]],"45":[[1,22,1]],"46":[[1,22,1]],"47":[[1,23,1]],"48":[[1,23,1]],"49":[[1,23,1]],"50":[[1,24,1]],"51":[[1,24,1]],"52":[[1,24,1]],"53":[[1,25,1]],"54":[[1,25,1]],"55":[[1,25,1]],"56":[[1,26,1]],"57":[[1,26,1]],"58":[[1,26,1]],"59":[[1,27,1]],"60":[[1,27,1]],"61":[[1,27,1]],"62":[[1,28,1]],"63":[[1,28,1]],"64":[[1,28,1]],"65":[[1,29,1]],"66":[[1,29,1]],"67":[[1,29,1]],"101":[[1,41,4]],"102":[[1,41,18],[1,42,2]],"103":[[1,44,11]],"104":[[1,42,1],[1,43,5]],"105":[[1,44,20],[1,45,50],[1,46,70]],"106":[[1,49,1]],"107":[[1,46,1]],"108":[[1,47,125],[1,48,65],[1,49,32]],"109":[[1,47,5]],"110":[[1,50,9],[1,51,4]],"111":[[1,52,4]],"112":[[1,50,12],[1,51,7],[1,52,6]],"113":[[1,42,1]],"114":[[1,41,1],[1,43,1]],"115":[[1,53,8],[1,55,2]],"116":[[1,53,120],[1,54,40],[1,55,40]],"117":[[1,53,80],[1,54,65],[1,55,125]],"118":[[1,53,6],[1,54,8]],"119":[[1,54,20],[1,55,25]],"120":[[1,54,35],[1,55,40]],"121":[[1,56,7],[1,57,3]],"122":[[1,58,9]],"123":[[1,57,4],[1,58,5]],"124":[[1,56,9],[1,57,4]],"125":[[1,58,3]],"126":[[1,61,5]],"127":[[1,60,3]],"128":[[1,60,6],[1,61,5]],"129":[[1,59,10],[1,60,8],[1,61,5]],"130":[[1,60,9],[1,61,8]],"131":[[1,59,6],[1,61,12]],"132":[[1,59,10],[1,60,8],[1,61,5]],"133":[[1,42,1]],"134":[[1,62,21],[1,63,15]],"143":[[1,62,21],[1,63,22],[1,64,15]],"144":[[1,64,15]],"146":[[1,45,12],[1,63,12],[1,46,6],[1,64,6]],"148":[[1,64,15],[1,63,10]],"149":[[1,65,10],[1,62,10]],"150":[[1,67,12],[1,46,12]],"151":[[1,67,6],[1,64,5]],"152":[[1,66,5],[1,64,7]],"153":[[1,64,6],[1,67,10]],"154":[[1,66,10],[1,64,10]],"200":[[1,41,12]],"201":[[0,0,2],[1,44,8]],"202":[[1,47,21]],"203":[[0,0,4],[1,51,20]],"204":[[1,42,6]],"205":[[0,0,2],[1,45,4]],"206":[[1,48,9]],"207":[[0,0,4],[1,52,20]],"208":[[1,41,15]],"209":[[0,0,2],[1,45,5]],"210":[[1,48,8]],"211":[[0,0,4],[1,50,27]],"212":[[1,43,15]],"213":[[0,0,2],[1,44,11]],"214":[[1,51,21]],"215":[[0,0,4],[1,52,22]]
@@ -333,8 +357,7 @@ const PRODUCT_MAP={"forestry":{"1":21,"2":22,"3":23,"4":24,"5":25,"7":26,"8":27,
 unsafeData.PRODUCT_MAP=PRODUCT_MAP.clone();
 // Yielded amount of forestry production
 // task_new_product
-//patch0803
-const PRODUCT_YIELD=[,{"1":1,"2":1,"3":1,"4":1,"5":1,"7":1,"8":1,"9":1,"21":1,"22":1,"23":1,"24":1,"25":1,"26":1,"27":1,"28":1,"41":5,"42":3,"43":3,"44":4,"45":2,"46":2,"47":7,"48":3,"49":3,"50":3,"51":2,"52":2,"53":8,"54":4,"55":4,"56":5,"57":3,"58":5,"59":6,"60":4,"61":3,"62":7,"63":5,"64":5,"101":1,"102":1,"103":1,"104":1,"105":1,"106":1,"107":1,"108":1,"109":1,"110":1,"111":1,"112":1,"113":1,"114":1,"115":1,"116":1,"117":1,"118":1,"119":1,"120":1,"121":1,"122":1,"123":1,"124":1,"125":1,"126":1,"127":1,"128":1,"129":1,"130":1,"131":1,"132":1,"133":1,"134":1,"143":1,"144":1,"146":1,"148":1,"200":131,"201":150,"202":307,"203":312,"204":120,"205":194,"206":236,"207":350,"208":138,"209":199,"210":184,"211":379,"212":157,"213":183,"214":230,"215":330,"250":1,"251":1,"252":1,"253":1,"254":1,"255":1,"256":1,"257":1,"258":1,"259":1,"260":1,"261":1,"262":1,"263":1,"264":1,"265":1,"266":1,"267":1,"268":1,"269":1,"270":1,"271":1,"272":1,"273":1,"274":1,"275":1,"276":1,"351":1,"352":1,"353":1,"354":1,"355":1,"356":1,"357":1,"358":1,"359":1,"360":1,"361":1,"700":1,"701":1,"702":1,"703":1,"704":1,"705":1,"706":1,"707":1,"708":1,"709":1}];
+const PRODUCT_YIELD=[,{"1":1,"2":1,"3":1,"4":1,"5":1,"7":1,"8":1,"9":1,"10":1,"21":1,"22":1,"23":1,"24":1,"25":1,"26":1,"27":1,"28":1,"29":1,"41":5,"42":3,"43":3,"44":4,"45":2,"46":2,"47":7,"48":3,"49":3,"50":3,"51":2,"52":2,"53":8,"54":4,"55":4,"56":5,"57":3,"58":5,"59":6,"60":4,"61":3,"62":7,"63":5,"64":5,"65":6,"66":5,"67":4,"101":1,"102":1,"103":1,"104":1,"105":1,"106":1,"107":1,"108":1,"109":1,"110":1,"111":1,"112":1,"113":1,"114":1,"115":1,"116":1,"117":1,"118":1,"119":1,"120":1,"121":1,"122":1,"123":1,"124":1,"125":1,"126":1,"127":1,"128":1,"129":1,"130":1,"131":1,"132":1,"133":1,"134":1,"143":1,"144":1,"146":1,"148":1,"149":1,"150":1,"151":1,"152":1,"153":1,"154":1,"200":1,"201":1,"202":1,"203":1,"204":1,"205":1,"206":1,"207":1,"208":1,"209":1,"210":1,"211":1,"212":1,"213":1,"214":1,"215":1}];
     /*
     var new_data=PRODUCT_YIELD.clone();
     new_data[1][7]=;
@@ -376,17 +399,18 @@ const ANIMAL_MOVE=[,,[false,0,0,255,10,10,505],[false,0,0,280,1,0,525],[false,0,
             fl5         Veterinary              Farmersmarket
             fl6         Speed eating            Farmersmarket
             fl7         Butterfly               Farmersmarket
+            fl8         cowracing               Farmersmarket
         */
 // BUILDING_UPGRADES[zoneType][levelNr-1][needed level,buildcost,bonus,animalamount]
 //     for Fuelstation: [needed level,buildcost,bonus=1,animalamount=1,yield per slot,duration]
 // task_new_building
-const BUILDING_UPGRADES={"1":[[1,2000,0.95,0],[15,21500,0.9,0],[21,76000,0.85,0],[27,192300,0.8,0],[33,"c20",0.8,0]],"2":[[2,2500,1,5],[7,15200,1,10],[12,32500,1,15],[23,134500,0.9,20],[29,350800,0.8,20]],"3":[[11,3400,1,2],[13,16300,1,3],[17,50200,1,4],[25,159600,0.9,5],[32,441000,0.8,6]],"4":[[14,6200,1,2],[18,33500,1,3],[20,76000,1,4],[28,210500,0.9,5],[34,482000,0.8,6]],"5":[[19,6800,1,1],[22,44800,1,2],[26,128200,1,3],[31,230600,0.9,4],[35,482000,0.8,4]],"7":[[16,5200,1,1],[19,33500,0.95,1],[25,106400,0.9,1],[30,230600,0.85,1],[33,441000,0.8,1]],"8":[[18,6800,1,1],[21,38000,0.95,1],[27,128200,0.9,1],[31,230600,0.85,1],[35,482000,0.8,1]],"9":[[27,8100,1,1],[30,53200,0.95,1],[33,140300,0.9,1],[36,264600,0.85,1],[38,597200,0.8,1]],"10":[[30,9700,1,1],[33,70200,0.95,1],[34,153700,0.9,1],[37,289200,0.85,1],[39,626300,0.8,1]],"11":[[16,10000,1,1],[20,85000,1,3],[24,200000,1,5],[28,"c22",0.9,6],[32,"c38",0.8,6]],"12":[[15,38000,1,2],[17,17200,1,3],[23,54600,1,4],[29,168800,0.9,5],[38,472400,0.8,6]],"13":[[31,16800,1,1],[32,86400,0.95,1],[34,174200,0.9,1],[36,362800,0.85,1],[38,796300,0.8,1]],"14":[[35,19400,1,1],[37,97100,0.95,1],[39,218400,0.9,1],[40,509800,0.85,1],[41,1388600,0.8,1]],"15":[[37,23000,1,1],[37,95300,1,2],[38,198500,1,3],[38,391700,0.9,4],[39,842200,0.8,5]],"16":[[38,97100,1,1],[39,209736,0.95,1],[40,467711,0.9,1],[41,1080413,0.85,1],[42,2538970,0.8,1]],"17":[[10,1000,1,1]],"18":[[10,5000,1,1]],"19":[[28,250000,1,1]],"20":[[40,421500,1,1,1,360],[40,0,1,1,2,420],[40,0,1,1,3,480],[40,0,1,1,4,510],[40,0,1,1,5,540],[40,0,1,1,6,570],[40,0,1,1,7,600],[40,0,1,1,8,660],[40,0,1,1,9,690],[40,0,1,1,10,720]],"21":[[42,150000,1,1],[42,400000,0.95,1],[43,800000,0.9,1],[43,1500000,0.85,1],[44,3000000,0.8,1]],"fw1":[[11,7000,1,1],[11,24600,0.95,1],[11,64200,0.9,1],[11,114400,0.85,1],[11,186300,0.8,1]],"fw2":[[12,8400,1,1],[12,32500,0.95,1],[12,68900,0.9,1],[12,122400,0.85,1],[12,178600,0.8,1]],"fw3":[[12,11200,1,1],[12,43300,0.95,1],[12,91900,0.9,1],[12,163200,0.85,1],[12,238100,0.8,1]],"fw4":[[31,14400,1,1],[31,55700,0.95,1],[31,118100,0.9,1],[31,209800,0.85,1],[31,306200,0.8,1]],"fl1":[[23,85000,0.95,36]],"fl2":[[23,75000,1,1]],"fl3":[[31,900000,1,1]],"fl4":[[36,900000,1,1]],"fl5":[[36,1000000,1,1]],"fl6":[[31,900000,1,1]],"fl7":[[31,1500000,1,1]]
+const BUILDING_UPGRADES={"1":[[1,2000,0.95,0],[15,21500,0.9,0],[21,76000,0.85,0],[27,192300,0.8,0],[33,"c20",0.8,0]],"2":[[2,2500,1,5],[7,15200,1,10],[12,32500,1,15],[23,134500,0.9,20],[29,350800,0.8,20]],"3":[[11,3400,1,2],[13,16300,1,3],[17,50200,1,4],[25,159600,0.9,5],[32,441000,0.8,6]],"4":[[14,6200,1,2],[18,33500,1,3],[20,76000,1,4],[28,210500,0.9,5],[34,482000,0.8,6]],"5":[[19,6800,1,1],[22,44800,1,2],[26,128200,1,3],[31,230600,0.9,4],[35,482000,0.8,4]],"7":[[16,5200,1,1],[19,33500,0.95,1],[25,106400,0.9,1],[30,230600,0.85,1],[33,441000,0.8,1]],"8":[[18,6800,1,1],[21,38000,0.95,1],[27,128200,0.9,1],[31,230600,0.85,1],[35,482000,0.8,1]],"9":[[27,8100,1,1],[30,53200,0.95,1],[33,140300,0.9,1],[36,264600,0.85,1],[38,597200,0.8,1]],"10":[[30,9700,1,1],[33,70200,0.95,1],[34,153700,0.9,1],[37,289200,0.85,1],[39,626300,0.8,1]],"11":[[16,10000,1,1],[20,85000,1,3],[24,200000,1,5],[28,"c22",0.9,6],[32,"c38",0.8,6]],"12":[[15,38000,1,2],[17,17200,1,3],[23,54600,1,4],[29,168800,0.9,5],[38,472400,0.8,6]],"13":[[31,16800,1,1],[32,86400,0.95,1],[34,174200,0.9,1],[36,362800,0.85,1],[38,796300,0.8,1]],"14":[[35,19400,1,1],[37,97100,0.95,1],[39,218400,0.9,1],[40,509800,0.85,1],[41,1388600,0.8,1]],"15":[[37,23000,1,1],[37,95300,1,2],[38,198500,1,3],[38,391700,0.9,4],[39,842200,0.8,5]],"16":[[38,97100,1,1],[39,209736,0.95,1],[40,467711,0.9,1],[41,1080413,0.85,1],[42,2538970,0.8,1]],"17":[[10,1000,1,1]],"18":[[10,5000,1,1]],"19":[[28,250000,1,1]],"20":[[40,421500,1,1,1,360],[40,0,1,1,2,420],[40,0,1,1,3,480],[40,0,1,1,4,510],[40,0,1,1,5,540],[40,0,1,1,6,570],[40,0,1,1,7,600],[40,0,1,1,8,660],[40,0,1,1,9,690],[40,0,1,1,10,720]],"21":[[42,150000,1,1],[42,400000,0.95,1],[43,800000,0.9,1],[43,1500000,0.85,1],[44,3000000,0.8,1]],"fw1":[[11,7000,1,1],[11,24600,0.95,1],[11,64200,0.9,1],[11,114400,0.85,1],[11,186300,0.8,1]],"fw2":[[12,8400,1,1],[12,32500,0.95,1],[12,68900,0.9,1],[12,122400,0.85,1],[12,178600,0.8,1]],"fw3":[[12,11200,1,1],[12,43300,0.95,1],[12,91900,0.9,1],[12,163200,0.85,1],[12,238100,0.8,1]],"fw4":[[31,14400,1,1],[31,55700,0.95,1],[31,118100,0.9,1],[31,209800,0.85,1],[31,306200,0.8,1]],"fl1":[[23,85000,0.95,36]],"fl2":[[23,75000,1,1]],"fl3":[[31,900000,1,1]],"fl4":[[36,900000,1,1]],"fl5":[[36,1000000,1,1]],"fl6":[[31,900000,1,1]],"fl7":[[31,1500000,1,1]],"fl8":[[42,2000000,1,1]]
                         };
 // produced thing -> production area
 // task_new_plant task_new_product
 // 13102016
 const PRODUCT2BUILDING=[[,1,1,1,1,1,1,1,1,2,3,4,5,,,,,1,1,1,1,1,1,1,1,7,1,8,9,1,10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,11,,,,,,1,,,,,,,1,,,1,1,1,12,8,1,1,1,1,13,13,13,13,13,13,14,14,14,14,1,1,1,1,"fw1","fw1","fw1","fw1","fw1","fw1","fw2","fw2","fw2","fw2","fw2","fw2","fw2","fw2",7,"fw1","fw1","fw1","fw2","fw2","fw2",15,9,1,1,16,16,16,1,,,"fw3","fw3","fw3","fw3","fw3","fw3","fw3","fw3","fw3","fw3","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1","fl1",,,,,,,,,,,"fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2","fl2",,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,"fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5","fl5",20,1,1,1,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"fl5","fl5","fl5","fl5"
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw1","fw1","fw1","fw1","fw1","fw1","fw2","fw2","fw2","fw2","fw3","fw3","fw3","fw3","fw3","fw3",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4",,,,,,,,,,,,,,,,,,,,,"fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4",,,,,,,,,,,,,,,,,,,,,"fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,21,21,21,21,21,21,21,21,21,21]
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw4","fw1","fw1","fw1","fw1","fw1","fw1","fw2","fw2","fw2","fw2","fw3","fw3","fw3","fw3","fw3","fw3",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4",,,,,,,,,,,,,,,,,,,,,"fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4",,,,,,,,,,,,,,,,,,,,,"fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4","fl4",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,21,21,21,21,21,21,21,21,21,21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8","fl8"]
                        ,{"1":"forest","2":"forest","3":"forest","4":"forest","5":"forest","7":"forest","8":"forest","9":"forest","10":"forest","21":"forest","22":"forest","23":"forest","24":"forest","25":"forest","26":"forest","27":"forest","28":"forest","29":"forest","41":"sawmill","42":"sawmill","43":"sawmill","44":"sawmill","45":"sawmill","46":"sawmill","47":"sawmill","48":"sawmill","49":"sawmill","50":"sawmill","51":"sawmill","52":"sawmill","53":"sawmill","54":"sawmill","55":"sawmill","56":"sawmill","57":"sawmill","58":"sawmill","59":"sawmill","60":"sawmill","61":"sawmill","62":"sawmill","63":"sawmill","64":"sawmill","65":"sawmill","66":"sawmill","67":"sawmill","101":"carpentry","102":"carpentry","103":"carpentry","104":"carpentry","105":"carpentry","106":"carpentry","107":"carpentry","108":"carpentry","109":"carpentry","110":"carpentry","111":"carpentry","112":"carpentry","113":"carpentry","114":"carpentry","115":"carpentry","116":"carpentry","117":"carpentry","118":"carpentry","119":"carpentry","120":"carpentry","121":"carpentry","122":"carpentry","123":"carpentry","124":"carpentry","125":"carpentry","126":"carpentry","127":"carpentry","128":"carpentry","129":"carpentry","130":"carpentry","131":"carpentry","132":"carpentry","133":"carpentry","134":"carpentry","143":"carpentry","144":"carpentry","146":"carpentry","148":"carpentry","149":"carpentry","150":"carpentry","151":"carpentry","152":"carpentry","153":"carpentry","154":"carpentry","200":"carpentry","201":"carpentry","202":"carpentry","203":"carpentry","204":"carpentry","205":"carpentry","206":"carpentry","207":"carpentry","208":"carpentry","209":"carpentry","210":"carpentry","211":"carpentry","212":"carpentry","213":"carpentry","214":"carpentry","215":"carpentry"}
                        ,[]
                        ,[,"windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill","windmill"]
@@ -416,7 +440,7 @@ unsafeData.BUILDING2PRODUCT=BUILDING2PRODUCT.clone();
     Butterfly               9
 */
 //13102016
-const BUILDINGTYPE={"0":0,"1":1,"2":2,"3":2,"4":2,"5":2,"6":0,"7":3,"8":3,"9":3,"10":3,"11":2,"12":2,"13":3,"14":3,"15":2,"16":3,"17":0,"18":5,"19":0,"20":6,"21":3,"fl1":1,"fl2":4,"fl3":7,"fl4":4,"fl5":4,"fl6":8,"fl7":9,"fw1":4,"fw2":4,"fw3":4,"fw4":4};
+const BUILDINGTYPE={"0":0,"1":1,"2":2,"3":2,"4":2,"5":2,"6":0,"7":3,"8":3,"9":3,"10":3,"11":2,"12":2,"13":3,"14":3,"15":2,"16":3,"17":0,"18":5,"19":0,"20":6,"21":3,"fl1":1,"fl2":4,"fl3":7,"fl4":4,"fl5":4,"fl6":8,"fl7":9,"fl8":4,"fw1":4,"fw2":4,"fw3":4,"fw4":4};
 unsafeData.BUILDINGTYPE=BUILDINGTYPE.clone();
 // task_new_building
 const BUILDING_SIZE={"1":120,"forest":25,"fl1":36,"megafield":[11,9]};
@@ -424,7 +448,7 @@ unsafeData.BUILDING_SIZE=BUILDING_SIZE.clone();
 // task_new_building
 
 //13102016
-const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"megafield":99};
+const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":4,"megafield":99};
 
 unsafeData.BUILDING_SLOTS=BUILDING_SLOTS.clone();
 // Needed input of a zone
@@ -605,7 +629,7 @@ const QUESTS =
                         [[[1,57,61],[1,132,34],[1,53,130]],,959000,[[6,50]]],
                         [[[1,60,106],[1,124,17]],,986400],
                         [[[1,64,116],[1,104,32]],,1013800],
-                        [[[1,24,156],[1,103,12],[1,60,74]],,1041200,[[1,1,10,5],[9,1,10],[9,1,29],[9,1,65],[9,1,66],[9,1,67]]],
+                        [[[1,24,156],[1,103,12],[1,42,74]],,1041200,[[1,1,10,5],[9,1,10],[9,1,29],[9,1,65],[9,1,66],[9,1,67]]],
                         [[[1,29,81],[1,101,56]],,1068600],
                         [[[1,67,102],[1,112,13]],,1096000],
                         [[[1,66,92],[1,127,35],[1,101,40]],,1123400,[[6,50]]],
@@ -658,6 +682,8 @@ const QUESTS =
                         ,"breed":{"1":[,[[[0,600,72],[0,668,24]],,80100],[[[0,636,132],[0,600,74]],,79500],[[[0,668,26],[0,636,135]],,81600],[[[0,600,78],[0,668,26]],,86800],[[[0,636,141],[0,600,80]],,85500],[[[0,668,27],[0,636,144]],,85900],[[[0,600,83],[0,636,148]],,89100],[[[0,668,29],[0,600,85]],,95600],[[[0,668,29],[0,636,154]],,92000],[[[0,600,59],[0,668,20],[0,636,105]],,96300,[[20,2]]],[[[0,636,160],[0,668,30]],, 95400],[[[0,634,134],[0,600,92]],, 133800],[[[0,668,32],[0,636,167]],, 100700],[[[0,600,96],[0,668,32]],, 106800],[[[0,636,173],[0,634,142]],, 136600],[[[0,668,33],[0,600,99]],, 110100],[[[0,634,147],[0,636,180]],, 141700],[[[0,668,35],[0,636,183]],, 110300],[[[0,600,105],[0,634,152]],, 152100],[[[0,668,24],[0,600,71],[0,602,16]],, 141800,[[20,3]]],[[[0,634,158],[0,602,24]],, 190200],[[[0,600,110],[0,634,160]],, 159900],[[[0,602,25],[0,636,199]],, 154400],[[[0,668,38],[0,600,114]],, 126800],[[[0,634,168],[0,602,26]],, 204100],[[[0,636,208],[0,668,39]],, 124000],[[[0,600,119],[0,634,173]],, 172900],[[[0,602,27],[0,636,215]],, 166800],[[[0,668,41],[0,600,123]],, 136800],[[[0,636,148],[0,634,121],[0,668,28]],, 162800,[[20,2]]],[[[0,602,28],[0,668,42]],, 178300],[[[0,636,228],[0,600,128]],, 137400],[[[0,634,189],[0,602,29]],, 228600],[[[0,636,234],[0,668,44]],, 139700],[[[0,602,30],[0,634,194]],, 235600],[[[0,667,45],[0,602,30]],, 238100],[[[0,634,199],[0,636,244]],, 191900],[[[0,600,139],[0,667,47]],, 204900],[[[0,602,32],[0,634,205]],, 250100],[[[0,667,32],[0,668,32],[0,634,138]],, 223600,[[20,3]]],[[[0,600,144],[0,602,32]],, 205500],[[[0,634,213],[0,667,49]],, 262600],[[[0,636,263],[0,668,50]],, 158000],[[[0,667,50],[0,602,34]],, 267200],[[[0,600,152],[0,634,220]],, 220200],[[[0,602,34],[0,667,51]],, 269900],[[[0,636,276],[0,600,155]],, 166400],[[[0,667,53],[0,634,228]],, 282600],[[[0,602,36],[0,668,53]],, 227500],[[[0,636,190],[0,667,36],[0,634,156]],, 247200,[[20,4]]],[[[0,635,93],[0,600,162]],, 272900],[[[0,668,55],[0,667,55]],, 239100],[[[0,602,37],[0,635,95]],, 329800],[[[0,600,168],[0,636,298]],, 180000],[[[0,635,97],[0,667,57]],, 343400],[[[0,668,57],[0,602,38]],, 241900],[[[0,636,308],[0,635,99]],, 282000],[[[0,667,59],[0,600,175]],, 257600],[[[0,635,101],[0,668,59]],, 294800],[[[0,602,27],[0,667,40],[0,635,68]],, 345900,[[20,2]]],[[[0,600,180],[0,635,103]],, 302600],[[[0,667,61],[0,636,324]],, 257500],[[[0,635,105],[0,602,41]],, 364900],[[[0,600,186],[0,667,62]],, 271800],[[[0,602,42],[0,635,107]],, 372700],[[[0,666,152],[0,667,63]],, 393400],[[[0,635,110],[0,602,43]],, 382400],[[[0,667,65],[0,666,155]],, 403200],[[[0,634,283],[0,635,112]],, 392300],[[[0,666,105],[0,602,30],[0,636,233]],, 338000,[[20,3]]],[[[0,635,114],[0,667,66]],, 400900],[[[0,634,291],[0,666,160]],, 413400],[[[0,602,45],[0,635,116]],, 402000],[[[0,666,163],[0,636,362]],, 343500],[[[0,667,69],[0,668,69]],, 299900],[[[0,635,119],[0,666,166]],, 476700],[[[0,602,47],[0,667,70]],, 371700],[[[0,666,169],[0,634,307]],, 436500],[[[0,668,71],[0,635,122]],, 355700],[[[0,667,48],[0,666,115]],, 467600,[[20,4]]],[[[0,604,144],[0,635,124]],, 483900],[[[0,667,73],[0,666,175]],, 454200],[[[0,635,126],[0,602,49]],, 437100],[[[0,634,323],[0,604,148]],, 446000],[[[0,666,179],[0,635,128]],, 513400],[[[0,604,150],[0,667,75]],, 453800],[[[0,668,76],[0,666,182]],, 392900],[[[0,635,131],[0,602,51]],, 454600],[[[0,668,77],[0,604,154]],, 385200],[[[0,667,52],[0,600,155],[0,604,104]],, 401800,[[20,2]]],[[[0,666,188],[0,634,341]],, 485200],[[[0,604,158],[0,635,135]],, 528900],[[[0,602,53],[0,636,423]],, 327700],[[[0,667,80],[0,666,192]],, 498000],[[[0,635,138],[0,604,161]],, 539800],[[[0,603,162],[0,667,81]],, 538300],[[[0,666,196],[0,602,55]],, 502200],[[[0,668,83],[0,604,165]],, 413500],[[[0,635,142],[0,603,166]],, 605300],[[[0,667,84],[0,634,364]],, 449500],[[[0,604,112],[0,666,135],[0,668,56]],, 478600,[[20,3]]],[[[0,603,170],[0,636,452]],, 465300],[[[0,602,57],[0,635,147]],, 509300],[[[0,667,86],[0,668,86]],, 373800],[[[0,604,173],[0,603,173]],, 631500],[[[0,666,209],[0,600,261]],, 454000],[[[0,603,176],[0,602,59]],, 577100],[[[0,634,385],[0,635,152]],, 533000],[[[0,667,89],[0,604,178]],, 538500],[[[0,666,144],[0,603,120],[0,634,261]],, 608400,[[20,4]]],[[[0,637,540],[0,635,155]],, 645200],[[[0,602,61],[0,604,182]],, 542500],[[[0,603,183],[0,666,219]],, 683200],[[[0,667,92],[0,637,551]],, 597200],[[[0,604,185],[0,668,93]],, 463600],[[[0,666,224],[0,603,186]],, 696400],[[[0,637,562],[0,602,63]],, 601200],[[[0,635,162],[0,604,189]],, 633600],[[[0,634,414],[0,667,95]],, 509800],[[[0,666,153],[0,637,382],[0,604,128]],, 681500,[[20,2]]],[[[0,603,192],[0,602,64]],, 628100],[[[0,604,194],[0,635,166]],, 649800],[[[0,637,584],[0,666,234]],, 713900],[[[0,667,98],[0,604,196]],, 592900],[[[0,603,197],[0,637,591]],, 763300],[[[0,669,425],[0,603,198]],, 783600],[[[0,604,200],[0,635,171]],, 669700],[[[0,637,602],[0,666,241]],, 735600],[[[0,667,101],[0,669,432]],, 671600],[[[0,603,136],[0,602,46],[0,669,290]],, 715500,[[20,3]]],[[[0,635,175],[0,637,612]],, 729900],[[[0,669,440],[0,604,206]],, 751900],[[[0,666,248],[0,668,104]],, 536100],[[[0,637,623],[0,603,208]],, 805300],[[[0,667,105],[0,669,448]],, 697200],[[[0,604,210],[0,634,459]],, 633200],[[[0,603,212],[0,666,254]],, 791900],[[[0,669,456],[0,637,638]],, 825500],[[[0,635,184],[0,604,214]],, 718600],[[[0,603,144],[0,669,307],[0,637,430]],, 840300,[[20,4]]],[[[0,639,130],[0,603,216]],, 884700],[[[0,637,652],[0,666,261]],, 796700],[[[0,669,468],[0,604,219]],, 799600],[[[0,603,220],[0,639,132]],, 899700],[[[0,635,190],[0,667,111]],, 670900],[[[0,634,485],[0,669,476]],, 736900],[[[0,639,134],[0,637,670]],, 896900],[[[0,604,225],[0,603,225]],, 821400],[[[0,669,484],[0,639,136]],, 926700],[[[0,602,51],[0,666,182],[0,639,91]],, 786900,[[20,2]]],[[[0,637,684],[0,635,196]],, 816600],[[[0,639,138],[0,603,230]],, 940600],[[[0,604,231],[0,669,494]],, 843700],[[[0,666,278],[0,637,695]],, 848900],[[[0,603,233],[0,639,140]],, 953500],[[[0,606,141],[0,666,281]],, 918700],[[[0,604,236],[0,669,504]],, 861400],[[[0,639,142],[0,606,142]],, 1009900],[[[0,637,713],[0,603,238]],, 921500],[[[0,669,342],[0,635,137],[0,606,96]],, 928200,[[20,3]]],[[[0,606,144],[0,604,240]],, 918800],[[[0,666,290],[0,639,145]],, 937500],[[[0,637,728],[0,603,243]],, 940900],[[[0,669,522],[0,606,147]],, 1009500],[[[0,639,147],[0,667,123]],, 850000],[[[0,604,246],[0,635,211]],, 825000],[[[0,606,149],[0,637,742]],, 1004400],[[[0,603,249],[0,639,150]],, 1020400],[[[0,666,300],[0,669,535]],, 935300],[[[0,637,502],[0,606,101],[0,604,168]],, 961900,[[20,4]]],[[[0,663,398],[0,639,152]],, 1081400],[[[0,604,254],[0,603,254]],, 927200],[[[0,606,153],[0,669,546]],, 1053200],[[[0,637,767],[0,663,404]],, 1039600],[[[0,635,221],[0,666,309]],, 886400],[[[0,663,408],[0,603,258]],, 1068500],[[[0,639,156],[0,606,156]],, 1109500],[[[0,669,558],[0,602,87]],, 854200],[[[0,604,262],[0,663,414]],, 1006700],[[[0,667,88],[0,637,526],[0,663,277]],, 950200,[[20,2]]],[[[0,603,264],[0,639,159]],, 1081700],[[[0,663,419],[0,606,160]],, 1148100],[[[0,666,320],[0,669,571]],, 998000],[[[0,635,230],[0,663,423]],, 1029500],[[[0,639,162],[0,604,269]],, 1022100],[[[0,606,162],[0,637,810]],, 1094100],[[[0,602,91],[0,603,272]],, 891100],[[[0,663,431],[0,669,584]],, 1130300],[[[0,666,329],[0,639,165]],, 1065400],[[[0,637,550],[0,606,110],[0,663,290]],, 1140400,[[20,3]]],[[[0,604,276],[0,663,436]],, 1060300],[[[0,669,594],[0,635,238]],, 1014200],[[[0,639,168],[0,603,279]],, 1143100],[[[0,663,442],[0,637,839]],, 1137300],[[[0,606,169],[0,666,337]],, 1101500],[[[0,667,141],[0,669,605]],, 939300],[[[0,603,284],[0,663,448]],, 1174600],[[[0,637,854],[0,639,171]],, 1143900],[[[0,634,624],[0,606,172]],, 999000],[[[0,663,302],[0,604,192],[0,668,96]],, 894200,[[20,4]]]]
                         },
                         "butterfly":{"1":[,[[[0,5,9450],[0,175,1512]],,80000],[[[0,22,18144],[0,179,1578]],,90000],[[[0,6,11813],[0,177,2035]],,100000,[[22,2]]],[[[0,18,100800],[0,182,4999]],,110000],[[[0,23,19845],[0,176,3024]],,120000],[[[0,33,15120],[0,171,5184]],,130000],[[[0,41,3093],[0,173,5292]],,140000],[[[0,42,3658],[0,180,5259]],,150000],[[[0,108,28875],[0,183,3119]],,160000],[[[0,154,4725],[0,181,6350]],,170000,[[22,3]]],[[[0,39,4914],[0,178,5897]],,180000],[[[0,36,15034],[0,172,9408]],,190000],[[[0,40,5906],[0,174,4639]],,200000],[[[0,8,12600],[0,176,6912]],,210000],[[[0,4,71400],[0,180,8941]],,220000],[[[0,20,113400],[0,173,10584]],,230000],[[[0,32,59850],[0,175,9576]],,240000],[[[0,35,22680],[0,177,8142]],,250000],[[[0,37,10584],[0,172,14112]],,260000],[[[0,153,23100],[0,181,11642]],,270000,[[22,4]]],[[[0,114,32200],[0,171,14904]],,280000],[[[0,7,18900],[0,183,6804]],,290000],[[[0,3,105000],[0,178,11340]],,300000],[[[0,26,75600],[0,174,8041]],,310000],[[[0,38,127575],[0,179,10650]],,320000],[[[0,43,9339],[0,182,23328]],,330000],[[[0,109,81200],[0,181,15347]],,340000],[[[0,44,37800],[0,175,15120]],,350000],[[[0,34,87885],[0,180,16303]],,360000],[[[0,31,145152],[0,176,13824]],,370000,[[22,5]]],[[[0,21,166320],[0,182,27494]],,380000],[[[0,24,107100],[0,183,9639]],,390000],[[[0,19,330750],[0,172,23520]],,400000],[[[0,154,14175],[0,174,11134]],,410000],[[[0,33,69930],[0,177,15062]],,420000],[[[0,8,29925],[0,179,14989]],,430000],[[[0,114,54600],[0,171,25272]],,440000],[[[0,42,14632],[0,178,18144]],,450000],[[[0,18,688800],[0,173,24108]],,460000],[[[0,41,14433],[0,175,21168]],,470000,[[22,6]]],[[[0,36,46176],[0,179,16961]],,480000],[[[0,44,55440],[0,177,17911]],,490000],[[[0,4,189000],[0,182,37491]],,500000],[[[0,20,289800],[0,176,19872]],,510000],[[[0,24,148050],[0,171,30456]],,520000],[[[0,38,226800],[0,173,28224]],,530000],[[[0,22,222264],[0,180,25770]],,540000],[[[0,5,157500],[0,183,14175]],,550000],[[[0,7,40163],[0,181,26989]],,560000],[[[0,31,235872],[0,178,23587]],,570000],[[[0,35,60102],[0,172,35616]],,580000],[[[0,40,21263],[0,174,16701]],,590000],[[[0,43,18344],[0,176,23760]],,600000],[[[0,109,156800],[0,180,29451]],,610000],[[[0,23,161595],[0,173,33516]],,620000],[[[0,6,137025],[0,175,29232]],,630000],[[[0,21,297360],[0,177,24018]],,640000],[[[0,32,189000],[0,172,40320]],,650000],[[[0,108,160125],[0,181,32281]],,660000],[[[0,34,175770],[0,171,40176]],,670000],[[[0,3,264600],[0,183,17861]],,680000],[[[0,19,604800],[0,178,29030]],,690000],[[[0,26,189000],[0,174,20103]],,700000],[[[0,39,24948],[0,179,26033]],,710000],[[[0,37,33768],[0,182,55821]],,720000],[[[0,153,71400],[0,181,35986]],,730000],[[[0,6,163013],[0,175,34776]],,740000],[[[0,24,220500],[0,180,36814]],,750000],[[[0,18,1192800],[0,176,30672]],,760000],[[[0,20,453600],[0,182,59986]],,770000],[[[0,32,229950],[0,183,20696]],,780000],[[[0,40,29138],[0,172,49728]],,790000],[[[0,23,212625],[0,174,23195]],,800000],[[[0,8,59850],[0,177,30938]],,810000],[[[0,26,223892],[0,179,30371]],,820000],[[[0,33,147420],[0,171,50544]],,830000],[[[0,39,29862],[0,178,35834]],,840000],[[[0,37,40320],[0,173,47040]],,850000],[[[0,34,229635],[0,175,40824]],,860000],[[[0,31,371952],[0,179,32344]],,870000],[[[0,19,784350],[0,177,33787]],,880000],[[[0,22,381024],[0,182,69984]],,890000],[[[0,43,28350],[0,176,36720]],,900000],[[[0,109,240800],[0,171,55728]],,910000],[[[0,114,121800],[0,173,51156]],,920000],[[[0,42,32191],[0,180,46280]],,930000],[[[0,38,420525],[0,183,25232]],,940000],[[[0,35,102060],[0,181,47628]],,950000],[[[0,44,114660],[0,178,41278]],,960000],[[[0,36,98795],[0,172,61824]],,970000],[[[0,21,468720],[0,174,28762]],,980000],[[[0,7,74025],[0,176,40608]],,990000],[[[0,4,399000],[0,171,61560]],,1000000],[[[0,41,32989],[0,172,64512]],,1010000],[[[0,108,254625],[0,173,57036]],,1020000]]
+                        },
+                        "cow":{"1":[,[[[0,804,192]],, 50000],[[[0,804,197]],, 60000],[[[0,804,202]],, 70000,[[9,0,801]]],[[[0,801,78],[0,804,104]],, 80000],[[[0,801,80],[0,804,106]],, 90000],[[[0,801,81],[0,804,108]],, 100000,[[9,0,800]]],[[[0,801,83],[0,804,111]],, 110000],[[[0,801,85],[0,804,113]],, 120000],[[[0,801,87],[0,804,116]],, 130000],[[[0,801,89],[0,804,118]],, 140000,[[9,0,805]]],[[[0,805,24],[0,804,120]],, 150000],[[[0,804,123],[0,801,92]],, 160000],[[[0,805,25],[0,801,94]],, 170000,[[23,2]]],[[[0,805,26],[0,804,128]],, 180000],[[[0,801,65],[0,805,18],[0,804,87]],, 190000,[[9,0,802]]],[[[0,804,132],[0,805,27]],, 200000],[[[0,805,27],[0,801,101]],, 210000],[[[0,801,103],[0,804,137]],, 220000],[[[0,804,140],[0,801,105]],, 230000],[[[0,801,71],[0,805,19],[0,804,95]],, 240000,[[9,0,802]]],[[[0,807,48],[0,804,144]],, 250000],[[[0,805,30],[0,807,49]],, 260000],[[[0,804,149],[0,805,30]],, 270000],[[[0,801,114],[0,805,31]],, 280000],[[[0,805,21],[0,807,35],[0,804,103]],, 290000,[[9,0,803]]],[[[0,807,52],[0,801,117]],, 300000],[[[0,807,53],[0,804,159]],, 310000],[[[0,805,22],[0,807,36],[0,801,81]],, 320000,[[23,3]]],[[[0,804,164],[0,801,123],[0,807,]],, 330000],[[[0,807,37],[0,804,111],[0,805,23]],, 340000,[[9,0,809]]],[[[0,809,84],[0,807,56]],, 350000],[[[0,805,35],[0,809,86]],, 360000],[[[0,804,173],[0,807,58]],, 370000],[[[0,807,59],[0,801,132]],, 380000],[[[0,809,60],[0,805,24],[0,807,40]],, 390000,[[9,0,806]]],[[[0,805,36],[0,804,180]],, 400000],[[[0,807,61],[0,809,92]],, 410000],[[[0,804,185],[0,805,37]],, 420000],[[[0,805,38],[0,807,63]],, 430000],[[[0,809,64],[0,801,95],[0,805,26]],, 440000,[[9,0,810]]],[[[0,810,144],[0,804,192]],, 450000],[[[0,810,146],[0,809,98]],, 460000],[[[0,805,27],[0,807,44],[0,801,99]],, 470000,[[23,4]]],[[[0,807,67],[0,810,150]],, 480000],[[[0,801,101],[0,809,68],[0,804,135]],, 490000,[[9,0,808]]],[[[0,810,153],[0,807,68]],, 500000],[[[0,805,42]],, 510000],[[[0,807,70],[0,810,157]],, 520000],[[[0,801,159],[0,809,106]],, 530000],[[[0,810,107],[0,805,29],[0,804,143]],, 540000,[[9,0,812]]],[[[0,812,87],[0,810,162]],, 550000],[[[0,809,110],[0,812,88]],, 560000],[[[0,805,45],[0,801,166]],, 570000],[[[0,807,75],[0,810,168]],, 580000],[[[0,812,61],[0,809,76],[0,804,151]],, 590000,[[9,0,811]]],[[[0,810,171],[0,805,46]],, 600000],[[[0,804,231],[0,801,173]],, 610000],[[[0,805,32],[0,812,63],[0,809,78]],, 620000,[[23,5]]],[[[0,807,79],[0,810,177]],, 630000],[[[0,812,64],[0,809,80],[0,801,119]],, 640000,[[9,0,813]]],[[[0,813,240],[0,804,240]],, 650000],[[[0,813,243],[0,812,97]],, 660000],[[[0,807,82],[0,809,123]],, 670000],[[[0,801,186],[0,813,248]],, 680000],[[[0,812,67],[0,805,34],[0,807,56]],, 690000,[[9,0,815]]],[[[0,809,126],[0,810,189]],, 700000],[[[0,812,102],[0,813,255]],, 710000],[[[0,810,193],[0,809,129]],, 720000],[[[0,807,87],[0,812,104]],, 730000],[[[0,813,175],[0,810,131],[0,801,131]],, 740000,[[9,0,814]]],[[[0,814,88],[0,807,88]],, 750000],[[[0,812,107],[0,814,89]],, 760000],[[[0,809,90],[0,810,135],[0,805,36]],, 770000[[23,6]]],[[[0,804,272],[0,813,272]],, 780000],[[[0,807,61],[0,801,137],[0,809,92]],, 790000,[[9,0,816]]],[[[0,812,111],[0,810,207]],, 800000],[[[0,813,279],[0,807,93]],, 810000],[[[0,809,141],[0,812,113]],, 820000],[[[0,810,213],[0,813,284]],, 830000],[[[0,814,64],[0,805,39],[0,801,143]],, 840000,[[9,0,818]]],[[[0,818,360],[0,812,116]],, 850000],[[[0,818,363],[0,814,97]],, 860000],[[[0,813,293],[0,814,98]],, 870000],[[[0,818,369],[0,810,222]],, 880000],[[[0,812,80],[0,813,199],[0,807,67]],, 890000,[[9,0,817]]],[[[0,810,225],[0,814,100]],, 900000],[[[0,809,152],[0,804,303]],, 910000],[[[0,813,204],[0,812,82],[0,801,153]],, 920000],[[[0,818,384],[0,814,103]],, 930000],[[[0,812,83],[0,809,104],[0,804,207]],, 90000,[[9,0,819]]]]
                         }
                };
 
@@ -665,12 +691,13 @@ unsafeData.QUESTS=QUESTS.clone();
 const INIT_questDataItem = {"nr":0,"time":0,"calcTo":0,"state":0,"given":{}};
 //22102016
 const INIT_questData = {"main":{"1":INIT_questDataItem.clone(),"2":INIT_questDataItem.clone(),
-                                "3":INIT_questDataItem.clone(),"4":INIT_questDataItem.clone()}
+    "3":INIT_questDataItem.clone(),"4":INIT_questDataItem.clone()}
                        ,"forestry":{"1":INIT_questDataItem.clone(),"2":INIT_questDataItem.clone()}
                        ,"foodworld":{"1":INIT_questDataItem.clone()}
                        ,"veterinary":{"1":INIT_questDataItem.clone()}
                        ,"breed":{"1":INIT_questDataItem.clone()}
                        ,"butterfly":{"1":INIT_questDataItem.clone()}
+                       ,"cow":{"1":INIT_questDataItem.clone()}
                        };
 // state: 0:not available, 1:not activated, 2:active
 /*
@@ -699,7 +726,7 @@ GM_log("new_PRODUCT_QUEST:\n"+implode(new_PRODUCT_QUEST));
 */
 
 // Default values for Mimimum stock-amount of goods
-const INIT_valMinRack={"v":200,"ex":200,"e":50,"o":10,"z":0,"f1":25,"f2":10,"f3":10,"f4":0,"fw1":10,"fw2":10,"fw3":10,"fw4":10,"hr":1000,"md":10,"breed":10,"alpin":200,"tea":50,"fl":1000,"fla":100};
+const INIT_valMinRack={"v":200,"ex":200,"e":50,"o":10,"z":0,"f1":25,"f2":10,"f3":10,"f4":0,"fw1":10,"fw2":10,"fw3":10,"fw4":10,"hr":1000,"md":10,"breed":10,"alpin":200,"tea":50,"cow":10,"fl":1000,"fla":100};
 // task_new_level
 const LEVEL_POINTS=[0,0,58,2420,6620,15620,27900,58700,101700,163100,211900
                    ,276900,359000,467000,730000,1190000,1750000,2680000,3900000,5660000,7850000
@@ -1278,14 +1305,15 @@ function updateProductDataFarm(){
         //
         // task_new_plant task_new_product
         //13102016
-        prodBlock[0]=["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","ct","","ct","","ct","ct","","ct","","","","","","","","","","ct","ct","ct","ct","ct","ct","ct","","","","","","","ct","","ct","","","ct","","","ct","ct","ct","","","","","","","","t","","","","","","","t","","t","t","","","","","","","","","","","","","","","","","","","","","","t","","","","","","","","","","","","","","","","","","","","","","","","","","","","","t","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","ut","ut",,,,,,,,,,,"","","","","","","","","","","","","","","t","t","t","t","t","t","t","t",,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","","","","","","","","","","","","","","","","","","","","","","","","","","",,,,,,,,,,,,,,,,,,,,,,,,"","","","","","t","t","","t","","t","","t","","t","","t","","t","","","t","","t","","","","","","","","t","t","","t","","","t","","t","","t","","t","t","","t","","","t","","","","","","","","","","","","",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","t","","t",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","t","","","","t","","t","t","t",,,,,,,,,,,,,,,,,,,,,"t","t","t","t","","","","","t","",,,,,,,,,,,,,,,,,,,,,"t","t","t","","t","t","","","","",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","","","","","","","","","",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","","","","","","","","",""];
+        prodBlock[0]=["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","ct","","ct","","ct","ct","","ct","","","","","","","","","","ct","ct","ct","ct","ct","ct","ct","","","","","","","ct","","ct","","","ct","","","ct","ct","ct","","","","","","","","t","","","","","","","t","","t","t","","","","","","","","","","","","","","","","","","","","","","t","","","","","","","","","","","","","","","","","","","","","","","","","","","","","t","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","ut","ut",,,,,,,,,,,"","","","","","","","","","","","","","","t","t","t","t","t","t","t","t",,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","","","","","","","","","","","","","","","","","","","","","","","","","","",,,,,,,,,,,,,,,,,,,,,,,,"","","","","","t","t","","t","","t","","t","","t","","t","","t","","","t","","t","","","","","","","","t","t","","t","","","t","","t","","t","","t","t","","t","","","t","","","","","","","","","","","","",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","t","","t",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","t","","","","t","","t","t","t",,,,,,,,,,,,,,,,,,,,,"t","t","t","t","","","","","t","",,,,,,,,,,,,,,,,,,,,,"t","t","t","","t","t","","","","",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","","","","","","","","","",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"","","","","","","","","","",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        "t","","t","t","","","t","","t","","","t","","","","t","t","t","",""];
         /*
                 var new_prodBlock=prodBlock[0].clone();
                 new_prodBlock[450]="test";
                 console.log(implode(new_prodBlock));
         */
         // 13102016
-        var help={"v":[],"ex":[],"hr":[],"e":[],"o":[],"fw1":[],"fw2":[],"fw3":[],"fw4":[],"z":[],"fl":[],"fla":[],"md":[],"breed":[],"alpin":[],"tea":[]};
+        var help={"v":[],"ex":[],"hr":[],"e":[],"o":[],"fw1":[],"fw2":[],"fw3":[],"fw4":[],"z":[],"fl":[],"fla":[],"md":[],"breed":[],"alpin":[],"tea":[],"cow":[]};
         // for(var v=1;v<unsafeWindow.produkt_name.length;v++){
         //*task_fix_growtime*/ var newProductGrowtime={};
         //*task_fix_points*/ var newProductPoints={};
@@ -1372,50 +1400,55 @@ function updateProductDataFarm(){
                 }
 
                 switch(prodTyp[0][v]){
-                case "hr":
-                    if(unsafeWindow.vet_data && unsafeWindow.vet_data.info){
-                        var vetdiv = $("farmersmarket_pos5_block");
-                        if( vetdiv.style.display=="block" || unsafeWindow.vet_data.info.level < PRODUCT_LEVEL["veterinary"][v] ){
-                            prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
+                    case "alpin":
+                        if(PRODUCT_QUEST[0][v]&&(questData[PRODUCT_QUEST[0][v][0]][PRODUCT_QUEST[0][v][1]]["nr"]<=PRODUCT_QUEST[0][v][2])){
+                            prodBlock[0][v]+="v";
                         }
-                        vetdiv=null;
-                    }else{
-                        prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
-                    }
-                break;
-                case "md":
-                    if(unsafeWindow.vet_data && unsafeWindow.vet_data.info){
-                        var vetdiv = $("farmersmarket_pos5_block");
-                        if( vetdiv.style.display=="block" || unsafeWindow.vet_data.info.level < PRODUCT_LEVEL["veterinary"][v] ){
-                            prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
-                        }
-                        vetdiv=null;
-                    }else{
-                        prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
-                    }
-                    //Fix Produkt Points Tinkturen
-                    prodPoints[0][v]=(prodPoints[0][v]?prodPoints[0][v]/prodYield[0][v]:0);
-                break;
-                case "ex":
-                    if(PRODUCT_QUEST[0][v]&&(questData[PRODUCT_QUEST[0][v][0]][PRODUCT_QUEST[0][v][1]]["nr"]<=PRODUCT_QUEST[0][v][2])){
-                        prodBlock[0][v]+="v";
-                    }
-                    // ToDo: this is a workaround - "q" would be enough. but with "q" only, all "ex" products are shown on the market-list. Even the not released
-                    // bugfix should be performed when populating the marketlist.
-                break;
-                case "breed": //13102016
-                    if (unsafeWindow.pets.data.block==0) {
-                        if (unsafeWindow.pets.data.data.level < PRODUCT_LEVEL["breeding"][v]) {
+                    break;
+                    case "breed": //13102016
+                        if (unsafeWindow.pets.data.block==0) {
+                            if (unsafeWindow.pets.data.data.level < PRODUCT_LEVEL["breeding"][v]) {
+                                prodBlock[0][v]+="v"+PRODUCT_LEVEL["breeding"][v];
+                            }
+                        } else {
                             prodBlock[0][v]+="v"+PRODUCT_LEVEL["breeding"][v];
                         }
-                    } else {
-                        prodBlock[0][v]+="v"+PRODUCT_LEVEL["breeding"][v];
-                    }
-                break;
-                default:
-                    if(USERLEVEL<unsafeWindow.produkt_level[v]){
-                        prodBlock[0][v]+="l"+unsafeWindow.produkt_level[v];
-                    }
+                    break;
+                    case "ex":
+                        if(PRODUCT_QUEST[0][v]&&(questData[PRODUCT_QUEST[0][v][0]][PRODUCT_QUEST[0][v][1]]["nr"]<=PRODUCT_QUEST[0][v][2])){
+                            prodBlock[0][v]+="v";
+                        }
+                        // ToDo: this is a workaround - "q" would be enough. but with "q" only, all "ex" products are shown on the market-list. Even the not released
+                        // bugfix should be performed when populating the marketlist.
+                    break;
+                    case "hr":
+                        if(unsafeWindow.vet_data && unsafeWindow.vet_data.info){
+                            var vetdiv = $("farmersmarket_pos5_block");
+                            if( vetdiv.style.display=="block" || unsafeWindow.vet_data.info.level < PRODUCT_LEVEL["veterinary"][v] ){
+                                prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
+                            }
+                            vetdiv=null;
+                        }else{
+                            prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
+                        }
+                    break;
+                    case "md":
+                        if(unsafeWindow.vet_data && unsafeWindow.vet_data.info){
+                            var vetdiv = $("farmersmarket_pos5_block");
+                            if( vetdiv.style.display=="block" || unsafeWindow.vet_data.info.level < PRODUCT_LEVEL["veterinary"][v] ){
+                                prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
+                            }
+                            vetdiv=null;
+                        }else{
+                            prodBlock[0][v]+="v"+PRODUCT_LEVEL["veterinary"][v];
+                        }
+                        //Fix Produkt Points Tinkturen
+                        prodPoints[0][v]=(prodPoints[0][v]?prodPoints[0][v]/prodYield[0][v]:0);
+                    break;
+                    default:
+                        if(USERLEVEL<unsafeWindow.produkt_level[v]){
+                            prodBlock[0][v]+="l"+unsafeWindow.produkt_level[v];
+                        }
                 }
                 if(PRODUCT_QUEST[0][v]&&(questData[PRODUCT_QUEST[0][v][0]][PRODUCT_QUEST[0][v][1]]["nr"]<=PRODUCT_QUEST[0][v][2])){
                     prodBlock[0][v]+="q";
@@ -1427,7 +1460,7 @@ function updateProductDataFarm(){
         prodTyp[0][0]="c";
         try{ prodStock[0][0]=parseInt($("coins").innerHTML,10); }catch(err){}
         //13102016
-        prodNameSort[0]=[0].concat(help["v"],help["ex"],help["e"],help["o"],help["fw1"],help["fw2"],help["fw3"],help["fw4"],help["fl"],help["fla"],help["hr"],help["md"],help["breed"],help["alpin"],help["tea"],help["z"]);
+        prodNameSort[0]=[0].concat(help["v"],help["ex"],help["e"],help["o"],help["fw1"],help["fw2"],help["fw3"],help["fw4"],help["fl"],help["fla"],help["hr"],help["md"],help["breed"],help["alpin"],help["tea"],help["cow"],help["z"]);
         // quest boni
         for(var v=1;v<questData["main"]["1"]["nr"];v++){
             if(QUESTS["main"]["1"][v]&&QUESTS["main"]["1"][v][3]){
@@ -2141,6 +2174,7 @@ var zones=new function(){
                 case "farmersmarket-5": building="fl5";break;
                 case "farmersmarket-6": building="fl6";break;
                 case "farmersmarket-7": building="fl7";break;
+                case "farmersmarket-8": building="fl8";break;
                 case "windmill":        building="windmill";break;
                 case "forest":          building="forest";break;
                 case "sawmill":         building="sawmill";break;
@@ -2324,6 +2358,7 @@ var zones=new function(){
             fl5         Veterinary              Farmersmarket
             fl6         Speed eating            Farmersmarket
             fl7         Butterfly               Farmersmarket
+            fl8         cowracing               Farmersmarket
         */
         try{
             if(!data[zoneNrF]){
@@ -3839,7 +3874,7 @@ try{
     }}(mode["filterCategory"]),false);
     switch(mode["prodType"]){
     case 0:{
-        createElement("div",{"class":"link rackcat1v"+(mode["filterCategory"]["v","ex"]?"_active":""),"filter":'["v","ex"]',"mouseOverText":getText("category_v"),"style":"float:left;"},newdiv);
+        createElement("div",{"class":"link rackcat1v"+(mode["filterCategory"]["v","ex","alpin"]?"_active":""),"filter":'["v","ex","alpin"]',"mouseOverText":getText("category_v"),"style":"float:left;"},newdiv);
         createElement("div",{"class":"link rackcat1e"+(mode["filterCategory"]["e","tea"]?"_active":""),"filter":'["e","tea"]',"mouseOverText":getText("category_e"),"style":"float:left;"},newdiv);
         createElement("div",{"class":"link rackcat10"+(mode["filterCategory"]["o"]?"_active":""),"filter":'["o"]',"mouseOverText":getText("category_o"),"style":"float:left;"},newdiv);
         createElement("div",{"class":"link rackcat15"+(mode["filterCategory"]["c"]||mode["filterCategory"]["z"]?"_active":""),"filter":'["c","z"]',"mouseOverText":getText("category_c")+"<br>"+getText("category_z"),"style":"float:left;"},newdiv);
@@ -3853,7 +3888,7 @@ try{
         createElement("div",{"class":"link rackcat60hr"+(mode["filterCategory"]["hr"]?"_active":""),"filter":'["hr"]',"mouseOverText":getText("category_hr"),"style":"float:left;"},newdiv);
         createElement("div",{"class":"link rackcat60md"+(mode["filterCategory"]["md"]?"_active":""),"filter":'["md"]',"mouseOverText":getText("category_md"),"style":"float:left;"},newdiv);
         createElement("div",{"class":"link rackcat60breed"+(mode["filterCategory"]["breed"]?"_active":""),"filter":'["breed"]',"mouseOverText":getText("category_breed"),"style":"float:left;"},newdiv);
-        createElement("div",{"class":"link rackcat60alpin"+(mode["filterCategory"]["alpin"]?"_active":""),"filter":'["alpin"]',"mouseOverText":getText("category_alpin"),"style":"float:left;"},newdiv);
+        createElement("div",{"class":"link rackcat60cow"+(mode["filterCategory"]["cow"]?"_active":""),"filter":'["cow"]',"mouseOverText":getText("category_cow"),"style":"float:left;"},newdiv);
     } break;
     case 1:{
         for(var i=1;i<=5;i++){
@@ -4352,7 +4387,7 @@ try{
             buildInfoPanelProfit({"filterCategory":filterCategory});
         }
     }}(mode["filterCategory"]),false);
-    createElement("div",{"class":"link rackcat1v"+(mode["filterCategory"]["v","ex"]?"_active":""),"filter":'["v","ex"]',"mouseOverText":getText("category_v"),"style":"float:left;"},newdiv);
+    createElement("div",{"class":"link rackcat1v"+(mode["filterCategory"]["v","ex","alpin"]?"_active":""),"filter":'["v","ex","alpin"]',"mouseOverText":getText("category_v"),"style":"float:left;"},newdiv);
     createElement("div",{"class":"link rackcat1e"+(mode["filterCategory"]["e","tea"]?"_active":""),"filter":'["e","tea"]',"mouseOverText":getText("category_e"),"style":"float:left;"},newdiv);
     createElement("div",{"class":"link rackcat10"+(mode["filterCategory"]["o"]?"_active":""),"filter":'["o"]',"mouseOverText":getText("category_o"),"style":"float:left;"},newdiv);
     newdiv1=createElement("div",{"style":"float:left;width:53px;"},newdiv);
@@ -4365,7 +4400,7 @@ try{
     createElement("div",{"class":"link rackcat60hr"+(mode["filterCategory"]["hr"]?"_active":""),"filter":'["hr"]',"mouseOverText":getText("category_hr"),"style":"float:left;"},newdiv);
     createElement("div",{"class":"link rackcat60md"+(mode["filterCategory"]["md"]?"_active":""),"filter":'["md"]',"mouseOverText":getText("category_md"),"style":"float:left;"},newdiv);
     createElement("div",{"class":"link rackcat60breed"+(mode["filterCategory"]["breed"]?"_active":""),"filter":'["breed"]',"mouseOverText":getText("category_breed"),"style":"float:left;"},newdiv);
-    createElement("div",{"class":"link rackcat60alpin"+(mode["filterCategory"]["alpin"]?"_active":""),"filter":'["alpin"]',"mouseOverText":getText("category_alpin"),"style":"float:left;"},newdiv);
+    createElement("div",{"class":"link rackcat60cow"+(mode["filterCategory"]["cow"]?"_active":""),"filter":'["cow"]',"mouseOverText":getText("category_cow"),"style":"float:left;"},newdiv);
 
     // the table
         err_trace="table";
@@ -4874,6 +4909,9 @@ try{
                     break;}
                     case 22:{
                         createElement("div",{},td,getText("terrarium").replace(/%1%/,questCurr[3][w][1]));
+                    break;}
+                    case 23:{
+                        createElement("div",{},td,getText("cowracing").replace(/%1%/,questCurr[3][w][1]));
                     break;}
 
                     default:{
@@ -7794,7 +7832,25 @@ function buildInfoPanelOptions(){
                         // main questseries 4 is accessible - do nothing
                         var help = help + "_accessible:_DoNothing ";
                     }
+                } else if (USERLEVEL >= 42
+                    && speedlink_farm5.style.display=="block"
+                    && (!unsafeWindow.quests_status.hasOwnProperty("main")
+                        || !unsafeWindow.quests_status["main"].hasOwnProperty("4"))) {
+                    // no main questseries - or main questseries 4 has no properties: questseries must be accomplished
+                    questData["main"][4] = INIT_questData["main"][4].clone();
+                    questData["main"][4]["nr"] = QUESTS["main"][4].length;
+                    questData["main"][4]["given"] = new Object();
+                    questData["main"][4]["time"] = 0;
+                    GM_setValueCache(COUNTRY+"_"+SERVER+"_"+USERNAME+"_questData",implode(questData,"handleQuestData/questData"));
+                    //unsafeData.questData=questData.clone();
+                    unsafeData.questData=Object.assign({}, questData);
+                    var help = help + "4_Accomplished: SetLastQuestNumber_QuestNumber_" + questData["main"][4]["nr"] + " ";
+                } else if (USERLEVEL >= 40
+                    && speedlink_farm5.style.display!="block"){
+                    // Farm 5 is not released - main questseries 3 is not accessible - do nothing
+                    var help = help + "4_NoFarm6:_DoNothing ";
                 }
+
                 if (USERLEVEL >= 40
                     && unsafeWindow.quests_status.hasOwnProperty("main")
                     && unsafeWindow.quests_status["main"].hasOwnProperty("3")
@@ -9160,7 +9216,7 @@ function showMarket(pid){
             closeInfoPanel();
             unsafeWindow.market_filter_pid=parseInt(pid,10);
             //13102016
-            var help={"v":1,"ex":1,"e":2,"o":3,"fw1":4,"fw2":4,"fw3":4,"fw4":4,"z":5,"fl":7,"fla":7,"hr":1,"md":7,"breed":7,"alpin":1,"tea":1,"c":0};
+            var help={"v":1,"ex":1,"e":2,"o":3,"fw1":4,"fw2":4,"fw3":4,"fw4":4,"z":5,"fl":7,"fla":7,"hr":1,"md":7,"breed":7,"alpin":1,"tea":1,"cow":8,"c":0};
             unsafeWindow.market_nav=help[prodTyp[0][parseInt(pid,10)]];
             unsafeWindow.filterMarket();
         }
@@ -9845,7 +9901,15 @@ function doFarmis(){
                     $("kunde_"+farmiNr).addEventListener("mouseover",function(event){
                         var farmiNr=this.id.replace("kunde_","");
                         // toolTip.show(event,print_r(unsafeWindow.farmisinfo[0][farmiNr],"",true));
-                        var cash=parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10);
+                        var cash;
+                        //var cash=parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10);
+                        if (unsafeWindow.specialbonus&&unsafeWindow.specialbonus.data&&unsafeWindow.specialbonus.data.farmis&&unsafeWindow.specialbonus.data.farmis.money&&unsafeWindow.specialbonus.data.remain>0) {
+                            cash = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*unsafeWindow.specialbonus.data.farmis.money;
+
+                        } else {
+                            cash = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10);
+                        }
+
                         var wert = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["marketValue"],10);
                         var cell=$("blase"+farmiNr).firstElementChild.firstElementChild;
                         var ppid, amount;
@@ -10310,7 +10374,13 @@ try{
                     }
                 }
             }
-            unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]=(priceMissing>0?null:(100*parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)/wert));
+            if (unsafeWindow.specialbonus&&unsafeWindow.specialbonus.data&&unsafeWindow.specialbonus.data.farmis&&unsafeWindow.specialbonus.data.farmis.money&&unsafeWindow.specialbonus.data.remain>0) {
+                unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]=(priceMissing>0?null:(100*(parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*unsafeWindow.specialbonus.data.farmis.money)/wert));
+
+            } else {
+                unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]=(priceMissing>0?null:(100*parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)/wert));
+            }
+            //unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]=(priceMissing>0?null:(100*parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)/wert));
             unsafeWindow.farmisinfo[0][farmiNr]["marketValue"]=(priceMissing>0?0:wert);
         }
     if(DEVMODE_FUNCTION){ tracking.end("berater",trackingHandle); }
@@ -11352,7 +11422,7 @@ try{
                 unsafeWindow.farm=0;
                 unsafeWindow.city=0;
                 unsafeWindow.foodworld_quicknavi=1;
-                unsafeWindow.foodworldAction('init');
+                unsafeWindow.foodworldAction('foodworld_init');
             }else{
                 //unsafeWindow.mapGo2Location("picknick",1);
                 document.addEventListener("gameCity2",function(){
@@ -12081,9 +12151,9 @@ try{
                 }
                 if(unsafeWindow.vet_data.quest.quest_id){
                     // Quest number
-                    if(questData["veterinary"][campaign]["nr"]!=parseInt(unsafeWindow.vet_data.quest.campaign=="2"?unsafeWindow.vet_data.quest.quest_id+177:unsafeWindow.vet_data.quest.quest_id,10)){
+                    if(questData["veterinary"][campaign]["nr"]!=parseInt(unsafeWindow.vet_data.quest.campaign=="2"?parseInt(unsafeWindow.vet_data.quest.quest_id)+177:unsafeWindow.vet_data.quest.quest_id,10)){
                         GM_logInfo("handleQuestDataVeterinary","","",getText("questSetXToNrY").replace(/%1%/,getText("quest"+"veterinary"+campaign)).replace(/%2%/,unsafeWindow.vet_data.quest.quest_id));
-                        questData["veterinary"][campaign]["nr"]=parseInt(unsafeWindow.vet_data.quest.campaign=="2"?unsafeWindow.vet_data.quest.quest_id+177:unsafeWindow.vet_data.quest.quest_id,10);
+                        questData["veterinary"][campaign]["nr"]=parseInt(unsafeWindow.vet_data.quest.campaign=="2"?parseInt(unsafeWindow.vet_data.quest.quest_id)+177:unsafeWindow.vet_data.quest.quest_id,10);
                     }
                     // Given
                     questData["veterinary"][campaign]["given"] = new Object();
@@ -12200,6 +12270,51 @@ try{
             }
             div=null;
         }catch(err){ GM_logError("handleQuestDataButterfly","","err_trace="+err_trace,err); }
+    }
+
+    function handleQuestDataCowRacing(){
+        // GM_log("setQuest newQuestNr="+newQuestNr);
+        try{
+            var err_trace = "Get questdata";
+            if(unsafeWindow.cowracing&&unsafeWindow.cowracing.data.quest){
+                // GM_log("unsafeWindow.cowracing.data.quest:\n"+print_r(unsafeWindow.cowracing.data.quest,"",true,"\n"));
+                if(!questData["cow"]){ questData["cow"]={}; }
+                var campaign = "1";
+                if(!questData["cow"][campaign]){
+                    questData["cow"][campaign]=INIT_questData["cow"][campaign].clone();
+                }
+                if(unsafeWindow.cowracing.data.quest.questid){
+                    // Quest number
+                    if(questData["cow"][campaign]["nr"]!=parseInt(unsafeWindow.cowracing.data.quest.questid,10)){
+                        GM_logInfo("handleQuestDataCowRacing","","",getText("questSetXToNrY").replace(/%1%/,getText("quest"+"cow"+campaign)).replace(/%2%/,unsafeWindow.cowracing.data.quest.questid));
+                        questData["cow"][campaign]["nr"]=parseInt(unsafeWindow.cowracing.data.quest.questid,10);
+                    }
+                    // Given
+                    questData["cow"][campaign]["given"] = new Object();
+                    if(unsafeWindow.cowracing.data.quest.questid){
+                        for(var t in unsafeWindow.cowracing.data.quest.data){
+                            if(!unsafeWindow.cowracing.data.quest.data.hasOwnProperty(t)){continue;}
+                            var prod = parseInt(t,10);
+                            var type = 0;
+                            if(!questData["cow"][campaign]["given"][type]){ questData["cow"][campaign]["given"][type] = new Object(); }
+                            if(!questData["cow"][campaign]["given"][type][prod]){ questData["cow"][campaign]["given"][type][prod] = 0; }
+                            questData["cow"][campaign]["given"][type][prod] += parseInt(unsafeWindow.cowracing.data.quest.data[t],10);
+                        }
+                    }
+                    // Time
+                    questData["cow"][campaign]["time"] = now; // TODO
+                }else{
+                    questData["cow"][campaign]["nr"]=QUESTS["cow"][campaign].length;
+                    questData["cow"][campaign]["given"] = new Object();
+                    questData["cow"][campaign]["time"] = 0;
+                }
+                calcQuestData("cow",campaign);
+                // GM_log("questdata:\n"+print_r(questData["cow"],"",true,"\n"));
+                GM_setValueCache(COUNTRY+"_"+SERVER+"_"+USERNAME+"_questData",implode(questData,"handleQuestDataCowRacing/questData"));
+                unsafeData.questData=questData.clone();
+            }
+            div=null;
+        }catch(err){ GM_logError("handleQuestDataCowRacing","","err_trace="+err_trace,err); }
     }
 
     // mouseover showing quest data
@@ -15249,10 +15364,25 @@ try{
                 // Check, if old production data is still valid
                 oldData=zones.getProduction(zoneNrF);
                 skip=false;
-                for(var oldProdId in oldData[0][0]) {
-                    if (!oldData[0][0].hasOwnProperty(oldProdId)) {continue};
-                    skip=oldData[0][0][oldProdId][0][2]>now; // Skip renewing production data, if old production is still running
-                }
+                try{
+                    for(var oldProdId in oldData[0][0]) {
+                        try{
+                            if (!oldData[0][0].hasOwnProperty(oldProdId)) {continue};
+                            //skip=oldData[0][0][oldProdId][0][2]>now; // Skip renewing production data, if old production is still running
+
+                        }catch(err){GM_logError("Mist1","zoneNrF="+oldProdId,"",err);}
+                        /*
+                        if (!oldData[0][0].hasOwnProperty(oldProdId)) {continue};
+                        */
+                        try{
+                            skip=oldData[0][0][oldProdId][0][2]>now; // Skip renewing production data, if old production is still running
+
+                        }catch(err){GM_logError("Mist3","zoneNrF="+oldProdId,"",err);}
+                        //skip=oldData[0][0][oldProdId][0][2]>now; // Skip renewing production data, if old production is still running
+
+                    }
+                }catch(err){GM_logError("Mist2","oldProdId="+oldProdId,"",err);}
+
                 // Skip not-yet-enabled or blocked zones, non-fields and skippable fields
                 if (!aktZone.status || aktZone.premiumblock || aktZone.buildingid != 1 || skip) {continue};
 
@@ -17016,7 +17146,13 @@ try{
             }
         break;}
         default:{
-            thisFarmiData["money"]=parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10);
+            if (unsafeWindow.specialbonus&&unsafeWindow.specialbonus.data&&unsafeWindow.specialbonus.data.farmis&&unsafeWindow.specialbonus.data.farmis.money&&unsafeWindow.specialbonus.data.remain>0) {
+                thisFarmiData["money"]=parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10)*unsafeWindow.specialbonus.data.farmis.money;
+
+            } else {
+                thisFarmiData["money"]=parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10);
+            }
+            //thisFarmiData["money"]=parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10);
             for(var i=1;i<=7;i++){
                 prod=parseInt(unsafeWindow.farmisinfo[0][farmi]["p"+i],10);
                 menge=parseInt(unsafeWindow.farmisinfo[0][farmi]["a"+i],10);
@@ -17308,7 +17444,7 @@ try{
                     zones.setBonusSpecial(zoneNrF,null);
                 }
                 if(unsafeWindow.farmersmarket_data.pos){
-                    for(var w=1;w<=7;w++) {
+                    for(var w=1;w<=8;w++) {
                         if(item=unsafeWindow.farmersmarket_data.pos[w]){
                             zoneNrF="farmersmarket-"+w;
                             currBlock=(item["block"]&&item["cost"]?"b":""); // locked due to missing payment
@@ -17414,12 +17550,13 @@ try{
                                     if(unsafeWindow.farmersmarket_data.megafruit.current) {
                                         zones.setBonus(zoneNrF,0);
                                         item = unsafeWindow.farmersmarket_data.megafruit;
-                                        slot = 0;
+                                         var SLOT={"water":1,"light":2,"fertilize":3};
+                                        //slot = 0;
                                         iProd=item.current.pid; iAmount=0; iPoints=0;
                                         tempZoneProductionData=[[{},{}],0,0,true];
                                         for (var i in item.current.data){
                                             if(!item.current.data.hasOwnProperty(i)){ continue; }
-                                            slot++;
+                                            slot = SLOT[i];
                                             zoneNrS=zoneNrF+"."+slot;
                                             zones.setBlock(zoneNrS,"");
 
@@ -17788,6 +17925,53 @@ try{
                                 }
                                 zones.setProduction(zoneNrF,tempZoneProductionData.clone());
                                 break;}
+                                case 8:{ // cowracing food
+                                    zones.setBonus(zoneNrF,0);
+                                    if((!currBlock)&&(unsafeWindow.farmersmarket_data.cowracing&&unsafeWindow.farmersmarket_data.cowracing.production)){
+                                        tempZoneProductionData=[[{},{}],0,0,true];
+                                        if (!zones.getBuilding(zoneNrF)){
+                                            zones.setBuilding(zoneNrF,"fl8");
+                                        }
+                                        for(var slot=1;slot<=4;slot++){
+                                            zoneNrS=zoneNrF+"."+slot;
+                                            zones.setBlock(zoneNrS,"");
+                                            tempZoneProductionDataSlot=[[{},{}],0,0,true];
+                                            //item=unsafeWindow.farmersmarket_data.cowracing.animals.slots2[slot];
+                                            if(slot >= 3 && unsafeWindow.farmersmarket_data.cowracing.data.slots[slot]["block"]) { // slot blocked
+                                                zones.setBlock(zoneNrS,"b");
+                                            } else if(unsafeWindow.farmersmarket_data.cowracing.production[slot]){ // production running
+                                                item=unsafeWindow.farmersmarket_data.cowracing.production[slot]["1"];
+                                                iProd=(item["pid"]?parseInt(item["pid"],10):null);
+                                                if(isNaN(iProd)){ iProd=null; }
+                                                if(iProd!=null) { // production in slot is ready (item["remain"] == 0) or busy (item["remain"] > 0)
+                                                    iTime=nowServer+Math.round(item["remain"]); // Math.round, because it's sometimes returned as string
+                                                }else{
+                                                    iTime=NEVER;
+                                                    tempZoneProductionData[1]++;
+                                                    tempZoneProductionDataSlot[1]++;
+                                                }
+                                                tempZoneProductionData[2]++;
+                                                tempZoneProductionDataSlot[2]++;
+                                                if(iProd!=null){
+                                                    iAmount=prodYield[0][iProd];
+                                                    iPoints=iAmount*prodPoints[0][iProd];
+                                                    if(!tempZoneProductionData[0][0][iProd]){ tempZoneProductionData[0][0][iProd]=[]; }
+                                                    tempZoneProductionData[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                                    if(!tempZoneProductionDataSlot[0][0][iProd]){ tempZoneProductionDataSlot[0][0][iProd]=[]; }
+                                                    tempZoneProductionDataSlot[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                                }
+                                            } else { // slot empty
+                                                tempZoneProductionData[1]++;
+                                                tempZoneProductionDataSlot[1]++;
+                                                tempZoneProductionData[2]++;
+                                                tempZoneProductionDataSlot[2]++;
+                                            }
+                                            zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+                                        }
+                                        zones.setProduction(zoneNrF,tempZoneProductionData.clone());
+                                        showGoToVetFarmi(); // Determine, if Discharge-Sick-Animals-Icon is shown
+                                    }
+                                break;}
 
                             default: currBlock="blpqs"; // Block farm
                             }
@@ -17799,6 +17983,7 @@ try{
             handleQuestDataVeterinary();
             handleQuestDataBreed();
             handleQuestDataButterfly();
+            handleQuestDataCowRacing();
             calcTotalZones();
         } catch (err) { GM_logError("doFarmersMarketData", "", "err_trace=" + err_trace, err); }
     };
@@ -18400,6 +18585,66 @@ try{
     });
 
     /**********************************************************
+    * Kuh Rennen / cowracing
+    **********************************************************/
+    //Open Farmersmarket Pos8
+    unsafeOverwriteObjFunction("cowracing","buildProductionSlots",function(){
+        try{
+             unsafeWindow.cowracing._buildProductionSlots();
+        }catch(err){GM_logError("cowracing.buildProductionSlots","","",err);}
+        try{
+            raiseEvent("gameFarmersmarketOpened8");
+        }catch(err){GM_logError("buildProductionSlotsResponse","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("cowracing","harvestProduction",function(b,a){
+        try{
+            unsafeWindow.cowracing._harvestProduction(b,a);
+        }catch(err){GM_logError("cowracing.harvestProduction","","",err);}
+        try{
+            raiseEvent("gameFarmersmarketCropped");
+        }catch(err){GM_logError("harvestProductionResponse","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("cowracing","productionSelection",function(r){
+        try{
+            unsafeWindow.cowracing._productionSelection(r);
+        }catch(err){GM_logError("cowracing.productionSelection","","",err);}
+        try{
+            raiseEvent("gameFarmersmarketSlotOpened");
+        }catch(err){GM_logError("productionSelectionResponse","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("cowracing","productionSelectionCommit",function(b){
+        try{
+            unsafeWindow.cowracing._productionSelectionCommit(b);
+        }catch(err){GM_logError("cowracing.productionSelectionCommit","","",err);}
+        try{
+            raiseEvent("gameProductionSelectionCommit");
+        }catch(err){GM_logError("productionSelectionCommitResponse","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("cowracing","productionSelectionNavi",function(b,c){
+        try{
+            unsafeWindow.cowracing._productionSelectionNavi(b,c);
+        }catch(err){GM_logError("cowracing.productionSelectionNavi","","",err);}
+        try{
+            raiseEvent("gameProductionSelectionNavi");
+        }catch(err){GM_logError("productionSelectionNaviResponse","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("cowracing","startProduction",function(a){
+        try{
+            unsafeWindow.cowracing._startProduction(a);
+        }catch(err){GM_logError("cowracing.startProduction","","",err);}
+        try{
+            raiseEvent("gameFarmersmarketStarted");
+        }catch(err){GM_logError("startProductionCommitResponse","","",err);}
+    });
+
+    /**********************************************************
     * Vehicle Farm 5 und 6
     **********************************************************/
     unsafeOverwriteFunction("openMap",function(){
@@ -18547,7 +18792,6 @@ try{
                         {1}{1}{11} = 0 ->stock 3: fid needed to produce
                         {1}{1}{12} = 0 //item for in the farmbuilding
                         */
-
                         //make prodName[1] && prodYield[1] && prodRequire[1] = [[type,fId,amount]]
                         var store,stock,fId,help,building;
                         for(var stock in result[4]){ //forestry_production_products==initForestryResponce->result[4]
@@ -18777,7 +19021,7 @@ try{
     */
     // Redesign Forest Stock
     var div,div2,span,iProd,iTime;
-    for(var v=1;v<=8;v++){
+    for(var v=1;v<=10;v++){
         if(div=$("f_stock_item"+v)){
             iProd=parseInt(/f_symbol(\d+)/.exec(div.firstElementChild.className)[1],10);
             if(iProd&&(div=$("f_stock_growing_"+v))){
@@ -18805,24 +19049,23 @@ try{
             case 1:{// sawmill
                 var container,prod,classStr,flagDisplay,div;
                 var zoneNrF="sawmill";
-                for(var treeId=1;treeId<=5;treeId++){
+                for (var slot=1;slot<=3;slot++){
                     try{
-                        container = $("forestry_sawmill_productbox_tree"+treeId);
-                        classStr = container.children[0].getAttribute("class");
-                        prod = parseInt(/f_symbol(\d+)/.exec(classStr)[1],10);
-                        $(container.children[0].id+"_amount").innerHTML = numberFormat(prodStock[1][prod]);
-                        flagDisplay = "none";
-                        for(var i=1;i<=3;i++){
-                            if(container.children[i].style.display!="none"){
-                                flagDisplay = "block";
-                                classStr = container.children[i].getAttribute("class");
-                                prod = parseInt(/f_symbol(\d+)/.exec(classStr)[1],10);
-                                if(!classStr.match(/ link$/)){ container.children[i].setAttribute("class",classStr+" link"); }
-                                $(container.children[i].id+"_amount").innerHTML = numberFormat(prodStock[1][prod]);
-                            }
+                        if ( $("forestry_building_inner_slot_locked"+slot).style.display=="block"){
+                            continue;
                         }
-                        container.style.display = flagDisplay;
-                    }catch(err){ GM_logError("showForestryProductionBox","type="+type,"zoneNrF="+zoneNrF+" treeId="+treeId,err); }
+                        container = $("forestry_building_inner_slot"+slot);
+                        classStr = container.children[0].children[0].getAttribute("class");
+                        prod = parseInt(/fbig(\d+)/.exec(classStr)[1],10);
+                        div=createElement("div", {
+                            "style": " position:absolute;bottom: 60px; left: 110px;"
+                        }, container, getText("inStock")+": "+numberFormat(prodStock[1][prod]));
+                        div=createElement("div", {
+                            "style": " position:absolute;bottom: 75px; left: 110px;"
+                        }, container);
+                        pointsFormat(prodPoints[1][prod], "div", div);
+                    }
+                    catch(err){ GM_logError("showForestryProductionBox","type="+type,"zoneNrF="+zoneNrF+" slot="+slot,err); }
                 }
                 //auto-cropping
                 for(var slot=1;slot<=3;slot++){
@@ -18845,38 +19088,25 @@ try{
                 raiseEvent("gameSawmillOpened");
             break;}
             case 2:{ // carpentry
-                var container,icon,prod,help;
-                for(var i=1;i<=20;i++){
+                var container,prod,classStr,flagDisplay,div;
+                var zoneNrF="carpentry";
+                for (var slot=1;slot<=3;slot++){
                     try{
-                    container=$("forestry_productiondialog_content_item_con"+i);
-                    icon=$("forestry_productiondialog_content_item"+i);
-                    if(container&&icon&&(container.style.display=="block")){
-                        prod = parseInt(/f_symbol(\d+)/.exec(icon.getAttribute("class"))[1],10);
-                        // show rack amount
-                        // $("forestry_productiondialog_content_item_rackamount"+i).innerHTML = numberFormat(prodStock[1][prod]);
-                        // check required products
-                        help=true;
-                        for(var j=0;j<prodRequire[1][prod].length;j++){
-                            if(prodStock[1][prodRequire[1][prod][j][1]]<prodRequire[1][prod][j][2]){ help=false; }
+                        if ( $("forestry_building_inner_slot_locked"+slot).style.display=="block"){
+                            continue;
                         }
-                        if(help){
-                            if(icon.childElementCount>0){ removeElement(icon.children[0]); }
-                        } else {
-                            if(icon.childElementCount==0){ createElement("img",{"alt":"X","style":"width:25px;height:25px;","src":GFX+"cursors/cursor_forbidden.gif"},icon); }
-                        }
-                        // show times
-                        help=calcProductionTime("carpentry",1,prod,1-zones.getBonus("carpentry")/100);
-                        if(icon=$("forestry_productiondialog_content_item_amount"+i)){
-                            icon.innerHTML = prodName[1][prod];
-                        }
-                        if(icon=$("forestry_productiondialog_content_item_times"+i)){
-                            icon.innerHTML = getTimeStr(help,true)+"&nbsp;"+getText("shortHours");
-                        }
-                        if(icon=$("forestry_productiondialog_content_item_endtimes"+i)){
-                            icon.innerHTML = getDaytimeStr(now+help,true,true)+"&nbsp;"+getText("shortOClock");
-                        }
+                        container = $("forestry_building_inner_slot"+slot);
+                        classStr = container.children[0].children[0].getAttribute("class");
+                        prod = parseInt(/fbig(\d+)/.exec(classStr)[1],10);
+                        div=createElement("div", {
+                            "style": " position:absolute;bottom: 60px; left: 110px;"
+                        }, container, getText("inStock")+": "+numberFormat(prodStock[1][prod]));
+                        div=createElement("div", {
+                            "style": " position:absolute;bottom: 75px; left: 110px;"
+                        }, container);
+                        pointsFormat(prodPoints[1][prod], "div", div);
                     }
-                    }catch(err){ GM_logError("showForestryProductionBox","type="+type,"i="+i,err); }
+                    catch(err){ GM_logError("showForestryProductionBox","type="+type,"zoneNrF="+zoneNrF+" slot="+slot,err); }
                 }
                 //auto-cropping
                 for(var slot=1;slot<=3;slot++){
@@ -20703,7 +20933,7 @@ try{
     for(var v=1;v<=4;v++){
         createZoneTimer("globalZoneTimer_foodworld-"+v,"foodworld-"+v,"zonetimer","position:relative;",$("timeHolder"));
     }
-    for(var v=1;v<=7;v++){
+    for(var v=1;v<=8;v++){
         createZoneTimer("globalZoneTimer_farmersmarket-"+v,"farmersmarket-"+v,"zonetimer","position:relative;",$("timeHolder"));
     }
 
@@ -22237,11 +22467,10 @@ try{
         .rackcat60breed{background-position:0px -562px;}\
         .rackcat60breed:hover{background-position:-36px -562px;}\
         .rackcat60breed_active{background-position:-72px -562px;}\
-        .rackcat60alpin,.rackcat60alpin_active{background:url("+GFX+"rack_sort_left7.png);width:26px;height:39px;}\
-        .rackcat60alpin{background-position:0px -609px;}\
-        .rackcat60alpin:hover{background-position:-36px -609px;}\
-        .rackcat60alpin_active{background-position:-72px -609px;}\;"
-
+        .rackcat60cow,.rackcat60cow_active{background:url("+GFX+"rack_sort_left8.png);width:36px;height:47px;}\
+        .rackcat60cow{background-position:0px -656px;}\
+        .rackcat60cow:hover{background-position:-36px -656px;}\
+        .rackcat60cow_active{background-position:-72px -656px;}\;"
     );
 
     // temporary hack
@@ -22290,6 +22519,8 @@ try{
         .quests_status_bar_butterfly1_active{background:url('"+IMAGES["questButterflyActive"]+"') no-repeat scroll 0 0 rgba(0, 0, 0, 0);}\
         .quests_status_bar_breed1{background:url('"+GFX+"breed/Heart_00.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);background-size: 30px 30px;}\
         .quests_status_bar_breed1_active{background:url('"+GFX+"breed/Heart_00.png') no-repeat scroll 0 0 rgba(116, 160, 43, 0.85);background-size: 30px 30px;}\
+        .quests_status_bar_cow1{background:url('"+GFX+"cowracing/CowHead_Holstein.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);background-size: 30px 30px;}\
+        .quests_status_bar_cow1_active{background:url('"+GFX+"cowracing/CowHead_Holstein.png') no-repeat scroll 0 0 rgba(116, 160, 43, 0.85);background-size: 30px 30px;}\
         .quests_status_bar_forestry1{background:url('"+GFX+"questbar_forestry1.png') repeat scroll 0 0 rgba(0, 0, 0, 0);}\
         .quests_status_bar_forestry1_active{background:url('"+IMAGES["questForestry1Active"]+"') repeat scroll 0 0 rgba(0, 0, 0, 0);}\
         .quests_status_bar_forestry2{background:url('"+GFX+"questbar_forestry2.png') repeat scroll 0 0 rgba(0, 0, 0, 0);}\
@@ -22419,6 +22650,7 @@ try{
         #map_stock_overview_link{position:absolute!important;top:372px!important;}\
         #weatherlink{top:-88px!important;}\
         #farm_speedlinks{top:11px!important;}\
+        #specialoffer_link{top:-37px!important;}\
         #teaser_links{top:-40px!important;-65px !important}"
     );
     GM_addStyle(
@@ -22907,6 +23139,7 @@ try{
         text["de"]["boughtTickets"]="Gekaufte Tickets";
         text["de"]["breed"]="Tieraufzucht";
         text["de"]["buildingNameX"]="%1% zum Kauf frei";
+        text["de"]["butterfly"]="Schmetterling";
         text["de"]["buy"]="Kauf";
         text["de"]["buyers"]="Käufer";
         //22102016
@@ -22932,6 +23165,8 @@ try{
         text["de"]["copyToTextFile"]="Kopiere diesen Satz in eine Text-Datei";
         text["de"]["couldNotGetRank"]="Dein Platz konnte nicht bestimmt werden.";
         text["de"]["couldNotGetUpdateInfoOfX"]="Update-Informationen für %1% konnten nicht bestimmt werden."
+        text["de"]["cow"]="Kuhrennen";
+        text["de"]["cowracing"]="%1%. Kuh-Rennstall";
         text["de"]["createStorageString"]="Erstelle Speicher-Satz";
         text["de"]["cropped"]="Geerntet";
         text["de"]["currentOffers"]="Aktuelle Angebote";
@@ -22981,6 +23216,7 @@ try{
         text["de"]["fl5"]="Tierarzt";
         text["de"]["fl6"]="Wettmampfen";
         text["de"]["fl7"]="Schmetterlingshaus";
+        text["de"]["fl8"]="KuhRennen";
         text["de"]["fw1"]="Getränkebude";
         text["de"]["fw2"]="Imbissbude";
         text["de"]["fw3"]="Konditorei";
@@ -23085,6 +23321,8 @@ try{
         text["de"]["questbutterfly1"]="Schmetterlings Questreihe";
         text["de"]["quest_breed"]="Tieraufzuchtsanlage Questreihe";
         text["de"]["questbreed1"]="Tieraufzuchtsanlage Questreihe";
+        text["de"]["questcow"]="Kuhrennen Questreihe";
+        text["de"]["questcow1"]="Kuhrennen Questreihe";
         text["de"]["quest_foodworld"]="Picknickarea Questreihe";
         text["de"]["quest_forestry"]="Forsthütte Questreihe";
         text["de"]["quest_main"]="Hauptquestreihe";
@@ -23194,7 +23432,7 @@ try{
         text["de"]["yieldPerProduction"]="Ertrag pro Produktion";
         text["de"]["youAreOnRankX"]="Du bist auf Platz %1%.";
         // category
-        text["de"]["category_alpin"]="Bergkräuter";
+        text["de"]["category_cow"]="Rennkuh-Futter";
         text["de"]["category_breed"]="Tieraufzucht";
         text["de"]["category_c"]=text["de"]["coins"];
         text["de"]["category_v"]="Pflanzliche Produkte";
@@ -23343,6 +23581,7 @@ try{
         text["en"]["boughtTickets"]="Bought tickets";
         text["en"]["breed"]="Animal breeding";
         text["en"]["buildingNameX"]="%1% to buying";
+        text["en"]["butterfly"]="Butterfly";
         text["en"]["buy"]="Buy";
         text["en"]["buyers"]="Buyers";
         //22102016
@@ -23368,6 +23607,8 @@ try{
         text["en"]["copyToTextFile"]="Copy this string to a text-file";
         text["en"]["couldNotGetRank"]="Your rank could not be determined.";
         text["en"]["couldNotGetUpdateInfoOfX"]="Update information for %1% could not be determined.";
+        text["en"]["cow"]="Cow-Racing";
+        text["en"]["cowracing"]="%1%. Cow-Racing-Stable";
         text["en"]["createStorageString"]="Create storage string";
         text["en"]["cropped"]="Cropped";
         text["en"]["currentOffers"]="Current offers";
@@ -23417,6 +23658,7 @@ try{
         text["en"]["fl5"]="Animal doctor";
         text["en"]["fl6"]="Speed eating";
         text["en"]["fl7"]="Butterfly terrarium";
+        text["en"]["fl8"]="Cowracing";
         text["en"]["fw1"]="Soda stall";
         text["en"]["fw2"]="Snack booth";
         text["en"]["fw3"]="Pastry shop";
@@ -23521,6 +23763,8 @@ try{
         text["en"]["questbreed1"]="Animal breed quest series";
         text["en"]["quest_butterfly"]="butterfly quest series";
         text["en"]["questbutterfly1"]="butterfly quest series";
+        text["en"]["questcow"]="cow racing quest series";
+        text["en"]["questcow1"]="cow racing quest series";
         text["en"]["quest_foodworld"]="Picnic area quest series";
         text["en"]["quest_forestry"]="Series of quests (forestry)";
         text["en"]["quest_main"]="Series of quests (farm)";
@@ -23630,7 +23874,7 @@ try{
         text["en"]["yieldPerProduction"]="Yield per production";
         text["en"]["youAreOnRankX"]="You are on rank %1%.";
         // category
-        text["en"]["category_alpin"]="Mountain herbs";
+        text["en"]["category_cow"]="cow running food";
         text["en"]["category_breed"]="Animal breeding";
         text["en"]["category_c"]=text["en"]["coins"];
         text["en"]["category_v"]="Plants";
