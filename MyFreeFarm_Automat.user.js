@@ -664,7 +664,7 @@ var settings=new function(){
     var dataDefault={"global":{},
                      "country":{"valCloseWindowTimer":30,"pauseShort":[300,700],"pause":[2000,4000],"maxDurationBotRun":300,"maxDurationBotStep":30,"botErrorBehaviour":"reload"},
                      "server":{"botActive":false},
-                     "account":{"autoPlant":true,"autoWater":true,"autoFeed":true,"botUseClothingDonation":false,"botUsebuyPetsParts":false,"botUseClothingGamble":false,"botUseDonkey":false,"botUseFarmersmarket":false,"botUseButterfly":false,"botUseVetTreatment":true,"botUseMegafruit":false,"botUseSpeedEating":false,"botUseFarmi":false,"botUseFoodworld":false,"botUseForestry":false,"botUseGuildJop":false,"botUseIceDelivery":false,"botUseLottery":false,"botUseMegafield":false,"botUseOlympiaRun":false,"botPreferMegafield":true,"botUseMegafieldPremiumPlanting":true,"megafieldSmallVehicle":1,"megafieldBigVehicle":0,"botUseWindmill":false,"disableCropFields":false,"farmiAccept":false,"farmiAcceptAboveNr":100,"farmiAcceptBelowMinValue":false,"botUseFarmiFoodworld":true,"farmiReject":false,"farmiRejectUntilNr":90,"farmiRemoveMissing":false,"farmiRemoveMissingAboveNr":10,"lotteryActivate":false,"lotteryDailyLot":false,"powerUpActivate":false,"seedWaitForCrop":30,"showQueueTime":true,"useQueueList":false,"garage1":0,"garage1ProductFrom1":0,"garage1ProductFrom5":0,"garage2":0,"garage2ProductFrom1":0,"garage2ProductFrom6":0}
+                     "account":{"autoPlant":true,"autoWater":true,"autoFeed":true,"botUseClothingDonation":false,"botUsebuyPetsParts":false,"botUseClothingGamble":false,"botUseDonkey":false,"botUseFarmersmarket":false,"botUseButterfly":false,"botUseCowracingFeed":true,"botUseVetTreatment":true,"botUseMegafruit":false,"botUseSpeedEating":false,"botUseFarmi":false,"botUseFoodworld":false,"botUseForestry":false,"botUseGuildJop":false,"botUseIceDelivery":false,"botUseLottery":false,"botUseMegafield":false,"botUseOlympiaRun":false,"botPreferMegafield":true,"botUseMegafieldPremiumPlanting":true,"megafieldSmallVehicle":1,"megafieldBigVehicle":0,"botUseWindmill":false,"disableCropFields":false,"farmiAccept":false,"farmiAcceptAboveNr":100,"farmiAcceptBelowMinValue":false,"botUseFarmiFoodworld":true,"farmiReject":false,"farmiRejectUntilNr":90,"farmiRemoveMissing":false,"farmiRemoveMissingAboveNr":10,"lotteryActivate":false,"lotteryDailyLot":false,"powerUpActivate":false,"seedWaitForCrop":30,"showQueueTime":true,"useQueueList":false,"garage1":0,"garage1ProductFrom1":0,"garage1ProductFrom5":0,"garage2":0,"garage2ProductFrom1":0,"garage2ProductFrom6":0}
                     };
     var require=    {"global":{},
                      "country":{},
@@ -8326,8 +8326,10 @@ try{
             if (handled.zoneBuildingTyp==4 && handled.slot>4){
                 if (handled.zoneNrF=="farmersmarket-4") {
                     autoFarmersmarketAnimalBreeding(runId,1,1);
-                } else {
+                } else if (handled.zoneNrF=="farmersmarket-5"){
                     autoFarmersmarketVetTreatment(runId,1);
+                } else {
+                    autoFarmersmarketCowracingFeed(runId,1);
                 }
             } else if (handled.zoneNrF=="farmersmarket-6" && handled.zoneBuildingTyp==8) {
                 autoFarmersmarketSpeedEating(runId,1);
@@ -9376,7 +9378,6 @@ try{
     if(settings.get("account","botUseButterfly")&&bot.checkRun("autoFarmersmarketButterfly",runId)){
         bot.setAction("autoFarmersmarketButterfly ("+step+")");
         var help,help2,action=null,listeningEvent=null;
-//{"zoneNrS":"farmersmarket-6.1","slot":1,"zoneNrF":"farmersmarket-6","farmNr":null,"zoneNr":"farmersmarket","zoneNrL":"farmersmarket-6.1","zoneBuildingTyp":8}
         switch(step){
         case 1:{ // open farmersmarket
             if((help=unsafeData.readyZone[handled.zoneNrS])&&help[2]&&( (help[1]=="r")||(help[1]=="e"))) {
@@ -9422,7 +9423,7 @@ try{
             }
         break;}
         case 5:{
-            GM_logInfo("autoFarmersmarketVetTreatment","runId="+runId,"zoneNrL="+handled.zoneNrL+" zoneNrS="+handled.zoneNrS,"start other slot or exit");
+            GM_logInfo("autoFarmersmarketButterfly","runId="+runId,"zoneNrL="+handled.zoneNrL+" zoneNrS="+handled.zoneNrS,"start other slot or exit");
             var zoneNrS,zoneNrL,help,next=false;
             if(unsafeData.zones.isMultiSlot(handled.zoneNrF)){
                 for(var slot=1;slot<=unsafeData.BUILDING_SLOTS[getZoneType(handled.zoneNrF)];slot++){
@@ -9469,6 +9470,158 @@ try{
     }
  }catch(err){ GM_logError("autoFarmersmarketButterfly","runId="+runId+" step="+step,"",err); }
 }
+
+//autoFarmersmarketCowracingFeed
+//{"zoneNrS":"farmersmarket-6.1","slot":1,"zoneNrF":"farmersmarket-6","farmNr":null,"zoneNr":"farmersmarket","zoneNrL":"farmersmarket-6.1","zoneBuildingTyp":8}
+function autoFarmersmarketCowracingFeed(runId, step){
+try{
+    GM_log("autoFarmersmarketCowracingFeed runId="+runId+" step="+step+" handled.zoneNrS="+handled.zoneNrS);
+    //if(settings.get("account","botUseSpeedEating")&&bot.checkRun("autoFarmersmarketCowracingFeed",runId)){
+    if(settings.get("account","botUseCowracingFeed")&&bot.checkRun("autoFarmersmarketCowracingFeed",runId)){ //todo true
+        bot.setAction("autoFarmersmarketCowracingFeed ("+step+")");
+        var help,help2,action=null,listeningEvent=null;
+        switch(step){
+        case 1:{ // open farmersmarket
+            //if((help=unsafeData.readyZone[handled.zoneNrS])&&help[2]&&(zoneList[handled.zoneNrL][0][0]!=PRODSTOP) && ( (help[1]=="r")||(help[1]=="e"))) {
+            if((help=unsafeData.readyZone[handled.zoneNrS])&&help[2]&&(((help[1]=="r")&&(zoneList[handled.zoneNrL][0][0]!=PRODSTOP))||((help[1]=="e")&&(zoneList[handled.zoneNrL][0][0]!=PRODSTOP)))){
+                if (parseInt(unsafeWindow.farm,10)==100) {
+                        autoFarmersmarketCowracingFeed(runId,step+1);
+                } else {
+                    GM_logInfo("autoFarmersmarketCowracing","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" Goto Farmersmarket2");
+                    action=function(){ click($("speedlink_farmersmarket2")); };
+                    listeningEvent="gameFarmersmarketOpened";
+                }
+            } else {
+                autoFarmersmarketCowracingFeed(runId,6); // -> exit
+            }
+        break;}
+
+        case 2:{ // open farmersmarket building
+            if( (help=unsafeData.readyZone[handled.zoneNrS])&&help[2]&&(help[1]=="r"||help[1]=="e")) {
+                help=/-(\d)$/.exec(handled.zoneNrF)[1]; // determine which building to work on
+                if($("farmersmarket_pos"+help+"_inner").style.display != "block"){
+                    GM_logInfo("autoFarmersmarketCowracingFeed","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" Open Cowracing");
+                    action=function(){ click($("farmersmarket_pos"+help+"_click")); };
+                    listeningEvent="gameFarmersmarketOpened"+help;
+                }else{
+                    GM_logInfo("autoFarmersmarketCowracingFeed","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" Cowracing is open");
+                    autoFarmersmarketCowracingFeed(runId,step+1);
+                }
+            }else{
+                autoFarmersmarketCowracingFeed(runId,6); // -> exit
+            }
+        break;}
+        case 3:{ // open cow
+            GM_logInfo("autoFarmersmarketCowracingFeed","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" open cow");
+            help = $("cowracing_cowslots_navi").querySelector('div[onclick*="cowracing.setCowSlot('+(handled.slot-4)+')');
+            if (help) {
+                action=function(){ click(help);};
+                listeningEvent="gameCowRacingOpenCow";
+            } else {
+                autoFarmersmarketCowracingFeed(runId,6); // -> exit
+            }
+
+        break;}
+        case 4:{ // cowracing open feedSelection
+            GM_logInfo("autoFarmersmarketCowracingFeed","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" open feedSelection");
+            var help = $("cowracing_feedbutton");
+
+            if (help){
+                action=function(){ click(help);};
+                // feed fighter
+                listeningEvent="gameCowRacingOpenFeedSeceltion";
+            } else {
+                autoFarmersmarketSpeedEating(runId,5); // Mergin
+            }
+        break;}
+        case 5:{ // feed cow
+            GM_logInfo("autoFarmersmarketCowracingFeed","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" Select feed");
+
+            if(help=$("cowracing_feed_selection")){
+                help2=help.querySelector('div[onclick*="cowracing.feedCow('+zoneList[handled.zoneNrL][0][0]+')"]');
+                var helpDown=$("cowracing_feed_selection_navi_down");
+                var helpUp=$("cowracing_feed_selection_navi_up");
+                if(help2) {
+                    // link is visible, can be clicked on
+                    action=function(){ click(help2); setNextQueueItem(handled.zoneNrS);};
+                    listeningEvent="gameCowRacingFeedCow";
+                }else if(helpDown || helpUp) {
+                    // link not visible, we need to scroll
+                    if (directionDown && helpDown.style.display=="none") { // Scroll-Down-Mode, but at bottom?
+                        directionDown = false; // Switch to Scroll-Up-Mode
+                    } else if (!directionDown && helpUp.style.display=="none") { // Scroll-Up-Mode, but at top?
+                        directionDown = true; // Switch to Scroll-Down-Mode
+                    }
+                    action=function(){
+                        if (directionDown) { // In Scroll-Down-Mode?
+                            click(helpDown); // Scroll down
+                        } else {
+                            click(helpUp);   // Scroll up
+                        }
+                    };
+                    step--;
+                    listeningEvent="gameCowRacingfeedSelectionNavi";
+                }else{
+                    autoFarmersmarketCowracingFeed(runId,6); // -> exit
+                }
+            }
+
+        break;}
+        case 6:{
+            GM_logInfo("autoFarmersmarketCowracingFeed","runId="+runId,"zoneNrL="+handled.zoneNrL+" zoneNrS="+handled.zoneNrS,"start other SLOT or exit");
+            var zoneNrS,zoneNrL,help,next=false;
+            if(unsafeData.zones.isMultiSlot(handled.zoneNrF)){
+                for(var slot=5;slot<=unsafeData.BUILDING_SLOTS[getZoneType(handled.zoneNrF)];slot++){
+                    zoneNrS=handled.zoneNrF+"."+slot;
+                    if((help=unsafeData.readyZone[zoneNrS])&&help[2]){
+                        zoneNrL=getZoneListId(zoneNrS);
+                        if(((help[1]=="r")&&((zoneList[zoneNrL][0][0]!=PRODSTOP)||!settings.get("account","disableCropFields")))||((help[1]=="e")&&(zoneList[zoneNrL][0][0]!=PRODSTOP))){
+                        //if ((zoneList[zoneNrL][0][0]!=PRODSTOP||!settings.get("account","disableCropFields")) && ( (help[1]=="r")||(help[1]=="e"))) {
+                            next=true;
+                            handled.set(zoneNrS);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if(next){
+                autoFarmersmarketCowracingFeed(runId,1);
+            }else{
+                help=/-(\d)$/.exec(handled.zoneNrF)[1];
+                var div=$("farmersmarket_pos"+help+"_inner").querySelector(".big_close");
+                if (!div) {
+                    var help2=$("farmersmarket_pos"+help+"_inner").querySelectorAll(".mini_close");
+                    for (var i=0;i<help2.length;i++) {
+                        if (help2[i].getAttribute("onclick")=="cowracing.close()"){
+                            div = help2[i];
+                            break;
+                        }
+                    }
+                }
+                if (!div) {
+                    autoZoneFinish(runId);
+                } else {
+                    autoZoneFinish(runId,div);
+                }
+
+            }
+        break;}
+        }
+        if(listeningEvent){
+            document.addEventListener(listeningEvent,function(listeningEvent,runId,step){
+                return function(){
+                    document.removeEventListener(listeningEvent,arguments.callee,false);
+                    window.setTimeout(autoFarmersmarketCowracingFeed,settings.getPause(),runId,step+1);
+                };
+            }(listeningEvent,runId,step),false);
+        }
+        if(action){ action(); }
+        help=null;listeningEvent=null;action=null;
+    }
+ }catch(err){ GM_logError("autoFarmersmarketCowracingFeed","runId="+runId+" step="+step,"",err); }
+}
+
 
 function autoFoodworld(runId){
 try{
@@ -12180,15 +12333,24 @@ try{
                                     }
                                     break;
                             case 5: container=$("vet_production_slot"+slot); break;
-                            case 8: container=$("cowracing_productionslot"+slot); break;
+                            case 8: if (slot<=4) {
+                                      container=$("cowracing_productionslot"+slot);
+                                    }
+                                    else {
+                                      container=$("cowracing_cowslots_navi").querySelector('div[onclick*="cowracing.setCowSlot('+(slot-4)+')');
+                                    }
+                                    break;
                             default: container=null;
                         }
                         if(container && (help=container.querySelector(".divZoneIcon"))){
                             removeElement(help);
                         }
+
                         if(container && !unsafeData.zones.getBlock(zoneNrS)){
                             if (id == 3) {
                                 drawAutomatIcon(zoneNrS,zoneNrS,container,"left:25px;");
+                            } else if((id==8) && (slot >4)){
+                                drawAutomatIcon(zoneNrS,zoneNrS,container,"left:10px;top:10px;");
                             } else {
                                 drawAutomatIcon(zoneNrS,zoneNrS,container,"left:-10px;");
                             }

@@ -448,7 +448,7 @@ unsafeData.BUILDING_SIZE=BUILDING_SIZE.clone();
 // task_new_building
 
 //13102016
-const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":4,"megafield":99};
+const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":17,"megafield":99};
 
 unsafeData.BUILDING_SLOTS=BUILDING_SLOTS.clone();
 // Needed input of a zone
@@ -2730,10 +2730,7 @@ var zones=new function(){
             } else if(zoneNrF=="farmersmarket-3" && zT <= unsafeWindow.Zeit.Server) {
               zT = NEVER;
               zones.setEndtime(zoneNrS, zT);
-              //zones.setEndtime(zoneNrF, zT);
-              //alert(zoneNrS);
             }
-
 
             if (zT == NEVER) { // EMPTY
                 if (unsafeData.readyZone[zoneNrS] && (unsafeData.readyZone[zoneNrS][1] == "e")) {
@@ -17926,8 +17923,13 @@ try{
                                 zones.setProduction(zoneNrF,tempZoneProductionData.clone());
                                 break;}
                                 case 8:{ // cowracing food
+                                    /*console.log("=== START LESE Cowracing ===");
+                                    console.log(print_r(unsafeWindow.cowracing, "", true, "\n"));
+                                    console.log("=== END LESE Cowracing ===");
+                                    */
                                     zones.setBonus(zoneNrF,0);
-                                    if((!currBlock)&&(unsafeWindow.farmersmarket_data.cowracing&&unsafeWindow.farmersmarket_data.cowracing.production)){
+                                    //if((!currBlock)&&(unsafeWindow.farmersmarket_data.cowracing&&unsafeWindow.farmersmarket_data.cowracing.production)){
+                                    if((!currBlock)&&(unsafeWindow.farmersmarket_data.cowracing)){
                                         tempZoneProductionData=[[{},{}],0,0,true];
                                         if (!zones.getBuilding(zoneNrF)){
                                             zones.setBuilding(zoneNrF,"fl8");
@@ -17965,6 +17967,40 @@ try{
                                                 tempZoneProductionDataSlot[1]++;
                                                 tempZoneProductionData[2]++;
                                                 tempZoneProductionDataSlot[2]++;
+                                            }
+                                            zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+                                        }
+
+                                        for(var slot=1;slot<=13;slot++){
+                                            zoneNrS=zoneNrF+"."+(slot+4);
+                                            zones.setBlock(zoneNrS,"");
+                                            tempZoneProductionDataSlot=[[{},{}],0,0,true];
+                                            if (slot >= 2 && !unsafeWindow.farmersmarket_data.cowracing.data.cows.hasOwnProperty(slot)) {
+                                                zones.setBlock(zoneNrS,"b");
+                                            } else {
+                                                item=unsafeWindow.farmersmarket_data.cowracing.data.cows[slot];
+                                                if (item.hasOwnProperty("feed_remain")) {
+                                                    iProd=(item["feed_pid"]?parseInt(item["feed_pid"],10):null);
+                                                    iTime=nowServer+Math.round(item["feed_remain"]); // Math.round, because it's sometimes returned as string
+                                                } else {
+                                                    iTime=NEVER;
+                                                    tempZoneProductionData[1]++;
+                                                    tempZoneProductionDataSlot[1]++;
+                                                }
+                                                tempZoneProductionData[2]++;
+                                                tempZoneProductionDataSlot[2]++;
+
+                                                if(!tempZoneProductionData[0][0][iProd]) {
+                                                    tempZoneProductionData[0][0][iProd]=[];
+                                                }
+                                                tempZoneProductionData[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                                if(!tempZoneProductionDataSlot[0][0][iProd]) {
+                                                    tempZoneProductionDataSlot[0][0][iProd]=[];
+                                                }
+                                                tempZoneProductionDataSlot[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                                zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+
+
                                             }
                                             zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
                                         }
@@ -18643,6 +18679,49 @@ try{
             raiseEvent("gameFarmersmarketStarted");
         }catch(err){GM_logError("startProductionCommitResponse","","",err);}
     });
+
+    unsafeOverwriteObjFunction("cowracing","setCowSlot",function(a){
+        try{
+            unsafeWindow.cowracing._setCowSlot(a);
+        }catch(err){GM_logError("cowracing.setCowSlot","","",err);}
+        try{
+            raiseEvent("gameCowRacingOpenCow");
+        }catch(err){GM_logError("gameCowRacingOpenCow","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("cowracing","feedSelection",function(){
+        try{
+            unsafeWindow.cowracing._feedSelection();
+        }catch(err){GM_logError("cowracing.feedSelection","","",err);}
+        try{
+            raiseEvent("gameCowRacingOpenFeedSeceltion");
+        }catch(err){GM_logError("gameCowRacingOpenFeedSeceltion","","",err);}
+    });
+
+    // Kuh füttern
+    unsafeOverwriteObjFunction("cowracing","feedCow",function(r){
+        try{
+             unsafeWindow.cowracing._feedCow(r);
+        }catch(err){GM_logError("cowracing.feedCow","","",err);}
+        try{
+            raiseEvent("gameCowRacingFeedCow");
+        }catch(err){GM_logError("gameCowRacingFeedCow","","",err);}
+
+    });
+
+
+
+    //Nächstes Auswahlfenster
+    unsafeOverwriteObjFunction("cowracing","feedSelectionNavi",function(b,c){
+        try{
+            unsafeWindow.cowracing._feedSelectionNavi(b,c);
+        }catch(err){GM_logError("cowracing.feedSelectionNavi","","",err);}
+        try{
+            raiseEvent("gameCowRacingfeedSelectionNavi");
+        }catch(err){GM_logError("gameCowRacingfeedSelectionNavi","","",err);}
+    });
+
+
 
     /**********************************************************
     * Vehicle Farm 5 und 6
