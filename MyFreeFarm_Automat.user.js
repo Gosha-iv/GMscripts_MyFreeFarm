@@ -1326,7 +1326,7 @@ function isVisibleZone(zoneNr){
         case "foodworld-1": case "foodworld-2":case "foodworld-3":case "foodworld-4":
             return(unsafeData.gameLocation.check("foodworld"));
         break;
-        case "farmersmarket-0": case "farmersmarket-1": case "farmersmarket-2":case "farmersmarket-3":case "farmersmarket-4":case "farmersmarket-5":case "farmersmarket-6":case "farmersmarket-7":
+        case "farmersmarket-0": case "farmersmarket-1": case "farmersmarket-2":case "farmersmarket-3":case "farmersmarket-4":case "farmersmarket-5":case "farmersmarket-6":case "farmersmarket-7":case "farmersmarket-8":
             return(unsafeData.gameLocation.check("farmersmarket"));
         break;
         default:
@@ -9535,7 +9535,7 @@ try{
             }
         break;}
         case 5:{ // feed cow
-            GM_logInfo("autoFarmersmarketCowracingFeed","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" Select feed");
+            GM_logInfo("autoFarmersmarketCowracingFeed","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" Select feed" + zoneList[handled.zoneNrL][0][0]);
 
             if(help=$("cowracing_feed_selection")){
                 help2=help.querySelector('div[onclick*="cowracing.feedCow('+zoneList[handled.zoneNrL][0][0]+')"]');
