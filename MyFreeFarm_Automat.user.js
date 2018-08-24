@@ -4727,7 +4727,18 @@ try{
             if(!unsafeData.readyZone.hasOwnProperty(fz)){ continue; }
             if((help=unsafeData.readyZone[fz])&&help[2]){
                 lz = getZoneListId(fz);
+                //alert(lz+" "+fz);
+                //console.log(implode(unsafeData.readyZone));
+                if (unsafeData.zones.isMultiSlot(fz)&&fz!="megafield"){
+                    if (fz.match(/\.(\d+)$/)==null){ continue; }
+                }
+
                 if((help[1]=="w")||(help[1]=="r" && (zoneList[lz][0][0]!=PRODSTOP||!settings.get("account","disableCropFields")))||(help[1]=="e" && zoneList[lz][0][0]!=PRODSTOP)){
+                    /*
+                    GM_logInfo("checkReadyZone", "zoneNrS=", "", "lz:"+lz +"  fz: "+fz);
+                    GM_logInfo("checkReadyZone", "zoneNrS=", "", zoneList[lz][0][0]);
+                    GM_logInfo("checkReadyZone", "zoneNrS=", "", help[1]);
+                    */
                     if(zoneWaiting[fz]){
                         GM_logInfo("checkReadyZone","zoneNr="+zoneNr,"fz="+fz+" zoneWaiting="+getDateText(zoneWaiting[fz])+" "+getDaytimeStr(zoneWaiting[fz]),getText("automat_zoneXWaiting").replace(/%1%/,unsafeData.zones.getName(fz)));
                     } else {
@@ -8324,11 +8335,12 @@ try{
 
             try{ unsafeWindow.jsTimeStamp=unsafeWindow.Zeit.Client - unsafeWindow.Zeit.Verschiebung; }catch(err){}
             if (handled.zoneBuildingTyp==4 && handled.slot>4){
-                if (handled.zoneNrF=="farmersmarket-4") {
+                if (handled.zoneNrF=="farmersmarket-4"&&(zoneList[handled.zoneNrL][0][0]!=PRODSTOP)) {
+                    //todo
                     autoFarmersmarketAnimalBreeding(runId,1,1);
                 } else if (handled.zoneNrF=="farmersmarket-5"){
                     autoFarmersmarketVetTreatment(runId,1);
-                } else {
+                } else if (handled.zoneNrF=="farmersmarket-8"){
                     autoFarmersmarketCowracingFeed(runId,1);
                 }
             } else if (handled.zoneNrF=="farmersmarket-6" && handled.zoneBuildingTyp==8) {
@@ -9225,6 +9237,7 @@ try{
                     }
                 }
             }
+            GM_logInfo("autoFarmersmarketAnimalBreeding","runId="+runId,"zoneNrL="+handled.zoneNrL+" zoneNrS="+handled.zoneNrS,"step7"+next+handled.zoneNrS);
             if(next){
                 autoFarmersmarketAnimalBreeding(runId,1,1);
             }else{
@@ -9994,6 +10007,7 @@ try{
         //Zone Pairing ausschalten
         if(fz=="farmersmarket-4.5"||fz=="farmersmarket-4.6"||fz=="farmersmarket-4.7" ||
            fz=="farmersmarket-5.5"||fz=="farmersmarket-5.6"||fz=="farmersmarket-5.7" ){ continue; }
+        if(currZoneType=="fl8"&&(parseInt(/\.(\d+)$/.exec(fz)[1],10)>4)){ continue; }
         zones.push(fz);
     }
     // build table
@@ -10007,12 +10021,14 @@ try{
     }
     newtr=createElement("tr",{"style":"line-height:18px;"},newtable);
     createElement("td",{"style":"text-align:left;border-top:none;"},newtr,getText("automat_titleQueue"));
+
     for(var lz in zoneList){
         if(!zoneList.hasOwnProperty(lz)){ continue; }
         if(lz==0 || lz=="windmill"){ continue; }
         //Zone Pairing ausschalten
         if(lz=="farmersmarket-4.5"||lz=="farmersmarket-4.6"||lz=="farmersmarket-4.7" ||
            lz=="farmersmarket-5.5"||lz=="farmersmarket-5.6"||lz=="farmersmarket-5.7"){ continue; }
+        if(getZoneType(lz)=="fl8"&&(parseInt(/\.(\d+)$/.exec(lz)[1],10)>4)){continue;}
         var extendedList=extendedListReg.exec(lz);
         if((!extendedList && currZoneType!=getZoneType(lz)) || (extendedList && currZoneType!=1)) continue;
         newtr=createElement("tr",{"style":"line-height:18px;"},newtable);

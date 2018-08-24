@@ -2732,13 +2732,22 @@ var zones=new function(){
               zones.setEndtime(zoneNrS, zT);
             }
 
+            /*
+            if ((zoneNrS=="farmersmarket-4.5"||zoneNrS=="farmersmarket-4.6"||zoneNrS=="farmersmarket-4.7") && zT <= unsafeWindow.Zeit.Server){
+                zT = NEVER;
+                zones.setEndtime(zoneNrS, zT);
+                zones.setEndtime(zoneNrF, zT);
+                //alert(zoneNrF);
+            }*/
+
             if (zT == NEVER) { // EMPTY
                 if (unsafeData.readyZone[zoneNrS] && (unsafeData.readyZone[zoneNrS][1] == "e")) {
                     if (!unsafeData.readyZone[zoneNrS][2]) {
                         unsafeData.readyZone[zoneNrS][2] = true;
                     }
                 } else {
-                    GM_logInfo("zones.checkReady", "zoneNrS=" + zoneNrS, "", "Empty zone found", 0);
+                    //GM_logInfo("zones.checkReady", "zoneNrS=" + zoneNrS, "", "Empty zone found", 0);
+                    GM_logInfo("zones.checkReady", "zoneNrS=" + zoneNrS, "", "Empty zone found"+zoneNrS+"   "+zoneNrF);
                     unsafeData.readyZone[zoneNrS] = [currLocation.farmNr === undefined ? currLocation.location : currLocation.farmNr, "e", true];
                     readyZoneAdded = 1;
                 }
@@ -2749,7 +2758,8 @@ var zones=new function(){
                 if (unsafeData.readyZone[zoneNrS] && (unsafeData.readyZone[zoneNrS][1] == "r")) {
                     if (!unsafeData.readyZone[zoneNrS][2]) { unsafeData.readyZone[zoneNrS][2] = true; }
                 } else {
-                    GM_logInfo("zones.checkReady", "zoneNrS=" + zoneNrS, "", "Ready zone for cropping found", 0);
+                    //GM_logInfo("zones.checkReady", "zoneNrS=" + zoneNrS, "", "Ready zone for cropping found", 0);
+                    GM_logInfo("zones.checkReady", "zoneNrS=" + zoneNrS, "", "Ready zone for cropping found"+zoneNrS+"   "+zoneNrF);
                     unsafeData.readyZone[zoneNrS] = [currLocation.farmNr === undefined ? currLocation.location : currLocation.farmNr, "r", true];
                     readyZoneAdded = 1;
                 }
@@ -17680,7 +17690,8 @@ try{
                                                     if (item.remain<7200) {
                                                         iTime = nowServer+item.remain;
                                                     } else{
-                                                        iTime = nowServer-item.happiness_interval[i];
+                                                        //iTime = nowServer-item.happiness_interval[i];
+                                                        iTime = NEVER;
                                                         tempZoneProductionData[1]++;
                                                         tempZoneProductionDataSlot[1]++;
                                                     }
