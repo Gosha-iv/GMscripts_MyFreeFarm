@@ -4727,18 +4727,11 @@ try{
             if(!unsafeData.readyZone.hasOwnProperty(fz)){ continue; }
             if((help=unsafeData.readyZone[fz])&&help[2]){
                 lz = getZoneListId(fz);
-                //alert(lz+" "+fz);
-                //console.log(implode(unsafeData.readyZone));
                 if (unsafeData.zones.isMultiSlot(fz)&&fz!="megafield"){
                     if (fz.match(/\.(\d+)$/)==null){ continue; }
                 }
 
                 if((help[1]=="w")||(help[1]=="r" && (zoneList[lz][0][0]!=PRODSTOP||!settings.get("account","disableCropFields")))||(help[1]=="e" && zoneList[lz][0][0]!=PRODSTOP)){
-                    /*
-                    GM_logInfo("checkReadyZone", "zoneNrS=", "", "lz:"+lz +"  fz: "+fz);
-                    GM_logInfo("checkReadyZone", "zoneNrS=", "", zoneList[lz][0][0]);
-                    GM_logInfo("checkReadyZone", "zoneNrS=", "", help[1]);
-                    */
                     if(zoneWaiting[fz]){
                         GM_logInfo("checkReadyZone","zoneNr="+zoneNr,"fz="+fz+" zoneWaiting="+getDateText(zoneWaiting[fz])+" "+getDaytimeStr(zoneWaiting[fz]),getText("automat_zoneXWaiting").replace(/%1%/,unsafeData.zones.getName(fz)));
                     } else {
@@ -4768,6 +4761,9 @@ function getReadyZone(location){
             if(!unsafeData.readyZone.hasOwnProperty(zoneNrS)){ continue; }
             if((help=unsafeData.readyZone[zoneNrS])&&help[2]&&((location===undefined)||(location==help[0]))){
                 zoneNrL = getZoneListId(zoneNrS);
+                if (unsafeData.zones.isMultiSlot(zoneNrS)&&zoneNrS!="megafield"){
+                    if (zoneNrS.lastIndexOf(".") == -1) { continue; }
+                }
                 if((help[1]=="w")||(help[1]=="r" && (zoneList[zoneNrL][0][0]!=PRODSTOP||!settings.get("account","disableCropFields")))||(help[1]=="e" && zoneList[zoneNrL][0][0]!=PRODSTOP)){
                     if(zoneWaiting[zoneNrS]){
                         GM_logInfo("getReadyZone","location="+location,"zoneNrS="+zoneNrS+" zoneWaiting="+getDateText(zoneWaiting[zoneNrS])+" "+getDaytimeStr(zoneWaiting[zoneNrS]),getText("automat_zoneXWaiting").replace(/%1%/,unsafeData.zones.getName(zoneNrS)));
@@ -8325,14 +8321,13 @@ try{
             if (zoneNrS.lastIndexOf(".") == -1) {
                 for (var i in unsafeData.readyZone) {
                     if (!unsafeData.readyZone.hasOwnProperty(i)) {continue;}
-                    if (i.startsWith(zoneNrS) && i != zoneNrS) {
+                    if (i.startsWith(zoneNrS) && i != zoneNrS ) {
                         zoneNrS=i;
                         break;
                     }
                 }
             }
             handled.set(zoneNrS);
-
             try{ unsafeWindow.jsTimeStamp=unsafeWindow.Zeit.Client - unsafeWindow.Zeit.Verschiebung; }catch(err){}
             if (handled.zoneBuildingTyp==4 && handled.slot>4){
                 if (handled.zoneNrF=="farmersmarket-4"&&(zoneList[handled.zoneNrL][0][0]!=PRODSTOP)) {
@@ -9489,7 +9484,6 @@ try{
 function autoFarmersmarketCowracingFeed(runId, step){
 try{
     GM_log("autoFarmersmarketCowracingFeed runId="+runId+" step="+step+" handled.zoneNrS="+handled.zoneNrS);
-    //if(settings.get("account","botUseSpeedEating")&&bot.checkRun("autoFarmersmarketCowracingFeed",runId)){
     if(settings.get("account","botUseCowracingFeed")&&bot.checkRun("autoFarmersmarketCowracingFeed",runId)){ //todo true
         bot.setAction("autoFarmersmarketCowracingFeed ("+step+")");
         var help,help2,action=null,listeningEvent=null;
