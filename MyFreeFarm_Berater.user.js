@@ -4,8 +4,8 @@
 // @author         BastianKanaan
 // @description    Extends MyFreeFarm
 // @icon           data:image/png;base64,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
-// @date           31.07.2018
-// @version        2.10.84
+// @date           01.09.2018
+// @version        2.10.85
 // @license        GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)au\.myfreefarm\.com\/.*$/
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)veselaferma\.com\/.*$/
@@ -192,11 +192,12 @@ const CHANGELOG=[["2.0","29.05.2014",[["Migration nach openuserjs.org","Migratio
                 ,["2.10.76","17.10.2017",[["Schmetterlinge füttern","butterfly feeding"]]]
                 ,["2.10.77","09.11.2017",[["Bugfix","Bugfix"]]]
                 ,["2.10.78","15.05.2018",[["Questreihe 2 Baumerei aktualisiert","forestry-quests-series II updated"]]]
-                ,["2.10.79","17.05.2017",[["Bugfix","Bugfix"]]]
-                ,["2.10.80","29.05.2017",[["Anpassung an Spiel-Update: Weltbauertag","Fix for game update: world farmers day"]]]
-                ,["2.10.82","11.07.2017",[["Bugfix","Bugfix"]]]
-                ,["2.10.83","27.07.2017",[["Anpassung an Spiel-Update: Kuhrennen","Fix for game update: cow running"]]]
-                ,["2.10.84","31.07.2017",[["Produktion Kuhrennen","Production cowracing"],["Bugfix Monsterfurcht","Bugfix megafruit"]]]
+                ,["2.10.79","17.05.2018",[["Bugfix","Bugfix"]]]
+                ,["2.10.80","29.05.2018",[["Anpassung an Spiel-Update: Weltbauertag","Fix for game update: world farmers day"]]]
+                ,["2.10.82","11.07.2018",[["Bugfix","Bugfix"]]]
+                ,["2.10.83","27.07.2018",[["Anpassung an Spiel-Update: Kuhrennen","Fix for game update: cow running"]]]
+                ,["2.10.84","31.07.2018",[["Produktion Kuhrennen","Production cowracing"],["Bugfix Monsterfurcht","Bugfix megafruit"]]]
+                ,["2.10.85","01.09.2018",[["Kuhfütterung","cow feeding"]]]
                 ];
 if(!VERSIONfunctionFile){
     alert("Hi, I am the Berater-Script.\nThe function-file is missing.\nPlease install me again.");
@@ -448,7 +449,7 @@ unsafeData.BUILDING_SIZE=BUILDING_SIZE.clone();
 // task_new_building
 
 //13102016
-const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":4,"megafield":99};
+const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":17,"megafield":99};
 
 unsafeData.BUILDING_SLOTS=BUILDING_SLOTS.clone();
 // Needed input of a zone
@@ -683,7 +684,7 @@ const QUESTS =
                         },
                         "butterfly":{"1":[,[[[0,5,9450],[0,175,1512]],,80000],[[[0,22,18144],[0,179,1578]],,90000],[[[0,6,11813],[0,177,2035]],,100000,[[22,2]]],[[[0,18,100800],[0,182,4999]],,110000],[[[0,23,19845],[0,176,3024]],,120000],[[[0,33,15120],[0,171,5184]],,130000],[[[0,41,3093],[0,173,5292]],,140000],[[[0,42,3658],[0,180,5259]],,150000],[[[0,108,28875],[0,183,3119]],,160000],[[[0,154,4725],[0,181,6350]],,170000,[[22,3]]],[[[0,39,4914],[0,178,5897]],,180000],[[[0,36,15034],[0,172,9408]],,190000],[[[0,40,5906],[0,174,4639]],,200000],[[[0,8,12600],[0,176,6912]],,210000],[[[0,4,71400],[0,180,8941]],,220000],[[[0,20,113400],[0,173,10584]],,230000],[[[0,32,59850],[0,175,9576]],,240000],[[[0,35,22680],[0,177,8142]],,250000],[[[0,37,10584],[0,172,14112]],,260000],[[[0,153,23100],[0,181,11642]],,270000,[[22,4]]],[[[0,114,32200],[0,171,14904]],,280000],[[[0,7,18900],[0,183,6804]],,290000],[[[0,3,105000],[0,178,11340]],,300000],[[[0,26,75600],[0,174,8041]],,310000],[[[0,38,127575],[0,179,10650]],,320000],[[[0,43,9339],[0,182,23328]],,330000],[[[0,109,81200],[0,181,15347]],,340000],[[[0,44,37800],[0,175,15120]],,350000],[[[0,34,87885],[0,180,16303]],,360000],[[[0,31,145152],[0,176,13824]],,370000,[[22,5]]],[[[0,21,166320],[0,182,27494]],,380000],[[[0,24,107100],[0,183,9639]],,390000],[[[0,19,330750],[0,172,23520]],,400000],[[[0,154,14175],[0,174,11134]],,410000],[[[0,33,69930],[0,177,15062]],,420000],[[[0,8,29925],[0,179,14989]],,430000],[[[0,114,54600],[0,171,25272]],,440000],[[[0,42,14632],[0,178,18144]],,450000],[[[0,18,688800],[0,173,24108]],,460000],[[[0,41,14433],[0,175,21168]],,470000,[[22,6]]],[[[0,36,46176],[0,179,16961]],,480000],[[[0,44,55440],[0,177,17911]],,490000],[[[0,4,189000],[0,182,37491]],,500000],[[[0,20,289800],[0,176,19872]],,510000],[[[0,24,148050],[0,171,30456]],,520000],[[[0,38,226800],[0,173,28224]],,530000],[[[0,22,222264],[0,180,25770]],,540000],[[[0,5,157500],[0,183,14175]],,550000],[[[0,7,40163],[0,181,26989]],,560000],[[[0,31,235872],[0,178,23587]],,570000],[[[0,35,60102],[0,172,35616]],,580000],[[[0,40,21263],[0,174,16701]],,590000],[[[0,43,18344],[0,176,23760]],,600000],[[[0,109,156800],[0,180,29451]],,610000],[[[0,23,161595],[0,173,33516]],,620000],[[[0,6,137025],[0,175,29232]],,630000],[[[0,21,297360],[0,177,24018]],,640000],[[[0,32,189000],[0,172,40320]],,650000],[[[0,108,160125],[0,181,32281]],,660000],[[[0,34,175770],[0,171,40176]],,670000],[[[0,3,264600],[0,183,17861]],,680000],[[[0,19,604800],[0,178,29030]],,690000],[[[0,26,189000],[0,174,20103]],,700000],[[[0,39,24948],[0,179,26033]],,710000],[[[0,37,33768],[0,182,55821]],,720000],[[[0,153,71400],[0,181,35986]],,730000],[[[0,6,163013],[0,175,34776]],,740000],[[[0,24,220500],[0,180,36814]],,750000],[[[0,18,1192800],[0,176,30672]],,760000],[[[0,20,453600],[0,182,59986]],,770000],[[[0,32,229950],[0,183,20696]],,780000],[[[0,40,29138],[0,172,49728]],,790000],[[[0,23,212625],[0,174,23195]],,800000],[[[0,8,59850],[0,177,30938]],,810000],[[[0,26,223892],[0,179,30371]],,820000],[[[0,33,147420],[0,171,50544]],,830000],[[[0,39,29862],[0,178,35834]],,840000],[[[0,37,40320],[0,173,47040]],,850000],[[[0,34,229635],[0,175,40824]],,860000],[[[0,31,371952],[0,179,32344]],,870000],[[[0,19,784350],[0,177,33787]],,880000],[[[0,22,381024],[0,182,69984]],,890000],[[[0,43,28350],[0,176,36720]],,900000],[[[0,109,240800],[0,171,55728]],,910000],[[[0,114,121800],[0,173,51156]],,920000],[[[0,42,32191],[0,180,46280]],,930000],[[[0,38,420525],[0,183,25232]],,940000],[[[0,35,102060],[0,181,47628]],,950000],[[[0,44,114660],[0,178,41278]],,960000],[[[0,36,98795],[0,172,61824]],,970000],[[[0,21,468720],[0,174,28762]],,980000],[[[0,7,74025],[0,176,40608]],,990000],[[[0,4,399000],[0,171,61560]],,1000000],[[[0,41,32989],[0,172,64512]],,1010000],[[[0,108,254625],[0,173,57036]],,1020000]]
                         },
-                        "cow":{"1":[,[[[0,804,192]],, 50000],[[[0,804,197]],, 60000],[[[0,804,202]],, 70000,[[9,0,801]]],[[[0,801,78],[0,804,104]],, 80000],[[[0,801,80],[0,804,106]],, 90000],[[[0,801,81],[0,804,108]],, 100000,[[9,0,800]]],[[[0,801,83],[0,804,111]],, 110000],[[[0,801,85],[0,804,113]],, 120000],[[[0,801,87],[0,804,116]],, 130000],[[[0,801,89],[0,804,118]],, 140000,[[9,0,805]]],[[[0,805,24],[0,804,120]],, 150000],[[[0,804,123],[0,801,92]],, 160000],[[[0,805,25],[0,801,94]],, 170000,[[23,2]]],[[[0,805,26],[0,804,128]],, 180000],[[[0,801,65],[0,805,18],[0,804,87]],, 190000,[[9,0,802]]],[[[0,804,132],[0,805,27]],, 200000],[[[0,805,27],[0,801,101]],, 210000],[[[0,801,103],[0,804,137]],, 220000],[[[0,804,140],[0,801,105]],, 230000],[[[0,801,71],[0,805,19],[0,804,95]],, 240000,[[9,0,802]]],[[[0,807,48],[0,804,144]],, 250000],[[[0,805,30],[0,807,49]],, 260000],[[[0,804,149],[0,805,30]],, 270000],[[[0,801,114],[0,805,31]],, 280000],[[[0,805,21],[0,807,35],[0,804,103]],, 290000,[[9,0,803]]],[[[0,807,52],[0,801,117]],, 300000],[[[0,807,53],[0,804,159]],, 310000],[[[0,805,22],[0,807,36],[0,801,81]],, 320000,[[23,3]]],[[[0,804,164],[0,801,123],[0,807,]],, 330000],[[[0,807,37],[0,804,111],[0,805,23]],, 340000,[[9,0,809]]],[[[0,809,84],[0,807,56]],, 350000],[[[0,805,35],[0,809,86]],, 360000],[[[0,804,173],[0,807,58]],, 370000],[[[0,807,59],[0,801,132]],, 380000],[[[0,809,60],[0,805,24],[0,807,40]],, 390000,[[9,0,806]]],[[[0,805,36],[0,804,180]],, 400000],[[[0,807,61],[0,809,92]],, 410000],[[[0,804,185],[0,805,37]],, 420000],[[[0,805,38],[0,807,63]],, 430000],[[[0,809,64],[0,801,95],[0,805,26]],, 440000,[[9,0,810]]],[[[0,810,144],[0,804,192]],, 450000],[[[0,810,146],[0,809,98]],, 460000],[[[0,805,27],[0,807,44],[0,801,99]],, 470000,[[23,4]]],[[[0,807,67],[0,810,150]],, 480000],[[[0,801,101],[0,809,68],[0,804,135]],, 490000,[[9,0,808]]],[[[0,810,153],[0,807,68]],, 500000],[[[0,805,42]],, 510000],[[[0,807,70],[0,810,157]],, 520000],[[[0,801,159],[0,809,106]],, 530000],[[[0,810,107],[0,805,29],[0,804,143]],, 540000,[[9,0,812]]],[[[0,812,87],[0,810,162]],, 550000],[[[0,809,110],[0,812,88]],, 560000],[[[0,805,45],[0,801,166]],, 570000],[[[0,807,75],[0,810,168]],, 580000],[[[0,812,61],[0,809,76],[0,804,151]],, 590000,[[9,0,811]]],[[[0,810,171],[0,805,46]],, 600000],[[[0,804,231],[0,801,173]],, 610000],[[[0,805,32],[0,812,63],[0,809,78]],, 620000,[[23,5]]],[[[0,807,79],[0,810,177]],, 630000],[[[0,812,64],[0,809,80],[0,801,119]],, 640000,[[9,0,813]]],[[[0,813,240],[0,804,240]],, 650000],[[[0,813,243],[0,812,97]],, 660000],[[[0,807,82],[0,809,123]],, 670000],[[[0,801,186],[0,813,248]],, 680000],[[[0,812,67],[0,805,34],[0,807,56]],, 690000,[[9,0,815]]],[[[0,809,126],[0,810,189]],, 700000],[[[0,812,102],[0,813,255]],, 710000],[[[0,810,193],[0,809,129]],, 720000],[[[0,807,87],[0,812,104]],, 730000],[[[0,813,175],[0,810,131],[0,801,131]],, 740000,[[9,0,814]]],[[[0,814,88],[0,807,88]],, 750000],[[[0,812,107],[0,814,89]],, 760000],[[[0,809,90],[0,810,135],[0,805,36]],, 770000[[23,6]]],[[[0,804,272],[0,813,272]],, 780000],[[[0,807,61],[0,801,137],[0,809,92]],, 790000,[[9,0,816]]],[[[0,812,111],[0,810,207]],, 800000],[[[0,813,279],[0,807,93]],, 810000],[[[0,809,141],[0,812,113]],, 820000],[[[0,810,213],[0,813,284]],, 830000],[[[0,814,64],[0,805,39],[0,801,143]],, 840000,[[9,0,818]]],[[[0,818,360],[0,812,116]],, 850000],[[[0,818,363],[0,814,97]],, 860000],[[[0,813,293],[0,814,98]],, 870000],[[[0,818,369],[0,810,222]],, 880000],[[[0,812,80],[0,813,199],[0,807,67]],, 890000,[[9,0,817]]],[[[0,810,225],[0,814,100]],, 900000],[[[0,809,152],[0,804,303]],, 910000],[[[0,813,204],[0,812,82],[0,801,153]],, 920000],[[[0,818,384],[0,814,103]],, 930000],[[[0,812,83],[0,809,104],[0,804,207]],, 90000,[[9,0,819]]]]
+                        "cow":{"1":[,[[[0,804,192]],, 50000],[[[0,804,197]],, 60000],[[[0,804,202]],, 70000,[[9,0,801]]],[[[0,801,78],[0,804,104]],, 80000],[[[0,801,80],[0,804,106]],, 90000],[[[0,801,81],[0,804,108]],, 100000,[[9,0,800]]],[[[0,801,83],[0,804,111]],, 110000],[[[0,801,85],[0,804,113]],, 120000],[[[0,801,87],[0,804,116]],, 130000],[[[0,801,89],[0,804,118]],, 140000,[[9,0,805]]],[[[0,805,24],[0,804,120]],, 150000],[[[0,804,123],[0,801,92]],, 160000],[[[0,805,25],[0,801,94]],, 170000,[[23,2]]],[[[0,805,26],[0,804,128]],, 180000],[[[0,801,65],[0,805,18],[0,804,87]],, 190000,[[9,0,802]]],[[[0,804,132],[0,805,27]],, 200000],[[[0,805,27],[0,801,101]],, 210000],[[[0,801,103],[0,804,137]],, 220000],[[[0,804,140],[0,801,105]],, 230000],[[[0,801,71],[0,805,19],[0,804,95]],, 240000,[[9,0,807]]],[[[0,807,48],[0,804,144]],, 250000],[[[0,805,30],[0,807,49]],, 260000],[[[0,804,149],[0,805,30]],, 270000],[[[0,801,114],[0,805,31]],, 280000],[[[0,805,21],[0,807,35],[0,804,103]],, 290000,[[9,0,803]]],[[[0,807,52],[0,801,117]],, 300000],[[[0,807,53],[0,804,159]],, 310000],[[[0,805,22],[0,807,36],[0,801,81]],, 320000,[[23,3]]],[[[0,804,164],[0,801,123],[0,807,]],, 330000],[[[0,807,37],[0,804,111],[0,805,23]],, 340000,[[9,0,809]]],[[[0,809,84],[0,807,56]],, 350000],[[[0,805,35],[0,809,86]],, 360000],[[[0,804,173],[0,807,58]],, 370000],[[[0,807,59],[0,801,132]],, 380000],[[[0,809,60],[0,805,24],[0,807,40]],, 390000,[[9,0,806]]],[[[0,805,36],[0,804,180]],, 400000],[[[0,807,61],[0,809,92]],, 410000],[[[0,804,185],[0,805,37]],, 420000],[[[0,805,38],[0,807,63]],, 430000],[[[0,809,64],[0,801,95],[0,805,26]],, 440000,[[9,0,810]]],[[[0,810,144],[0,804,192]],, 450000],[[[0,810,146],[0,809,98]],, 460000],[[[0,805,27],[0,807,44],[0,801,99]],, 470000,[[23,4]]],[[[0,807,67],[0,810,150]],, 480000],[[[0,801,101],[0,809,68],[0,804,135]],, 490000,[[9,0,808]]],[[[0,810,153],[0,807,68]],, 500000],[[[0,805,42]],, 510000],[[[0,807,70],[0,810,157]],, 520000],[[[0,801,159],[0,809,106]],, 530000],[[[0,810,107],[0,805,29],[0,804,143]],, 540000,[[9,0,812]]],[[[0,812,87],[0,810,162]],, 550000],[[[0,809,110],[0,812,88]],, 560000],[[[0,805,45],[0,801,166]],, 570000],[[[0,807,75],[0,810,168]],, 580000],[[[0,812,61],[0,809,76],[0,804,151]],, 590000,[[9,0,811]]],[[[0,810,171],[0,805,46]],, 600000],[[[0,804,231],[0,801,173]],, 610000],[[[0,805,32],[0,812,63],[0,809,78]],, 620000,[[23,5]]],[[[0,807,79],[0,810,177]],, 630000],[[[0,812,64],[0,809,80],[0,801,119]],, 640000,[[9,0,813]]],[[[0,813,240],[0,804,240]],, 650000],[[[0,813,243],[0,812,97]],, 660000],[[[0,807,82],[0,809,123]],, 670000],[[[0,801,186],[0,813,248]],, 680000],[[[0,812,67],[0,805,34],[0,807,56]],, 690000,[[9,0,815]]],[[[0,809,126],[0,810,189]],, 700000],[[[0,812,102],[0,813,255]],, 710000],[[[0,810,193],[0,809,129]],, 720000],[[[0,807,87],[0,812,104]],, 730000],[[[0,813,175],[0,810,131],[0,801,131]],, 740000,[[9,0,814]]],[[[0,814,88],[0,807,88]],, 750000],[[[0,812,107],[0,814,89]],, 760000],[[[0,809,90],[0,810,135],[0,805,36]],, 770000[[23,6]]],[[[0,804,272],[0,813,272]],, 780000],[[[0,807,61],[0,801,137],[0,809,92]],, 790000,[[9,0,816]]],[[[0,812,111],[0,810,207]],, 800000],[[[0,813,279],[0,807,93]],, 810000],[[[0,809,141],[0,812,113]],, 820000],[[[0,810,213],[0,813,284]],, 830000],[[[0,814,64],[0,805,39],[0,801,143]],, 840000,[[9,0,818]]],[[[0,818,360],[0,812,116]],, 850000],[[[0,818,363],[0,814,97]],, 860000],[[[0,813,293],[0,814,98]],, 870000],[[[0,818,369],[0,810,222]],, 880000],[[[0,812,80],[0,813,199],[0,807,67]],, 890000,[[9,0,817]]],[[[0,810,225],[0,814,100]],, 900000],[[[0,809,152],[0,804,303]],, 910000],[[[0,813,204],[0,812,82],[0,801,153]],, 920000],[[[0,818,384],[0,814,103]],, 930000],[[[0,812,83],[0,809,104],[0,804,207]],, 90000,[[9,0,819]]]]
                         }
                };
 
@@ -2724,16 +2725,20 @@ var zones=new function(){
                 }
             }
 
+            var slot=(zoneNrS.toString().match(/\.(\d+)$/)?parseInt(/\.(\d+)$/.exec(zoneNrS)[1],10):null);
             if (zoneNrS=="farmersmarket-6" && zT <= unsafeWindow.Zeit.Server) {
               zT = NEVER;
               zones.setEndtime(zoneNrS, zT);
             } else if(zoneNrF=="farmersmarket-3" && zT <= unsafeWindow.Zeit.Server) {
               zT = NEVER;
               zones.setEndtime(zoneNrS, zT);
-              //zones.setEndtime(zoneNrF, zT);
-              //alert(zoneNrS);
+            } else if (zoneNrF=="farmersmarket-8" && slot>4 && zT <= unsafeWindow.Zeit.Server) {
+                zT = NEVER;
+                if (zones.getEndtime(zoneNrF)!=NEVER) {
+                    zones.setEndtime(zoneNrF, zT);
+                }
+                zones.setEndtime(zoneNrS, zT);
             }
-
 
             if (zT == NEVER) { // EMPTY
                 if (unsafeData.readyZone[zoneNrS] && (unsafeData.readyZone[zoneNrS][1] == "e")) {
@@ -2742,6 +2747,7 @@ var zones=new function(){
                     }
                 } else {
                     GM_logInfo("zones.checkReady", "zoneNrS=" + zoneNrS, "", "Empty zone found", 0);
+                    //GM_logInfo("zones.checkReady", "zoneNrS=" + zoneNrS, "", "Empty zone found"+zoneNrS+"   "+zoneNrF);
                     unsafeData.readyZone[zoneNrS] = [currLocation.farmNr === undefined ? currLocation.location : currLocation.farmNr, "e", true];
                     readyZoneAdded = 1;
                 }
@@ -2753,6 +2759,7 @@ var zones=new function(){
                     if (!unsafeData.readyZone[zoneNrS][2]) { unsafeData.readyZone[zoneNrS][2] = true; }
                 } else {
                     GM_logInfo("zones.checkReady", "zoneNrS=" + zoneNrS, "", "Ready zone for cropping found", 0);
+                    //GM_logInfo("zones.checkReady", "zoneNrS=" + zoneNrS, "", "Ready zone for cropping found"+zoneNrS+"   "+zoneNrF);
                     unsafeData.readyZone[zoneNrS] = [currLocation.farmNr === undefined ? currLocation.location : currLocation.farmNr, "r", true];
                     readyZoneAdded = 1;
                 }
@@ -15469,9 +15476,6 @@ try{
         try {
             var r = checkRequest(request, mode);
             if ((r != 0) && (r[0] != 0)) {
-                console.log("---------------------farmActionResponse-----------------------");
-                console.log(mode);
-                console.log("---------------------farmActionResponse-----------------------");
                 switch (mode) {
                     case "autoplant":
                         {
@@ -17683,7 +17687,8 @@ try{
                                                     if (item.remain<7200) {
                                                         iTime = nowServer+item.remain;
                                                     } else{
-                                                        iTime = nowServer-item.happiness_interval[i];
+                                                        //iTime = nowServer-item.happiness_interval[i];
+                                                        iTime = NEVER;
                                                         tempZoneProductionData[1]++;
                                                         tempZoneProductionDataSlot[1]++;
                                                     }
@@ -17845,7 +17850,6 @@ try{
                                             if(remain > 0) {
                                                 iTime = nowServer+remain;
                                             } else {
-                                                //iTime = nowServer+remain;
                                                 iTime = NEVER;
                                                 tempZoneProductionData[1]++;
                                             }
@@ -17890,10 +17894,6 @@ try{
                                                 iProd=1; iAmount=0; iPoints=0;
                                                 if(item.data.data.breed[slot].remain > 0) {
                                                     iTime = nowServer+item.data.data.breed[slot].remain;
-                                                    /*iTime=NEVER;
-                                                    tempZoneProductionData[1]++;
-                                                    tempZoneProductionDataSlot[1]++;
-                                                    */
                                                 } else {
                                                     iTime=NEVER;
                                                     tempZoneProductionData[1]++;
@@ -17926,8 +17926,13 @@ try{
                                 zones.setProduction(zoneNrF,tempZoneProductionData.clone());
                                 break;}
                                 case 8:{ // cowracing food
+                                    /*console.log("=== START LESE Cowracing ===");
+                                    console.log(print_r(unsafeWindow.cowracing, "", true, "\n"));
+                                    console.log("=== END LESE Cowracing ===");
+                                    */
                                     zones.setBonus(zoneNrF,0);
-                                    if((!currBlock)&&(unsafeWindow.farmersmarket_data.cowracing&&unsafeWindow.farmersmarket_data.cowracing.production)){
+                                    //if((!currBlock)&&(unsafeWindow.farmersmarket_data.cowracing&&unsafeWindow.farmersmarket_data.cowracing.production)){
+                                    if((!currBlock)&&(unsafeWindow.farmersmarket_data.cowracing)){
                                         tempZoneProductionData=[[{},{}],0,0,true];
                                         if (!zones.getBuilding(zoneNrF)){
                                             zones.setBuilding(zoneNrF,"fl8");
@@ -17936,7 +17941,6 @@ try{
                                             zoneNrS=zoneNrF+"."+slot;
                                             zones.setBlock(zoneNrS,"");
                                             tempZoneProductionDataSlot=[[{},{}],0,0,true];
-                                            //item=unsafeWindow.farmersmarket_data.cowracing.animals.slots2[slot];
                                             if(slot >= 3 && unsafeWindow.farmersmarket_data.cowracing.data.slots[slot]["block"]) { // slot blocked
                                                 zones.setBlock(zoneNrS,"b");
                                             } else if(unsafeWindow.farmersmarket_data.cowracing.production[slot]){ // production running
@@ -17945,6 +17949,7 @@ try{
                                                 if(isNaN(iProd)){ iProd=null; }
                                                 if(iProd!=null) { // production in slot is ready (item["remain"] == 0) or busy (item["remain"] > 0)
                                                     iTime=nowServer+Math.round(item["remain"]); // Math.round, because it's sometimes returned as string
+                                                    //iTime = nowServer + 20;
                                                 }else{
                                                     iTime=NEVER;
                                                     tempZoneProductionData[1]++;
@@ -17965,6 +17970,41 @@ try{
                                                 tempZoneProductionDataSlot[1]++;
                                                 tempZoneProductionData[2]++;
                                                 tempZoneProductionDataSlot[2]++;
+                                            }
+                                            zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+                                        }
+
+                                        for(var slot=1;slot<=13;slot++){
+                                            zoneNrS=zoneNrF+"."+(slot+4);
+                                            zones.setBlock(zoneNrS,"");
+                                            tempZoneProductionDataSlot=[[{},{}],0,0,true];
+                                            if (slot >= 2 && !unsafeWindow.farmersmarket_data.cowracing.data.cows.hasOwnProperty(slot)) {
+                                                zones.setBlock(zoneNrS,"b");
+                                            } else {
+                                                item=unsafeWindow.farmersmarket_data.cowracing.data.cows[slot];
+                                                if (item.hasOwnProperty("feed_remain")) {
+                                                    iProd=(item["feed_pid"]?parseInt(item["feed_pid"],10):null);
+                                                    iTime=nowServer+Math.round(item["feed_remain"]); // Math.round, because it's sometimes returned as string
+                                                } else {
+                                                    iTime=NEVER;
+                                                    //iProd=null;
+                                                    tempZoneProductionData[1]++;
+                                                    tempZoneProductionDataSlot[1]++;
+                                                }
+                                                tempZoneProductionData[2]++;
+                                                tempZoneProductionDataSlot[2]++;
+
+                                                if(!tempZoneProductionData[0][0][iProd]) {
+                                                    tempZoneProductionData[0][0][iProd]=[];
+                                                }
+                                                tempZoneProductionData[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                                if(!tempZoneProductionDataSlot[0][0][iProd]) {
+                                                    tempZoneProductionDataSlot[0][0][iProd]=[];
+                                                }
+                                                tempZoneProductionDataSlot[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                                zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+
+
                                             }
                                             zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
                                         }
@@ -18587,6 +18627,15 @@ try{
     /**********************************************************
     * Kuh Rennen / cowracing
     **********************************************************/
+    unsafeOverwriteObjFunction("cowracing","build",function(){
+        try{
+             doFarmersMarketData();
+             unsafeWindow.cowracing._build();
+        }catch(err){GM_logError("cowracing.build","","",err);}
+        try{
+        }catch(err){GM_logError("cowracing.build","","",err);}
+
+    });
     //Open Farmersmarket Pos8
     unsafeOverwriteObjFunction("cowracing","buildProductionSlots",function(){
         try{
@@ -18643,6 +18692,49 @@ try{
             raiseEvent("gameFarmersmarketStarted");
         }catch(err){GM_logError("startProductionCommitResponse","","",err);}
     });
+
+    unsafeOverwriteObjFunction("cowracing","setCowSlot",function(a){
+        try{
+            unsafeWindow.cowracing._setCowSlot(a);
+        }catch(err){GM_logError("cowracing.setCowSlot","","",err);}
+        try{
+            raiseEvent("gameCowRacingOpenCow");
+        }catch(err){GM_logError("gameCowRacingOpenCow","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("cowracing","feedSelection",function(){
+        try{
+            unsafeWindow.cowracing._feedSelection();
+        }catch(err){GM_logError("cowracing.feedSelection","","",err);}
+        try{
+            raiseEvent("gameCowRacingOpenFeedSeceltion");
+        }catch(err){GM_logError("gameCowRacingOpenFeedSeceltion","","",err);}
+    });
+
+    // Kuh füttern
+    unsafeOverwriteObjFunction("cowracing","feedCow",function(r){
+        try{
+             unsafeWindow.cowracing._feedCow(r);
+        }catch(err){GM_logError("cowracing.feedCow","","",err);}
+        try{
+            raiseEvent("gameCowRacingFeedCow");
+        }catch(err){GM_logError("gameCowRacingFeedCow","","",err);}
+
+    });
+
+
+
+    //Nächstes Auswahlfenster
+    unsafeOverwriteObjFunction("cowracing","feedSelectionNavi",function(b,c){
+        try{
+            unsafeWindow.cowracing._feedSelectionNavi(b,c);
+        }catch(err){GM_logError("cowracing.feedSelectionNavi","","",err);}
+        try{
+            raiseEvent("gameCowRacingfeedSelectionNavi");
+        }catch(err){GM_logError("gameCowRacingfeedSelectionNavi","","",err);}
+    });
+
+
 
     /**********************************************************
     * Vehicle Farm 5 und 6
