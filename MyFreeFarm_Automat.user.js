@@ -884,15 +884,15 @@ var restartBotTime=30; //standard
 function restartBot(){
     try {
         if (settings.get("country","valRestartBotTimer")>=0) {
-            var divReStL=$("divRestartLayer");
-            if(divReStL.style.display!="block"){ divReStL.style.display="block"; }
+            /*var divReStL=$("divRestartLayer");
+            if(divReStL.style.display!="block"){ divReStL.style.display="block"; }*/
             var divReSt=$("divRestart");
             if(divReSt.style.display!="block"){ divReSt.style.display="block"; }
             if (--restartBotTime>=0){
                 divReSt.innerHTML=getText("automat_RestartBotTimer").replace("%1%", getTimeStr(restartBotTime)) + "<br>" + getText("automat_RestartBotTimerClick");
                 if(!restartBotTimer) restartBotTimer=window.setInterval(restartBot,1000);
             } else {
-                if($("divRestartLayer")){ $("divRestartLayer").style.display="none";}
+                //if($("divRestartLayer")){ $("divRestartLayer").style.display="none";}
                 if($("divRestart")){ $("divRestart").style.display="none";}
                 try{ window.clearInterval(restartBotTimer); }catch(err){}
                 restartBotTimer=null;
@@ -13134,7 +13134,7 @@ try{
             stopCloseWindowTimer();
         },false);
 
-        newdiv=createElement("div",{"id":"divRestartLayer","class":"link ","style":"opacity:0.7;position:absolute;top:20px;z-index:101;display:none;background:black;height:84px;left:210px;width:770px;"},$("headercontainer"));
+        //newdiv=createElement("div",{"id":"divRestartLayer","class":"link ","style":"opacity:0.7;position:absolute;top:20px;z-index:101;display:none;background:black;height:84px;left:210px;width:770px;"},$("headercontainer"));
         newdiv=createElement("div",{"id":"divRestart","class":"link blackbox","style":"width:250px;display:none;text-align:center;padding:10px;border-radius:5px 5px 5px 5px;position:relative;z-index:101;top:30px;left:470px;"},$("headercontainer"));
         newdiv.addEventListener("mouseover",function(event){
             toolTip.show(event,"Automat-Restart timer +30s");
