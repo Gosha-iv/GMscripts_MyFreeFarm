@@ -4,8 +4,8 @@
 // @author         BastianKanaan
 // @description    Extends MyFreeFarm
 // @icon           data:image/png;base64,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
-// @date           13.05.2019
-// @version        2.10.94
+// @date           25.07.2019
+// @version        2.10.95
 // @license        GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)au\.myfreefarm\.com\/.*$/
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)veselaferma\.com\/.*$/
@@ -207,6 +207,7 @@ const CHANGELOG=[["2.0","29.05.2014",[["Migration nach openuserjs.org","Migratio
                 ,["2.10.92","10.02.2019",[["Bugfix","Bugfix"]]]
                 ,["2.10.93","12.03.2019",[["Schmetterling MouseOver Fenster: Blüten pro Stunde","Butterfly mouseover div: blossoms for hour"]]]
                 ,["2.10.94","13.05.2019",[["Verbesserungen","Improvements"]]]
+                ,["2.10.95","25.07.2019",[["Kuhrennen","Cow running"]]]
                 ];
 if(!VERSIONfunctionFile){
     alert("Hi, I am the Berater-Script.\nThe function-file is missing.\nPlease install me again.");
@@ -459,7 +460,7 @@ unsafeData.BUILDING_SIZE=BUILDING_SIZE.clone();
 // task_new_building
 
 //13102016
-const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":17,"megafield":99};
+const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":30,"megafield":99};
 
 unsafeData.BUILDING_SLOTS=BUILDING_SLOTS.clone();
 // Needed input of a zone
@@ -649,7 +650,7 @@ const QUESTS =
                         [[[1,55,77],[1,146,24],[1,47,173]],,1205600,[[9,1,149]]],
                         [[[1,66,155],[1,106,178]],,1233000],
                         [[[1,52,137],[1,110,46]],,1260400],
-                        [[[1,27,39],[1,122,36],[1,60,96]],,1287800,[[6,50]]],
+                        [[[1,27,39],[1,122,36],[1,42,96]],,1287800,[[6,50]]],
                         [[[1,65,216],[1,125,144]],,1315200],
                         [[[1,67,131],[1,149,74]],,1342600],
                         [[[1,66,118],[1,109,20],[1,122,39]],,1370000,[[9,1,150]]],
@@ -17946,12 +17947,12 @@ try{
                                     console.log("=== END LESE Cowracing ===");
                                     */
                                     zones.setBonus(zoneNrF,0);
-                                    //if((!currBlock)&&(unsafeWindow.farmersmarket_data.cowracing&&unsafeWindow.farmersmarket_data.cowracing.production)){
                                     if((!currBlock)&&(unsafeWindow.farmersmarket_data.cowracing)){
                                         tempZoneProductionData=[[{},{}],0,0,true];
                                         if (!zones.getBuilding(zoneNrF)){
                                             zones.setBuilding(zoneNrF,"fl8");
                                         }
+                                        //Production
                                         for(var slot=1;slot<=4;slot++){
                                             zoneNrS=zoneNrF+"."+slot;
                                             zones.setBlock(zoneNrS,"");
@@ -17988,7 +17989,7 @@ try{
                                             }
                                             zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
                                         }
-
+                                        //Cow feeding
                                         for(var slot=1;slot<=13;slot++){
                                             zoneNrS=zoneNrF+"."+(slot+4);
                                             zones.setBlock(zoneNrS,"");
@@ -18009,10 +18010,6 @@ try{
                                                         tempZoneProductionData[1]++;
                                                         tempZoneProductionDataSlot[1]++;
                                                     }
-                                                    //iTime=(item.ispvp==1)?nowServer+Math.round(unsafeWindow.farmersmarket_data.cowracing.pvp.racedayremain):NEVER;
-                                                    //iProd=null;
-                                                    //tempZoneProductionData[1]++;
-                                                    //tempZoneProductionDataSlot[1]++;
                                                 }
                                                 tempZoneProductionData[2]++;
                                                 tempZoneProductionDataSlot[2]++;
@@ -18031,6 +18028,52 @@ try{
                                             }
                                             zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
                                         }
+                                        //Cow racing
+                                        for(var slot=1;slot<=13;slot++){
+                                            zoneNrS=zoneNrF+"."+(slot+4+13);
+                                            zones.setBlock(zoneNrS,"");
+                                            tempZoneProductionDataSlot=[[{},{}],0,0,true];
+                                            if (slot >= 1 && !unsafeWindow.cowracing.data.data.cows.hasOwnProperty(slot)) {
+                                                zones.setBlock(zoneNrS,"b");
+                                            } else {
+                                                item=unsafeWindow.cowracing.data.data.cows[slot];
+                                                if (item.hasOwnProperty("race_remain") && item["race_remain"]>=0) {
+                                                    iProd=1;
+                                                    iTime=(item.ispvp==1)?nowServer+Math.round(unsafeWindow.farmersmarket_data.cowracing.pvp.racedayremain+60):nowServer+Math.round(item["race_remain"]);
+                                                    //zum Testen
+/*
+                                                    iTime=NEVER;
+                                                    tempZoneProductionData[1]++;
+                                                    tempZoneProductionDataSlot[1]++;
+*/
+                                                } else {
+                                                    if(item.ispvp==1){
+                                                        iProd=null;
+                                                        iTime=nowServer+Math.round(unsafeWindow.farmersmarket_data.cowracing.pvp.racedayremain+60); // Math.round, because it's sometimes returned as string
+                                                    } else {
+                                                        iTime=NEVER;
+                                                        tempZoneProductionData[1]++;
+                                                        tempZoneProductionDataSlot[1]++;
+                                                    }
+                                                }
+                                                tempZoneProductionData[2]++;
+                                                tempZoneProductionDataSlot[2]++;
+
+                                                if(!tempZoneProductionData[0][0][iProd]) {
+                                                    tempZoneProductionData[0][0][iProd]=[];
+                                                }
+                                                tempZoneProductionData[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                                if(!tempZoneProductionDataSlot[0][0][iProd]) {
+                                                    tempZoneProductionDataSlot[0][0][iProd]=[];
+                                                }
+                                                tempZoneProductionDataSlot[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                                zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+
+
+                                            }
+                                            zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+                                        }
+
                                         zones.setProduction(zoneNrF,tempZoneProductionData.clone());
                                         showGoToVetFarmi(); // Determine, if Discharge-Sick-Animals-Icon is shown
                                     }
@@ -18050,7 +18093,6 @@ try{
             calcTotalZones();
         } catch (err) { GM_logError("doFarmersMarketData", "", "err_trace=" + err_trace, err); }
     };
-    // if(unsafeWindow.farmersmarket_data){ doFarmersMarketData(); } // Moved after showGoToVetFarmi() --Moe, 2016/04/28
 
     unsafeOverwriteFunction("farmersMarketHandler", function(response) {
         try {
@@ -18706,12 +18748,20 @@ try{
                     var blossoms = Math.ceil((item.data.config.butterflies[item.data.data.breed[c].butterfly].reward.blossoms)*decay);
                     blossoms = Math.ceil(blossoms*bonus);
                     var blossomsForH = blossoms / (item.data.data.breed[c].duration /3600)
+
+                    var blossomsForAll = 0;
+                    for (var i = parseInt(item.data.config.butterflies[item.data.data.breed[c].butterfly].care_count1);i<parseInt(item.data.data.breed[c].count);i++){
+                        blossomsForAll += item.data.data.breed[c].care.entries[i].reward.blossoms;
+                    }
+                    var blossomsForAllH=blossomsForAll/((item.data.data.breed[c].breedend-item.data.data.breed[c].createdate)/3600);
+
                     if (!$("divButterfly"+c)) {
                         newdiv=createElement("div",{"id":"divButterfly"+c,"style":"color:red;font-weight:bold;"},div,blossomsForH.toFixed(2) + " " + getText("blossomsForHour") + ", " + item.data.data.breed[c].duration /3600 + getText("shortHours"));
+
+                        createElement("div",{"style":"color:red;font-weight:bold;"},div,blossomsForAllH.toFixed(2) + " " + getText("blossomsForHour") + ", " + getFormattedDateStr(item.data.data.breed[c].createdate)+ ", "+ getDaytimeStr(item.data.data.breed[c].createdate));
                     }
                 }
             }
-
         }catch(err){GM_logError("butterfly.slotHover","","",err);}
     });
 
@@ -18803,6 +18853,15 @@ try{
         }catch(err){GM_logError("gameCowRacingOpenFeedSeceltion","","",err);}
     });
 
+    unsafeOverwriteObjFunction("cowracing","feedSelectionNavi",function(b,c){
+        try{
+            unsafeWindow.cowracing._feedSelectionNavi(b,c);
+        }catch(err){GM_logError("cowracing.feedSelectionNavi","","",err);}
+        try{
+            raiseEvent("gameCowRacingfeedSelectionNavi");
+        }catch(err){GM_logError("gameCowRacingfeedSelectionNavi","","",err);}
+    });
+
     // Kuh füttern
     unsafeOverwriteObjFunction("cowracing","feedCow",function(r){
         try{
@@ -18815,15 +18874,6 @@ try{
     });
 
     //Nächstes Auswahlfenster
-    unsafeOverwriteObjFunction("cowracing","feedSelectionNavi",function(b,c){
-        try{
-            unsafeWindow.cowracing._feedSelectionNavi(b,c);
-        }catch(err){GM_logError("cowracing.feedSelectionNavi","","",err);}
-        try{
-            raiseEvent("gameCowRacingfeedSelectionNavi");
-        }catch(err){GM_logError("gameCowRacingfeedSelectionNavi","","",err);}
-    });
-
     unsafeOverwriteObjFunction("cowracing","itemShop",function(d){
         try{
             unsafeWindow.cowracing._itemShop(d);
@@ -18843,8 +18893,82 @@ try{
             var newdiv=createElement("div",{"style":"background:url("+GFX+"cowracing/WeatherIcons_50x50.png); background-position: "+weather[unsafeWindow.cowracing.data.data.cows[unsafeWindow.cowracing.currentCowSlot].lanestatus]+" 0px;width:50px;height:50px;position:absolute;top:5px;left:5px"
             },$('cowracing_itemshop').children[0],"");
             newdiv.addEventListener("mouseover",function(event){ toolTip.show(event,"Next Race"); },false);
+            raiseEvent("gameCowRacingOpenItemShhop")
         }catch(err){GM_logError("cowracing.itemShop","","",err);}
     });
+
+    unsafeOverwriteObjFunction("cowracing","unequipItem",function(b){
+        try{
+             unsafeWindow.cowracing._unequipItem(b);
+        }catch(err){GM_logError("cowracing.gameCowRacingunequipItem","","",err);}
+        try{
+            raiseEvent("gameCowRacingUnequipItem");
+        }catch(err){GM_logError("gameCowRacingUnequipItem","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("cowracing","equipItem",function(a){
+        try{
+             unsafeWindow.cowracing._equipItem(a);
+        }catch(err){GM_logError("cowracing.gameCowRacingequipItem","","",err);}
+        try{
+            raiseEvent("gameCowRacingEquipItem");
+        }catch(err){GM_logError("gameCowRacingEquipItem","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("cowracing","itemShopBuyCommit",function(b){
+        try{
+             unsafeWindow.cowracing._itemShopBuyCommit(b);
+        }catch(err){GM_logError("cowracing.gameCowRacingitemShopBuyCommit","","",err);}
+        try{
+            raiseEvent("gameCowRacingitemShopBuyCommit");
+        }catch(err){GM_logError("gameCowRacingitemShopBuyCommit","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("cowracing","buyItem",function(a){
+        try{
+             unsafeWindow.cowracing._buyItem(a);
+        }catch(err){GM_logError("cowracing.gameCowRacingbuyItem","","",err);}
+        try{
+            raiseEvent("gameCowRacingBuyItem");
+        }catch(err){GM_logError("gameCowRacingitemShopBuyCommit","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("cowracing","raceSelection",function(){
+        try{
+             unsafeWindow.cowracing._raceSelection();
+        }catch(err){GM_logError("cowracing.gameCowRacingraceSelection","","",err);}
+        try{
+            raiseEvent("gameCowRacingOpenCowRacingSelection");
+        }catch(err){GM_logError("gameCowRacingOpenCowRacingSelection","","",err);}
+
+    });
+    unsafeOverwriteObjFunction("cowracing","startRace",function(a){
+        try{
+             unsafeWindow.cowracing._startRace(a);
+        }catch(err){GM_logError("cowracing.gameCowRacingstartRace","","",err);}
+        try{
+            raiseEvent("gameCowRacingOpenStartCowracing");
+        }catch(err){GM_logError("gameCowRacingOpenCowRacingSelection","","",err);}
+
+    });
+
+
+    unsafeOverwriteObjFunction("cowracing","response",function(c,b,d){
+        try{
+             unsafeWindow.cowracing._response(c,b,d);
+        }catch(err){GM_logError("cowracing.gameCowRacingstartRace","","",err);}
+        try{
+            switch (b) {
+                case 'cowracing_startrace': {
+                    doFarmersMarketData();
+                    break;
+                }
+            }
+        }catch(err){GM_logError("gameCowRacingOpenCowRacingSelection","","",err);}
+    });
+
 
     /**********************************************************
     * Vehicle Farm 5 und 6
@@ -23719,6 +23843,7 @@ try{
         text["de"]["yieldPerProduction"]="Ertrag pro Produktion";
         text["de"]["youAreOnRankX"]="Du bist auf Platz %1%.";
         // category
+        text["de"]["category_alpin"]="Bergkräuter";
         text["de"]["category_cow"]="Rennkuh-Futter";
         text["de"]["category_breed"]="Tieraufzucht";
         text["de"]["category_c"]=text["de"]["coins"];
@@ -24162,6 +24287,7 @@ try{
         text["en"]["yieldPerProduction"]="Yield per production";
         text["en"]["youAreOnRankX"]="You are on rank %1%.";
         // category
+        text["en"]["category_alpin"]="Mountain herbage";
         text["en"]["category_cow"]="cow running food";
         text["en"]["category_breed"]="Animal breeding";
         text["en"]["category_c"]=text["en"]["coins"];
