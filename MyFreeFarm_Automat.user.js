@@ -306,6 +306,7 @@ var botArbiter=new function(){
             case "windmill":                priority= 20;fkt=autoWindmill;          break;
             case "forestry":                priority= 10;fkt=autoForestry;          break;
             case "foodworld":               priority= 10;fkt=autoFoodworld;         break;
+            case "map_stall":               priority=  5;fkt=autoMapStall;         break;
             case "clothingDonation":        priority=  5;fkt=autoClothingDonation;  break;
             case "donkey":                  priority=  5;fkt=autoDonkey;            break;
             case "lottery":                 priority=  5;fkt=autoLottery;           break;
@@ -668,7 +669,7 @@ var settings=new function(){
     var dataDefault={"global":{},
                      "country":{"valCloseWindowTimer":30,"pauseShort":[300,700],"pause":[2000,4000],"maxDurationBotRun":300,"maxDurationBotStep":30,"botErrorBehaviour":"reload","valRestartBotTimer":30},
                      "server":{"botActive":false},
-                     "account":{"autoPlant":true,"autoWater":true,"autoFeed":true,"botUseClothingDonation":false,"botUseBattleDailyBonus":true,"botUsebuyPetsParts":false,"botUseClothingGamble":false,"botUseDonkey":false,"botUseFarmersmarket":false,"botUseButterfly":false,"botUseCowracingFeed":true,"botUseVetTreatment":true,"botUseMegafruit":false,"botUseSpeedEating":false,"botUseDailyLoginBonus":true,"dailyLoginSelectProduct":1,"botUseFarmi":false,"botUseFoodworld":false,"botUseForestry":false,"botUseGuildJop":false,"botUseIceDelivery":false,"botUseLottery":false,"botUseMegafield":false,"botUseOlympiaRun":false,"botPreferMegafield":true,"botUseMegafieldPremiumPlanting":true,"megafieldSmallVehicle":1,"megafieldBigVehicle":0,"botUseWindmill":false,"botUseXMasCalendar":true,"disableCropFields":false,"farmiAccept":false,"farmiAcceptAboveNr":100,"farmiAcceptBelowMinValue":false,"botUseFarmiFoodworld":true,"farmiReject":false,"farmiRejectUntilNr":90,"farmiRemoveMissing":false,"farmiRemoveMissingAboveNr":10,"lotteryActivate":false,"lotteryDailyLot":false,"powerUpActivate":false,"seedWaitForCrop":30,"showQueueTime":true,"useQueueList":false,"garage1":0,"garage1ProductFrom1":0,"garage1ProductFrom5":0,"garage2":0,"garage2ProductFrom1":0,"garage2ProductFrom6":0}
+                     "account":{"autoPlant":true,"autoWater":true,"autoFeed":true,"botUseClothingDonation":false,"botUseBattleDailyBonus":true,"botUsebuyPetsParts":false,"botUseClothingGamble":false,"botUseDonkey":false,"botUseFarmersmarket":false,"botUseButterfly":false,"botUseCowracingFeed":true,"botUseVetTreatment":true,"botUseMegafruit":false,"botUseSpeedEating":false,"botUseDailyLoginBonus":true,"dailyLoginSelectProduct":1,"botUseFarmi":false,"botUseFoodworld":false,"botUseForestry":false,"botUseGuildJop":false,"botUseIceDelivery":false,"botUseLottery":false,"botUseMap_stall":false,"botUseMegafield":false,"botUseOlympiaRun":false,"botPreferMegafield":true,"botUseMegafieldPremiumPlanting":true,"megafieldSmallVehicle":1,"megafieldBigVehicle":0,"botUseWindmill":false,"botUseXMasCalendar":true,"disableCropFields":false,"farmiAccept":false,"farmiAcceptAboveNr":100,"farmiAcceptBelowMinValue":false,"botUseFarmiFoodworld":true,"farmiReject":false,"farmiRejectUntilNr":90,"farmiRemoveMissing":false,"farmiRemoveMissingAboveNr":10,"lotteryActivate":false,"lotteryDailyLot":false,"powerUpActivate":false,"seedWaitForCrop":30,"showQueueTime":true,"useQueueList":false,"garage1":0,"garage1ProductFrom1":0,"garage1ProductFrom5":0,"garage2":0,"garage2ProductFrom1":0,"garage2ProductFrom6":0}
                     };
     var require=    {"global":{},
                      "country":{},
@@ -1554,6 +1555,9 @@ function getGarden(zoneNr){
         case "megafield":
             return "megafield";
         break;
+        case "map_stall1":
+            return "map_stall";
+        break;
         default:
             GM_logWarning("getGarden","zoneNr="+zoneNr,"","Zone unknown. Function returns null");
             return null;
@@ -1742,7 +1746,8 @@ try {
             automatIcons[name][1]=createElement("div",{"id":"divAutomatIcon_"+name,"class":"link divFoodworldIcon","product":PRODSTOP,"zoneNrS":zoneNrS,"style":style},appendTo);
         break;
         case 5: // Pony is fine with standard PRODSTOP icon
-        case 7: //monster fruit culture
+        case 7:  //monster fruit culture
+        case 11:  //map_stall
         default:
             automatIcons[name][1]=createElement("div",{"id":"divAutomatIcon_"+name,"class":"link divZoneIcon v"+PRODSTOP,"product":PRODSTOP,"zoneNrS":zoneNrS,"style":style},appendTo);
         }
@@ -1789,6 +1794,9 @@ try {
             case 7: //monster fruit culture
                 drawMonsterfruitChooseItemBox(zoneNrS, zoneNrL,$("divChooseBoxInner"));
             break;
+            case 11: //Obststand / map_stall1
+                drawQueueMapStall1ItemBox(zoneNrS, zoneNrL, $("divChooseBoxInner"));
+            break;
             default:
                 throw("Building type '"+getBuildingTyp(zoneNrS)+"' unknown.");
             }
@@ -1801,8 +1809,8 @@ try {
                 newnode.removeChild(newnode.lastElementChild);
                 toolTip.show(event, newnode.innerHTML);
             },false);
-        } else if(!(zoneNrS=="farmersmarket-4.5"||zoneNrS=="farmersmarket-4.6"||zoneNrS=="farmersmarket-4.7")) {
-            //toolTip von  farmersmarket-4 slot 5 bis 7 ausblenden
+        } else if(!(zoneNrS=="farmersmarket-4.5"||zoneNrS=="farmersmarket-4.6"||zoneNrS=="farmersmarket-4.7"||zoneNrS.match("map_stall1"))) {
+            //toolTip von  farmersmarket-4 slot 5 bis 7 und map_stall/Obstand ausblenden
             automatIcons[name][1].addEventListener("mouseover", function(event){
                 toolTip.show(event, toolTipProductSmall(this.getAttribute("zoneNrS"),this.getAttribute("zoneNrL"),0,this));
             },false);
@@ -2618,7 +2626,6 @@ function drawMonsterfruitChooseItemBox(zoneNrS, zoneNrL, appendTo){
         appendTo.setAttribute("zoneNrF",zoneNrF);
         appendTo.setAttribute("zoneNrS",zoneNrS);
         appendTo.setAttribute("zoneNrL",zoneNrL);
-        appendTo.setAttribute("queueNum",0);
         createElement("div",{"id":"divChooseTitle"+zoneNrL,"class":"queueTitle"},appendTo, getZoneName(0,zoneNrS,zoneNrL,null,20,true,true,true));
         createElement("div",{"id":"divChooseEndTime"+zoneNrL,"class":"queueTime"},appendTo);
         createElement("div",{"style":"clear:both;"},appendTo);
@@ -3257,6 +3264,90 @@ try{
 }catch(err){GM_logError("drawChooseItemBoxMegafield ","","",err);}
 }
 
+//MapStall1
+function drawQueueMapStall1ItemBox(zoneNrS, zoneNrL, appendTo){
+    try{
+        // GM_log("Begin drawQueueMapStall1ItemBox zoneNrS="+zoneNrS+" zoneNrL="+zoneNrL+" appendTo.id="+appendTo.id);
+        if(zoneNrL===undefined || zoneNrL==null){ zoneNrL=getZoneListId(zoneNrS); }
+        appendTo.innerHTML="";
+        appendTo.setAttribute("zoneNrS",zoneNrS);
+        appendTo.setAttribute("zoneNrL",zoneNrL);
+        var fzZoneType=getZoneType(zoneNrS);
+        createElement("div",{"id":"divChooseTitle"+zoneNrL,"class":"queueTitle"},appendTo, getZoneName(0,zoneNrS,zoneNrL, null, 20, true, true));
+
+        createElement("div",{"id":"divChooseEndTime"+zoneNrL,"class":"queueTime"},appendTo);
+        createElement("div",{"style":"clear:both;"},appendTo);
+
+        newdiv=createElement("div",{id:"divChooseItem"+zoneNrL+ "I"+PRODSTOP,"class":"divChooseItem link v"+PRODSTOP,"product":PRODSTOP},appendTo);
+        newdiv.addEventListener("click",function(){
+            var zoneNrS=this.parentNode.getAttribute("zoneNrS");
+            var zoneNrL=this.parentNode.getAttribute("zoneNrL");
+            var product=parseInt(this.getAttribute("product"),10);
+            zoneList[zoneNrL]=DEFAULT_ZONELIST_ITEM_ARRAY.clone();
+            zoneList[zoneNrL][0][0]=product;
+            //toolTip.hide(this);
+            if(this.parentNode==$("divChooseBoxInner")) click($("divChooseBoxClose"));
+            updateQueueBox(zoneNrS, zoneNrL);
+        },false);
+        /*
+        newdiv.addEventListener("mouseover", function(event){
+            var zoneNrS=this.parentNode.getAttribute("zoneNrS");
+            var zoneNrL=this.parentNode.getAttribute("zoneNrL");
+            toolTip.show(event, toolTipProductSmall(zoneNrS, zoneNrL, 0, this));
+        },false);
+        */
+        for(i=0;i<unsafeWindow.stall.data.products.length;i++){
+            var iProd = unsafeWindow.stall.data.products[i];
+            //if(!in_array(this.data.products[i],h)){this.fillProduct=this.data.products[i];break}
+        //for(var iProd=0;iProd<unsafeData.prodName[0].length;iProd++){
+        //    if(!(unsafeData.prodBlock[0][iProd]&&unsafeData.prodBlock[0][iProd].match(/[uvlq]/))){
+                /*var fruitsShopProdTyp = ["v", "ex"];
+                if (fruitsShopProdTyp.indexOf(unsafeData.prodTyp[0][iProd])==-1){continue;}
+*/
+                newdiv=createElement("div",{"id":"divChooseItem"+zoneNrL+"I"+iProd,"class":"divChooseItem link v"+iProd,"product":iProd},appendTo);
+                if(unsafeWindow.in_array(iProd,unsafeWindow.stall.data.data[1].wishlist.products)){
+                    createElement("img",{src:GFX+"star.png","style":"position: relative; top: -10px; left: -10px; height: 22px; width: 22px;"},newdiv);
+
+                    //createElement("img",{src:GFX+"points.gif",style:"float:left;display:block;margin:0px 2px 0px 1px;width:12px;"},newdiv);
+
+                    //url(http://mff.wavecdn.de/mff/star.png);
+                    //<div class="marker"></div
+/*
+                    var frame=createElement("div", {
+                        "style":"position:absolute;top:47px;left:25%;padding-left: 4px;background: url('http://mff.wavecdn.de/mff/megafruit_time_bar.png') 100% 20px / 200%;border: 1px solid black;border-radius: 5px;"
+                    },div,getText("veterinaryRoleAutostart")+": ");*/
+                }
+                if(zoneList[zoneNrL][0][0]==iProd){ newdiv.style.border="2px solid black"; }
+
+                newdiv.addEventListener("click",function(){
+                    var zoneNrS=this.parentNode.getAttribute("zoneNrS");
+                    var zoneNrL=this.parentNode.getAttribute("zoneNrL");
+                    var product=parseInt(this.getAttribute("product"),10);
+                    zoneList[zoneNrL]=DEFAULT_ZONELIST_ITEM_ARRAY.clone();
+                    zoneList[zoneNrL][0][0]=product;
+                    //toolTip.hide(this);
+                    if(this.parentNode==$("divChooseBoxInner")) click($("divChooseBoxClose"));
+                    updateQueueBox(zoneNrS, zoneNrL);
+                },false);
+                /*
+                newdiv.addEventListener("mouseover", function(event){
+                    var zoneNrS=this.parentNode.getAttribute("zoneNrS");
+                    var zoneNrL=this.parentNode.getAttribute("zoneNrL");
+                    toolTip.show(event, toolTipProductSmall(zoneNrS, zoneNrL, 0, this));
+                },false);*/
+        //    }
+        }
+
+        if(appendTo==$("divChooseBoxInner")){
+            $("divChooseBox").style.display="block";
+            $("divChooseBox").style.top=Math.round(255 - $("divChooseBox").offsetHeight/2)+"px";
+        }
+        newdiv=null;appendTo=null;
+        updateQueueBox(zoneNrS, zoneNrL);
+    }catch(err){GM_logError("drawQueueMapStall1ItemBox ","","",err);}
+}
+
+
 function updateQueueBox(zoneNrS,zoneNrL){
 try{
     GM_logInfo("updateQueueBox","zoneNrS="+zoneNrS+" zoneNrL="+zoneNrL,"","Begin",1);
@@ -3326,6 +3417,18 @@ try{
                 } else {
                     automatIcons[i][1].setAttribute("class","link divZoneAutoMonsterFruitCultureIcon divZoneIcon megafruit_need_item megafruit_need_item"+zoneList[zoneNrL][0][0]);
                 }
+            break;
+            case 11: //map_stall1 / Obststand
+                if(unsafeWindow.in_array(zoneList[zoneNrL][0][0],unsafeWindow.stall.data.data[1].wishlist.products)){
+                    if (!automatIcons[i][1].childNodes[0]){
+                    createElement("img",{"class":"marker", src:GFX+"star.png","style":"position: relative; top: -10px; left: -10px; height: 22px; width: 22px;"},automatIcons[i][1]);
+                    }
+                } else {
+                    if (automatIcons[i][1].childNodes[0]){
+                        automatIcons[i][1].removeChild(automatIcons[i][1].childNodes[0]);
+                    }
+                }
+                automatIcons[i][1].setAttribute("class","link divZoneIcon v"+zoneList[zoneNrL][0][0]);
             break;
             }
             automatIcons[i][1].setAttribute("product",zoneList[zoneNrL][0][0]);
@@ -3744,6 +3847,8 @@ try{
             zoneFeedCurr=null;zoneProdCurr=null;
         break;}
         case 7: { // monster fruit culture  - No queue mode support
+        break;}
+        case 11: { // map_stall1 / Obststand  - No queue mode support
         break;}
         case "windmill":{ // (fzWindmill)
             if(settings.get("account","showQueueTime")){
@@ -4792,7 +4897,6 @@ try{
                 if (unsafeData.zones.isMultiSlot(fz)&&fz!="megafield"){
                     if (fz.match(/\.(\d+)$/)==null){ continue; }
                 }
-
                 if((help[1]=="w")||(help[1]=="r" && (zoneList[lz][0][0]!=PRODSTOP||!settings.get("account","disableCropFields")))||(help[1]=="e" && zoneList[lz][0][0]!=PRODSTOP)){
                     if(zoneWaiting[fz]){
                         GM_logInfo("checkReadyZone","zoneNr="+zoneNr,"fz="+fz+" zoneWaiting="+getDateText(zoneWaiting[fz])+" "+getDaytimeStr(zoneWaiting[fz]),getText("automat_zoneXWaiting").replace(/%1%/,unsafeData.zones.getName(fz)));
@@ -7711,6 +7815,130 @@ try{
         help=null; listeningEvent=null; action=null;
     }
 }catch(err){ GM_logError("autoVehicles","runId="+runId+" step="+step,"",err); }
+}
+
+//autoMapStall
+function autoMapStall(runId,step){
+try{
+    if(bot.checkRun("autoMapStall",runId)){
+        var help,action=null,listeningEvent=null;
+        if(!step){ step=1; }
+        bot.setAction("autoMapStall ("+step+")");
+        switch(step){
+        case 1:{ // go to map_stall1
+            GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Open Map_Stall1");
+            var zoneNrS=getReadyZone("map");
+            handled.set(zoneNrS);
+
+            listeningEvent="gameOpenMapStall1";
+            action=function(){
+                GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Map_Stall1");
+                click($("map_stall_overview_link"));
+            };
+        break;}
+        case 2:{ //Next or clear $("map_stall1_slot1_amount")
+            GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Clear or next step");
+            if (zoneList[handled.zoneNrL][0][0]== unsafeWindow.stall.data.data[1].slots[handled.slot].pid) {
+                autoMapStall(runId,step+1); //refill or new
+                /*
+                if(help=$("map_stall1_slot"+handled.slot+"_amount")) {
+                    autoMapStall(runId,step+1);
+                } else {
+
+                }*/
+
+            } else {
+                //  help$("map_stall1_slot"+handled.slot).querySelector('div[onclick*="stall.clearSlotCommit(1, '+(handled.slot)+')');
+               if(help=$("map_stall1_slot"+handled.slot).getElementsByClassName("clicker")[0]) {
+                   listeningEvent="gameMapStall1_ClearSlot";
+                   action=function(){
+                       unsafeWindow.stall.clearSlot(1, handled.slot);
+                   };
+               }
+            }
+
+        break;}
+        case 3:{ // Klick RefillSlot or FillSlot
+            GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Klick RefillSlot or FillSlot");
+            if(help=$("map_stall1_slot"+handled.slot+"_amount")) {
+                listeningEvent="gameMapStall1_refillSlotCommit";
+                action=function(){
+                    click(help);
+                };
+            } else if (help=$("map_stall1_slot"+handled.slot).getElementsByClassName("clicker")[0]){
+                listeningEvent="gameMapStall1_fillSlotCommit";
+                action=function(){
+                    click(help);
+                };
+            } else {
+                autoMapStall(runId,5); // exit
+            }
+        break;}
+        case 4:{ // FillSlot
+            GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Refill or fill");
+            if ($("map_stall_fill_slot_commit").getElementsByClassName("dropdown")[0]) {
+                unsafeWindow.stall.fillSlotCommitSetProduct(zoneList[handled.zoneNrL][0][0]);
+            }
+            //var div = $("globalbox_content").querySelector('button[onclick*="stall.fillSlot()"]');
+            var div = $("globalbox_content").querySelector('button');
+            if (div){
+                action=function(){ click(div); }
+                listeningEvent="gameMapStall1_fill_slot";
+            } else {
+                autoMapStall(runId,5); // exit
+            }
+        break;}
+        case 5:{
+            GM_logInfo("autoMapStall","runId="+runId,"zoneNrL="+handled.zoneNrL+" zoneNrS="+handled.zoneNrS,"start other SLOT or exit");
+            var zoneNrS,zoneNrL,help,next=false;
+            if(unsafeData.zones.isMultiSlot(handled.zoneNrF)){
+                for(var slot=1;slot<=unsafeData.BUILDING_SLOTS[getZoneType(handled.zoneNrF)];slot++){
+                    zoneNrS=handled.zoneNrF+"."+slot;
+                    if((help=unsafeData.readyZone[zoneNrS])&&help[2]){
+                        zoneNrL=getZoneListId(zoneNrS);
+                        if(((help[1]=="r")&&((zoneList[zoneNrL][0][0]!=PRODSTOP)||!settings.get("account","disableCropFields")))||((help[1]=="e")&&(zoneList[zoneNrL][0][0]!=PRODSTOP))){
+                            next=true;
+                            handled.set(zoneNrS);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if(next){
+                autoMapStall(runId,1,type);
+            }else{
+                //help=/-(\d)$/.exec(handled.zoneNrF)[1];
+                var div=$("map_stall_inner").querySelector(".big_close");
+                if (!div) {
+                    var help2=$("map_stall_inner").querySelectorAll(".mini_close");
+                    for (var i=0;i<help2.length;i++) {
+                        if (help2[i].getAttribute("onclick")=="stall.close()"){
+                            div = help2[i];
+                            break;
+                        }
+                    }
+                }
+                if (!div) {
+                    autoZoneFinish(runId);
+                } else {
+                    autoZoneFinish(runId,div);
+                }
+            }
+        break;}
+        }
+        if(listeningEvent){
+            document.addEventListener(listeningEvent,function(listeningEvent,runId,step){
+                return function(){
+                    document.removeEventListener(listeningEvent,arguments.callee,false);
+                    window.setTimeout(autoMapStall,settings.getPause(),runId,step+1);
+                };
+            }(listeningEvent,runId,step),false);
+        }
+        if(action){ action(); }
+        help=null;listeningEvent=null;action=null;
+    }
+}catch(err){ GM_logError("autoMapStall","runId="+runId+" step="+step,"",err); }
 }
 
 function autoClothingDonation(runId, step) {
@@ -11631,6 +11859,19 @@ function buildInfoPanelOptions(){
         },false);
         newtd=createElement("td",{"colspan":"2"},newtr,getText("automat_settings_megafieldBigHarvester"));
 
+        // ********** Map / Obststand ********************************
+        newtr=createElement("tr",{"style":"background-color:#b69162;"},newtable);
+        createElement("th",{colspan:"3"},newtr,getText("automat_map"));
+        newtr=createElement("tr",{"style":"line-height:18px;"},newtable);
+        newtd=createElement("td",{"align":"center","width":"40"},newtr);
+        inp=createElement("input",{"class":"link","type":"checkbox","checked":settings.get("account","botUseMap_stall")},newtd);
+        inp.addEventListener("click",function(){
+            settings.set("account","botUseMap_stall",this.checked);
+            buildInfoPanelOptionsDisabling();
+            botArbiter.check();
+        },false);
+        newtd=createElement("td",{"colspan":"2"},newtr,getText("automat_settings_botUseMapStall"));
+
         // *********** GUILD *****************************************
         newtr=createElement("tr",{"style":"background-color:#b69162;"},newtable);
         createElement("th",{colspan:"3"},newtr,getText("automat_guild"));
@@ -13047,6 +13288,20 @@ try{
                 }
             }(v),false);
         }
+        //gameOpenMapStall1
+        err_trace="listener gameOpenMapStall1";
+        document.addEventListener("gameOpenMapStall1",function(){ // Obststand open
+        try{
+            var zoneNrF="map_stall1"
+            var zoneNrS;
+            for(var slot=1;slot<=4;slot++){
+                zoneNrS=zoneNrF+"."+slot;
+                if(!unsafeData.zones.getBlock(zoneNrS)){
+                    drawAutomatIcon(zoneNrS,zoneNrS,$("map_stall1_slot"+slot),"top:75px;left:10px;");
+                }
+            }
+        }catch(err){GM_logError("eventListener:gameOpenMapStall ","","",err);}
+        },false);
 
         err_trace="listener gameDailyLoginBonusOpen";
         document.addEventListener("gameSetDailyLoginProduct",function(id){
@@ -13061,7 +13316,6 @@ try{
             }catch(err){GM_logError("eventListener:gameFarmersmarketOpened"+id+"","","",err);}
             }
         }(v),false);
-
 
         document.addEventListener("gamegoToOpenDailyLoginBonus",function(id){
             return function(){
@@ -13677,6 +13931,7 @@ try{
         text["de"]["automat_timing"] = "Timing";
         text["de"]["automat_general"] = "General";
         text["de"]["automat_guild"] = "Bauernclub";
+        text["de"]["automat_map"] = "Farmkarte";
         text["de"]["automat_development"] = "Development";
         text["de"]["automat_arrivedInFarm"] = "Farm erreicht";
         text["de"]["automat_changeToFarmX"] = "Gehe nach Farm %1%";
@@ -13713,6 +13968,7 @@ try{
         text["de"]["automat_settings_botUseButterfly"] = "Schmetterling";
         text["de"]["automat_settings_botUseFoodworld"] = "Auto-Ablehnung für Picknick-Farmis";
         text["de"]["automat_settings_botUseGuildJop"] = "Verwende Bot für Clubauftrag";
+        text["de"]["automat_settings_botUseMapStall"] = "Verwende Bot für Obststand";
         text["de"]["automat_settings_botUseMegafruit"] = "Monsterfruchtzucht";
         text["de"]["automat_settings_botUseSpeedEating"] = "Wettessen";
         text["de"]["automat_settings_botUseVetTreatment"] = "Tierarzt: Automatisches Heilen";
@@ -13912,6 +14168,7 @@ try{
         text["en"]["automat_timing"] = "Timing";
         text["en"]["automat_general"] = "General";
         text["en"]["automat_guild"] = "Guild";
+        text["en"]["automat_map"] = "Farmmap";
         text["en"]["automat_development"] = "Development";
         text["en"]["automat_arrivedInFarm"] = "Arrived in farm";
         text["en"]["automat_changeToFarmX"] = "Going to farm %1%";
@@ -13949,6 +14206,7 @@ try{
         text["en"]["automat_settings_botUseButterfly"] = "Butterfly";
         text["en"]["automat_settings_botUseFoodworld"] = "Auto reject foodworld farmis";
         text["en"]["automat_settings_botUseGuildJop"] = "Use bot for guildjob ";
+        text["en"]["automat_settings_botUseMapStall"] = "Use bot for fruit shop";
         text["en"]["automat_settings_botUseMegafruit"] = "Megafruit";
         text["en"]["automat_settings_botUseSpeedEating"] = "Speedeating";
         text["en"]["automat_settings_botUseVetTreatment"] = "Vet: Automatic treatment";
