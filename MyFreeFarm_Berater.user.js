@@ -18997,18 +18997,18 @@ try{
                     console.log("+++++++++++++++++++++++++++++++");
                     console.log(implode(item.data.data[1].slots[slot]));
                     console.log("++++++++++++++++++++++++++++++++++++++++++")*/
-
                     if (item.data.data[1].slots.hasOwnProperty(slot)) {
                         if ( item.data.data[1].slots[slot].length==0 ||
-                            item.data.data[1].slots[slot].amount/item.data.config.level[item.data.data[1].level].fillsum <=0.30) {
+                            item.data.data[1].slots[slot].amount/item.data.config.level[item.data.data[1].level].fillsum <=0.66) {
                             iTime=nowServer-100; // TODO:
                             tempZoneProductionData[1]++;
                             tempZoneProductionDataSlot[1]++;
-                        } else if(item.data.data[1].slots[slot].length==0 ||
+                        } /*else if(item.data.data[1].slots[slot].length==0 ||
                             item.data.data[1].slots[slot].amount/item.data.config.level[item.data.data[1].level].fillsum <=0.60){
                             iTime = nowServer+1800;
-                        } else {
-                            iTime = nowServer+3600;
+                        }*/ else {
+                            iTime=parseInt(item.data.data[1].farmi_last,10)+1800;
+                            //iTime = nowServer+3600;
                         }
                         iProd=item.data.data[1].slots[slot].pid; iAmount=0; iPoints=0;
                         tempZoneProductionData[2]++;
@@ -19060,6 +19060,7 @@ try{
                     raiseEvent("gameMapStall1_ClearSlot");
                     break;
                 case "stall_fill_slot":
+                case "stall_refill_slot":
                     raiseEvent("gameMapStall1_fill_slot");
                     doMapStall();
                     break;
@@ -19087,15 +19088,16 @@ try{
         }catch(err){GM_logError("stall.refillSlotCommit","","",err);}
     });
 
-    var notstartStallInformer = true;
+    var notstartStallInformer = 0;
     unsafeOverwriteObjFunction("stall","informer",function(c){
         try{
              unsafeWindow.stall._informer(c);
         }catch(err){GM_logError("stall.openMapStall","","",err);}
         try{
-            if (notstartStallInformer) {
+            if (notstartStallInformer++==0) {
                 doMapStall();
-                notstartStallInformer = false;
+            } else if (notstartStallInformer>=600) {
+                notstartStallInformer = 0;
             }
 
         }catch(err){GM_logError("openMapStall1","","",err);}
