@@ -160,7 +160,7 @@ const CHANGELOG=[["2.0","29.05.2014",[["Migration nach openuserjs.org","Migratio
                 ,["2.09.68","09.10.2018",[["Täglicher Login Bonus","Daily login bonus"]]]
                 ,["2.09.69","15.10.2018",[["Täglicher Login Bonus","Daily login bonus"]]]
                 ,["2.09.70","25.10.2018",[["Bonus Alien Invasion","Alieninvasion bonus"]]]
-                ,["2.09.71","05.12.2018",[["Adventskalender","xMas-Calendar"]]],
+                ,["2.09.71","05.12.2018",[["Adventskalender","xMas-Calendar"]]]
                 ,["2.09.72","25.07.2019",[["Kuhrennen","Cow running"]]]
             ];
 
@@ -322,7 +322,7 @@ var botArbiter=new function(){
             case "goOlympiaRun":            priority=  5;fkt=autoOlympiaRun;        break;
             case "goSiebenSchlaefer":       priority=  5;fkt=autoSiebenSchlaeferRun;     break;
             case "goXMasCalendar":          priority=  5;fkt=autoXMasCalendar;     break;
-
+            case "farmdog":                 priority=  2;fkt=autoFarmDog;     break;
             // case "quest":          priority=  5;fkt=autoActivateQuest;   break;
             // case "lodgeQuest":     priority=  5;fkt=autoActivateLodgeQuest;break;
             case "otherAccReady":           priority=  1;fkt=doGameOtherAccReady;   break;
@@ -448,6 +448,10 @@ var botArbiter=new function(){
                 if (isNaN(unsafeWindow.farms_data.map.vehicles[1][settings.get("account","garage1")].remain)){
                     botArbiter.add("vehicles1");
                 }
+            }
+
+            if(settings.get("account","botUseFarmDog") && unsafeWindow.farmdog_isset == 1 && unsafeWindow.farmdog_harvest == 0) {
+                botArbiter.add("farmdog");
             }
 
             if (settings.get("account","garage2")>0 ) {
@@ -669,7 +673,7 @@ var settings=new function(){
     var dataDefault={"global":{},
                      "country":{"valCloseWindowTimer":30,"pauseShort":[300,700],"pause":[2000,4000],"maxDurationBotRun":300,"maxDurationBotStep":30,"botErrorBehaviour":"reload","valRestartBotTimer":30},
                      "server":{"botActive":false},
-                     "account":{"autoPlant":true,"autoWater":true,"autoFeed":true,"botUseClothingDonation":false,"botUseBattleDailyBonus":true,"botUsebuyPetsParts":false,"botUseClothingGamble":false,"botUseDonkey":false,"botUseFarmersmarket":false,"botUseButterfly":false,"botUseCowracingFeed":true,"botUseVetTreatment":true,"botUseMegafruit":false,"botUseSpeedEating":false,"botUseDailyLoginBonus":true,"dailyLoginSelectProduct":1,"botUseFarmi":false,"botUseFoodworld":false,"botUseForestry":false,"botUseGuildJop":false,"botUseIceDelivery":false,"botUseLottery":false,"botUseMap_stall":false,"botUseMegafield":false,"botUseOlympiaRun":false,"botPreferMegafield":true,"botUseMegafieldPremiumPlanting":true,"megafieldSmallVehicle":1,"megafieldBigVehicle":0,"botUseWindmill":false,"botUseXMasCalendar":true,"disableCropFields":false,"farmiAccept":false,"farmiAcceptAboveNr":100,"farmiAcceptBelowMinValue":false,"botUseFarmiFoodworld":true,"farmiReject":false,"farmiRejectUntilNr":90,"farmiRemoveMissing":false,"farmiRemoveMissingAboveNr":10,"lotteryActivate":false,"lotteryDailyLot":false,"powerUpActivate":false,"seedWaitForCrop":30,"showQueueTime":true,"useQueueList":false,"garage1":0,"garage1ProductFrom1":0,"garage1ProductFrom5":0,"garage2":0,"garage2ProductFrom1":0,"garage2ProductFrom6":0}
+                     "account":{"autoPlant":true,"autoWater":true,"autoFeed":true,"botUseClothingDonation":false,"botUseBattleDailyBonus":true,"botUsebuyPetsParts":false,"botUseClothingGamble":false,"botUseDonkey":false,"botUseFarmDog":false,"botUseFarmersmarket":false,"botUseButterfly":false,"botUseCowracingFeed":true,"botUseVetTreatment":true,"botUseMegafruit":false,"botUseSpeedEating":false,"botUseDailyLoginBonus":true,"dailyLoginSelectProduct":1,"botUseFarmi":false,"botUseFoodworld":false,"botUseForestry":false,"botUseGuildJop":false,"botUseIceDelivery":false,"botUseLottery":false,"botUseMap_stall":false,"botUseMegafield":false,"botUseOlympiaRun":false,"botPreferMegafield":true,"botUseMegafieldPremiumPlanting":true,"megafieldSmallVehicle":1,"megafieldBigVehicle":0,"botUseWindmill":false,"botUseXMasCalendar":true,"disableCropFields":false,"farmiAccept":false,"farmiAcceptAboveNr":100,"farmiAcceptBelowMinValue":false,"botUseFarmiFoodworld":true,"farmiReject":false,"farmiRejectUntilNr":90,"farmiRemoveMissing":false,"farmiRemoveMissingAboveNr":10,"lotteryActivate":false,"lotteryDailyLot":false,"powerUpActivate":false,"seedWaitForCrop":30,"showQueueTime":true,"useQueueList":false,"garage1":0,"garage1ProductFrom1":0,"garage1ProductFrom5":0,"garage2":0,"garage2ProductFrom1":0,"garage2ProductFrom6":0}
                     };
     var require=    {"global":{},
                      "country":{},
@@ -7906,7 +7910,7 @@ try{
             }
 
             if(next){
-                autoMapStall(runId,1,type);
+                autoMapStall(runId,1);
             }else{
                 //help=/-(\d)$/.exec(handled.zoneNrF)[1];
                 var div=$("map_stall_inner").querySelector(".big_close");
@@ -8200,6 +8204,67 @@ try{
         help=null;listeningEvent=null;action=null;
     }
 }catch(err){ GM_logError("autoLottery","runId="+runId+" step="+step,"",err); }
+}
+
+function autoFarmDog(runId,step){
+try{
+    if(bot.checkRun("autoFarmDog",runId)){
+        var help,action=null,listeningEvent=null;
+        if(!step){ step=1; }
+        bot.setAction("autoFarmDog ("+step+")");
+        switch(step){
+            case 1: { // go to farm 1
+            if (unsafeWindow.farm == 1) {
+                autoFarmDog(runId, step + 1);
+            } else {
+                listeningEvent="gameFarmOpened";
+                action=function(){
+                    GM_logInfo("autoFarmDog","runId="+runId+" step="+step,"","Goto Farm 1");
+                    click($("speedlink_farm1"));
+                };
+            }
+            break; }
+
+            case 2:{ // open farmdog
+                GM_logInfo("autoFarmDog","runId="+runId+" step="+step,"","FarmDog: Opening");
+                if(help=$("farm_dog") ) {
+                    listeningEvent="gameOpenFarmDog";
+                    action=function(){
+                        click(help);
+                    };
+                }
+            break;}
+            case 3:{ // get farmdog donus
+                GM_logInfo("autoFarmDog","runId="+runId+" step="+step,"","FarmDog: Opening");
+                if(help=$("farm_dog_button_link") ) {
+                    listeningEvent="gameGetFarmDog";
+                    action=function(){
+                        click(help);
+                    };
+                }
+            break;}
+
+            case 4:{ // exit
+                GM_logInfo("autoFarmDog","runId="+runId+" step="+step,"","FarmDog: Exiting");
+                if($("farm_dog_box").style.display=="block"){
+                    autoZoneFinish(runId,$("farm_dog_box_close"));
+                }else{
+                    autoZoneFinish(runId);
+                }
+            break;}
+        }
+        if(listeningEvent){
+            document.addEventListener(listeningEvent,function(listeningEvent,runId,step){
+                return function(){
+                    document.removeEventListener(listeningEvent,arguments.callee,false);
+                    window.setTimeout(autoFarmDog,settings.getPause(),runId,step+1);
+                };
+            }(listeningEvent,runId,step),false);
+        }
+        if(action){ action(); }
+        help=null;listeningEvent=null;action=null;
+    }
+}catch(err){ GM_logError("autoFarmDog","runId="+runId+" step="+step,"",err); }
 }
 
 function autoDailyLoginBonus(runId, step) {
@@ -11489,19 +11554,27 @@ function buildInfoPanelOptions(){
         },false);
         newtd=createElement("td",{"colspan":"2"},newtr,getText("automat_settings_botUseButterfly"));
 
-        // *********** WALTRAUD ***********************************
+        // *********** 24h Bonusse ***********************************
         newtr=createElement("tr",{"style":"background-color:#b69162;"},newtable);
-        createElement("th",{"colspan":"3"},newtr,getText("donkey"));
+        createElement("th",{"colspan":"3"},newtr,getText("automat_settings_botDailyBonus"));
 
         newtr=createElement("tr",{"style":"line-height:18px;"},newtable);
         newtd=createElement("td",{"align":"center","width":"40"},newtr);
         inp=createElement("input",{"class":"link","type":"checkbox","checked":settings.get("account","botUseDonkey")},newtd);
         inp.addEventListener("click",function(){
             settings.set("account", "botUseDonkey", this.checked);
-            // buildInfoPanelOptionsDisabling();
             botArbiter.check();
         }, false);
-        newtd=createElement("td",{"colspan":"2"},newtr,getText("automat_settings_botUse"));
+        newtd=createElement("td",{"colspan":"2"},newtr,getText("donkey"));
+
+        newtr=createElement("tr",{"style":"line-height:18px;"},newtable);
+        newtd=createElement("td",{"align":"center","width":"40"},newtr);
+        inp=createElement("input",{"class":"link","type":"checkbox","checked":settings.get("account","botUseFarmDog")},newtd);
+        inp.addEventListener("click",function(){
+            settings.set("account", "botUseFarmDog", this.checked);
+            botArbiter.check();
+        }, false);
+        newtd=createElement("td",{"colspan":"2"},newtr,getText("automat_settings_FarmDog"));
 
         // *********** buyPetsParts ***********************************
         //22102016
@@ -13965,7 +14038,9 @@ try{
         text["de"]["automat_settings_autoWater"] = "Sollen die Äcker gegossen werden?";
         text["de"]["automat_settings_autoFeed"] = "Soll der Futter-Automat angezeigt werden?";
         text["de"]["automat_settings_botUse"] = "Verwende Bot";
+        text["de"]["automat_settings_botDailyBonus"] = "Täglicher Bonus / sonstige Bonuse";
         text["de"]["automat_settings_botUseButterfly"] = "Schmetterling";
+        text["de"]["automat_settings_FarmDog"] = "Braver Ben";
         text["de"]["automat_settings_botUseFoodworld"] = "Auto-Ablehnung für Picknick-Farmis";
         text["de"]["automat_settings_botUseGuildJop"] = "Verwende Bot für Clubauftrag";
         text["de"]["automat_settings_botUseMapStall"] = "Verwende Bot für Obststand";
@@ -14203,7 +14278,9 @@ try{
         text["en"]["automat_settings_autoWater"] = "Shall the fields be watered?";
         text["en"]["automat_settings_autoFeed"] = "Shall the feeding machine be displayed?";
         text["en"]["automat_settings_botUse"] = "Use bot";
+        text["en"]["automat_settings_botDailyBonus"] = "Daily bonus / other bonuses";
         text["en"]["automat_settings_botUseButterfly"] = "Butterfly";
+        text["en"]["automat_settings_FarmDog"] = "Farmdog";
         text["en"]["automat_settings_botUseFoodworld"] = "Auto reject foodworld farmis";
         text["en"]["automat_settings_botUseGuildJop"] = "Use bot for guildjob ";
         text["en"]["automat_settings_botUseMapStall"] = "Use bot for fruit shop";

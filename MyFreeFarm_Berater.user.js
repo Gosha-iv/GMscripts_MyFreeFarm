@@ -15508,6 +15508,7 @@ try{
                         }
                     case "dogbonus":
                         doDogBen();
+                        raiseEvent("gameGetFarmDog");
                         break;
                     case "flowerarea_harvest_all":
                         raiseEvent("gameFarmersmarketCropped");
@@ -18998,8 +18999,9 @@ try{
                     console.log(implode(item.data.data[1].slots[slot]));
                     console.log("++++++++++++++++++++++++++++++++++++++++++")*/
                     if (item.data.data[1].slots.hasOwnProperty(slot)) {
-                        if ( item.data.data[1].slots[slot].length==0 ||
-                            item.data.data[1].slots[slot].amount/item.data.config.level[item.data.data[1].level].fillsum <=0.66) {
+                        if(!item.data.data[1].slots[slot].hasOwnProperty("amount") ||
+                            item.data.data[1].slots[slot].amount/item.data.config.level[item.data.data[1].level].fillsum <=0.66
+                        ){
                             iTime=nowServer-100; // TODO:
                             tempZoneProductionData[1]++;
                             tempZoneProductionDataSlot[1]++;
@@ -21170,6 +21172,15 @@ try{
         });
         showGoToDonkey();
     }
+
+    unsafeOverwriteFunction("showFarmDog",function(){
+        try{
+            unsafeWindow._showFarmDog();
+        }catch(err){GM_logError("showFarmDog","","",err);}
+        try{
+            raiseEvent("gameOpenFarmDog");
+        }catch(err){GM_logError("showFarmDog","","",err);}
+    });
 
     /**********************************************************
     * Events Daily Login Bonus
