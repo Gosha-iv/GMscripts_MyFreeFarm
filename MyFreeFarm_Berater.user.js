@@ -208,8 +208,8 @@ const CHANGELOG=[["2.0","29.05.2014",[["Migration nach openuserjs.org","Migratio
                 ,["2.10.93","12.03.2019",[["Schmetterling MouseOver Fenster: Blüten pro Stunde","Butterfly mouseover div: blossoms for hour"]]]
                 ,["2.10.94","13.05.2019",[["Verbesserungen","Improvements"]]]
                 ,["2.10.95","25.07.2019",[["Kuhrennen","Cow running"]]]
-                ,["2.10.96","09.10.2019",[["Obststand","Fruitshop"],["Braver Ben","farmdog"],["Farm 7","farm 7"]]]                
-                ];
+                ,["2.10.96","09.10.2019",[["Obststand","Fruitshop"],["Braver Ben","farmdog"],["Farm 7","farm 7"]]]
+            ];
 if(!VERSIONfunctionFile){
     alert("Hi, I am the Berater-Script.\nThe function-file is missing.\nPlease install me again.");
     location.href=GM_Source;
@@ -21386,6 +21386,98 @@ try{
             }catch(err){GM_logError("xMasCalendar.build","","",err);}
         }, true);
     }
+
+    //*********************************************************************************************
+    // Geburtstagsspiel
+    //*********************************************************************************************
+    var tinkergameAnzahl=0;
+    var tinkergameSelect;
+    function doTinkergame(){
+        try{
+            if (tinkergameAnzahl>0) {
+                unsafeWindow.tinkergame.exchangePrize(selectPaket.value);
+                tinkergameAnzahl--;
+                document.addEventListener("tinkergame_paket",function(){
+                    document.removeEventListener("tinkergame_paket",arguments.callee,false);
+                    if((help=$("globalbox")) && (help.style.display == "block")) {
+                        unsafeWindow.hideDiv('globalbox');
+                        unsafeWindow.hideDiv('globaltransp');
+                    }
+                    window.setTimeout(function(){
+                        doTinkergame();
+                    },1000);
+                });
+
+            }
+        }catch(err){GM_logError("doTinkergame","","",err);}
+    }
+
+    unsafeOverwriteObjFunction("tinkergame","exchangePrize",function(a){
+        try{
+            unsafeWindow.tinkergame._exchangePrize(a);
+        }catch(err){GM_logError("tinkergameExchangePrize","","",err);}
+        try{
+            window.setTimeout(function(){
+                raiseEvent("tinkergame_paket");
+            },1000);
+        }catch(err){GM_logError("tinkergameExchangePrize","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("tinkergame","open",function(){
+        try{
+             unsafeWindow.tinkergame._open();
+
+        }catch(err){GM_logError("tinkergame.open","","",err);}
+        try{
+            var item = unsafeWindow.farms_data.map;
+            var container = $("tinkergame_main");
+            var newNode = createElement("div",{"id":"divGame","class":"","style":"height:25px"});
+            var newtable=createElement("table",{"border":"0","class":"","style":"width:75%"},newNode);
+
+            var newtr=createElement("tr",{},newtable);
+            createElement("td",{},newtr,"Paket:");
+            var newtd = createElement("td",{},newtr);
+            var selectPaket = createElement("select", {
+                "id": "selectPaket",
+                "size":"1",
+                "name": "selection",
+                "style": "margin: 0px 0px 0px 10px"
+            }, newtd, false);
+
+            createElement("option", {"value":2}, selectPaket, "Produktpaket");
+            createElement("option", {"value":11}, selectPaket, "Joghurt");
+            createElement("option", {"value":12}, selectPaket, "Ziegenmilch");
+            createElement("option", {"value":13}, selectPaket, "Angorawolle");
+            createElement("option", {"value":14}, selectPaket, "Ketchup");
+            createElement("option", {"value":15}, selectPaket, "Biosprit");
+
+            createElement("td",{},newtr, "Anzahl:");
+            newtd = createElement("td",{},newtr);
+            var inputAnzahl = createElement("input",{
+                "id":"anzahl",
+                "value":tinkergameAnzahl,
+                "size":"5px",
+                "style":"text-align:center;"
+            },newtd);
+
+            newtd = createElement("td",{},newtr);
+
+            var button=createElement("button", {"class":"link","style":""}, newtd, "Start");
+            button.addEventListener("click",function(){
+                if (inputAnzahl.value > 0 && selectPaket.value) {
+                    tinkergameAnzahl=inputAnzahl.value;
+                    tinkergameSelect=selectPaket.value;
+                    doTinkergame();
+                }
+            },false);
+
+            button=null;
+            container.insertBefore(newNode, container.firstChild.nextSibling);
+            container=null;button=null;help=null;
+
+        }catch(err){GM_logError("tinkergame.open","","",err);}
+    });
+
 
     //*********************************************************************************************
     // buyPetsParts
