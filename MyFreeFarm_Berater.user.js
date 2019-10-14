@@ -4,8 +4,8 @@
 // @author         BastianKanaan
 // @description    Extends MyFreeFarm
 // @icon           data:image/png;base64,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
-// @date           25.07.2019
-// @version        2.10.95
+// @date           09.10.2019
+// @version        2.10.96
 // @license        GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)au\.myfreefarm\.com\/.*$/
 // @include       /^(http|https):\/\/(|www\.|s\d+\.)veselaferma\.com\/.*$/
@@ -208,6 +208,7 @@ const CHANGELOG=[["2.0","29.05.2014",[["Migration nach openuserjs.org","Migratio
                 ,["2.10.93","12.03.2019",[["Schmetterling MouseOver Fenster: Blüten pro Stunde","Butterfly mouseover div: blossoms for hour"]]]
                 ,["2.10.94","13.05.2019",[["Verbesserungen","Improvements"]]]
                 ,["2.10.95","25.07.2019",[["Kuhrennen","Cow running"]]]
+                ,["2.10.96","09.10.2019",[["Obststand","Fruitshop"],["Braver Ben","farmdog"],["Farm 7","farm 7"]]]                
                 ];
 if(!VERSIONfunctionFile){
     alert("Hi, I am the Berater-Script.\nThe function-file is missing.\nPlease install me again.");
@@ -295,10 +296,10 @@ const NPC=[[,0.5,1.1,1.34,2.75,3.95,8.05,17.8,18.5,"f85","f110","f180","f280",,,
 // task_new_product
 const INIT_NPC_SAISON={"94":false,"95":false,"96":false,"98":false,"100":false,"101":false,"102":false,"103":false,"105":false};
 // task_new_zone
-const ALL_ZONES = {"farm":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36],"farmersmarket":["farmersmarket-0","farmersmarket-1","farmersmarket-2","farmersmarket-3","farmersmarket-4","farmersmarket-5","farmersmarket-6","farmersmarket-7","farmersmarket-8"],"forestry":["forest","sawmill","carpentry"],"city":["windmill"],"foodworld":["foodworld-0","foodworld-1","foodworld-2","foodworld-3","foodworld-4"],"map_stall":["map_stall0","map_stall1"],"megafield":["megafield"]};
+const ALL_ZONES = {"farm":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42],"farmersmarket":["farmersmarket-0","farmersmarket-1","farmersmarket-2","farmersmarket-3","farmersmarket-4","farmersmarket-5","farmersmarket-6","farmersmarket-7","farmersmarket-8"],"forestry":["forest","sawmill","carpentry"],"city":["windmill"],"foodworld":["foodworld-0","foodworld-1","foodworld-2","foodworld-3","foodworld-4"],"map_stall":["map_stall0","map_stall1"],"megafield":["megafield"]};
 unsafeData.ALL_ZONES=ALL_ZONES.clone();
 // task_new_zone
-const DATA_zones = {"1":{"location":"farm","farmNr":0,"zoneNr":1,"productional":true},"2":{"location":"farm","farmNr":0,"zoneNr":2,"productional":true},"3":{"location":"farm","farmNr":0,"zoneNr":3,"productional":true},"4":{"location":"farm","farmNr":0,"zoneNr":4,"productional":true},"5":{"location":"farm","farmNr":0,"zoneNr":5,"productional":true},"6":{"location":"farm","farmNr":0,"zoneNr":6,"productional":true},"7":{"location":"farm","farmNr":1,"zoneNr":1,"productional":true},"8":{"location":"farm","farmNr":1,"zoneNr":2,"productional":true},"9":{"location":"farm","farmNr":1,"zoneNr":3,"productional":true},"10":{"location":"farm","farmNr":1,"zoneNr":4,"productional":true},"11":{"location":"farm","farmNr":1,"zoneNr":5,"productional":true},"12":{"location":"farm","farmNr":1,"zoneNr":6,"productional":true},"13":{"location":"farm","farmNr":2,"zoneNr":1,"productional":true},"14":{"location":"farm","farmNr":2,"zoneNr":2,"productional":true},"15":{"location":"farm","farmNr":2,"zoneNr":3,"productional":true},"16":{"location":"farm","farmNr":2,"zoneNr":4,"productional":true},"17":{"location":"farm","farmNr":2,"zoneNr":5,"productional":true},"18":{"location":"farm","farmNr":2,"zoneNr":6,"productional":true},"19":{"location":"farm","farmNr":3,"zoneNr":1,"productional":true},"20":{"location":"farm","farmNr":3,"zoneNr":2,"productional":true},"21":{"location":"farm","farmNr":3,"zoneNr":3,"productional":true},"22":{"location":"farm","farmNr":3,"zoneNr":4,"productional":true},"23":{"location":"farm","farmNr":3,"zoneNr":5,"productional":true},"24":{"location":"farm","farmNr":3,"zoneNr":6,"productional":true},"25":{"location":"farm","farmNr":4,"zoneNr":1,"productional":true},"26":{"location":"farm","farmNr":4,"zoneNr":2,"productional":true},"27":{"location":"farm","farmNr":4,"zoneNr":3,"productional":true},"28":{"location":"farm","farmNr":4,"zoneNr":4,"productional":true},"29":{"location":"farm","farmNr":4,"zoneNr":5,"productional":true},"30":{"location":"farm","farmNr":4,"zoneNr":6,"productional":true},"31":{"location":"farm","farmNr":5,"zoneNr":1,"productional":true},"32":{"location":"farm","farmNr":5,"zoneNr":2,"productional":true},"33":{"location":"farm","farmNr":5,"zoneNr":3,"productional":true},"34":{"location":"farm","farmNr":5,"zoneNr":4,"productional":true},"35":{"location":"farm","farmNr":5,"zoneNr":5,"productional":true},"36":{"location":"farm","farmNr":5,"zoneNr":6,"productional":true},"windmill":{"location":"city","cityNr":2,"zoneNr":1,"productional":true},"forest":{"location":"forestry","productional":true},"sawmill":{"location":"forestry","zoneNr":1,"productional":true},"carpentry":{"location":"forestry","zoneNr":2,"productional":true},"foodworld-0":{"location":"foodworld","productional":false},"foodworld-1":{"location":"foodworld","zoneNr":1,"productional":true},"foodworld-2":{"location":"foodworld","zoneNr":2,"productional":true},"foodworld-3":{"location":"foodworld","zoneNr":3,"productional":true},"foodworld-4":{"location":"foodworld","zoneNr":4,"productional":true},"farmersmarket-0":{"location":"farmersmarket","productional":false},"farmersmarket-1":{"location":"farmersmarket","zoneNr":1,"productional":true},"farmersmarket-2":{"location":"farmersmarket","zoneNr":2,"productional":true},"farmersmarket-3":{"location":"farmersmarket","zoneNr":3,"productional":true},"farmersmarket-4":{"location":"farmersmarket","zoneNr":4,"productional":true},"farmersmarket-5":{"location":"farmersmarket","zoneNr":5,"productional":true},"farmersmarket-6":{"location":"farmersmarket","zoneNr":6,"productional":true},"farmersmarket-7":{"location":"farmersmarket","productional":true},"farmersmarket-8":{"location":"farmersmarket","zoneNr":8,"productional":true},"megafield":{"location":"megafield","zoneNr":1,"productional":true},"map_stall0":{"location":"map","productional":false},"map_stall1":{"location":"map","zoneNr":1,"productional":true}};
+const DATA_zones = {"1":{"location":"farm","farmNr":0,"zoneNr":1,"productional":true},"2":{"location":"farm","farmNr":0,"zoneNr":2,"productional":true},"3":{"location":"farm","farmNr":0,"zoneNr":3,"productional":true},"4":{"location":"farm","farmNr":0,"zoneNr":4,"productional":true},"5":{"location":"farm","farmNr":0,"zoneNr":5,"productional":true},"6":{"location":"farm","farmNr":0,"zoneNr":6,"productional":true},"7":{"location":"farm","farmNr":1,"zoneNr":1,"productional":true},"8":{"location":"farm","farmNr":1,"zoneNr":2,"productional":true},"9":{"location":"farm","farmNr":1,"zoneNr":3,"productional":true},"10":{"location":"farm","farmNr":1,"zoneNr":4,"productional":true},"11":{"location":"farm","farmNr":1,"zoneNr":5,"productional":true},"12":{"location":"farm","farmNr":1,"zoneNr":6,"productional":true},"13":{"location":"farm","farmNr":2,"zoneNr":1,"productional":true},"14":{"location":"farm","farmNr":2,"zoneNr":2,"productional":true},"15":{"location":"farm","farmNr":2,"zoneNr":3,"productional":true},"16":{"location":"farm","farmNr":2,"zoneNr":4,"productional":true},"17":{"location":"farm","farmNr":2,"zoneNr":5,"productional":true},"18":{"location":"farm","farmNr":2,"zoneNr":6,"productional":true},"19":{"location":"farm","farmNr":3,"zoneNr":1,"productional":true},"20":{"location":"farm","farmNr":3,"zoneNr":2,"productional":true},"21":{"location":"farm","farmNr":3,"zoneNr":3,"productional":true},"22":{"location":"farm","farmNr":3,"zoneNr":4,"productional":true},"23":{"location":"farm","farmNr":3,"zoneNr":5,"productional":true},"24":{"location":"farm","farmNr":3,"zoneNr":6,"productional":true},"25":{"location":"farm","farmNr":4,"zoneNr":1,"productional":true},"26":{"location":"farm","farmNr":4,"zoneNr":2,"productional":true},"27":{"location":"farm","farmNr":4,"zoneNr":3,"productional":true},"28":{"location":"farm","farmNr":4,"zoneNr":4,"productional":true},"29":{"location":"farm","farmNr":4,"zoneNr":5,"productional":true},"30":{"location":"farm","farmNr":4,"zoneNr":6,"productional":true},"31":{"location":"farm","farmNr":5,"zoneNr":1,"productional":true},"32":{"location":"farm","farmNr":5,"zoneNr":2,"productional":true},"33":{"location":"farm","farmNr":5,"zoneNr":3,"productional":true},"34":{"location":"farm","farmNr":5,"zoneNr":4,"productional":true},"35":{"location":"farm","farmNr":5,"zoneNr":5,"productional":true},"36":{"location":"farm","farmNr":5,"zoneNr":6,"productional":true},"37":{"location":"farm","farmNr":6,"zoneNr":1,"productional":true},"38":{"location":"farm","farmNr":6,"zoneNr":2,"productional":true},"39":{"location":"farm","farmNr":6,"zoneNr":3,"productional":true},"40":{"location":"farm","farmNr":6,"zoneNr":4,"productional":true},"41":{"location":"farm","farmNr":6,"zoneNr":5,"productional":true},"42":{"location":"farm","farmNr":6,"zoneNr":6,"productional":true},"windmill":{"location":"city","cityNr":2,"zoneNr":1,"productional":true},"forest":{"location":"forestry","productional":true},"sawmill":{"location":"forestry","zoneNr":1,"productional":true},"carpentry":{"location":"forestry","zoneNr":2,"productional":true},"foodworld-0":{"location":"foodworld","productional":false},"foodworld-1":{"location":"foodworld","zoneNr":1,"productional":true},"foodworld-2":{"location":"foodworld","zoneNr":2,"productional":true},"foodworld-3":{"location":"foodworld","zoneNr":3,"productional":true},"foodworld-4":{"location":"foodworld","zoneNr":4,"productional":true},"farmersmarket-0":{"location":"farmersmarket","productional":false},"farmersmarket-1":{"location":"farmersmarket","zoneNr":1,"productional":true},"farmersmarket-2":{"location":"farmersmarket","zoneNr":2,"productional":true},"farmersmarket-3":{"location":"farmersmarket","zoneNr":3,"productional":true},"farmersmarket-4":{"location":"farmersmarket","zoneNr":4,"productional":true},"farmersmarket-5":{"location":"farmersmarket","zoneNr":5,"productional":true},"farmersmarket-6":{"location":"farmersmarket","zoneNr":6,"productional":true},"farmersmarket-7":{"location":"farmersmarket","productional":true},"farmersmarket-8":{"location":"farmersmarket","zoneNr":8,"productional":true},"megafield":{"location":"megafield","zoneNr":1,"productional":true},"map_stall0":{"location":"map","productional":false},"map_stall1":{"location":"map","zoneNr":1,"productional":true}};
 // All single-slot-zones themselves and all slots of multi-slot-zones
 var ALL_SLOTS={};
 // [farm, forestry, recipes, powerups]
@@ -358,7 +359,7 @@ const PRODUCT_REQUIRE=[{"25":[[0,9,30]],"27":[[0,10,12]],"28":[[0,11,8]],"30":[[
 ,"819":[[-1,2000],[0,3,240],[0,109,180]]
 
 }
-                      ,{"41":[[1,21,1]],"42":[[1,21,1]],"43":[[1,21,1]],"44":[[1,22,1]],"45":[[1,22,1]],"46":[[1,22,1]],"47":[[1,23,1]],"48":[[1,23,1]],"49":[[1,23,1]],"50":[[1,24,1]],"51":[[1,24,1]],"52":[[1,24,1]],"53":[[1,25,1]],"54":[[1,25,1]],"55":[[1,25,1]],"56":[[1,26,1]],"57":[[1,26,1]],"58":[[1,26,1]],"59":[[1,27,1]],"60":[[1,27,1]],"61":[[1,27,1]],"62":[[1,28,1]],"63":[[1,28,1]],"64":[[1,28,1]],"65":[[1,29,1]],"66":[[1,29,1]],"67":[[1,29,1]],"101":[[1,41,4]],"102":[[1,41,18],[1,42,2]],"103":[[1,44,11]],"104":[[1,42,1],[1,43,5]],"105":[[1,44,20],[1,45,50],[1,46,70]],"106":[[1,49,1]],"107":[[1,46,1]],"108":[[1,47,125],[1,48,65],[1,49,32]],"109":[[1,47,5]],"110":[[1,50,9],[1,51,4]],"111":[[1,52,4]],"112":[[1,50,12],[1,51,7],[1,52,6]],"113":[[1,42,1]],"114":[[1,41,1],[1,43,1]],"115":[[1,53,8],[1,55,2]],"116":[[1,53,120],[1,54,40],[1,55,40]],"117":[[1,53,80],[1,54,65],[1,55,125]],"118":[[1,53,6],[1,54,8]],"119":[[1,54,20],[1,55,25]],"120":[[1,54,35],[1,55,40]],"121":[[1,56,7],[1,57,3]],"122":[[1,58,9]],"123":[[1,57,4],[1,58,5]],"124":[[1,56,9],[1,57,4]],"125":[[1,58,3]],"126":[[1,61,5]],"127":[[1,60,3]],"128":[[1,60,6],[1,61,5]],"129":[[1,59,10],[1,60,8],[1,61,5]],"130":[[1,60,9],[1,61,8]],"131":[[1,59,6],[1,61,12]],"132":[[1,59,10],[1,60,8],[1,61,5]],"133":[[1,42,1]],"134":[[1,62,21],[1,63,15]],"143":[[1,62,21],[1,63,22],[1,64,15]],"144":[[1,64,15]],"146":[[1,45,12],[1,63,12],[1,46,6],[1,64,6]],"148":[[1,64,15],[1,63,10]],"149":[[1,65,10],[1,62,10]],"150":[[1,67,12],[1,46,12]],"151":[[1,67,6],[1,64,5]],"152":[[1,66,5],[1,64,7]],"153":[[1,64,6],[1,67,10]],"154":[[1,66,10],[1,64,10]],"200":[[1,41,12]],"201":[[0,0,2],[1,44,8]],"202":[[1,47,21]],"203":[[0,0,4],[1,51,20]],"204":[[1,42,6]],"205":[[0,0,2],[1,45,4]],"206":[[1,48,9]],"207":[[0,0,4],[1,52,20]],"208":[[1,41,15]],"209":[[0,0,2],[1,45,5]],"210":[[1,48,8]],"211":[[0,0,4],[1,50,27]],"212":[[1,43,15]],"213":[[0,0,2],[1,44,11]],"214":[[1,51,21]],"215":[[0,0,4],[1,52,22]]
+                      ,{"41":[[1,21,1]],"42":[[1,21,1]],"43":[[1,21,1]],"44":[[1,22,1]],"45":[[1,22,1]],"46":[[1,22,1]],"47":[[1,23,1]],"48":[[1,23,1]],"49":[[1,23,1]],"50":[[1,24,1]],"51":[[1,24,1]],"52":[[1,24,1]],"53":[[1,25,1]],"54":[[1,25,1]],"55":[[1,25,1]],"56":[[1,26,1]],"57":[[1,26,1]],"58":[[1,26,1]],"59":[[1,27,1]],"60":[[1,27,1]],"61":[[1,27,1]],"62":[[1,28,1]],"63":[[1,28,1]],"64":[[1,28,1]],"65":[[1,29,1]],"66":[[1,29,1]],"67":[[1,29,1]],"101":[[1,41,4]],"102":[[1,41,18],[1,42,2]],"103":[[1,44,11]],"104":[[1,42,1],[1,43,5]],"105":[[1,44,20],[1,45,50],[1,46,70]],"106":[[1,49,1]],"107":[[1,46,1]],"108":[[1,47,125],[1,48,65],[1,49,32]],"109":[[1,47,5]],"110":[[1,50,9],[1,51,4]],"111":[[1,52,4]],"112":[[1,50,12],[1,51,7],[1,52,6]],"113":[[1,42,1]],"114":[[1,41,1],[1,43,1]],"115":[[1,53,8],[1,55,2]],"116":[[1,53,120],[1,54,40],[1,55,40]],"117":[[1,53,80],[1,54,65],[1,55,125]],"118":[[1,53,6],[1,54,8]],"119":[[1,54,20],[1,55,25]],"120":[[1,54,35],[1,55,40]],"121":[[1,56,7],[1,57,3]],"122":[[1,58,9]],"123":[[1,57,4],[1,58,5]],"124":[[1,56,9],[1,57,4]],"125":[[1,58,3]],"126":[[1,61,5]],"127":[[1,60,3]],"128":[[1,60,6],[1,61,5]],"129":[[1,59,10],[1,60,8],[1,61,5]],"130":[[1,60,9],[1,61,8]],"131":[[1,59,6],[1,61,12]],"132":[[1,59,10],[1,60,8],[1,61,5]],"133":[[1,42,1]],"134":[[1,62,21],[1,63,15]],"143":[[1,62,21],[1,63,22],[1,64,15]],"144":[[1,64,15]],"146":[[1,45,12],[1,63,12],[1,46,6],[1,64,6]],"148":[[1,64,15],[1,63,10]],"149":[[1,65,10],[1,62,10]],"150":[[1,67,12],[1,46,12]],"151":[[1,67,6],[1,64,5]],"152":[[1,66,5],[1,65,7]],"153":[[1,64,6],[1,67,10]],"154":[[1,66,10],[1,64,10]],"200":[[1,41,12]],"201":[[0,0,2],[1,44,8]],"202":[[1,47,21]],"203":[[0,0,4],[1,51,20]],"204":[[1,42,6]],"205":[[0,0,2],[1,45,4]],"206":[[1,48,9]],"207":[[0,0,4],[1,52,20]],"208":[[1,41,15]],"209":[[0,0,2],[1,45,5]],"210":[[1,48,8]],"211":[[0,0,4],[1,50,27]],"212":[[1,43,15]],"213":[[0,0,2],[1,44,11]],"214":[[1,51,21]],"215":[[0,0,4],[1,52,22]]
                   }
                       ];
 // Mapping between original material and final good, e.g. sapling with tree
@@ -1339,11 +1340,13 @@ function updateProductDataFarm(){
 
         if(!prodStock[5]||!(prodStock[5] instanceof Array)){ prodStock[5]=[]; }
         if(!prodStock[6]||!(prodStock[6] instanceof Array)){ prodStock[6]=[]; }
+        if(!prodStock[7]||!(prodStock[7] instanceof Array)){ prodStock[7]=[]; }
 
         var prodStockTemp=new Array();    //Stock Farm 1
         for(var i in unsafeWindow.rackobj) {
             for(var j in unsafeWindow.rackobj[i]) {
                 for(var k in unsafeWindow.rackobj[i][j]) {
+
                     switch (i) {
                         case "1":
                             prodStockTemp[unsafeWindow.rackobj[i][j][k].pid]=parseInt(unsafeWindow.rackobj[i][j][k].amount);
@@ -1353,6 +1356,9 @@ function updateProductDataFarm(){
                             break;
                         case "6":
                             prodStock[6][unsafeWindow.rackobj[i][j][k].pid]=parseInt(unsafeWindow.rackobj[i][j][k].amount);
+                            break;
+                        case "7":
+                            prodStock[7][unsafeWindow.rackobj[i][j][k].pid]=parseInt(unsafeWindow.rackobj[i][j][k].amount);
                             break;
                     }
                 }
@@ -1369,6 +1375,7 @@ function updateProductDataFarm(){
             prodStock[0][v]=(c?parseInt(c,10):0);
             if (prodStock[5][v]==null) prodStock[5][v] = 0; //Wert auf 0 setzen, wenn nicht vorhanden
             if (prodStock[6][v]==null) prodStock[6][v] = 0;
+            if (prodStock[7][v]==null) prodStock[7][v] = 0;
 
             prodYield[0][v]=(unsafeWindow.produkt_ernte[v]?parseInt(unsafeWindow.produkt_ernte[v],10):0);
             prodTyp[0][v]=unsafeWindow.produkt_category[v];
@@ -9859,7 +9866,7 @@ function doMarketoffersNotepad(){
 function doRack(){
     try{
         var cand=$("rackItems").getElementsByClassName("tklein2");
-        if(unsafeWindow.farm!=5 && unsafeWindow.farm!=6 ){ //Fix Linus--Tux 20151015
+        if(unsafeWindow.farm!=5 && unsafeWindow.farm!=6 && unsafeWindow.farm!=7 ){
             for(var v=0;v<cand.length;v++){
                 var currProd=parseInt(cand[v].parentNode.id.replace("rackitem",""),10);
                 var cell=$(cand[v].parentNode.id+"format");
@@ -11290,7 +11297,7 @@ try{
     newdiv.addEventListener("mouseover",function(event){ toolTip.show(event,getText("upjersAdvertising")); },false);
     newdiv.addEventListener("click",function(){ unsafeWindow.buildInfoPanel("upjersAds"); },false);
     $("notepad").style.zIndex=111; // Notizen on top
-    unsafeWindow.shredderCommit = function(){return;}; // Schredder weg
+    //unsafeWindow.shredderCommit = function(){return;}; // Schredder weg
 
     // Dragging
     err_trace="Dragging";
@@ -11317,7 +11324,7 @@ try{
                 var err_trace="init";
                 if (!unsafeWindow.premium){
                     unsafeWindow.showDiv("farm_speedlinks");
-                    var a = ["farm1", "farm2", "farm3", "farm4", "farm5", "city1", "city2", "guild", "forestry", "foodworld", "megafield"];
+                    var a = ["farm1", "farm2", "farm3", "farm4", "farm5", "farm6","farm7", "city1", "city2", "guild", "forestry", "foodworld", "megafield"];
                     for (var b = 0; b <= a.length; b++) {
                         if ($("speedlink_" + a[b])) {
                             unsafeWindow.hideDiv($("speedlink_" + a[b]));
@@ -14323,6 +14330,9 @@ try{
                     case "6":
                         prodStock[6][unsafeWindow.rackobj[i][j][k].pid]=parseInt(unsafeWindow.rackobj[i][j][k].amount);
                         break;
+                    case "7":
+                        prodStock[7][unsafeWindow.rackobj[i][j][k].pid]=parseInt(unsafeWindow.rackobj[i][j][k].amount);
+                        break;
                 }
             }
         }
@@ -14378,6 +14388,9 @@ try{
                                 break;
                             case "6":
                                 prodStock[6][unsafeWindow.rackobj[i][j][k].pid]=parseInt(unsafeWindow.rackobj[i][j][k].amount);
+                                break;
+                            case "7":
+                                prodStock[7][unsafeWindow.rackobj[i][j][k].pid]=parseInt(unsafeWindow.rackobj[i][j][k].amount);
                                 break;
                         }
                     }
@@ -15937,7 +15950,7 @@ try{
 
         var cand=$("innercontent").getElementsByClassName("feedproduct");
         for(var v=0;v<cand.length;v++){
-            var stockNr = (unsafeWindow.farm<=4)?0:(unsafeWindow.farm==5)?5:6;
+            var stockNr = (unsafeWindow.farm<=4)?0:(unsafeWindow.farm==5)?5:(unsafeWindow.farm==6)?6:7;
             var currProd=parseInt(cand[v].getElementsByTagName("div")[1].getAttribute("class").replace("l",""),10);
             var str="blackbox"+(prodStock[0][currProd]<prodMinRack[0][currProd]?" lowrack":"");
             if(!$(cand[v].id+"_rackamount")){ createElement("div",{"id":cand[v].id+"_rackamount","style":"position:absolute;top:-25px;left:-2px;font-weight:bold;"},cand[v]); }
@@ -16082,6 +16095,11 @@ try{
                                     top.unsafeData.autoAction = null;
                                 }, 500, newDiv);
                             }
+                        } else {
+                            tempZoneProductionData[1]++;
+                            tempZoneProductionDataSlot[1]++;
+                            tempZoneProductionData[2]++;
+                            tempZoneProductionDataSlot[2]++;
                         }
                     }
                     zones.setProduction(zoneNrF + "." + slot, tempZoneProductionDataSlot.clone());
