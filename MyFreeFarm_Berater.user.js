@@ -21353,7 +21353,7 @@ try{
     * Events xMasCalendar
     **********************************************************/
     if($top("calendar_link")){
-        if(GM_getValue(COUNTRY+"_"+SERVER+"_"+USERNAME+"_xMasCalendarLastDailyBonus")!=todayStr &&  unsafeWindow.calendar.data.days<=12){
+        if(GM_getValue(COUNTRY+"_"+SERVER+"_"+USERNAME+"_xMasCalendarLastDailyBonus")!=todayStr){
             unsafeData.xMasCalendarDailyDone=false;
         } else {
             unsafeData.xMasCalendarDailyDone=true;
