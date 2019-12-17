@@ -23312,7 +23312,7 @@ try{
         #pets_parts_link{top:65px!important;}\
         #cropbonus_symbol{top:101px!important;}\
         #specialbonus_link{top:20px!important;left:-30px!important}\
-        #whatsup_link{top:20px!important;left:-225px!important}\
+        #whatsup_link{top:-30px!important;left:-135px!important}\
         #poweruptimes{top:310px!important;}\
         #carpentrybonus_symbol{top:186px!important;}\
         #farm_production_checker_icon{position:absolute!important;top:240px!important;}\
