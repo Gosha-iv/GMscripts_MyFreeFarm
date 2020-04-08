@@ -16132,18 +16132,24 @@ try{
             console.log(implode(l));
             console.log("+++++++++++response+++++++++++");*/
             var zoneNr = h.position + 6 * (h.farm-1);
-            switch(BUILDINGTYPE[zones.getBuilding(zoneNr)]){
-                case 3:
+            switch (zones.getBuilding(zoneNr)) {
+                case 7:
+                case 8:
+                case 9:
+                case 10:
                     doFactory(h.position);
                     raiseEvent("gameStartFactory");
                     break;
-                case 4:
+
+                case 13:
+                case 14:
+                case 16:
+                case 21:
                     doFactoryOilKnittingTea(h.position);
                     raiseEvent("gameFactory_"+d+"_"+h.farm+"_"+h.position);
                     break;
                 default:
             }
-
         }catch(err){GM_logError("factory.response","","",err);}
 
     });
