@@ -5375,12 +5375,12 @@ function autoFarm(runId){
                         }else if($("innermaincontainer").style.display=="block"){
                             bot.setAction("autoFarm: farm opened, close innermaincontainer");
                             GM_logInfo("autoFarm","runId="+runId,"farmNr="+farmNr+" zoneNrS="+zoneNrS,getText("automat_closingFactoryContainer"));
-                            var btn = $("cancelscreen").getElementsByClassName("link")[0];
+                            //var btn = $("cancelscreen").getElementsByClassName("link")[0];
+                            var btn = $("innermaincontainer").querySelector('#cancelscreen');
                             if (!btn) { // Try this button, eg. on pony factory
                                 btn = $("innercontent").getElementsByClassName("big_close")[0];
                             }
                             click(btn);
-                            // click($("cancelscreen").getElementsByClassName("link")[0]);
                             window.setTimeout(autoFarm,settings.getPause(),runId);
                         }else if($("building_inner").style.display=="block"){
                             bot.setAction("autoFarm: farm opened, close building_inner");
