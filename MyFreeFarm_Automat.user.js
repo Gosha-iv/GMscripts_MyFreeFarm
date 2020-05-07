@@ -5224,8 +5224,6 @@ try{
             if(cropable){
                 GM_logInfo("autoZoneCrop","","zoneTyp="+zoneTyp,"Cropping"); // TODO text
                 unsafeData.zones.getProduction(handled.zoneNrF)[3]=false;
-                //20151014 Linus--Tux
-                //click($("cropall").getElementsByTagName("img")[0]);
                 click($("cropall"));
                 return true;
             }else{
@@ -5241,12 +5239,23 @@ try{
             }
             break;
         case 3:
+
+             if ($("production_slot_info" + handled.farmNr + "_" + handled.zoneNr + "_1").innerHTML == "") {
+                 // Cropped
+                 return false;
+             } else {
+                 // Cropping
+                 click($("production_slot" + handled.farmNr + "_" + handled.zoneNr + "_1"));
+                 return true;
+             }
+
+         /*
             if($("globalbox").style.display=="block"){
                 click($("globalbox_button1"));
                 return true;
             }else{
                 return false;
-            }
+            }*/
             break;
         case "forest":
             try{
