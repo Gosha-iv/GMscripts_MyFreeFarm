@@ -23253,6 +23253,7 @@ try{
         .rackitem_tt_sack,.rackitem_tt_box,.rackitem_tt_bottle,.rackitem_tt_karton,.rackitem_tt_tupper{z-index:110!important;}\
         .farm_button_destruct{display:none!important;}\
         .farm_button_gardenspeedup{left:5px!important;}\
+        .farm_button_infinitequestlinebonus{left:65px!important;}\
         .farm_button_tt{width:150px!important;}\
         .farm_button_tt{display:none!important;}\
         .quests_status_bar_item_tt{display:none!important;}\

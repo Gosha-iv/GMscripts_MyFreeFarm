@@ -2447,17 +2447,19 @@ try{
         //if((unsafeData.prodTyp[0][iProd]=="v")&&!(unsafeData.prodBlock[0][iProd]&&unsafeData.prodBlock[0][iProd].match(/l/))){
         if((unsafeData.PRODUCT2BUILDING[0][iProd]==fzZoneType)&&!(unsafeData.prodBlock[0][iProd]&&unsafeData.prodBlock[0][iProd].match(/[uvlq]/))){
             //Farm 5 nur exotische Produkte
-            if (zoneNrS==25||zoneNrS==26||zoneNrS==27||zoneNrS==28||zoneNrS==29||zoneNrS==30){
+
+            if ((zoneNrS==25||zoneNrS==26||zoneNrS==27||zoneNrS==28||zoneNrS==29||zoneNrS==30) && getZoneType(zoneNrS)!=10){
                 if ((unsafeData.prodTyp[0][iProd]!="ex")) {continue;}
             } else {
                 if ((unsafeData.prodTyp[0][iProd]=="ex")) {continue;}
             }
             //farm 6 nur Bergkräuter
-            if (zoneNrS==31||zoneNrS==32||zoneNrS==33||zoneNrS==34||zoneNrS==35||zoneNrS==36){
+            if ((zoneNrS==31||zoneNrS==32||zoneNrS==33||zoneNrS==34||zoneNrS==35||zoneNrS==36)&& getZoneType(zoneNrS)!=10){
                 if ((unsafeData.prodTyp[0][iProd]!="alpin")) {continue;}
             } else {
                 if ((unsafeData.prodTyp[0][iProd]=="alpin")) {continue;}
             }
+
             newdiv=createElement("div",{"id":"divChooseItem"+zoneNrL+"Q"+queueNum+"I"+iProd,"class":"divChooseItem link v"+iProd,"product":iProd},appendTo);
             if (zoneNrS==25||zoneNrS==26||zoneNrS==27||zoneNrS==28||zoneNrS==29||zoneNrS==30){
             //if (unsafeWindow.farm==5){
