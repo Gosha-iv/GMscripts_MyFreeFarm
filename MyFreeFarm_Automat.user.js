@@ -6140,7 +6140,7 @@ function autoFarmFactory(runId, step) {
                             } else {
                                 div = $("globalbox").querySelector('div[onclick*="factory.start(\'start\','+handled.zoneNr+','+index+','+'1'+')"]');
                             }
-                            action = function() { click(div); }
+                            action = function() { click(div); setNextQueueItem(handled.zoneNrS);}
                             listeningEvent = "gameStartFactory";
                         } else {
                             window.setTimeout(autoFarmFactory, settings.getPause(), runId, step); // wait
