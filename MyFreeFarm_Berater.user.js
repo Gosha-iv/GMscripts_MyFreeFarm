@@ -9911,12 +9911,13 @@ function doFarmis(){
                         var farmiNr=this.id.replace("kunde_","");
                         // toolTip.show(event,print_r(unsafeWindow.farmisinfo[0][farmiNr],"",true));
                         var cash;
-                        //var cash=parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10);
-                        if (unsafeWindow.specialbonus&&unsafeWindow.specialbonus.data&&unsafeWindow.specialbonus.data.farmis&&unsafeWindow.specialbonus.data.farmis.money&&unsafeWindow.specialbonus.data.remain>0) {
-                            cash = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*unsafeWindow.specialbonus.data.farmis.money;
+                        // Obststandbonus
+                        var stallMilestone = (unsafeWindow.stall.data.milestones)?unsafeWindow.stall.data.milestones.farmis:0;
+                        if (unsafeWindow.specialbonus&&unsafeWindow.specialbonus.data[0]&&unsafeWindow.specialbonus.data[0].farmis&&unsafeWindow.specialbonus.data[0].farmis.money&&unsafeWindow.specialbonus.data[0].remain>0) {
+                            cash = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*(stallMilestone+unsafeWindow.specialbonus.data[0].farmis.money);
 
                         } else {
-                            cash = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10);
+                            cash = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*(stallMilestone);
                         }
 
                         var wert = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["marketValue"],10);
@@ -10383,13 +10384,14 @@ try{
                     }
                 }
             }
-            if (unsafeWindow.specialbonus&&unsafeWindow.specialbonus.data&&unsafeWindow.specialbonus.data.farmis&&unsafeWindow.specialbonus.data.farmis.money&&unsafeWindow.specialbonus.data.remain>0) {
-                unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]=(priceMissing>0?null:(100*(parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*unsafeWindow.specialbonus.data.farmis.money)/wert));
+            // Obststandbonus
+            var stallMilestone = (unsafeWindow.stall.data.milestones)?unsafeWindow.stall.data.milestones.farmis:0;
+            if (unsafeWindow.specialbonus&&unsafeWindow.specialbonus.data[0]&&unsafeWindow.specialbonus.data[0].farmis&&unsafeWindow.specialbonus.data[0].farmis.money&&unsafeWindow.specialbonus.data[0].remain>0) {
+                unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]=(priceMissing>0?null:(100*(parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*(stallMilestone+unsafeWindow.specialbonus.data[0].farmis.money))/wert));
 
             } else {
-                unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]=(priceMissing>0?null:(100*parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)/wert));
+                unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]=(priceMissing>0?null:(100*(parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*(stallMilestone))/wert));
             }
-            //unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]=(priceMissing>0?null:(100*parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)/wert));
             unsafeWindow.farmisinfo[0][farmiNr]["marketValue"]=(priceMissing>0?0:wert);
         }
     if(DEVMODE_FUNCTION){ tracking.end("berater",trackingHandle); }
@@ -17166,13 +17168,14 @@ try{
             }
         break;}
         default:{
-            if (unsafeWindow.specialbonus&&unsafeWindow.specialbonus.data&&unsafeWindow.specialbonus.data.farmis&&unsafeWindow.specialbonus.data.farmis.money&&unsafeWindow.specialbonus.data.remain>0) {
-                thisFarmiData["money"]=parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10)*unsafeWindow.specialbonus.data.farmis.money;
+            // Obststandbonus
+            var stallMilestone = (unsafeWindow.stall.data.milestones)?unsafeWindow.stall.data.milestones.farmis:0;
+            if (unsafeWindow.specialbonus&&unsafeWindow.specialbonus.data[0]&&unsafeWindow.specialbonus.data[0].farmis&&unsafeWindow.specialbonus.data[0].farmis.money&&unsafeWindow.specialbonus.data[0].remain>0) {
+                thisFarmiData["money"]=parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10)*(stallMilestone+unsafeWindow.specialbonus.data[0].farmis.money);
 
             } else {
-                thisFarmiData["money"]=parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10);
+                thisFarmiData["money"]=parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10)*(stallMilestone);
             }
-            //thisFarmiData["money"]=parseFloat(unsafeWindow.farmisinfo[0][farmi]["price"],10);
             for(var i=1;i<=7;i++){
                 prod=parseInt(unsafeWindow.farmisinfo[0][farmi]["p"+i],10);
                 menge=parseInt(unsafeWindow.farmisinfo[0][farmi]["a"+i],10);
@@ -24816,3 +24819,4 @@ window.addEventListener("load", function load(event){
     window.setTimeout(test,1000);
 },false);
 */
+<
