@@ -18365,11 +18365,49 @@ try{
         }catch(err){GM_logError("startProductionCommitResponse","","",err);}
     });
 
+    var autoPartsRedeem=false;
     unsafeOverwriteObjFunction("pets","parts",function(){
         try{
             unsafeWindow.pets._parts();
         }catch(err){GM_logError("pets.parts","","",err);}
         try{
+            if(unsafeWindow.pets.data.packs.length===undefined){
+                if(unsafeWindow.pets&&unsafeWindow.pets.data.packs){
+                    var container = $("pets_parts");
+                    var newNode = createElement("div",{"id":"divGame","class":"","style":"position:absolute;top:-50px;height:25px;width:100%;background-color:#c3a75e"});
+                    var newtable=createElement("table",{"border":"0","class":"","style":"width:75%"},newNode);
+
+                    var newtr=createElement("tr",{},newtable);
+                    createElement("td",{},newtr,"Tierteile-Pakete einlösen:");
+                    var newtd = createElement("td",{},newtr);
+                    var button=createElement("button", {"class":"link","style":""}, newtd, (!autoPartsRedeem)?"Start":"Stop");
+
+                    button.addEventListener("click",function(){
+                        if (!autoPartsRedeem) {
+                            autoPartsRedeem = true;
+                            this.innerText="Stop";
+                            unsafeWindow.pets.openPack(Object.keys(unsafeWindow.pets.data.packs)[0]);
+                        } else {
+                            this.innerText="Start";
+                            autoPartsRedeem = false;
+                        }
+
+                    },false);
+                    window.setTimeout(function(){
+                        if (autoPartsRedeem) {
+                            if(unsafeWindow.pets.data.packs.length===undefined){
+                                unsafeWindow.pets.openPack(Object.keys(unsafeWindow.pets.data.packs)[0]);
+                            } else {
+                                autoPartsRedeem = false;
+                            }
+                        }
+                    },1000);
+
+                    button=null;
+                    container.insertBefore(newNode, container.firstChild.nextSibling);
+                    container=null;button=null;help=null;
+                }
+            }
             raiseEvent("gamegoToOpenPetsParts");
         }catch(err){GM_logError("gamegoToOpenPetsPartsResponse","","",err);}
     });
@@ -18475,6 +18513,21 @@ try{
         }catch(err){GM_logError("_pets.move","","",err);}
 
     });
+
+    unsafeOverwriteObjFunction("pets","openPack",function(a){
+        try{
+            unsafeWindow.pets._openPack(a);
+        }catch(err){GM_logError("pets.openPack","","",err);}
+        try{
+            if (autoPartsRedeem) {
+                window.setTimeout(function(){
+                    unsafeWindow.pets.parts();
+                    unsafeWindow.pets.surpriseFly();
+                },1000);
+            }
+        }catch(err){GM_logError("pets.openPack","","",err);}
+    });
+    //*************************************************************************
 
     unsafeOverwriteFunction("initVet",function(){
         try{
