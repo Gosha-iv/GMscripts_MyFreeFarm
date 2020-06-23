@@ -10769,7 +10769,7 @@ try{
         try {
             if (s[4]) {
                 for (var i in s[4]) {
-                    $("memorycard" + i).innerHTML = '<span style="font-size: large;background-color:#fff;">Wert: ' + s[4][i] + '</span>';
+                    createElement("span",{"style":"font-size: large;background-color:#fff;position:absolute;"},$("memorycard" + i),"Wert:"+s[4][i] );
                 }
             }
         } catch (err) { GM_logError("openFoodworldBuildingSelect", "", "", err); }
@@ -12397,7 +12397,7 @@ try{
             var questStarted = (questDataCurr["time"]<now);
             var table=createElement("table",{"border":"0","cellspacing":"0","cellpadding":"3","style":"line-height:16px;"},container);
             var tr=createElement("tr",{},table);
-            var td=createElement("td",{"colspan":"3","style":"text-align:center;border-bottom:1px solid black;font-weight:bold;"},tr,getText("quest"+questType+campaign)+"<br>"+getText("nr")+" "+questDataCurr["nr"]);
+            var td=createElement("td",{"colspan":"3","style":"text-align:center;border-bottom:1px solid black;font-weight:bold;"},tr,getText("quest"+questType+campaign)+"<br>"+getText("nr")+" "+ (questType !== "infinite" ? questDataCurr["nr"] : unsafeWindow.infinitequestline.data.data.quest.questid));
             if(questStarted){ createElement("td",{"colspan":"2","style":"text-align:center;border-bottom:1px solid black;border-left:1px solid black;"},tr,getText("given")); }
             createElement("td",{"colspan":"2","style":"text-align:center;border-bottom:1px solid black;border-left:1px solid black;"},tr,getText("missing"));
             createElement("td",{"colspan":"2","style":"text-align:center;border-bottom:1px solid black;border-left:1px solid black;"},tr,getText("total"));
@@ -24098,6 +24098,7 @@ try{
         text["de"]["questcow1"]="Kuhrennen Questreihe";
         text["de"]["quest_foodworld"]="Picknickarea Questreihe";
         text["de"]["quest_forestry"]="Forsthütte Questreihe";
+        text["de"]["questinfinite1"]="Rosis täglicher Einkauf";
         text["de"]["quest_main"]="Hauptquestreihe";
         text["de"]["quest_veterinary"]="Tierarzt Questreihe";
         text["de"]["questfoodworld1"]="Picknickarea Questreihe";
@@ -24543,6 +24544,7 @@ try{
         text["en"]["questcow1"]="cow racing quest series";
         text["en"]["quest_foodworld"]="Picnic area quest series";
         text["en"]["quest_forestry"]="Series of quests (forestry)";
+        text["en"]["questinfinite1"]="Rosy's Daily Purchase";
         text["en"]["quest_main"]="Series of quests (farm)";
         text["en"]["quest_veterinary"]="Veterinary quest series";
         text["en"]["questfoodworld1"]="Picnic area quest series";
