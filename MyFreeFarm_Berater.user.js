@@ -3549,7 +3549,8 @@ function handleQuestLine() {
                                 }
                         }
 
-                    } else if ((questData[type][campaign]["nr"] == -1) || (questData[type][campaign]["calcTo"] == -1)) {
+                    //} else if ((questData[type][campaign]["nr"] == -1) || (questData[type][campaign]["calcTo"] == -1)) {
+                    } else if (questData[type][campaign]["nr"] == -1) {
                         div.style.display = "none"; // do not show quest
                     } else if (QUESTS[type][campaign][questData[type][campaign]["nr"]]) {
                         div.style.display = "block"; // quest available
@@ -10772,7 +10773,7 @@ try{
                     createElement("span",{"style":"font-size: large;background-color:#fff;position:absolute;"},$("memorycard" + i),"Wert:"+s[4][i] );
                 }
             }
-        } catch (err) { GM_logError("openFoodworldBuildingSelect", "", "", err); }
+        } catch (err) { GM_logError("_openMemoryResponse", "", "", err); }
     }, true);
     unsafeOverwriteFunction("entryCityXmasEvent",function(c){
         /*
@@ -11969,7 +11970,33 @@ try{
         for(var campaign in QUESTS[type]){
         if(!QUESTS[type].hasOwnProperty(campaign)){continue;}
             var help = (type=="infinite")?"":campaign;
-            if(newdiv=$("quests_status_bar_"+type+help)){
+            newdiv=$("quests_status_bar_"+type+help);
+            if (!newdiv) {
+                if (questData[type][campaign]["nr"] > 0 && QUESTS[type][campaign][questData[type][campaign]["nr"]])
+                newdiv=createElement("div",{"id":"quests_status_bar_"+type+help,"class":"link quests_status_bar_item quests_status_bar_"+type+help,"style":";display:block;"});
+                if (newdiv) {
+                    $("quests_status_bar").insertBefore(newdiv, $("quests_status_bar").querySelector(".clear"));
+                    newdiv.addEventListener("click",function(event){
+                        var help=this.id.split("_");
+                        switch (help[3].replace(/[0-9]/g,'')) {
+                            case 'breed':
+                                    unsafeWindow.pets.showQuest();
+                                    break;
+                            case 'butterfly':
+                                    unsafeWindow.butterfly.showQuest()
+                                    break;
+                            case 'cow':
+                                    unsafeWindow.cowracing.showQuest()
+                                    break;
+                            case 'veterinary':
+                                    unsafeWindow.vetQuests();
+                                    break;
+                            default:
+                        }
+                    },false);
+                }
+            }
+            if(newdiv) {
                 newdiv.setAttribute("type",implode([type,campaign],"QuestStatusBar"));
                 newdiv.addEventListener("mouseover",function(event){
                     var help=explode(this.getAttribute("type"),"QuestStatusBar");
@@ -12183,7 +12210,8 @@ try{
                         }
                     }
                     // Time
-                    questData["veterinary"][campaign]["time"] = now; // TODO
+                    questData["veterinary"][campaign]["time"] =
+                    (unsafeWindow.vet_data.quest.remain === undefined)? 0:now+unsafeWindow.vet_data.quest.remain ;
                 }else{
                     questData["veterinary"][campaign]["nr"]=QUESTS["veterinary"][campaign].length;
                     questData["veterinary"][campaign]["given"] = new Object();
@@ -12209,7 +12237,7 @@ try{
                 if(!questData["breed"][campaign]){
                     questData["breed"][campaign]=INIT_questData["breed"][campaign].clone();
                 }
-                if(unsafeWindow.pets.data.quest.questid){
+                if(unsafeWindow.pets.data.quest.questid&&!unsafeWindow.pets.data.block){
                     // Quest number
                     if(questData["breed"][campaign]["nr"]!=parseInt(unsafeWindow.pets.data.quest.questid,10)){
                         GM_logInfo("handleQuestDataBreed","","",getText("questSetXToNrY").replace(/%1%/,getText("quest"+"breed"+campaign)).replace(/%2%/,unsafeWindow.pets.data.quest.questid));
@@ -12228,9 +12256,11 @@ try{
                         }
                     }
                     // Time
-                    questData["breed"][campaign]["time"] = now; // TODO
+                    questData["breed"][campaign]["time"] =
+                    (unsafeWindow.pets.data.quest.remain === undefined)? unsafeWindow.pets.data.data.createdate:now+unsafeWindow.pets.data.quest.remain ;
                 }else{
-                    questData["breed"][campaign]["nr"]=QUESTS["breed"][campaign].length;
+                    //questData["breed"][campaign]["nr"]=QUESTS["breed"][campaign].length;
+                    questData["breed"][campaign]["nr"]=0;
                     questData["breed"][campaign]["given"] = new Object();
                     questData["breed"][campaign]["time"] = 0;
                 }
@@ -12272,7 +12302,8 @@ try{
                         }
                     }
                     // Time
-                    questData["butterfly"][campaign]["time"] = now; // TODO
+                    questData["butterfly"][campaign]["time"] =
+                    (unsafeWindow.butterfly.data.quest.remain === undefined)? 0:now+unsafeWindow.butterfly.data.quest.remain ;
                 }else{
                     questData["butterfly"][campaign]["nr"]=QUESTS["butterfly"][campaign].length;
                     questData["butterfly"][campaign]["given"] = new Object();
@@ -12317,7 +12348,8 @@ try{
                         }
                     }
                     // Time
-                    questData["cow"][campaign]["time"] = now; // TODO
+                    questData["cow"][campaign]["time"] =
+                    (unsafeWindow.cowracing.data.quest.remain === undefined)? 0:now+unsafeWindow.cowracing.data.quest.remain ;
                 }else{
                     questData["cow"][campaign]["nr"]=QUESTS["cow"][campaign].length;
                     questData["cow"][campaign]["given"] = new Object();
