@@ -295,7 +295,6 @@ const NPC=[[,0.5,1.1,1.34,2.75,3.95,8.05,17.8,18.5,"f85","f110","f180","f280",,,
     console.log(implode(new_NPC));
 */
 
-
 // task_new_product
 const INIT_NPC_SAISON={"94":false,"95":false,"96":false,"98":false,"100":false,"101":false,"102":false,"103":false,"105":false};
 // task_new_zone
@@ -449,7 +448,7 @@ unsafeData.BUILDING_SIZE=BUILDING_SIZE.clone();
 // task_new_building
 
 //13102016
-const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":30,"megafield":99,"m1":4};
+const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":34,"megafield":99,"m1":4};
 
 unsafeData.BUILDING_SLOTS=BUILDING_SLOTS.clone();
 // Needed input of a zone
@@ -18091,7 +18090,7 @@ try{
                                             zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
                                         }
                                         //Cow feeding
-                                        for(var slot=1;slot<=13;slot++){
+                                        for(var slot=1;slot<=15;slot++){
                                             zoneNrS=zoneNrF+"."+(slot+4);
                                             zones.setBlock(zoneNrS,"");
                                             tempZoneProductionDataSlot=[[{},{}],0,0,true];
@@ -18124,14 +18123,12 @@ try{
                                                 }
                                                 tempZoneProductionDataSlot[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
                                                 zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
-
-
                                             }
                                             zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
                                         }
                                         //Cow racing
-                                        for(var slot=1;slot<=13;slot++){
-                                            zoneNrS=zoneNrF+"."+(slot+4+13);
+                                        for(var slot=1;slot<=15;slot++){
+                                            zoneNrS=zoneNrF+"."+(slot+4+15);
                                             zones.setBlock(zoneNrS,"");
                                             tempZoneProductionDataSlot=[[{},{}],0,0,true];
                                             if (slot >= 1 && !unsafeWindow.cowracing.data.data.cows.hasOwnProperty(slot)) {
@@ -18169,12 +18166,9 @@ try{
                                                 }
                                                 tempZoneProductionDataSlot[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
                                                 zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
-
-
                                             }
                                             zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
                                         }
-
                                         zones.setProduction(zoneNrF,tempZoneProductionData.clone());
                                         showGoToVetFarmi(); // Determine, if Discharge-Sick-Animals-Icon is shown
                                     }
@@ -18383,13 +18377,9 @@ try{
                     var tempZoneProductionData=[[{}],0,0,true];
 
                     zones.setBlock(zoneNrF,"b");
-                    //tempZoneProductionData[2]=1;
-
                     zones.setProduction(zoneNrF,tempZoneProductionData.clone());
                     tempZoneProductionData=null;
-
                 }
-
             }
             //raiseEvent("gameOpenHillwalks");
         }catch(err){GM_logError("hillwalk.openHillwalks","","",err);}
@@ -19100,6 +19090,7 @@ try{
         }catch(err){GM_logError("gameCowRacingOpenCowRacingSelection","","",err);}
 
     });
+
     unsafeOverwriteObjFunction("cowracing","startRace",function(a){
         try{
              unsafeWindow.cowracing._startRace(a);
@@ -19109,7 +19100,6 @@ try{
         }catch(err){GM_logError("gameCowRacingOpenCowRacingSelection","","",err);}
 
     });
-
 
     unsafeOverwriteObjFunction("cowracing","response",function(c,b,d){
         try{
@@ -19124,7 +19114,6 @@ try{
             }
         }catch(err){GM_logError("gameCowRacingOpenCowRacingSelection","","",err);}
     });
-
 
     /**********************************************************
     * Obststand / m1          map_stall1             Map

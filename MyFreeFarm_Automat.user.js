@@ -8893,7 +8893,7 @@ try{
                 } else if (handled.zoneNrF=="farmersmarket-5"){
                     autoFarmersmarketVetTreatment(runId,1);
                 } else if (handled.zoneNrF=="farmersmarket-8"){
-                    if (handled.slot<=17) {
+                    if (handled.slot<=19) {
                         autoFarmersmarketCowracingFeed(runId,1);
                     } else {
                         autoFarmersmarketCowracingRacing(runId,1,0);
@@ -10227,7 +10227,7 @@ try{
         break;}
         case 3:{ // open cow
             GM_logInfo("autoFarmersmarketCowracingRacing","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" open cow");
-            help = $("cowracing_cowslots_navi").querySelector('div[onclick*="cowracing.setCowSlot('+(handled.slot-4-13)+')');
+            help = $("cowracing_cowslots_navi").querySelector('div[onclick*="cowracing.setCowSlot('+(handled.slot-4-15)+')');
             if (help) {
                 action=function(){ click(help);};
                 listeningEvent="gameCowRacingOpenCow";
@@ -10241,9 +10241,9 @@ try{
             var item=unsafeWindow.cowracing.data.data;
             var next = true;
 
-            if (item.cows[handled.slot-4-13].ladder.rank == 1) { //not equip
+            if (item.cows[handled.slot-4-15].ladder.rank == 1) { //not equip
                 for (var i = 0; i<3; i++) {
-                    if (item.cows[handled.slot-4-13]["slot_"+body[i]] == 0 ) {
+                    if (item.cows[handled.slot-4-15]["slot_"+body[i]] == 0 ) {
                         continue;
                     }
                     help = $("cowracing_unequipslot"+body[i]);
@@ -10257,7 +10257,7 @@ try{
                 if (next) {
                     window.setTimeout(autoFarmersmarketCowracingRacing,settings.getPause(),runId,8,type); //cow racing
                 }
-            } else if (item.cows[handled.slot-4-13].level > 1) {
+            } else if (item.cows[handled.slot-4-15].level > 1) {
                 window.setTimeout(autoFarmersmarketCowracingRacing,settings.getPause(),runId,step+1,type);
             } else {
                 window.setTimeout(autoFarmersmarketCowracingRacing,settings.getPause(),runId,8,type);//cow racing
@@ -10268,11 +10268,11 @@ try{
             GM_logInfo("autoFarmersmarketCowracingRacing","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" Open equip" + zoneList[handled.zoneNrL][0][0]);
             var next = true;
             var item=unsafeWindow.cowracing.data.data;
-            var weather=item.cows[handled.slot-4-13].lanestatus;
+            var weather=item.cows[handled.slot-4-15].lanestatus;
 
             for (var i = 0; i<3; i++) {
                 next = true;
-                if (item.cows[handled.slot-4-13]["slot_"+body[i]] > 0 && item.items[item.cows[handled.slot-4-13]["slot_"+body[i]]].type==equip[weather][i]) {
+                if (item.cows[handled.slot-4-15]["slot_"+body[i]] > 0 && item.items[item.cows[handled.slot-4-15]["slot_"+body[i]]].type==equip[weather][i]) {
                     continue;
                 } else {
                     next = false;
@@ -10296,7 +10296,7 @@ try{
         case 6:{ // open Itemshop
             GM_logInfo("autoFarmersmarketCowracingRacing","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" Open Itemshop" + zoneList[handled.zoneNrL][0][0]);
             var item=unsafeWindow.cowracing.data.data;
-            var weather=item.cows[handled.slot-4-13].lanestatus;
+            var weather=item.cows[handled.slot-4-15].lanestatus;
             var bIndex=body.indexOf(type);
 
             for (var j in item.items) {
@@ -10330,7 +10330,7 @@ try{
         case 7:{ //buy
             GM_logInfo("autoFarmersmarketCowracingRacing","runId="+runId+" step="+step,"",handled.zoneNrF.capitalize()+" Buy item" + zoneList[handled.zoneNrL][0][0]);
             var item=unsafeWindow.cowracing.data.data;
-            var weather=item.cows[handled.slot-4-13].lanestatus;
+            var weather=item.cows[handled.slot-4-15].lanestatus;
             var bIndex=body.indexOf(type);
 
             help =$("globalbox").querySelector('button[onclick*="cowracing.buyItem('+equip[weather][bIndex]+')"]');
@@ -11184,7 +11184,7 @@ function buildInfoPanelOverview(mode){
             break;}
             default:{
                 var slot=(zoneNrS.toString().match(/\.(\d+)$/)?parseInt(/\.(\d+)$/.exec(zoneNrS)[1],10):null);
-                if (slot > 17) {continue}; // Kuhrennen ab Slot 18 werden nicht angezeigt
+                if (slot > 19) {continue}; // Kuhrennen ab Slot 20 werden nicht angezeigt
                 if(!$("tdAutoMatOverview_"+zoneNrL)){
                     newtr=createElement("tr",{},newtable);
                     newtd=createElement("td",{"id":"tdAutoMatOverview_"+zoneNrL},newtr);
@@ -13217,24 +13217,24 @@ try{
                             case 8: if (slot<=4) {
                                       container=$("cowracing_productionslot"+slot);
                                     }
-                                    else if (slot > 4 && slot <= 17){
+                                    else if (slot > 4 && slot <= 19){
                                       container=$("cowracing_cowslots_navi").querySelector('div[onclick*="cowracing.setCowSlot('+(slot-4)+')');
                                     }
                                     else {
-                                      container=$("cowracing_cowslots_navi").querySelector('div[onclick*="cowracing.setCowSlot('+(slot-4-13)+')');
+                                      container=$("cowracing_cowslots_navi").querySelector('div[onclick*="cowracing.setCowSlot('+(slot-4-15)+')');
                                     }
                                     break;
                             default: container=null;
                         }
                         if(container && (help=container.querySelector(".divZoneIcon"))){
-                            if((id==8) && (slot <=17))
+                            if((id==8) && (slot <=19))
                                 removeElement(help);
                         }
                         if(container && !unsafeData.zones.getBlock(zoneNrS)){
                             if (id == 3) {
                                 drawAutomatIcon(zoneNrS,zoneNrS,container,"left:25px;");
                             } else if((id==8) && (slot >4)){
-                                if (slot <= 17) {
+                                if (slot <= 19) {
                                     drawAutomatIcon(zoneNrS,zoneNrS,container,"left:10px;top:10px;");
                                 } else {
                                     drawCowRacingCheckbox(zoneNrS,zoneNrS,container, "left:10px;top:-30px;");
