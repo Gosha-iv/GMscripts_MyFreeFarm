@@ -303,7 +303,7 @@ var botArbiter=new function(){
         var priority, fkt=null;
         switch(event){
             case "sessionEnds":             priority=999;fkt=doGameSessionEnds;     break;
-            case "megafield":               priority= 35;fkt=autoMegafield;         break;
+            case "megafield":               priority= 30;fkt=autoMegafield;         break;
             case "otherAccMegafieldReady":  priority= 34;fkt=doGameOtherAccReady;   break;
             case "farm":                    priority= 30;fkt=autoFarm;              break;
             case "farmersmarket":           priority= 25;fkt=autoFarmersmarket;     break;
@@ -683,7 +683,7 @@ var settings=new function(){
     var dataDefault={"global":{},
                      "country":{"valCloseWindowTimer":30,"pauseShort":[300,700],"pause":[2000,4000],"maxDurationBotRun":300,"maxDurationBotStep":30,"botErrorBehaviour":"reload","valRestartBotTimer":30},
                      "server":{"botActive":false},
-                     "account":{"autoPlant":true,"autoWater":true,"autoFeed":true,"botUseClothingDonation":false,"botUseBattleDailyBonus":true,"botUsebuyPetsParts":false,"botUseClothingGamble":false,"botUseDonkey":false,"botUseFarmDog":false,"botUseFarmersmarket":false,"botUseButterfly":false,"botUseCowracingFeed":true,"botUseVetTreatment":true,"botUseMegafruit":false,"botUseSpeedEating":false,"botUseDailyLoginBonus":true,"dailyLoginSelectProduct":1,"botUseFarmi":false,"botUseFoodworld":false,"botUseForestry":false,"botUseGuildJop":false,"botUseIceDelivery":false,"botUseLottery":false,"botUseMap_stall":false,"botUseMegafield":false,"botUseOlympiaRun":false,"botPreferMegafield":true,"botUseMegafieldPremiumPlanting":true,"megafieldSmallVehicle":1,"megafieldBigVehicle":0,"botUseWindmill":false,"botUseXMasCalendar":true,"disableCropFields":false,"farmiAccept":false,"farmiAcceptAboveNr":100,"farmiAcceptBelowMinValue":false,"botUseFarmiFoodworld":true,"farmiReject":false,"farmiRejectUntilNr":90,"farmiRemoveMissing":false,"farmiRemoveMissingAboveNr":10,"lotteryActivate":false,"lotteryDailyLot":false,"powerUpActivate":false,"seedWaitForCrop":30,"showQueueTime":true,"useQueueList":false,"garage1":0,"garage1ProductFrom1":0,"garage1ProductFrom5":0,"garage2":0,"garage2ProductFrom1":0,"garage2ProductFrom6":0,"garage3":0,"garage3ProductFrom1":0,"garage3ProductFrom7":0}
+                     "account":{"autoPlant":true,"autoWater":true,"autoFeed":true,"botUseClothingDonation":false,"botUseBattleDailyBonus":true,"botUsebuyPetsParts":false,"botUseClothingGamble":false,"botUseDonkey":false,"botUseFarmDog":false,"botUseFarmersmarket":false,"botUseButterfly":false,"botUseCowracingFeed":true,"botUseVetTreatment":true,"botUseMegafruit":false,"botUseSpeedEating":false,"botUseDailyLoginBonus":true,"dailyLoginSelectProduct":1,"botUseFarmi":false,"botUseFoodworld":false,"botUseForestry":false,"botUseGuildJop":false,"botUseIceDelivery":false,"botUseLottery":false,"botUseMap_stall":false,"botUseMegafield":false,"botUseOlympiaRun":false,"botPreferMegafield":true,"botUseMegafieldPremiumPlanting":true,"megafieldSmallVehicle":1,"megafieldBigVehicle":0,"botUseWeather":false,"botUseWindmill":false,"botUseXMasCalendar":true,"disableCropFields":false,"farmiAccept":false,"farmiAcceptAboveNr":100,"farmiAcceptBelowMinValue":false,"botUseFarmiFoodworld":true,"farmiReject":false,"farmiRejectUntilNr":90,"farmiRemoveMissing":false,"farmiRemoveMissingAboveNr":10,"lotteryActivate":false,"lotteryDailyLot":false,"powerUpActivate":false,"seedWaitForCrop":30,"showQueueTime":true,"useQueueList":false,"garage1":0,"garage1ProductFrom1":0,"garage1ProductFrom5":0,"garage2":0,"garage2ProductFrom1":0,"garage2ProductFrom6":0,"garage3":0,"garage3ProductFrom1":0,"garage3ProductFrom7":0}
                     };
     var require=    {"global":{},
                      "country":{},
@@ -2417,6 +2417,7 @@ try{
     // GM_log("Begin drawQueueChooseItemBox zoneNrS="+zoneNrS+" zoneNrL="+zoneNrL+" queueNum="+queueNum+" appendTo.id="+appendTo.id);
     if(zoneNrL===undefined || zoneNrL==null){ zoneNrL=getZoneListId(zoneNrS); }
     if(queueNum===undefined){ queueNum=0; }
+    var zoneNrF=zoneNrS.toString().replace(/\.\d+$/,"");
     appendTo.innerHTML="";
     appendTo.setAttribute("zoneNrS",zoneNrS);
     appendTo.setAttribute("zoneNrL",zoneNrL);
@@ -2461,12 +2462,14 @@ try{
             }
 
             newdiv=createElement("div",{"id":"divChooseItem"+zoneNrL+"Q"+queueNum+"I"+iProd,"class":"divChooseItem link v"+iProd,"product":iProd},appendTo);
-            if (zoneNrS==25||zoneNrS==26||zoneNrS==27||zoneNrS==28||zoneNrS==29||zoneNrS==30){
+            if (zoneNrF==25||zoneNrF==26||zoneNrF==27||zoneNrF==28||zoneNrF==29||zoneNrF==30){
             //if (unsafeWindow.farm==5){
                 newdiv.style.opacity=(unsafeData.prodStock[5][iProd]&&unsafeData.prodStock[5][iProd]>0)?1:0.4;
             //} else if (unsafeWindow.farm==6) {
-            }else if (zoneNrS==31||zoneNrS==32||zoneNrS==33||zoneNrS==34||zoneNrS==35||zoneNrS==36) {
+            }else if (zoneNrF==31||zoneNrF==32||zoneNrF==33||zoneNrF==34||zoneNrF==35||zoneNrF==36) {
                 newdiv.style.opacity=(unsafeData.prodStock[6][iProd]&&unsafeData.prodStock[6][iProd]>0)?1:0.4;
+            }else if (zoneNrF==37||zoneNrF==38||zoneNrF==39||zoneNrF==40||zoneNrF==41||zoneNrF==42) {
+                newdiv.style.opacity=(unsafeData.prodStock[7][iProd]&&unsafeData.prodStock[7][iProd]>0)?1:0.4;
             } else {
                 newdiv.style.opacity=(unsafeData.prodStock[0][iProd]&&unsafeData.prodStock[0][iProd]>0)?1:0.4;
             }
@@ -5114,7 +5117,21 @@ TypeError: can't convert undefined to object
                                 autoZoneFinish(runId,$("gardencancel"));
                             }else{
                                 reSortQueue(handled.zoneNrF, false);
-                                autoFarmPlantInit(runId,zoneList[handled.zoneNrL][0][0]); // init planting
+                                var productWeather=0;
+                                if(settings.get("account","botUseWeather") && (handled.farmNr==5||handled.farmNr==6)){
+                                    for (var x=0; x<unsafeWindow.farms_data.weather.today.set.length;x++) {
+                                        if (unsafeData.prodTyp[0][unsafeWindow.farms_data.weather.today.set[x]]=="alpin") {
+                                            if(unsafeData.BUILDING_SIZE["1"]/unsafeData.prodPlantSize[0][unsafeWindow.farms_data.weather.today.set[x]] < unsafeData.prodStock[handled.farmNr][unsafeWindow.farms_data.weather.today.set[x]] ) {
+                                                productWeather = unsafeWindow.farms_data.weather.today.set[x];
+                                            }
+                                        }
+                                    }
+                                }
+                                if (productWeather==0){
+                                    autoFarmPlantInit(runId,zoneList[handled.zoneNrL][0][0]); // init planting
+                                } else {
+                                    autoFarmPlantInit(runId,productWeather); // init planting
+                                }
                             }
                         }
                         }(runId),settings.getPause());
@@ -11387,6 +11404,14 @@ function buildInfoPanelOptions(){
         },false);
 
         newtr=createElement("tr",{style:"line-height:18px;"},newtable);
+        newtd=createElement("td",{align:"center","style":"max-width:120px;"},newtr);
+        inp=createElement("input",{"class":"link","type":"checkbox","checked":settings.get("account","botUseWeather")},newtd);
+        inp.addEventListener("click",function(){
+            settings.set("account","botUseWeather",this.checked);
+        },false);
+        newtd=createElement("td",{colspan:"2"},newtr,getText("automat_settings_useWeather"));
+
+        newtr=createElement("tr",{style:"line-height:18px;"},newtable);
         newtd=createElement("td",{align:"center"},newtr);
         inp=createElement("input",{"class":"link",type:"checkbox",checked:settings.get("account","showQueueTime")},newtd);
         inp.addEventListener("click",function(){
@@ -11399,8 +11424,8 @@ function buildInfoPanelOptions(){
         },false);
         createElement("td",{colspan:"2"},newtr,getText("automat_settings_showQueueTime"));
 
-        // *********** FARMIE *************************************
 
+        // *********** FARMIE *************************************
         newtr=createElement("tr",{"style":"background-color:#b69162;"},newtable);
         newtd=createElement("th",{colspan:"3"},newtr,"Farmis"); // TODO text
         newtr=createElement("tr",{"style":"line-height:18px;"},newtable);
@@ -14065,6 +14090,7 @@ try{
         text["de"]["automat_settings_seedWaitForCrop"] = "Das Pflanzen wartet, falls innerhalb dieser Zeit geerntet werden kann.";
         text["de"]["automat_emergencyPlants"] = "Notfall-Pflanzen. Diese werden zuerst genommen, falls die benötigte Pflanze nicht verfügbar oder passend ist.";
         text["de"]["automat_settings_useQueueList"] = "Benutze Queue-Listen für die Äcker";
+        text["de"]["automat_settings_useWeather"] = "Benutze Wetter auf Farm 5 und 6";
         text["de"]["automat_set12a"] = "Lösche \n alle zone Queue\n Daten";
         text["de"]["automat_set12b"] = "Gelöscht.";
         text["de"]["automat_settings_showQueueTime"] = "Zeige berechnete Zeiten in der Queue-Liste.";
@@ -14305,6 +14331,7 @@ try{
         text["en"]["automat_settings_seedWaitForCrop"] = "Wait planting if next cropping time is less than";
         text["en"]["automat_emergencyPlants"] = "Emergency Plants. They are taken first if the needed plant is not available or fitting.";
         text["en"]["automat_settings_useQueueList"] = "Use queue for the fields.";
+        text["en"]["automat_settings_useWeather"] = "Use Weather on farm 5 und 6";
         text["en"]["automat_set12a"] = "Delete \n all zone queue\n data";
         text["en"]["automat_set12b"] = "Delete Completed.";
         text["en"]["automat_settings_showQueueTime"] = "Show calculated product ready time in the queue.";
