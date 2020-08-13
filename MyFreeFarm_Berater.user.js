@@ -1331,11 +1331,6 @@ function updateProductDataFarm(){
         if(!prodStock[6]||!(prodStock[6] instanceof Array)){ prodStock[6]=[]; }
         if(!prodStock[7]||!(prodStock[7] instanceof Array)){ prodStock[7]=[]; }
 
-        for(var v in unsafeWindow.produkt_name){
-            prodStock[5][v] = 0; //Wert auf 0 setzen, wenn nicht vorhanden
-            prodStock[6][v] = 0;
-            prodStock[7][v] = 0;
-        }
         var prodStockTemp=new Array();    //Stock Farm 1
         for(var i in unsafeWindow.rackobj) {
             for(var j in unsafeWindow.rackobj[i]) {
@@ -1367,11 +1362,10 @@ function updateProductDataFarm(){
             prodPlantSize[0][v]=unsafeWindow.produkt_x[v]*unsafeWindow.produkt_y[v];
             var c=(prodStockTemp[v])?prodStockTemp[v]:0;
             prodStock[0][v]=(c?parseInt(c,10):0);
-            /* kann gelöscht werden
             if (prodStock[5][v]==null) prodStock[5][v] = 0; //Wert auf 0 setzen, wenn nicht vorhanden
             if (prodStock[6][v]==null) prodStock[6][v] = 0;
-            if (!prodStock[7][v]) {prodStock[7][v] = 0;}
-            */
+            if (prodStock[7][v]==null) prodStock[7][v] = 0;
+
             prodYield[0][v]=(unsafeWindow.produkt_ernte[v]?parseInt(unsafeWindow.produkt_ernte[v],10):0);
             prodTyp[0][v]=unsafeWindow.produkt_category[v];
             prodRequire[0][v]=PRODUCT_REQUIRE[0][v];
@@ -17109,7 +17103,6 @@ try{
         }catch(err){GM_logError("setGuildQuestRun","","",err);}
     });
     // Clubquest product submitting
-
     unsafeOverwriteFunction("commitboxguild",function(c,a,d,b,e){
         try{
             unsafeWindow._commitboxguild(c,a,d,b,e);
