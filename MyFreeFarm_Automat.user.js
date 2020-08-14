@@ -5120,7 +5120,8 @@ TypeError: can't convert undefined to object
                                 var productWeather=0;
                                 if(settings.get("account","botUseWeather") && (handled.farmNr==5||handled.farmNr==6)){
                                     for (var x=0; x<unsafeWindow.farms_data.weather.today.set.length;x++) {
-                                        if (unsafeData.prodTyp[0][unsafeWindow.farms_data.weather.today.set[x]]=="alpin") {
+                                        if ((unsafeData.prodTyp[0][unsafeWindow.farms_data.weather.today.set[x]]=="ex" && handled.farmNr==5)
+                                            || (unsafeData.prodTyp[0][unsafeWindow.farms_data.weather.today.set[x]]=="alpin" && handled.farmNr==6) ) {
                                             if(unsafeData.BUILDING_SIZE["1"]/unsafeData.prodPlantSize[0][unsafeWindow.farms_data.weather.today.set[x]] < unsafeData.prodStock[handled.farmNr][unsafeWindow.farms_data.weather.today.set[x]] ) {
                                                 productWeather = unsafeWindow.farms_data.weather.today.set[x];
                                             }
@@ -6153,8 +6154,10 @@ function autoFarmFactory(runId, step) {
                             var div;
                             var index = 1 + Object.keys(unsafeData.BUILDING_INPUT[getZoneType(handled.zoneNrS)]).indexOf(""+zoneList[handled.zoneNrL][0][0]);
                             if (checkGuildJobProduct(handled.zoneNrL)) {
-                                //div = $("globalbox").querySelector('div[onclick*="createAdvancedProductionCommit('+handled.zoneNr+', '+req[0][0]+', '+'1'+')"]');
+                                //"factory.start('start',4,2,1, 1)"
+                                div = $("globalbox").querySelector('div[onclick*="factory.start(\'start\','+handled.zoneNr+','+index+','+'1'+', '+'1'+')"]');
                             } else {
+                                //factory.start('start',4,2,1)
                                 div = $("globalbox").querySelector('div[onclick*="factory.start(\'start\','+handled.zoneNr+','+index+','+'1'+')"]');
                             }
                             action = function() { click(div); setNextQueueItem(handled.zoneNrS);}
