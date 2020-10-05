@@ -18900,8 +18900,12 @@ try{
                     blossoms = Math.ceil(blossoms*bonus);
                     var blossomsForH = blossoms / (item.data.data.breed[c].duration /3600)
 
-                    var blossomsForAll = 0;
+                    /*var blossomsForAll = 0;
                     for (var i = parseInt(item.data.config.butterflies[item.data.data.breed[c].butterfly].care_count1);i<parseInt(item.data.data.breed[c].count);i++){
+                        blossomsForAll += item.data.data.breed[c].care.entries[i].reward.blossoms;
+                    }*/
+                    var blossomsForAll = 0;
+                    for (var i = parseInt(item.data.config.butterflies[item.data.data.breed[c].butterfly].care_count1);i< Math.min(parseInt(item.data.data.breed[c].count),item.data.data.breed[c].care.entries.length);i++){
                         blossomsForAll += item.data.data.breed[c].care.entries[i].reward.blossoms;
                     }
                     var blossomsForAllH=blossomsForAll/((item.data.data.breed[c].breedend-item.data.data.breed[c].createdate)/3600);
@@ -19120,6 +19124,15 @@ try{
                 }
             }
         }catch(err){GM_logError("gameCowRacingOpenCowRacingSelection","","",err);}
+    });
+
+    unsafeOverwriteObjFunction("cowracing","move",function(b){
+        try{
+            if(b==3&&unsafeWindow.cowracing.data.data.queue_remain&&unsafeWindow.cowracing.data.data.queue_remain<0&&unsafeWindow.cowracing.data.data.pharmacist_remember_box)
+                unsafeWindow.cowracing.data.data.pharmacist_remember_box = 0;
+             unsafeWindow.cowracing._move(b);
+        }catch(err){GM_logError("cowracing.move","","",err);}
+
     });
 
     /**********************************************************
