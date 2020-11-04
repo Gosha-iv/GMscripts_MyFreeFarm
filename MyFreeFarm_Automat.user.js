@@ -6193,6 +6193,7 @@ function autoFarmPony(runId,step){
     if(bot.checkRun("autoFarmPony",runId)){
         bot.setAction("autoFarmPony ("+step+")");
         var action=null,listeningEvent=null;
+        //alert("step: "+step);
         switch(step){
         case 1:{ // init
             if(unsafeData.zones.getBlock(handled.zoneNrS)){
@@ -10722,7 +10723,8 @@ try{
                     }
                     GM_logInfo("autoFarmi","","farmiNr="+farmiNr,"Click Farmi",0);
                     GM_logInfo("autoFarmi","","farmiNr="+farmiNr+" farmiAmount="+farmiAmount,"Click  Farmi:"+farmiNr);
-                    click($("kunde_"+farmiNr));
+                    click($("customerline2").children[farmiNr]);
+
                 }catch(err){ GM_logError("autoFarmi","","farmiNr="+farmiNr+" farmiAmount="+farmiAmount,"",err);}
             },settings.getPause(true),farmiNr,farmiAmount);
         }else{
@@ -13012,10 +13014,10 @@ try{
             for (var i=0;i<=zoneList[zoneToList[zoneNrS]][0][0]/2;i++){
                 createElement("option", {"value":i}, inp, i+" ");
             }
-
             inp.value=Math.min(zoneList[zoneToList[zoneNrS]][0][1],zoneList[zoneToList[zoneNrS]][0][0]/2);
+
             inp.addEventListener("change",function(){
-                zoneList[zoneNrS][0][1]=this.value;
+                zoneList[zoneNrS][0][1]=parseInt(this.value,10);
                 GM_setValueCache(COUNTRY+"_"+SERVER+"_"+USERNAME+"_zoneList", implode(zoneList,"updateQueueBox/zoneList"));
             },false);
 
@@ -13220,7 +13222,7 @@ try{
             }
         }catch(err){GM_logError("eventListener:gameFarmersmarketOpened ","","",err);}
         },false);
-        for(var v=1;v<=8;v++){
+        for(var v=1;v<=9;v++){
             err_trace="listener gameFarmersmarketOpened"+v;
             document.addEventListener("gameFarmersmarketOpened"+v,function(id){
                 return function(){
@@ -13250,6 +13252,11 @@ try{
                                     }
                                     else {
                                       container=$("cowracing_cowslots_navi").querySelector('div[onclick*="cowracing.setCowSlot('+(slot-4-15)+')');
+                                    }
+                                    break;
+                            case 9:
+                                    if(slot<=4) {
+                                        container=$("fishing_productionslot"+slot);
                                     }
                                     break;
                             default: container=null;

@@ -9953,7 +9953,7 @@ function doFarmis(){
         // this can't go in the above loop because the amountMinRack are needed to be calculated first
         var cell,customerline,str;
         var missing,belowMinRack,belowMinRackInit;
-        if(customerline=$("customerline")){
+        if(customerline=$("customerline2")){
             for(var farmiNr=0;farmiNr<customerline.childElementCount;farmiNr++){
                 err_trace="farmisinfo";
                 missing=0;belowMinRack=0;belowMinRackInit=false;
@@ -9972,70 +9972,71 @@ function doFarmis(){
                 err_trace="farmiInfo create";
                 if (!$("farmiInfo"+farmiNr)){ // assure that this code is run only once per farmi. else eventlisteners are stacked
                     // prepare the additional farmi-info-bubble
-                    createElement("div",{"id":"farmiInfo"+farmiNr,"class":"farmiInfo"},$("blase"+farmiNr));
-                    createElement("div",{"id":"farmiMiniInfo"+farmiNr,"class":"farmiMiniInfo"},$("kunde_"+farmiNr));
-                    //createElement("div",{"id":"farmiInfo"+farmiNr,"style":"position:absolute;height:35px;top:-47px;border-radius:5px;padding:5px;color:black;font-size:0.8em;"},$("blase"+farmiNr));
-                    //createElement("div",{"id":"farmiMiniInfo"+farmiNr,"style":"position:absolute;top:45px;right:15px;height:7px;width:7px;display:block;border-radius:5px;"},$("kunde_"+farmiNr));
-                    // fill the bubble when shown
-                    $("kunde_"+farmiNr).addEventListener("mouseover",function(event){
-                        var farmiNr=this.id.replace("kunde_","");
-                        // toolTip.show(event,print_r(unsafeWindow.farmisinfo[0][farmiNr],"",true));
-                        var cash;
-                        // Obststandbonus
-                        var stallMilestone = (unsafeWindow.stall.data.milestones)?unsafeWindow.stall.data.milestones.farmis:0;
-                        if (unsafeWindow.specialbonus&&unsafeWindow.specialbonus.data[0]&&unsafeWindow.specialbonus.data[0].farmis&&unsafeWindow.specialbonus.data[0].farmis.money&&unsafeWindow.specialbonus.data[0].remain>0) {
-                            cash = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*(stallMilestone+unsafeWindow.specialbonus.data[0].farmis.money);
+                    createElement("div",{"id":"farmiInfo"+farmiNr,"class":"farmiInfo"},$(customerline.children[farmiNr].id+"_bubble"));
+                    createElement("div",{"id":"farmiMiniInfo"+farmiNr,"class":"farmiMiniInfo"},customerline.children[farmiNr]);
 
-                        } else {
-                            cash = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*(stallMilestone);
-                        }
+                    customerline.children[farmiNr].addEventListener("mouseover",function(farmiNr){
+                        return function(){
+                            //toolTip.show(event,print_r(unsafeWindow.farmisinfo[0][farmiNr],"",true));
+                            var cash;
+                            // Obststandbonus
+                            var stallMilestone = (unsafeWindow.stall.data.milestones)?unsafeWindow.stall.data.milestones.farmis:0;
+                            if (unsafeWindow.specialbonus&&unsafeWindow.specialbonus.data[0]&&unsafeWindow.specialbonus.data[0].farmis&&unsafeWindow.specialbonus.data[0].farmis.money&&unsafeWindow.specialbonus.data[0].remain>0) {
+                                cash = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*(stallMilestone+unsafeWindow.specialbonus.data[0].farmis.money);
 
-                        var wert = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["marketValue"],10);
-                        var cell=$("blase"+farmiNr).firstElementChild.firstElementChild;
-                        var ppid, amount;
-                        for(var i=1;i<=7;i++){ // 7=maxanzahl produkte pro farmi
-                            if(cell.style.clear=="both"){ // line break after 4 products
+                            } else {
+                                cash = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)+parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["price"],10)*(stallMilestone);
+                            }
+
+                            var wert = parseFloat(unsafeWindow.farmisinfo[0][farmiNr]["marketValue"],10);
+                            var cell = $(this.id+"_bubble").firstElementChild;
+
+                            var ppid, amount;
+                            for(var i=1;i<=7;i++){ // 7=maxanzahl produkte pro farmi
+                                if(cell.style.clear=="both"){ // line break after 4 products
+                                    cell=cell.nextElementSibling;
+                                    if(!cell){ break; }
+                                }
+                                pid=unsafeWindow.farmisinfo[0][farmiNr]["p"+i];
+                                amount=parseInt(unsafeWindow.farmisinfo[0][farmiNr]["a"+i],10);
+                                if((pid>0)&&(amount>0)){
+                                    if(prodStock[0][pid]<amount){
+                                        // not enough in rack
+                                        cell.setAttribute("style",css_styles["prod_border_missing"][1]+"overflow:hidden; margin-right:2px; marign-bottom:2px; float:left; width:15px; height:15px;border-radius:4px;");
+                                    }else if(prodStock[0][pid]-amount<prodMinRack[0][pid]-((valMinRackFarmis&&totalFarmis[0]&&totalFarmis[0][pid])?totalFarmis[0][pid]:0)){
+                                        // selling this farmi will push the rack below the min-value
+                                        cell.setAttribute("style",css_styles["prod_border_lowamount"][1]+"overflow:hidden; margin-right:2px; marign-bottom:2px; float:left; width:15px; height:15px;border-radius:4px;");
+                                    }else{
+                                        cell.style.border="1px solid white";
+                                        //css_styles["prod_border_none"][[],"1px solid white","1px solid white"];
+                                        //cell.setAttribute("style",css_styles["prod_border_none"][1]+"overflow:hidden; margin-right:2px; marign-bottom:2px; float:left; width:15px; height:15px;border-radius:4px;");
+                                    }
+                                }
                                 cell=cell.nextElementSibling;
                                 if(!cell){ break; }
                             }
-                            pid=unsafeWindow.farmisinfo[0][farmiNr]["p"+i];
-                            amount=parseInt(unsafeWindow.farmisinfo[0][farmiNr]["a"+i],10);
-                            if((pid>0)&&(amount>0)){
-                                if(prodStock[0][pid]<amount){
-                                    // not enough in rack
-                                    cell.setAttribute("style",css_styles["prod_border_missing"][1]+"overflow:hidden; margin-right:2px; marign-bottom:2px; float:left; width:15px; height:15px;border-radius:4px;");
-                                }else if(prodStock[0][pid]-amount<prodMinRack[0][pid]-((valMinRackFarmis&&totalFarmis[0]&&totalFarmis[0][pid])?totalFarmis[0][pid]:0)){
-                                    // selling this farmi will push the rack below the min-value
-                                    cell.setAttribute("style",css_styles["prod_border_lowamount"][1]+"overflow:hidden; margin-right:2px; marign-bottom:2px; float:left; width:15px; height:15px;border-radius:4px;");
-                                }else{
-                                    cell.style.border="1px solid white";
-                                    //css_styles["prod_border_none"][[],"1px solid white","1px solid white"];
-                                    //cell.setAttribute("style",css_styles["prod_border_none"][1]+"overflow:hidden; margin-right:2px; marign-bottom:2px; float:left; width:15px; height:15px;border-radius:4px;");
-                                }
+                            cell=$("farmiInfo"+farmiNr);
+                            if(!unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]){
+                                // a price is missing. can't calculate, so display white
+                                cell.innerHTML=moneyFormatInt(cash);
+                                cell.setAttribute("style",css_styles["cloud_back_noprice"][1]+css_styles["cloud_border_noprice"][1]);
+                            }else if(unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]<valFarmiLimits[0]){
+                                // low case
+                                cell.innerHTML=moneyFormatInt(cash)+"<br>"+numberFormat(unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"],1)+"&nbsp;%<br>"+moneyFormatInt(cash-wert)+"&nbsp;|&nbsp;"+moneyFormatInt(cash-0.9*wert);
+                                cell.setAttribute("style",css_styles["cloud_back_below"][1]+css_styles["cloud_border_below"][1]);
+                            }else if(unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]<valFarmiLimits[1]){
+                                // middle case
+                                cell.innerHTML=moneyFormatInt(cash)+"<br>"+numberFormat(unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"],1)+"&nbsp;%<br>"+moneyFormatInt(cash-wert)+"&nbsp;|&nbsp;+"+moneyFormatInt(cash-0.9*wert);
+                                cell.setAttribute("style",css_styles["cloud_back_between"][1]+css_styles["cloud_border_between"][1]);
+                            }else{
+                                // high case
+                                cell.innerHTML=moneyFormatInt(cash)+"<br>"+numberFormat(unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"],1)+"&nbsp;%<br>+"+moneyFormatInt(cash-wert)+"&nbsp;|&nbsp;+"+moneyFormatInt(cash-0.9*wert);
+                                cell.setAttribute("style",css_styles["cloud_back_above"][1]+css_styles["cloud_border_above"][1]);
                             }
-                            cell=cell.nextElementSibling;
-                            if(!cell){ break; }
+                            cell=null;
                         }
-                        cell=$("farmiInfo"+farmiNr);
-                        if(!unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]){
-                            // a price is missing. can't calculate, so display white
-                            cell.innerHTML=moneyFormatInt(cash);
-                            cell.setAttribute("style",css_styles["cloud_back_noprice"][1]+css_styles["cloud_border_noprice"][1]);
-                        }else if(unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]<valFarmiLimits[0]){
-                            // low case
-                            cell.innerHTML=moneyFormatInt(cash)+"<br>"+numberFormat(unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"],1)+"&nbsp;%<br>"+moneyFormatInt(cash-wert)+"&nbsp;|&nbsp;"+moneyFormatInt(cash-0.9*wert);
-                            cell.setAttribute("style",css_styles["cloud_back_below"][1]+css_styles["cloud_border_below"][1]);
-                        }else if(unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"]<valFarmiLimits[1]){
-                            // middle case
-                            cell.innerHTML=moneyFormatInt(cash)+"<br>"+numberFormat(unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"],1)+"&nbsp;%<br>"+moneyFormatInt(cash-wert)+"&nbsp;|&nbsp;+"+moneyFormatInt(cash-0.9*wert);
-                            cell.setAttribute("style",css_styles["cloud_back_between"][1]+css_styles["cloud_border_between"][1]);
-                        }else{
-                            // high case
-                            cell.innerHTML=moneyFormatInt(cash)+"<br>"+numberFormat(unsafeWindow.farmisinfo[0][farmiNr]["costQuotient"],1)+"&nbsp;%<br>+"+moneyFormatInt(cash-wert)+"&nbsp;|&nbsp;+"+moneyFormatInt(cash-0.9*wert);
-                            cell.setAttribute("style",css_styles["cloud_back_above"][1]+css_styles["cloud_border_above"][1]);
-                        }
-                        cell=null;
-                    },false);
+
+                    }(farmiNr),false);
                     // farmi is new=not in the FarmiLog
                     var farmi_id=parseInt(unsafeWindow.farmisinfo[0][farmiNr]["id"],10);
                     var farmiLog_id=farmiLog.length;
@@ -19322,10 +19323,10 @@ try{
                 unsafeWindow.fishing.data.data.queue_remember = 0
              }
              unsafeWindow.fishing._init();
-        }catch(err){GM_logError("fishing.initi","","",err);}
+        }catch(err){GM_logError("fishing.init","","",err);}
         try{
             raiseEvent("gameFarmersmarketOpened9");
-        }catch(err){GM_logError("fishing.initi","","",err);}
+        }catch(err){GM_logError("fishing.init","","",err);}
 
     });
 
@@ -23505,7 +23506,7 @@ try{
     // Script elements
     GM_addStyle(
         ".farmiInfo{position:absolute;height:35px;top:-47px;border-radius:5px;padding:5px;color:black;font-size:0.8em;}\
-        .farmiMiniInfo{position:absolute;top:45px;right:15px;height:7px;width:7px;display:block;border-radius:5px;}\
+        .farmiMiniInfo{position:absolute;top:0px;right:15px;height:7px;width:7px;display:block;border-radius:5px;}\
         .foodworldfarmiMiniInfo{position:absolute;top:55px;right:15px;height:7px;width:7px;display:block;border-radius:5px;}\
         .questboxbarinPoss{position:absolute;top:0px;height:15px;background-color:green;opacity:0.5;}\
         .fieldReady{background:url('"+GFX+"incoming.gif');position:absolute;top:30px;display:block!important;width:24px;height:57px;}\
@@ -23633,7 +23634,7 @@ try{
         .farm_production_timer{opacity:1!important;}\
         .farmersmarket_pos_timer{opacity:1!important;}\
         #cartsubmit{font-weight:bold!important;}\
-        #customerline{z-index:19!important;}\
+        #customerline2{z-index:19!important;}\
         #transp8{display:none!important;}\
         #buildinginfo1,#buildinginfo2,#buildinginfo3,#buildinginfo4,#buildinginfo5,#buildinginfo6{display:none!important;}\
         #buildinginfo_right3,#buildinginfo_right6{display:none!important;}\
