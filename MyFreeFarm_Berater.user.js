@@ -436,7 +436,7 @@ unsafeData.BUILDING2PRODUCT=BUILDING2PRODUCT.clone();
     Obststand               11
     fishing                 12
 */
-const BUILDINGTYPE={"0":0,"1":1,"2":2,"3":2,"4":2,"5":2,"6":0,"7":3,"8":3,"9":3,"10":3,"11":2,"12":2,"13":3,"14":3,"15":2,"16":3,"17":0,"18":5,"19":0,"20":6,"21":3,"22":10,"fl1":1,"fl2":4,"fl3":7,"fl4":4,"fl5":4,"fl6":8,"fl7":9,"fl8":4,"fl9":4,"fw1":4,"fw2":4,"fw3":4,"fw4":4,"m1":11};
+const BUILDINGTYPE={"0":0,"1":1,"2":2,"3":2,"4":2,"5":2,"6":0,"7":3,"8":3,"9":3,"10":3,"11":2,"12":2,"13":3,"14":3,"15":2,"16":3,"17":0,"18":5,"19":0,"20":6,"21":3,"22":10,"fl1":1,"fl2":4,"fl3":7,"fl4":4,"fl5":4,"fl6":8,"fl7":9,"fl8":4,"fl9":12,"fw1":4,"fw2":4,"fw3":4,"fw4":4,"m1":11};
 unsafeData.BUILDINGTYPE=BUILDINGTYPE.clone();
 // task_new_building
 const BUILDING_SIZE={"1":120,"forest":25,"fl1":36,"megafield":[11,9]};
@@ -444,7 +444,7 @@ unsafeData.BUILDING_SIZE=BUILDING_SIZE.clone();
 // task_new_building
 
 //13102016
-const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":34,"fl9":4,"megafield":99,"m1":4};
+const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":34,"fl9":8,"megafield":99,"m1":4};
 
 unsafeData.BUILDING_SLOTS=BUILDING_SLOTS.clone();
 // Needed input of a zone
@@ -462,7 +462,6 @@ const BUILDING_INPUT=[,,{"9":[[[1,600]],[[2,1200]]]},{"10":[[[3,900]],[[4,1800]]
     ,"757":[[[707,80],[708,100],[709,50]]]
     ,"758":[[[708,110],[709,65],[700,80]]]
     ,"759":[[[709,50],[700,80],[701,70]]]
-
 }];
 
 unsafeData.BUILDING_INPUT=BUILDING_INPUT.clone();
@@ -703,7 +702,7 @@ const QUESTS =
                             ,[[[0,913,50],[0,42,984]], ,210000,[[24,1,3] ]]
                             ,[[[0,915,52],[0,24,9675]], ,220000]
                             ,[[[0,901,54],[0,109,9000]], ,230000]
-                            ,[[[0,917,40],[0,917,27],[0,25,135]], ,240000,[[24,4,4] ]]
+                            ,[[[0,917,40],[0,913,27],[0,25,135]], ,240000,[[24,4,4] ]]
                             ,[[[0,900,59],[0,7,2744]], ,250000]
                             ,[[[0,912,62],[0,34,10328]], ,260000,[[24,0,1] ]]
                             ,[[[0,901,64],[0,26,10971]], ,270000,[[24,2,1] ]]
@@ -18293,18 +18292,20 @@ try{
                                     }
                                 break;}
                             case 9:{ // fishing food
+                                /*
                                 console.log("=== START LESE Fishing ===");
                                 console.log(print_r(unsafeWindow.fishing, "", true, "\n"));
                                 console.log("=== END LESE Fishing ===");
-
-                                /*
+                                */
+                                //fishing _ fisherman (slot 5 bis slot 8)
                                 zones.setBonus(zoneNrF,0);
-                                if((!currBlock)&&(unsafeWindow.farmersmarket_data.cowracing)){
+                                if((!currBlock)&&(unsafeWindow.fishing)){
                                     tempZoneProductionData=[[{},{}],0,0,true];
                                     if (!zones.getBuilding(zoneNrF)){
                                         zones.setBuilding(zoneNrF,"fl9");
                                     }
-                                    //Production
+                                    //Fishing Production
+                                    /*
                                     for(var slot=1;slot<=4;slot++){
                                         zoneNrS=zoneNrF+"."+slot;
                                         zones.setBlock(zoneNrS,"");
@@ -18341,10 +18342,47 @@ try{
                                         }
                                         zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
                                     }
+                                    */
+                                    for(var slot=1;slot<=4;slot++){
+                                        zoneNrS=zoneNrF+"."+(slot+4);
+                                        zones.setBlock(zoneNrS,"");
+                                        tempZoneProductionDataSlot=[[{},{}],0,0,true];
+                                        if (slot >= 1 && unsafeWindow.fishing.data.data.fishingslots[slot].block){
+                                            zones.setBlock(zoneNrS,"b");
+                                        } else {
+                                            item = unsafeWindow.fishing.data.data.fishingslots[slot];
+                                            iAmount = 0;
+                                            iPoints = 0;
+                                            iProd=0;
+                                            if(item.remain>0){
+                                                iTime=nowServer+Math.round(item.remain); // Math.round, because it's sometimes returned as string
+                                                //iTime=nowServer+100000;
+                                            } else {
+                                                //iTime=nowServer+10;
+                                                iTime=NEVER;
+                                                tempZoneProductionData[1]++;
+                                                tempZoneProductionDataSlot[1]++;
+                                            }
+
+                                            tempZoneProductionData[2]++;
+                                            tempZoneProductionDataSlot[2]++;
+
+                                            if(!tempZoneProductionData[0][0][iProd]) {
+                                                tempZoneProductionData[0][0][iProd]=[];
+                                            }
+                                            tempZoneProductionData[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                            if(!tempZoneProductionDataSlot[0][0][iProd]) {
+                                                tempZoneProductionDataSlot[0][0][iProd]=[];
+                                            }
+                                            tempZoneProductionDataSlot[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                                            zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+                                        }
+                                        zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+                                    }
                                     zones.setProduction(zoneNrF,tempZoneProductionData.clone());
                                     showGoToVetFarmi(); // Determine, if Discharge-Sick-Animals-Icon is shown
                                 }
-                            */
+
                             break;}
 
                             default: currBlock="blpqs"; // Block farm
@@ -19325,11 +19363,81 @@ try{
              unsafeWindow.fishing._init();
         }catch(err){GM_logError("fishing.init","","",err);}
         try{
-            raiseEvent("gameFarmersmarketOpened9");
+            //raiseEvent("gameFarmersmarketOpened9");
         }catch(err){GM_logError("fishing.init","","",err);}
 
     });
 
+    unsafeOverwriteObjFunction("fishing","buildProduction",function(){
+        try{
+             unsafeWindow.fishing._buildProduction();
+        }catch(err){GM_logError("fishing.buildProduction","","",err);}
+        try{
+            raiseEvent("gameFishingBuildProduction");
+        }catch(err){GM_logError("fishing.buildProduction","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("fishing","buildPier",function(){
+        try{
+             unsafeWindow.fishing._buildPier();
+        }catch(err){GM_logError("fishing.buildPier","","",err);}
+        try{
+            raiseEvent("gameFishingBuildPier");
+        }catch(err){GM_logError("fishing.buildPier","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("fishing","updateFishingSlot",function(e){
+        try{
+             unsafeWindow.fishing._updateFishingSlot(e);
+        }catch(err){GM_logError("fishing.buildPier","","",err);}
+        try{
+            raiseEvent("gameFishingBuildProduction");
+        }catch(err){GM_logError("fishing.buildPier","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("fishing","showReward",function(){
+        try{
+             unsafeWindow.fishing._showReward();
+        }catch(err){GM_logError("fishing.showReward","","",err);}
+        try{
+            raiseEvent("gameFishingFinishFishing");
+        }catch(err){GM_logError("fishing.showReward","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("fishing","goodbyeFish",function(){
+        try{
+             unsafeWindow.fishing._goodbyeFish();
+        }catch(err){GM_logError("fishing.goodbyeFish","","",err);}
+        try{
+            raiseEvent("gameFishingGoodbyeFish");
+        }catch(err){GM_logError("fishing.goodbyeFish","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("fishing","startFishingSelection",function(r){
+        try{
+             unsafeWindow.fishing._startFishingSelection(r);
+        }catch(err){GM_logError("fishing.startFishingSelection","","",err);}
+        try{
+            raiseEvent("gameFishingStartFishingSelection");
+        }catch(err){GM_logError("fishing.startFishingSelection","","",err);}
+
+    });
+
+    unsafeOverwriteObjFunction("fishing","startFishing",function(){
+        try{
+             unsafeWindow.fishing._startFishing();
+        }catch(err){GM_logError("fishing.startFishing","","",err);}
+        try{
+            doFarmersMarketData();
+            raiseEvent("gameFishingStartFishing");
+        }catch(err){GM_logError("fishing.startFishing","","",err);}
+
+    });
 
     //Open Farmersmarket Pos8
     /*
@@ -24249,6 +24357,7 @@ try{
         text["de"]["fl6"]="Wettmampfen";
         text["de"]["fl7"]="Schmetterlingshaus";
         text["de"]["fl8"]="KuhRennen";
+        text["de"]["fl9"]="Angelstation";
         text["de"]["fw1"]="Getränkebude";
         text["de"]["fw2"]="Imbissbude";
         text["de"]["fw3"]="Konditorei";
@@ -24698,6 +24807,7 @@ try{
         text["en"]["fl6"]="Speed eating";
         text["en"]["fl7"]="Butterfly terrarium";
         text["en"]["fl8"]="Cowracing";
+        text["en"]["fl9"]="Fishing";
         text["en"]["fw1"]="Soda stall";
         text["en"]["fw2"]="Snack booth";
         text["en"]["fw3"]="Pastry shop";
