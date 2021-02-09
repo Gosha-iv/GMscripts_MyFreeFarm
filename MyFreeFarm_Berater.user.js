@@ -19476,7 +19476,7 @@ try{
                     console.log("++++++++++++++++++++++++++++++++++++++++++")*/
                     if (item.data.data[1].slots.hasOwnProperty(slot)) {
                         if(!item.data.data[1].slots[slot].hasOwnProperty("amount") ||
-                            item.data.data[1].slots[slot].amount/item.data.config.level[item.data.data[1].level].fillsum <=0.66
+                            item.data.data[1].slots[slot].amount/item.data.config.level[1][item.data.data[1].level].fillsum <=0.66
                         ){
                             iTime=nowServer-100; // TODO:
                             tempZoneProductionData[1]++;

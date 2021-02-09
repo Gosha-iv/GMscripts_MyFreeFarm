@@ -7878,7 +7878,7 @@ try{
             listeningEvent="gameOpenMapStall1";
             action=function(){
                 GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Map_Stall1");
-                click($("map_stall_overview_link"));
+                click($("map_stall_overview_link1"));
             };
         break;}
         case 2:{ //Next or clear $("map_stall1_slot1_amount")
