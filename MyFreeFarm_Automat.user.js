@@ -4933,7 +4933,8 @@ try{
                                         botArbiter.add(getGarden(fz));
                                     }
                                 } else {
-                                    botArbiter.add(getGarden(fz));
+                                    if (zoneList[lz][0][0]!=PRODSTOP || ((fz=="farmersmarket-5.5"||fz=="farmersmarket-5.6"||fz=="farmersmarket-5.7") && settings.get("account","botUseVetTreatment")))
+                                        botArbiter.add(getGarden(fz));
                                 }
                                 /*
                                 if(   (fz=="farmersmarket-9.5"||fz=="farmersmarket-9.6"||fz=="farmersmarket-9.7"||fz=="farmersmarket-9.8" ||
@@ -6214,7 +6215,6 @@ function autoFarmPony(runId,step){
     if(bot.checkRun("autoFarmPony",runId)){
         bot.setAction("autoFarmPony ("+step+")");
         var action=null,listeningEvent=null;
-        //alert("step: "+step);
         switch(step){
         case 1:{ // init
             if(unsafeData.zones.getBlock(handled.zoneNrS)){
@@ -8941,13 +8941,13 @@ try{
                     } else {
                         autoFarmersmarketCowracingRacing(runId,1,0);
                     }
+                } else if (handled.zoneNrF=="farmersmarket-9"){
+                    autoFarmersmarketFishing(runId,1);
                 }
             } else if (handled.zoneNrF=="farmersmarket-6" && handled.zoneBuildingTyp==8) {
                 autoFarmersmarketSpeedEating(runId,1);
             } else if (handled.zoneNrF=="farmersmarket-7" && handled.zoneBuildingTyp==9) {
                 autoFarmersmarketButterfly(runId,1);
-            } else if (handled.zoneNrF=="farmersmarket-9" && handled.zoneBuildingTyp==12) {
-                autoFarmersmarketFishing(runId,1);
             } else {
                 autoFarmersmarketBuilding(runId,1);
             }
@@ -8992,7 +8992,7 @@ try{
         break;}
         case 2:{ // open farmersmarket
             if((help=unsafeData.readyZone[handled.zoneNrS])&&help[2]&&(((help[1]=="r")&&(zoneList[handled.zoneNrL][0][0]!=PRODSTOP||!settings.get("account","disableCropFields")))||((help[1]=="e")&&(zoneList[handled.zoneNrL][0][0]!=PRODSTOP)))){
-                if (handled.zoneNrF=="farmersmarket-8") {
+                if (handled.zoneNrF=="farmersmarket-8" || handled.zoneNrF=="farmersmarket-9" ) {
                     if (parseInt(unsafeWindow.farm,10)==100) {
                             autoFarmersmarketBuilding(runId,step+1);
                     } else {
@@ -9080,6 +9080,9 @@ try{
                         action=function(){ click(help); };
                         listeningEvent="gameFarmersmarketCropped";
                     } else if(handled.zoneNrF=="farmersmarket-8" && (help=$("cowracing_productionslot" + handled.slot + "_click" ))){
+                        action=function(){ click(help); };
+                        listeningEvent="gameFarmersmarketCropped";
+                    } else if(handled.zoneNrF=="farmersmarket-9" && (help=$("fishing_productionslot" + handled.slot + "_click" ))){
                         action=function(){ click(help); };
                         listeningEvent="gameFarmersmarketCropped";
                     } else{
@@ -9220,7 +9223,10 @@ try{
                     } else if(handled.zoneNrF=="farmersmarket-8" && (help2=$("cowracing_productionslot" + handled.slot + "_click" ))){
                         action=function(){ click(help2); };
                         listeningEvent="gameFarmersmarketSlotOpened";
-                    }else{
+                    }  else if(handled.zoneNrF=="farmersmarket-9" && (help2=$("fishing_productionslot" + handled.slot + "_click" ))){
+                        action=function(){ click(help2); };
+                        listeningEvent="gameFarmersmarketSlotOpened";
+                    } else{
                         autoFarmersmarketBuilding(runId,9); // -> exit
                     }
                 break;}
@@ -9291,8 +9297,7 @@ try{
                     }else{
                         autoFarmersmarketBuilding(runId,9); // -> exit
                     }
-                } else
-                if((help=$("pets_production_selection")) && (handled.zoneNrF == "farmersmarket-4")){
+                } else if((help=$("pets_production_selection")) && (handled.zoneNrF == "farmersmarket-4")){
                     help2 = $("pets_production_selection_slot"+zoneList[handled.zoneNrL][0][0]);
 
                     var helpDown=$("pets_production_selection_navi_down");
@@ -9349,7 +9354,65 @@ try{
                     }else{
                         autoFarmersmarketBuilding(runId,9); // -> exit
                     }
+                } else if ((help=$("fishing_production_selection")) && (handled.zoneNrF == "farmersmarket-9")){
+                    var altPr = zoneList[handled.zoneNrL][0][0];
+                    for (var fP in unsafeWindow.fishing.data.config.products) {
+                        if (unsafeWindow.fishing.data.config.products[fP].coins || !unsafeWindow.fishing.data.config.products[fP].needs.items) {
+                            continue;
+                        }
+                        if (unsafeWindow.fishing.data.config.products[fP].level && unsafeWindow.fishing.data.config.products[fP].level > unsafeWindow.fishing.data.data.level) {
+                           continue;
+                        }
+                        if (unsafeWindow.fishing.data.config.products[fP].needs.products) {
+                            for (var x in unsafeWindow.fishing.data.config.products[fP].needs.products) {
+                                var y = unsafeWindow.checkRackItem(x);
+                                if (unsafeWindow.fishing.data.config.products[fP].needs.products[x] > y) {
+                                    continue;
+                                }
+                            }
+                        }
+                        if (unsafeWindow.fishing.data.config.products[fP].needs.items) {
+                            for (var x in unsafeWindow.fishing.data.config.products[fP].needs.items) {
+                                var y = 0;
+                                if (unsafeWindow.fishing.data.data.stock && unsafeWindow.fishing.data.data.stock[x]) {
+                                    y = parseInt(unsafeWindow.fishing.data.data.stock[x])
+                                }
+                                if (unsafeWindow.fishing.data.config.products[fP].needs.items[x] > y) {
+                                    continue;
+                                } else {
+                                    altPr = fP;
+                                }
+                            }
+                        }
+                    }
+                    //alert("stop " + altPr + " prodName" + unsafeData.prodName[0][altPr]);
+                    help2=help.querySelector('div[onclick*="fishing.productionSelectionCommit('+altPr+')');
 
+                    var helpDown=$("fishing_production_selection_navi_down");
+                    var helpUp=$("fishing_production_selection_navi_up");
+                    if(help2) {
+                        // link is visible, can be clicked on
+                        action=function(){ click(help2); };
+                        listeningEvent="gameProductionSelectionCommit";
+                    }else if(helpDown || helpUp) {
+                        // link not visible, we need to scroll
+                        if (directionDown && (helpDown.style.display == "none")) { // Scroll-Down-Mode, but at bottom?
+                            directionDown = false; // Switch to Scroll-Up-Mode
+                        } else if (!directionDown && (helpUp.style.display == "none")) { // Scroll-Up-Mode, but at top?
+                            directionDown = true; // Switch to Scroll-Down-Mode
+                        }
+                        action=function(){
+                            if (directionDown) { // In Scroll-Down-Mode?
+                                click(helpDown); // Scroll down
+                            } else {
+                                click(helpUp);   // Scroll up
+                            }
+                        };
+                        step--;
+                        listeningEvent="gameProductionSelectionNavi";
+                    }else{
+                        autoFarmersmarketBuilding(runId,9); // -> exit
+                    }
                 } else if((help=$("vet_production_filter_icon").parentNode) && (help.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.style.display == "block") && handled.zoneNrF == "farmersmarket-5"){
                     var help2=help.querySelector('div[onclick*="vetDialog(\'production_select_confirm\','+handled.slot+','+zoneList[handled.zoneNrL][0][0]+',undefined)"]');
                     if (!help2) {
@@ -13462,7 +13525,7 @@ try{
         document.addEventListener("gameFarmersmarketOpened",function(){
         try{
             // Automat icons
-            for(var v=1;v<=8;v++){
+            for(var v=1;v<=9;v++){
                 if (v==3 || v == 6 || v == 7) {continue;} //Automat-Icon blockieren (Farmersmarket-3)
                 if(!unsafeData.zones.getBlock("farmersmarket-"+v)){
                     drawAutomatIcon("farmersmarket-"+v,
@@ -13474,7 +13537,7 @@ try{
         }catch(err){GM_logError("eventListener:gameFarmersmarketOpened ","","",err);}
         },false);
 
-        for(var v=1;v<=8;v++){
+        for(var v=1;v<=9;v++){
             err_trace="listener gameFarmersmarketOpened"+v;
             document.addEventListener("gameFarmersmarketOpened"+v,function(id){
                 return function(){
@@ -13506,14 +13569,11 @@ try{
                                       container=$("cowracing_cowslots_navi").querySelector('div[onclick*="cowracing.setCowSlot('+(slot-4-15)+')');
                                     }
                                     break;
-                            /*case 9:
+                            case 9:
                                     if(slot<=4) {
                                         container=$("fishing_productionslot"+slot);
-                                    } else {
-                                        container=$("fishing_fishingslot"+(slot-4));
                                     }
                                     break;
-                            */
                             default: container=null;
                         }
                         if(container && (help=container.querySelector(".divZoneIcon"))){
@@ -13529,9 +13589,9 @@ try{
                                 } else {
                                     drawCowRacingCheckbox(zoneNrS,zoneNrS,container, "left:10px;top:-30px;");
                                 }
-                            } /*else if (id == 9 && slot > 4) {
-                                    drawFishingFishing(zoneNrS,zoneNrS,container, "left:10px;top:-30px;");
-                            }*/ else {
+                            } else if (id == 9 && slot > 4) {
+                                    //drawFishingFishing(zoneNrS,zoneNrS,container, "left:10px;top:-30px;");
+                            } else {
                                 drawAutomatIcon(zoneNrS,zoneNrS,container,"left:-10px;");
                             }
                         }
