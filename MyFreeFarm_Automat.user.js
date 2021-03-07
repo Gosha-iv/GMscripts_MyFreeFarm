@@ -685,7 +685,7 @@ var settings=new function(){
     var dataDefault={"global":{},
                      "country":{"valCloseWindowTimer":30,"pauseShort":[300,700],"pause":[2000,4000],"maxDurationBotRun":300,"maxDurationBotStep":30,"botErrorBehaviour":"reload","valRestartBotTimer":30},
                      "server":{"botActive":false},
-                     "account":{"autoPlant":true,"autoWater":true,"autoFeed":true,"botUseClothingDonation":false,"botUseBattleDailyBonus":true,"botUsebuyPetsParts":false,"botUseClothingGamble":false,"botUseDonkey":false,"botUseFarmDog":false,"botUseFarmersmarket":false,"botUseButterfly":false,"botUseCowracingFeed":true,"botUseFishing":false,"botUseVetTreatment":true,"botUseMegafruit":false,"botUseSpeedEating":false,"botUseDailyLoginBonus":true,"dailyLoginSelectProduct":1,"botUseFarmi":false,"botUseFoodworld":false,"botUseForestry":false,"botUseGuildJop":false,"botUseIceDelivery":false,"botUseLottery":false,"botUseMap_stall":false,"botUseMegafield":false,"botUseOlympiaRun":false,"botPreferMegafield":true,"botUseMegafieldPremiumPlanting":true,"megafieldSmallVehicle":1,"megafieldBigVehicle":0,"botUseWeather":false,"botUseWindmill":false,"botUseXMasCalendar":true,"disableCropFields":false,"farmiAccept":false,"farmiAcceptAboveNr":100,"farmiAcceptBelowMinValue":false,"botUseFarmiFoodworld":true,"farmiReject":false,"farmiRejectUntilNr":90,"farmiRemoveMissing":false,"farmiRemoveMissingAboveNr":10,"lotteryActivate":false,"lotteryDailyLot":false,"powerUpActivate":false,"seedWaitForCrop":30,"showQueueTime":true,"useQueueList":false,"garage1":0,"garage1ProductFrom1":0,"garage1ProductFrom5":0,"garage2":0,"garage2ProductFrom1":0,"garage2ProductFrom6":0,"garage3":0,"garage3ProductFrom1":0,"garage3ProductFrom7":0}
+                     "account":{"autoPlant":true,"autoWater":true,"autoFeed":true,"botUseClothingDonation":false,"botUseBattleDailyBonus":true,"botUsebuyPetsParts":false,"botUseClothingGamble":false,"botUseDonkey":false,"botUseFarmDog":false,"botUseFarmersmarket":false,"botUseButterfly":false,"botUseCowracingFeed":true,"botUseFishing":false,"botUseFishingLookSp":true,"botUseVetTreatment":true,"botUseMegafruit":false,"botUseSpeedEating":false,"botUseDailyLoginBonus":true,"dailyLoginSelectProduct":1,"botUseFarmi":false,"botUseFoodworld":false,"botUseForestry":false,"botUseGuildJop":false,"botUseIceDelivery":false,"botUseLottery":false,"botUseMap_stall":false,"botUseMegafield":false,"botUseOlympiaRun":false,"botPreferMegafield":true,"botUseMegafieldPremiumPlanting":true,"megafieldSmallVehicle":1,"megafieldBigVehicle":0,"botUseWeather":false,"botUseWindmill":false,"botUseXMasCalendar":true,"disableCropFields":false,"farmiAccept":false,"farmiAcceptAboveNr":100,"farmiAcceptBelowMinValue":false,"botUseFarmiFoodworld":true,"farmiReject":false,"farmiRejectUntilNr":90,"farmiRemoveMissing":false,"farmiRemoveMissingAboveNr":10,"lotteryActivate":false,"lotteryDailyLot":false,"powerUpActivate":false,"seedWaitForCrop":30,"showQueueTime":true,"useQueueList":false,"garage1":0,"garage1ProductFrom1":0,"garage1ProductFrom5":0,"garage2":0,"garage2ProductFrom1":0,"garage2ProductFrom6":0,"garage3":0,"garage3ProductFrom1":0,"garage3ProductFrom7":0}
                     };
     var require=    {"global":{},
                      "country":{},
@@ -4159,7 +4159,17 @@ try{
                             createElement("span",{},newdiv, numberFormat(help[2]) + "&nbsp;" + unsafeData.prodName[help[0]][help[1]]);
                         }
                     }
-
+                    if (zoneNrF=="farmersmarket-9") {
+                        if (unsafeWindow.fishing.data.config.products[iProd].needs.items) {
+                            for (var x in unsafeWindow.fishing.data.config.products[iProd].needs.items) {
+                                newrow=createElement("div",{style:"display:table-row;width:100%;"},content);
+                                createElement("div",{"class":"tableTd1"},newrow,i==0?getText("automat_QueUses"):"");
+                                newdiv=createElement("div",{"class":"tableTd2"},newrow);
+                                createElement("div",{"class":"trove fishing_trove" + x + " float","style":"width: 15px;height: 15px;background-size: 100%;"},newdiv);
+                                createElement("span",{},newdiv, numberFormat(unsafeWindow.fishing.data.config.products[iProd].needs.items[x]) + "&nbsp;" +unsafeWindow.fishing.data.config.trove[x].name);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -4404,6 +4414,20 @@ try{
                         createElement("div",{style:"display:table-cell;padding-left:8px;"},newspan,unsafeData.prodName[help[0]][help[1]]);
                     }
                 }
+                if (zoneNrF.toString().replace(/\.\d+$/,"")=="farmersmarket-9") {
+
+                    if (unsafeWindow.fishing.data.config.products[iProd].needs.items) {
+                        var newspan=createElement("div",{style:"display:table-row;"},content);
+                        for (var x in unsafeWindow.fishing.data.config.products[iProd].needs.items) {
+                            createElement("div",{"class":"trove fishing_trove" + x ,"style":"display:inline-block;position:relative; width: 15px;height: 15px;background-size: 100%;"},newspan);
+                            createElement("div",{style:"display:table-cell;padding-left:8px;text-align:right;"},newspan, numberFormat(unsafeWindow.fishing.data.config.products[iProd].needs.items[x]));
+                            createElement("div",{style:"display:table-cell;padding-left:8px;text-align:right;"},newspan, numberFormat(unsafeWindow.fishing.data.config.products[iProd].needs.items[x]*iTot));
+                            createElement("div",{style:"display:table-cell;padding-left:8px;text-align:right;"},newspan, unsafeWindow.fishing.data.config.products[iProd].needs.items[x]*iTot > unsafeWindow.fishing.data.data.stock[x] ? unsafeWindow.fishing.data.data.stock[x] - unsafeWindow.fishing.data.config.products[iProd].needs.items[x]*iTot : "");
+                            createElement("div",{style:"display:table-cell;padding-left:8px;"},newspan,unsafeWindow.fishing.data.config.trove[x].name);
+                        }
+                    }
+                }
+
                 createElement("div",{style:"margin:4px 0px 4px 0px;width:100%;height:1px;border-bottom:1px solid black;"},content);
                 createElement("div",{style:"display:block"},content,getText("automat_usedFarmFieldsReadyAt"));
                 createElement("div",{style:"margin:2px 0px 2px 0px;width:100%;height:1px;border-bottom:1px dashed black;"},content);
@@ -9356,31 +9380,33 @@ try{
                     }
                 } else if ((help=$("fishing_production_selection")) && (handled.zoneNrF == "farmersmarket-9")){
                     var altPr = zoneList[handled.zoneNrL][0][0];
-                    for (var fP in unsafeWindow.fishing.data.config.products) {
-                        if (unsafeWindow.fishing.data.config.products[fP].coins || !unsafeWindow.fishing.data.config.products[fP].needs.items) {
-                            continue;
-                        }
-                        if (unsafeWindow.fishing.data.config.products[fP].level && unsafeWindow.fishing.data.config.products[fP].level > unsafeWindow.fishing.data.data.level) {
-                           continue;
-                        }
-                        if (unsafeWindow.fishing.data.config.products[fP].needs.products) {
-                            for (var x in unsafeWindow.fishing.data.config.products[fP].needs.products) {
-                                var y = unsafeWindow.checkRackItem(x);
-                                if (unsafeWindow.fishing.data.config.products[fP].needs.products[x] > y) {
-                                    continue;
+                    if (settings.get("account","botUseFishingLookSp")) {
+                        for (var fP in unsafeWindow.fishing.data.config.products) {
+                            if (unsafeWindow.fishing.data.config.products[fP].coins || !unsafeWindow.fishing.data.config.products[fP].needs.items) {
+                                continue;
+                            }
+                            if (unsafeWindow.fishing.data.config.products[fP].level && unsafeWindow.fishing.data.config.products[fP].level > unsafeWindow.fishing.data.data.level) {
+                               continue;
+                            }
+                            if (unsafeWindow.fishing.data.config.products[fP].needs.products) {
+                                for (var x in unsafeWindow.fishing.data.config.products[fP].needs.products) {
+                                    var y = unsafeWindow.checkRackItem(x);
+                                    if (unsafeWindow.fishing.data.config.products[fP].needs.products[x] > y) {
+                                        continue;
+                                    }
                                 }
                             }
-                        }
-                        if (unsafeWindow.fishing.data.config.products[fP].needs.items) {
-                            for (var x in unsafeWindow.fishing.data.config.products[fP].needs.items) {
-                                var y = 0;
-                                if (unsafeWindow.fishing.data.data.stock && unsafeWindow.fishing.data.data.stock[x]) {
-                                    y = parseInt(unsafeWindow.fishing.data.data.stock[x])
-                                }
-                                if (unsafeWindow.fishing.data.config.products[fP].needs.items[x] > y) {
-                                    continue;
-                                } else {
-                                    altPr = fP;
+                            if (unsafeWindow.fishing.data.config.products[fP].needs.items) {
+                                for (var x in unsafeWindow.fishing.data.config.products[fP].needs.items) {
+                                    var y = 0;
+                                    if (unsafeWindow.fishing.data.data.stock && unsafeWindow.fishing.data.data.stock[x]) {
+                                        y = parseInt(unsafeWindow.fishing.data.data.stock[x])
+                                    }
+                                    if (unsafeWindow.fishing.data.config.products[fP].needs.items[x] > y) {
+                                        continue;
+                                    } else {
+                                        altPr = fP;
+                                    }
                                 }
                             }
                         }
@@ -11897,6 +11923,16 @@ function buildInfoPanelOptions(){
             botArbiter.check();
         },false);
         newtd=createElement("td",{"colspan":"2"},newtr,getText("automat_settings_botUseFishing"));
+
+        newtr=createElement("tr",{"style":"line-height:18px;"},newtable);
+        newtd=createElement("td",{"align":"center","width":"40"},newtr);
+        inp=createElement("input",{"class":"link","type":"checkbox","checked":settings.get("account","botUseFishingLookSp")},newtd);
+        inp.addEventListener("click",function(){
+            settings.set("account","botUseFishing",this.checked);
+            buildInfoPanelOptionsDisabling();
+            botArbiter.check();
+        },false);
+        newtd=createElement("td",{"colspan":"2"},newtr,getText("automat_settings_botUseFishingLookSp"));
 
         // *********** 24h Bonusse ***********************************
         newtr=createElement("tr",{"style":"background-color:#b69162;"},newtable);
@@ -14578,7 +14614,8 @@ try{
         text["de"]["automat_settings_botDailyBonus"] = "Täglicher Bonus / sonstige Bonuse";
         text["de"]["automat_settings_botUseButterfly"] = "Schmetterling";
         text["de"]["automat_settings_FarmDog"] = "Braver Ben";
-        text["de"]["automat_settings_botUseFishing"] = "Verwende Bot fürs Angeln";
+        text["de"]["automat_settings_botUseFishing"] = "Angelhütte: Angeln";
+        text["de"]["automat_settings_botUseFishingLookSp"] = "Angelhütte: automatisch besonderes Futter produzieren";
         text["de"]["automat_settings_botUseFoodworld"] = "Auto-Ablehnung für Picknick-Farmis";
         text["de"]["automat_settings_botUseGuildJop"] = "Verwende Bot für Clubauftrag";
         text["de"]["automat_settings_botUseMapStall"] = "Verwende Bot für Obststand";
@@ -14820,7 +14857,8 @@ try{
         text["en"]["automat_settings_botDailyBonus"] = "Daily bonus / other bonuses";
         text["en"]["automat_settings_botUseButterfly"] = "Butterfly";
         text["en"]["automat_settings_FarmDog"] = "Farmdog";
-        text["en"]["automat_settings_botUseFishing"] = "Use bot for fishing";
+        text["en"]["automat_settings_botUseFishing"] = "Fishing: Fisherman";
+        text["en"]["automat_settings_botUseFishingLookSp"] = "Fishing: look for special products";
         text["en"]["automat_settings_botUseFoodworld"] = "Auto reject foodworld farmis";
         text["en"]["automat_settings_botUseGuildJop"] = "Use bot for guildjob ";
         text["en"]["automat_settings_botUseMapStall"] = "Use bot for fruit shop";
