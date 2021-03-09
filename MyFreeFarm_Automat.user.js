@@ -11928,7 +11928,7 @@ function buildInfoPanelOptions(){
         newtd=createElement("td",{"align":"center","width":"40"},newtr);
         inp=createElement("input",{"class":"link","type":"checkbox","checked":settings.get("account","botUseFishingLookSp")},newtd);
         inp.addEventListener("click",function(){
-            settings.set("account","botUseFishing",this.checked);
+            settings.set("account","botUseFishingLookSp",this.checked);
             buildInfoPanelOptionsDisabling();
             botArbiter.check();
         },false);
