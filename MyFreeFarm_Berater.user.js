@@ -298,10 +298,10 @@ const NPC=[[,0.5,1.1,1.34,2.75,3.95,8.05,17.8,18.5,"f85","f110","f180","f280",,,
 // task_new_product
 const INIT_NPC_SAISON={"94":false,"95":false,"96":false,"98":false,"100":false,"101":false,"102":false,"103":false,"105":false};
 // task_new_zone
-const ALL_ZONES = {"farm":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42],"farmersmarket":["farmersmarket-0","farmersmarket-1","farmersmarket-2","farmersmarket-3","farmersmarket-4","farmersmarket-5","farmersmarket-6","farmersmarket-7","farmersmarket-8","farmersmarket-9"],"forestry":["forest","sawmill","carpentry"],"city":["windmill"],"foodworld":["foodworld-0","foodworld-1","foodworld-2","foodworld-3","foodworld-4"],"map_stall":["map_stall0","map_stall1"],"megafield":["megafield"]};
+const ALL_ZONES = {"farm":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42],"farmersmarket":["farmersmarket-0","farmersmarket-1","farmersmarket-2","farmersmarket-3","farmersmarket-4","farmersmarket-5","farmersmarket-6","farmersmarket-7","farmersmarket-8","farmersmarket-9"],"forestry":["forest","sawmill","carpentry"],"city":["windmill"],"foodworld":["foodworld-0","foodworld-1","foodworld-2","foodworld-3","foodworld-4"],"map_stall":["map_stall0","map_stall1","map_stall2"],"megafield":["megafield"]};
 unsafeData.ALL_ZONES=ALL_ZONES.clone();
 // task_new_zone
-const DATA_zones = {"1":{"location":"farm","farmNr":0,"zoneNr":1,"productional":true},"2":{"location":"farm","farmNr":0,"zoneNr":2,"productional":true},"3":{"location":"farm","farmNr":0,"zoneNr":3,"productional":true},"4":{"location":"farm","farmNr":0,"zoneNr":4,"productional":true},"5":{"location":"farm","farmNr":0,"zoneNr":5,"productional":true},"6":{"location":"farm","farmNr":0,"zoneNr":6,"productional":true},"7":{"location":"farm","farmNr":1,"zoneNr":1,"productional":true},"8":{"location":"farm","farmNr":1,"zoneNr":2,"productional":true},"9":{"location":"farm","farmNr":1,"zoneNr":3,"productional":true},"10":{"location":"farm","farmNr":1,"zoneNr":4,"productional":true},"11":{"location":"farm","farmNr":1,"zoneNr":5,"productional":true},"12":{"location":"farm","farmNr":1,"zoneNr":6,"productional":true},"13":{"location":"farm","farmNr":2,"zoneNr":1,"productional":true},"14":{"location":"farm","farmNr":2,"zoneNr":2,"productional":true},"15":{"location":"farm","farmNr":2,"zoneNr":3,"productional":true},"16":{"location":"farm","farmNr":2,"zoneNr":4,"productional":true},"17":{"location":"farm","farmNr":2,"zoneNr":5,"productional":true},"18":{"location":"farm","farmNr":2,"zoneNr":6,"productional":true},"19":{"location":"farm","farmNr":3,"zoneNr":1,"productional":true},"20":{"location":"farm","farmNr":3,"zoneNr":2,"productional":true},"21":{"location":"farm","farmNr":3,"zoneNr":3,"productional":true},"22":{"location":"farm","farmNr":3,"zoneNr":4,"productional":true},"23":{"location":"farm","farmNr":3,"zoneNr":5,"productional":true},"24":{"location":"farm","farmNr":3,"zoneNr":6,"productional":true},"25":{"location":"farm","farmNr":4,"zoneNr":1,"productional":true},"26":{"location":"farm","farmNr":4,"zoneNr":2,"productional":true},"27":{"location":"farm","farmNr":4,"zoneNr":3,"productional":true},"28":{"location":"farm","farmNr":4,"zoneNr":4,"productional":true},"29":{"location":"farm","farmNr":4,"zoneNr":5,"productional":true},"30":{"location":"farm","farmNr":4,"zoneNr":6,"productional":true},"31":{"location":"farm","farmNr":5,"zoneNr":1,"productional":true},"32":{"location":"farm","farmNr":5,"zoneNr":2,"productional":true},"33":{"location":"farm","farmNr":5,"zoneNr":3,"productional":true},"34":{"location":"farm","farmNr":5,"zoneNr":4,"productional":true},"35":{"location":"farm","farmNr":5,"zoneNr":5,"productional":true},"36":{"location":"farm","farmNr":5,"zoneNr":6,"productional":true},"37":{"location":"farm","farmNr":6,"zoneNr":1,"productional":true},"38":{"location":"farm","farmNr":6,"zoneNr":2,"productional":true},"39":{"location":"farm","farmNr":6,"zoneNr":3,"productional":true},"40":{"location":"farm","farmNr":6,"zoneNr":4,"productional":true},"41":{"location":"farm","farmNr":6,"zoneNr":5,"productional":true},"42":{"location":"farm","farmNr":6,"zoneNr":6,"productional":true},"windmill":{"location":"city","cityNr":2,"zoneNr":1,"productional":true},"forest":{"location":"forestry","productional":true},"sawmill":{"location":"forestry","zoneNr":1,"productional":true},"carpentry":{"location":"forestry","zoneNr":2,"productional":true},"foodworld-0":{"location":"foodworld","productional":false},"foodworld-1":{"location":"foodworld","zoneNr":1,"productional":true},"foodworld-2":{"location":"foodworld","zoneNr":2,"productional":true},"foodworld-3":{"location":"foodworld","zoneNr":3,"productional":true},"foodworld-4":{"location":"foodworld","zoneNr":4,"productional":true},"farmersmarket-0":{"location":"farmersmarket","productional":false},"farmersmarket-1":{"location":"farmersmarket","zoneNr":1,"productional":true},"farmersmarket-2":{"location":"farmersmarket","zoneNr":2,"productional":true},"farmersmarket-3":{"location":"farmersmarket","zoneNr":3,"productional":true},"farmersmarket-4":{"location":"farmersmarket","zoneNr":4,"productional":true},"farmersmarket-5":{"location":"farmersmarket","zoneNr":5,"productional":true},"farmersmarket-6":{"location":"farmersmarket","zoneNr":6,"productional":true},"farmersmarket-7":{"location":"farmersmarket","productional":true},"farmersmarket-8":{"location":"farmersmarket","zoneNr":8,"productional":true},"farmersmarket-9":{"location":"farmersmarket","zoneNr":9,"productional":true},"megafield":{"location":"megafield","zoneNr":1,"productional":true},"map_stall0":{"location":"map","productional":false},"map_stall1":{"location":"map","zoneNr":1,"productional":true}};
+const DATA_zones = {"1":{"location":"farm","farmNr":0,"zoneNr":1,"productional":true},"2":{"location":"farm","farmNr":0,"zoneNr":2,"productional":true},"3":{"location":"farm","farmNr":0,"zoneNr":3,"productional":true},"4":{"location":"farm","farmNr":0,"zoneNr":4,"productional":true},"5":{"location":"farm","farmNr":0,"zoneNr":5,"productional":true},"6":{"location":"farm","farmNr":0,"zoneNr":6,"productional":true},"7":{"location":"farm","farmNr":1,"zoneNr":1,"productional":true},"8":{"location":"farm","farmNr":1,"zoneNr":2,"productional":true},"9":{"location":"farm","farmNr":1,"zoneNr":3,"productional":true},"10":{"location":"farm","farmNr":1,"zoneNr":4,"productional":true},"11":{"location":"farm","farmNr":1,"zoneNr":5,"productional":true},"12":{"location":"farm","farmNr":1,"zoneNr":6,"productional":true},"13":{"location":"farm","farmNr":2,"zoneNr":1,"productional":true},"14":{"location":"farm","farmNr":2,"zoneNr":2,"productional":true},"15":{"location":"farm","farmNr":2,"zoneNr":3,"productional":true},"16":{"location":"farm","farmNr":2,"zoneNr":4,"productional":true},"17":{"location":"farm","farmNr":2,"zoneNr":5,"productional":true},"18":{"location":"farm","farmNr":2,"zoneNr":6,"productional":true},"19":{"location":"farm","farmNr":3,"zoneNr":1,"productional":true},"20":{"location":"farm","farmNr":3,"zoneNr":2,"productional":true},"21":{"location":"farm","farmNr":3,"zoneNr":3,"productional":true},"22":{"location":"farm","farmNr":3,"zoneNr":4,"productional":true},"23":{"location":"farm","farmNr":3,"zoneNr":5,"productional":true},"24":{"location":"farm","farmNr":3,"zoneNr":6,"productional":true},"25":{"location":"farm","farmNr":4,"zoneNr":1,"productional":true},"26":{"location":"farm","farmNr":4,"zoneNr":2,"productional":true},"27":{"location":"farm","farmNr":4,"zoneNr":3,"productional":true},"28":{"location":"farm","farmNr":4,"zoneNr":4,"productional":true},"29":{"location":"farm","farmNr":4,"zoneNr":5,"productional":true},"30":{"location":"farm","farmNr":4,"zoneNr":6,"productional":true},"31":{"location":"farm","farmNr":5,"zoneNr":1,"productional":true},"32":{"location":"farm","farmNr":5,"zoneNr":2,"productional":true},"33":{"location":"farm","farmNr":5,"zoneNr":3,"productional":true},"34":{"location":"farm","farmNr":5,"zoneNr":4,"productional":true},"35":{"location":"farm","farmNr":5,"zoneNr":5,"productional":true},"36":{"location":"farm","farmNr":5,"zoneNr":6,"productional":true},"37":{"location":"farm","farmNr":6,"zoneNr":1,"productional":true},"38":{"location":"farm","farmNr":6,"zoneNr":2,"productional":true},"39":{"location":"farm","farmNr":6,"zoneNr":3,"productional":true},"40":{"location":"farm","farmNr":6,"zoneNr":4,"productional":true},"41":{"location":"farm","farmNr":6,"zoneNr":5,"productional":true},"42":{"location":"farm","farmNr":6,"zoneNr":6,"productional":true},"windmill":{"location":"city","cityNr":2,"zoneNr":1,"productional":true},"forest":{"location":"forestry","productional":true},"sawmill":{"location":"forestry","zoneNr":1,"productional":true},"carpentry":{"location":"forestry","zoneNr":2,"productional":true},"foodworld-0":{"location":"foodworld","productional":false},"foodworld-1":{"location":"foodworld","zoneNr":1,"productional":true},"foodworld-2":{"location":"foodworld","zoneNr":2,"productional":true},"foodworld-3":{"location":"foodworld","zoneNr":3,"productional":true},"foodworld-4":{"location":"foodworld","zoneNr":4,"productional":true},"farmersmarket-0":{"location":"farmersmarket","productional":false},"farmersmarket-1":{"location":"farmersmarket","zoneNr":1,"productional":true},"farmersmarket-2":{"location":"farmersmarket","zoneNr":2,"productional":true},"farmersmarket-3":{"location":"farmersmarket","zoneNr":3,"productional":true},"farmersmarket-4":{"location":"farmersmarket","zoneNr":4,"productional":true},"farmersmarket-5":{"location":"farmersmarket","zoneNr":5,"productional":true},"farmersmarket-6":{"location":"farmersmarket","zoneNr":6,"productional":true},"farmersmarket-7":{"location":"farmersmarket","productional":true},"farmersmarket-8":{"location":"farmersmarket","zoneNr":8,"productional":true},"farmersmarket-9":{"location":"farmersmarket","zoneNr":9,"productional":true},"megafield":{"location":"megafield","zoneNr":1,"productional":true},"map_stall0":{"location":"map","productional":false},"map_stall1":{"location":"map","zoneNr":1,"productional":true},"map_stall2":{"location":"map","zoneNr":2,"productional":true}};
 // All single-slot-zones themselves and all slots of multi-slot-zones
 var ALL_SLOTS={};
 // [farm, forestry, recipes, powerups]
@@ -395,11 +395,12 @@ const ANIMAL_MOVE=[,,[false,0,0,255,10,10,505],[false,0,0,280,1,0,525],[false,0,
             fl8         cowracing               Farmersmarket
             fl9         fishing                 Farmersmarket
             m1          map_stall1              Map
+            m2          map_stall2              Map
         */
 // BUILDING_UPGRADES[zoneType][levelNr-1][needed level,buildcost,bonus,animalamount]
 //     for Fuelstation: [needed level,buildcost,bonus=1,animalamount=1,yield per slot,duration]
 // task_new_building
-const BUILDING_UPGRADES={"1":[[1,2000,0.95,0],[15,21500,0.9,0],[21,76000,0.85,0],[27,192300,0.8,0],[33,"c20",0.8,0]],"2":[[2,2500,1,5],[7,15200,1,10],[12,32500,1,15],[23,134500,0.9,20],[29,350800,0.8,20]],"3":[[11,3400,1,2],[13,16300,1,3],[17,50200,1,4],[25,159600,0.9,5],[32,441000,0.8,6]],"4":[[14,6200,1,2],[18,33500,1,3],[20,76000,1,4],[28,210500,0.9,5],[34,482000,0.8,6]],"5":[[19,6800,1,1],[22,44800,1,2],[26,128200,1,3],[31,230600,0.9,4],[35,482000,0.8,4]],"7":[[16,5200,1,1],[19,33500,0.95,1],[25,106400,0.9,1],[30,230600,0.85,1],[33,441000,0.8,1]],"8":[[18,6800,1,1],[21,38000,0.95,1],[27,128200,0.9,1],[31,230600,0.85,1],[35,482000,0.8,1]],"9":[[27,8100,1,1],[30,53200,0.95,1],[33,140300,0.9,1],[36,264600,0.85,1],[38,597200,0.8,1]],"10":[[30,9700,1,1],[33,70200,0.95,1],[34,153700,0.9,1],[37,289200,0.85,1],[39,626300,0.8,1]],"11":[[16,10000,1,1],[20,85000,1,3],[24,200000,1,5],[28,"c22",0.9,6],[32,"c38",0.8,6]],"12":[[15,38000,1,2],[17,17200,1,3],[23,54600,1,4],[29,168800,0.9,5],[38,472400,0.8,6]],"13":[[31,16800,1,1],[32,86400,0.95,1],[34,174200,0.9,1],[36,362800,0.85,1],[38,796300,0.8,1]],"14":[[35,19400,1,1],[37,97100,0.95,1],[39,218400,0.9,1],[40,509800,0.85,1],[41,1388600,0.8,1]],"15":[[37,23000,1,1],[37,95300,1,2],[38,198500,1,3],[38,391700,0.9,4],[39,842200,0.8,5]],"16":[[38,97100,1,1],[39,209736,0.95,1],[40,467711,0.9,1],[41,1080413,0.85,1],[42,2538970,0.8,1]],"17":[[10,1000,1,1]],"18":[[10,5000,1,1]],"19":[[28,250000,1,1]],"20":[[40,421500,1,1,1,360],[40,0,1,1,2,420],[40,0,1,1,3,480],[40,0,1,1,4,510],[40,0,1,1,5,540],[40,0,1,1,6,570],[40,0,1,1,7,600],[40,0,1,1,8,660],[40,0,1,1,9,690],[40,0,1,1,10,720]],"21":[[42,150000,1,1],[42,400000,0.95,1],[43,800000,0.9,1],[43,1500000,0.85,1],[44,3000000,0.8,1]],"fw1":[[11,7000,1,1],[11,24600,0.95,1],[11,64200,0.9,1],[11,114400,0.85,1],[11,186300,0.8,1]],"fw2":[[12,8400,1,1],[12,32500,0.95,1],[12,68900,0.9,1],[12,122400,0.85,1],[12,178600,0.8,1]],"fw3":[[12,11200,1,1],[12,43300,0.95,1],[12,91900,0.9,1],[12,163200,0.85,1],[12,238100,0.8,1]],"fw4":[[31,14400,1,1],[31,55700,0.95,1],[31,118100,0.9,1],[31,209800,0.85,1],[31,306200,0.8,1]],"fl1":[[23,85000,0.95,36]],"fl2":[[23,75000,1,1]],"fl3":[[31,900000,1,1]],"fl4":[[36,900000,1,1]],"fl5":[[36,1000000,1,1]],"fl6":[[31,900000,1,1]],"fl7":[[31,1500000,1,1]],"fl8":[[42,2000000,1,1]],"fl9":[[44,2000000,1,1]],"m1":[[9,30000,1,1]]
+const BUILDING_UPGRADES={"1":[[1,2000,0.95,0],[15,21500,0.9,0],[21,76000,0.85,0],[27,192300,0.8,0],[33,"c20",0.8,0]],"2":[[2,2500,1,5],[7,15200,1,10],[12,32500,1,15],[23,134500,0.9,20],[29,350800,0.8,20]],"3":[[11,3400,1,2],[13,16300,1,3],[17,50200,1,4],[25,159600,0.9,5],[32,441000,0.8,6]],"4":[[14,6200,1,2],[18,33500,1,3],[20,76000,1,4],[28,210500,0.9,5],[34,482000,0.8,6]],"5":[[19,6800,1,1],[22,44800,1,2],[26,128200,1,3],[31,230600,0.9,4],[35,482000,0.8,4]],"7":[[16,5200,1,1],[19,33500,0.95,1],[25,106400,0.9,1],[30,230600,0.85,1],[33,441000,0.8,1]],"8":[[18,6800,1,1],[21,38000,0.95,1],[27,128200,0.9,1],[31,230600,0.85,1],[35,482000,0.8,1]],"9":[[27,8100,1,1],[30,53200,0.95,1],[33,140300,0.9,1],[36,264600,0.85,1],[38,597200,0.8,1]],"10":[[30,9700,1,1],[33,70200,0.95,1],[34,153700,0.9,1],[37,289200,0.85,1],[39,626300,0.8,1]],"11":[[16,10000,1,1],[20,85000,1,3],[24,200000,1,5],[28,"c22",0.9,6],[32,"c38",0.8,6]],"12":[[15,38000,1,2],[17,17200,1,3],[23,54600,1,4],[29,168800,0.9,5],[38,472400,0.8,6]],"13":[[31,16800,1,1],[32,86400,0.95,1],[34,174200,0.9,1],[36,362800,0.85,1],[38,796300,0.8,1]],"14":[[35,19400,1,1],[37,97100,0.95,1],[39,218400,0.9,1],[40,509800,0.85,1],[41,1388600,0.8,1]],"15":[[37,23000,1,1],[37,95300,1,2],[38,198500,1,3],[38,391700,0.9,4],[39,842200,0.8,5]],"16":[[38,97100,1,1],[39,209736,0.95,1],[40,467711,0.9,1],[41,1080413,0.85,1],[42,2538970,0.8,1]],"17":[[10,1000,1,1]],"18":[[10,5000,1,1]],"19":[[28,250000,1,1]],"20":[[40,421500,1,1,1,360],[40,0,1,1,2,420],[40,0,1,1,3,480],[40,0,1,1,4,510],[40,0,1,1,5,540],[40,0,1,1,6,570],[40,0,1,1,7,600],[40,0,1,1,8,660],[40,0,1,1,9,690],[40,0,1,1,10,720]],"21":[[42,150000,1,1],[42,400000,0.95,1],[43,800000,0.9,1],[43,1500000,0.85,1],[44,3000000,0.8,1]],"fw1":[[11,7000,1,1],[11,24600,0.95,1],[11,64200,0.9,1],[11,114400,0.85,1],[11,186300,0.8,1]],"fw2":[[12,8400,1,1],[12,32500,0.95,1],[12,68900,0.9,1],[12,122400,0.85,1],[12,178600,0.8,1]],"fw3":[[12,11200,1,1],[12,43300,0.95,1],[12,91900,0.9,1],[12,163200,0.85,1],[12,238100,0.8,1]],"fw4":[[31,14400,1,1],[31,55700,0.95,1],[31,118100,0.9,1],[31,209800,0.85,1],[31,306200,0.8,1]],"fl1":[[23,85000,0.95,36]],"fl2":[[23,75000,1,1]],"fl3":[[31,900000,1,1]],"fl4":[[36,900000,1,1]],"fl5":[[36,1000000,1,1]],"fl6":[[31,900000,1,1]],"fl7":[[31,1500000,1,1]],"fl8":[[42,2000000,1,1]],"fl9":[[44,2000000,1,1]],"m1":[[9,30000,1,1]],"m2":[[13,60000,1,1]]
                         };
 // produced thing -> production area
 // task_new_plant task_new_product
@@ -437,7 +438,7 @@ unsafeData.BUILDING2PRODUCT=BUILDING2PRODUCT.clone();
     Obststand               11
     fishing                 12
 */
-const BUILDINGTYPE={"0":0,"1":1,"2":2,"3":2,"4":2,"5":2,"6":0,"7":3,"8":3,"9":3,"10":3,"11":2,"12":2,"13":3,"14":3,"15":2,"16":3,"17":0,"18":5,"19":0,"20":6,"21":3,"22":10,"fl1":1,"fl2":4,"fl3":7,"fl4":4,"fl5":4,"fl6":8,"fl7":9,"fl8":4,"fl9":4,"fw1":4,"fw2":4,"fw3":4,"fw4":4,"m1":11};
+const BUILDINGTYPE={"0":0,"1":1,"2":2,"3":2,"4":2,"5":2,"6":0,"7":3,"8":3,"9":3,"10":3,"11":2,"12":2,"13":3,"14":3,"15":2,"16":3,"17":0,"18":5,"19":0,"20":6,"21":3,"22":10,"fl1":1,"fl2":4,"fl3":7,"fl4":4,"fl5":4,"fl6":8,"fl7":9,"fl8":4,"fl9":4,"fw1":4,"fw2":4,"fw3":4,"fw4":4,"m1":11,"m2":11};
 unsafeData.BUILDINGTYPE=BUILDINGTYPE.clone();
 // task_new_building
 const BUILDING_SIZE={"1":120,"forest":25,"fl1":36,"megafield":[11,9]};
@@ -445,7 +446,7 @@ unsafeData.BUILDING_SIZE=BUILDING_SIZE.clone();
 // task_new_building
 
 //13102016
-const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":34,"fl9":8,"megafield":99,"m1":4};
+const BUILDING_SLOTS={"13":3,"14":3,"16":3,"18":3,"20":4,"21":3,"windmill":2,"sawmill":3,"carpentry":3,"fw1":3,"fw2":3,"fw3":3,"fw4":3,"fl0":17,"fl2":3,"fl3":3,"fl4":7,"fl5":7,"fl7":6,"fl8":34,"fl9":8,"megafield":99,"m1":4,"m2":3};
 
 unsafeData.BUILDING_SLOTS=BUILDING_SLOTS.clone();
 // Needed input of a zone
@@ -2244,6 +2245,7 @@ var zones=new function(){
                 case "megafield":       building="megafield";break;
                 case "map_stall0":      building="m0";break;
                 case "map_stall1":      building="m1";break;
+                case "map_stall2":      building="m2";break;
                 default:                building=null;
                 }
                 zones.setBuilding(zoneNrF,building);
@@ -2420,6 +2422,7 @@ var zones=new function(){
             fl8         cowracing               Farmersmarket
             fl9         fishing                 Farmersmarket
             m1          map_stall1              Map
+            m2          map_stall2              Map
         */
         try{
             if(!data[zoneNrF]){
@@ -11194,13 +11197,18 @@ try{
 
     err_trace="zones";
     zones.init();
-    for(var j=0;j<ALL_ZONES["farm"].length;j++){
-        help=zones.getBlock(ALL_ZONES["farm"][j]);
-        if((!help.match(/b/))&&(unsafeWindow.farmamount<Math.ceil(ALL_ZONES["farm"][j]/6))){
-            GM_logInfo("do_main","","farmamount="+unsafeWindow.farmamount+" zoneNr="+ALL_ZONES["farm"][j],"Blocking zone because farmamount is too low");
-            zones.setBlock(ALL_ZONES["farm"][j],help+"b");
+
+    window.setTimeout(function() {
+        for(var j=0;j<ALL_ZONES["farm"].length;j++){
+            help=zones.getBlock(ALL_ZONES["farm"][j]);
+            if((!help.match(/b/))&&(unsafeWindow.farms_data.farms[DATA_zones[ALL_ZONES["farm"][j]]["farmNr"]+1][DATA_zones[ALL_ZONES["farm"][j]]["zoneNr"]].bulldoze)){
+            //if((!help.match(/b/))&&(unsafeWindow.farmamount<Math.ceil(ALL_ZONES["farm"][j]/6))){
+                GM_logInfo("do_main","","farmamount="+unsafeWindow.farmamount+" zoneNr="+ALL_ZONES["farm"][j],"Blocking zone because farmamount is too low");
+                zones.setBlock(ALL_ZONES["farm"][j],help+"b");
+            }
         }
-    }
+    }, 1000);
+
     zones.setBlock("windmill",USERLEVEL>=8?"":"l");
     calcAllSlots();
     calcTotalZones();
@@ -19496,65 +19504,68 @@ try{
 
     /**********************************************************
     * Obststand / m1          map_stall1             Map
+    * Obststand / m2          map_stall2             Map
     **********************************************************/
     function doMapStall(){
         try {
             var err_trace="doMapStall";
             var nowServer=unsafeWindow.Zeit.Server;
             var item,zoneNrF,zoneNrS,tempZoneProductionData,tempZoneProductionDataSlot,iProd,iTime,iWaterTime,iPoints,iAmount,currBlock;
+            // if(BUILDING_SLOTS[building]){
+            for (var nr = 1;nr<=2;nr++) {
+                if(unsafeWindow.stall && unsafeWindow.stall.data.data[nr]){
+                    zoneNrF = "map_stall"+nr;
+                    zones.setBonus(zoneNrF,0);
+                    item = unsafeWindow.stall;
+                    tempZoneProductionData=[[{},{}],0,0,true];
 
-            if(unsafeWindow.stall && unsafeWindow.stall.data.data){
-                zoneNrF = "map_stall1";
-                zones.setBonus(zoneNrF,0);
-                item = unsafeWindow.stall;
-                tempZoneProductionData=[[{},{}],0,0,true];
-                for(var slot=1;slot<=4;slot++){
-                    zoneNrS=zoneNrF+"."+slot;
-                    zones.setBlock(zoneNrS,"");
-                    tempZoneProductionDataSlot=[[{},{}],0,0,true];/*
-                    console.log("+++++++++++++++++++++++++++++++");
-                    console.log(implode(item.data.data[1].slots[slot]));
-                    console.log("++++++++++++++++++++++++++++++++++++++++++")*/
-                    if (item.data.data[1].slots.hasOwnProperty(slot)) {
-                        if(!item.data.data[1].slots[slot].hasOwnProperty("amount") ||
-                            item.data.data[1].slots[slot].amount/item.data.config.level[1][item.data.data[1].level].fillsum <=0.66
-                        ){
-                            iTime=nowServer-100; // TODO:
-                            tempZoneProductionData[1]++;
-                            tempZoneProductionDataSlot[1]++;
-                        } /*else if(item.data.data[1].slots[slot].length==0 ||
-                            item.data.data[1].slots[slot].amount/item.data.config.level[item.data.data[1].level].fillsum <=0.60){
-                            iTime = nowServer+1800;
-                        }*/ else {
-                            iTime=parseInt(item.data.data[1].farmi_last,10)+1800;
-                            //iTime = nowServer+3600;
-                        }
-                        iProd=item.data.data[1].slots[slot].pid; iAmount=0; iPoints=0;
-                        tempZoneProductionData[2]++;
-                        tempZoneProductionDataSlot[2]++;
+                    for(var slot=1;slot<=BUILDING_SLOTS["m"+nr];slot++){
+                        zoneNrS=zoneNrF+"."+slot;
+                        zones.setBlock(zoneNrS,"");
+                        tempZoneProductionDataSlot=[[{},{}],0,0,true];/*
+                        console.log("+++++++++++++++++++++++++++++++");
+                        console.log(implode(item.data.data[1].slots[slot]));
+                        console.log("++++++++++++++++++++++++++++++++++++++++++")*/
+                        if (item.data.data[nr].slots.hasOwnProperty(slot)) {
+                            if(!item.data.data[nr].slots[slot].hasOwnProperty("amount") ||
+                                item.data.data[nr].slots[slot].amount/item.data.config.level[nr][item.data.data[nr].level].fillsum <=0.66
+                            ){
+                                iTime=nowServer-100; // TODO:
+                                tempZoneProductionData[1]++;
+                                tempZoneProductionDataSlot[1]++;
+                            } /*else if(item.data.data[1].slots[slot].length==0 ||
+                                item.data.data[1].slots[slot].amount/item.data.config.level[item.data.data[1].level].fillsum <=0.60){
+                                iTime = nowServer+1800;
+                            }*/ else {
+                                iTime=parseInt(item.data.data[nr].farmi_last,10)+1800;
+                                //iTime = nowServer+3600;
+                            }
+                            iProd=item.data.data[nr].slots[slot].pid; iAmount=0; iPoints=0;
+                            tempZoneProductionData[2]++;
+                            tempZoneProductionDataSlot[2]++;
 
-                        if(!tempZoneProductionData[0][0][iProd]){
-                            tempZoneProductionData[0][0][iProd]=[];
-                        }
-                        tempZoneProductionData[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
-                        if(!tempZoneProductionDataSlot[0][0][iProd]){
-                            tempZoneProductionDataSlot[0][0][iProd]=[];
-                        }
-                        tempZoneProductionDataSlot[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
-                        zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+                            if(!tempZoneProductionData[0][0][iProd]){
+                                tempZoneProductionData[0][0][iProd]=[];
+                            }
+                            tempZoneProductionData[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                            if(!tempZoneProductionDataSlot[0][0][iProd]){
+                                tempZoneProductionDataSlot[0][0][iProd]=[];
+                            }
+                            tempZoneProductionDataSlot[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
+                            zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
 
-                    } else {
-                        //locked
-                        zones.setBlock(zoneNrS,"b");
+                        } else {
+                            //locked
+                            zones.setBlock(zoneNrS,"b");
+                        }
                     }
+                    zones.setProduction(zoneNrF,tempZoneProductionData.clone());
+                    zones.setBlock(zoneNrF,"");
+                } else {
+                    zoneNrF = "map_stall"+nr;
+                    zones.setBlock(zoneNrF,"blpqs");
                 }
-                zones.setProduction(zoneNrF,tempZoneProductionData.clone());
-                zones.setBlock(zoneNrF,"");
-            } else {
-                zoneNrF = "map_stall1";
-                zones.setBlock(zoneNrF,"blpqs");
             }
-
             calcTotalZones();
         } catch (err) {
             GM_logError("doFarmersMarketData", "", "err_trace=" + err_trace, err); }
@@ -19565,7 +19576,7 @@ try{
              unsafeWindow.stall._open(c);
         }catch(err){GM_logError("stall.openMapStall","","",err);}
         try{
-            raiseEvent("gameOpenMapStall1");
+            raiseEvent("gameOpenMapStall"+c);
         }catch(err){GM_logError("openMapStall1","","",err);}
     });
 
@@ -19579,13 +19590,17 @@ try{
                     raiseEvent("gameMapStall1_ClearSlot");
                     break;
                 case "stall_fill_slot":
-                case "stall_refill_slot":
-                    raiseEvent("gameMapStall1_fill_slot");
                     doMapStall();
+                    raiseEvent("gameMapStall_fillSlotCommit");
+                    break;
+                case "stall_refill_slot":
+                    doMapStall();
+                    raiseEvent("gameMapStall_fillSlotCommit");
                     break;
                 default:
 
             }
+
         }catch(err){GM_logError("stall.response_2","","",err);}
     });
 
@@ -19633,7 +19648,6 @@ try{
             raiseEvent("gamegoToMap");
         }catch(err){GM_logError("openMap","","",err);}
     });
-
 
     unsafeOverwriteFunction("mapCalcVehicleSlot",function(d){
         try{
@@ -24403,7 +24417,8 @@ try{
         text["de"]["fw2"]="Imbissbude";
         text["de"]["fw3"]="Konditorei";
         text["de"]["fw4"]="Eiscafe";
-        text["de"]["m1"]="Obststand";
+        text["de"]["m1"]="Obststand I";
+        text["de"]["m2"]="Obststand II";
         text["de"]["gamecurrency"]=unsafeWindow.gamecurrency?unsafeWindow.gamecurrency:"kT";
         text["de"]["gain"]="Erzeugnis";
         text["de"]["general"]="Allgemein";
@@ -24853,7 +24868,8 @@ try{
         text["en"]["fw2"]="Snack booth";
         text["en"]["fw3"]="Pastry shop";
         text["en"]["fw4"]="Ice creme parlor";
-        text["en"]["m1"]="Fruitshop";
+        text["en"]["m1"]="Fruitshop I";
+        text["en"]["m2"]="Fruitshop II";
         text["en"]["gain"]="Gain";
         text["en"]["gamecurrency"]=unsafeWindow.gamecurrency;
         text["en"]["general"]="General";

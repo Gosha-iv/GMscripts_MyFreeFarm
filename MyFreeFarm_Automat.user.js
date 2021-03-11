@@ -1571,7 +1571,7 @@ function getGarden(zoneNr){
         case "megafield":
             return "megafield";
         break;
-        case "map_stall1":
+        case "map_stall1": case "map_stall2":
             return "map_stall";
         break;
         default:
@@ -1825,7 +1825,7 @@ try {
                 newnode.removeChild(newnode.lastElementChild);
                 toolTip.show(event, newnode.innerHTML);
             },false);
-        } else if(!(zoneNrS=="farmersmarket-4.5"||zoneNrS=="farmersmarket-4.6"||zoneNrS=="farmersmarket-4.7"||zoneNrS.match("map_stall1"))) {
+        } else if(!(zoneNrS=="farmersmarket-4.5"||zoneNrS=="farmersmarket-4.6"||zoneNrS=="farmersmarket-4.7"||zoneNrS.match("map_stall1")||zoneNrS.match("map_stall2"))) {
             //toolTip von  farmersmarket-4 slot 5 bis 7 und map_stall/Obstand ausblenden
             automatIcons[name][1].addEventListener("mouseover", function(event){
                 toolTip.show(event, toolTipProductSmall(this.getAttribute("zoneNrS"),this.getAttribute("zoneNrL"),0,this));
@@ -4956,6 +4956,8 @@ try{
                                     } else {
                                         botArbiter.add(getGarden(fz));
                                     }
+                                } else if (fz=="megafield" && zoneList[lz][0][0]==PRODSTOP) {
+                                        botArbiter.add(getGarden(fz));
                                 } else {
                                     if (zoneList[lz][0][0]!=PRODSTOP || ((fz=="farmersmarket-5.5"||fz=="farmersmarket-5.6"||fz=="farmersmarket-5.7") && settings.get("account","botUseVetTreatment")))
                                         botArbiter.add(getGarden(fz));
@@ -7888,74 +7890,69 @@ try{
 }
 
 //autoMapStall
-function autoMapStall(runId,step){
+function autoMapStall(runId,step,nr){
 try{
     if(bot.checkRun("autoMapStall",runId)){
         var help,action=null,listeningEvent=null;
         if(!step){ step=1; }
+        if(!nr) {nr = parseInt(getReadyZone("map").match(/\d/),10);}
         bot.setAction("autoMapStall ("+step+")");
         switch(step){
-        case 1:{ // go to map_stall1
-            GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Open Map_Stall1");
+        case 1:{ // go to map_stall
+            GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Open Map_Stall"+nr);
             var zoneNrS=getReadyZone("map");
             handled.set(zoneNrS);
 
-            listeningEvent="gameOpenMapStall1";
+            listeningEvent="gameOpenMapStall"+nr;
             action=function(){
-                GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Map_Stall1");
-                click($("map_stall_overview_link1"));
+                GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Map_Stall"+nr);
+                click($("map_stall_overview_link"+nr));
             };
         break;}
         case 2:{ //Next or clear $("map_stall1_slot1_amount")
             GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Clear or next step");
-            if (zoneList[handled.zoneNrL][0][0]== unsafeWindow.stall.data.data[1].slots[handled.slot].pid) {
-                autoMapStall(runId,step+1); //refill or new
-                /*
-                if(help=$("map_stall1_slot"+handled.slot+"_amount")) {
-                    autoMapStall(runId,step+1);
-                } else {
-
-                }*/
-
+            if (zoneList[handled.zoneNrL][0][0]== unsafeWindow.stall.data.data[nr].slots[handled.slot].pid) {
+                autoMapStall(runId,step+1,nr); //refill or new
             } else {
                 //  help$("map_stall1_slot"+handled.slot).querySelector('div[onclick*="stall.clearSlotCommit(1, '+(handled.slot)+')');
-               if(help=$("map_stall1_slot"+handled.slot).getElementsByClassName("clicker")[0]) {
+               if(help=$("map_stall"+nr+"_slot"+handled.slot).getElementsByClassName("clicker")[0]) {
                    listeningEvent="gameMapStall1_ClearSlot";
                    action=function(){
-                       unsafeWindow.stall.clearSlot(1, handled.slot);
+                       unsafeWindow.stall.clearSlot(nr, handled.slot);
                    };
                }
             }
-
         break;}
         case 3:{ // Klick RefillSlot or FillSlot
             GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Klick RefillSlot or FillSlot");
-            if(help=$("map_stall1_slot"+handled.slot+"_amount")) {
+            if(help=$("map_stall"+nr+"_slot"+handled.slot+"_amount")) {
                 listeningEvent="gameMapStall1_refillSlotCommit";
                 action=function(){
                     click(help);
                 };
-            } else if (help=$("map_stall1_slot"+handled.slot).getElementsByClassName("clicker")[0]){
+            } else if (help=$("map_stall"+nr+"_slot"+handled.slot).getElementsByClassName("clicker")[0]){
                 listeningEvent="gameMapStall1_fillSlotCommit";
                 action=function(){
                     click(help);
                 };
             } else {
-                autoMapStall(runId,5); // exit
+                autoMapStall(runId,5,nr); // exit
             }
         break;}
         case 4:{ // FillSlot
             GM_logInfo("autoMapStall","runId="+runId+" step="+step,"","Refill or fill");
+
             if ($("map_stall_fill_slot_commit").getElementsByClassName("dropdown")[0]) {
                 unsafeWindow.stall.fillSlotCommitSetProduct(zoneList[handled.zoneNrL][0][0]);
             }
             //var div = $("globalbox_content").querySelector('button[onclick*="stall.fillSlot()"]');
             var div = $("globalbox_content").querySelector('button');
             if (div){
+                listeningEvent="gameMapStall_fillSlotCommit";
                 action=function(){ click(div); }
-                listeningEvent="gameMapStall1_fill_slot";
+
             } else {
-                autoMapStall(runId,5); // exit
+                autoMapStall(runId,5,nr); // exit
             }
         break;}
         case 5:{
@@ -7976,7 +7973,7 @@ try{
             }
 
             if(next){
-                autoMapStall(runId,1);
+                autoMapStall(runId,1,nr);
             }else{
                 //help=/-(\d)$/.exec(handled.zoneNrF)[1];
                 var div=$("map_stall_inner").querySelector(".big_close");
@@ -7998,12 +7995,12 @@ try{
         break;}
         }
         if(listeningEvent){
-            document.addEventListener(listeningEvent,function(listeningEvent,runId,step){
+            document.addEventListener(listeningEvent,function(listeningEvent,runId,step,nr){
                 return function(){
                     document.removeEventListener(listeningEvent,arguments.callee,false);
-                    window.setTimeout(autoMapStall,settings.getPause(),runId,step+1);
+                    window.setTimeout(autoMapStall,settings.getPause(),runId,step+1,nr);
                 };
-            }(listeningEvent,runId,step),false);
+            }(listeningEvent,runId,step,nr),false);
         }
         if(action){ action(); }
         help=null;listeningEvent=null;action=null;
@@ -11152,6 +11149,7 @@ try{
            fz=="farmersmarket-5.5"||fz=="farmersmarket-5.6"||fz=="farmersmarket-5.7" ||
            fz=="farmersmarket-9.5"||fz=="farmersmarket-9.6"||fz=="farmersmarket-9.7" || fz=="farmersmarket-9.8"){ continue; }
         if(currZoneType=="fl8"&&(parseInt(/\.(\d+)$/.exec(fz)[1],10)>4)){ continue; }
+        //if(currZoneType=="m1" || currZoneType=="m2") { continue; }
         zones.push(fz);
     }
     // build table
@@ -11172,10 +11170,11 @@ try{
         //Zone Pairing ausschalten
         if(lz=="farmersmarket-4.5"||lz=="farmersmarket-4.6"||lz=="farmersmarket-4.7" ||
            lz=="farmersmarket-5.5"||lz=="farmersmarket-5.6"||lz=="farmersmarket-5.7" ||
-           fz=="farmersmarket-9.5"||fz=="farmersmarket-9.6"||fz=="farmersmarket-9.7" || fz=="farmersmarket-9.8"){ continue; }
+           lz=="farmersmarket-9.5"||lz=="farmersmarket-9.6"||lz=="farmersmarket-9.7" || lz=="farmersmarket-9.8"){ continue; }
         if(getZoneType(lz)=="fl8"&&(parseInt(/\.(\d+)$/.exec(lz)[1],10)>4)){continue;}
         var extendedList=extendedListReg.exec(lz);
         if((!extendedList && currZoneType!=getZoneType(lz)) || (extendedList && currZoneType!=1)) continue;
+        //if(currZoneType=="m1" || currZoneType=="m2") { continue; }
         newtr=createElement("tr",{"style":"line-height:18px;"},newtable);
         newtd=createElement("td",{"nowrap":"","style":"width:50px;text-align:right;","class":"link","lz":lz}, newtr, getZoneName(0,lz,lz,null,false,true,true,false));
         // !!extendedList?
@@ -13935,19 +13934,24 @@ try{
             }(v),false);
         }
         //gameOpenMapStall1
-        err_trace="listener gameOpenMapStall1";
-        document.addEventListener("gameOpenMapStall1",function(){ // Obststand open
-        try{
-            var zoneNrF="map_stall1"
-            var zoneNrS;
-            for(var slot=1;slot<=4;slot++){
-                zoneNrS=zoneNrF+"."+slot;
-                if(!unsafeData.zones.getBlock(zoneNrS)){
-                    drawAutomatIcon(zoneNrS,zoneNrS,$("map_stall1_slot"+slot),"top:75px;left:10px;");
+        for (var v=1;v<=2;v++) {
+            err_trace="listener gameOpenMapStall"+v;
+
+            document.addEventListener("gameOpenMapStall"+v,function(nr){ // Obststand open
+                return function () {
+                    try{
+                        var zoneNrF="map_stall"+nr;
+                        var zoneNrS;
+                        for(var slot=1;slot<=unsafeData.BUILDING_SLOTS["m"+nr];slot++){
+                            zoneNrS=zoneNrF+"."+slot;
+                            if(!unsafeData.zones.getBlock(zoneNrS)){
+                                drawAutomatIcon(zoneNrS,zoneNrS,$("map_stall"+nr+"_slot"+slot),"top:75px;left:10px;");
+                            }
+                        }
+                    }catch(err){GM_logError("eventListener:gameOpenMapStall ","","",err);}
                 }
-            }
-        }catch(err){GM_logError("eventListener:gameOpenMapStall ","","",err);}
-        },false);
+            }(v),false);
+        }
 
         err_trace="listener gameDailyLoginBonusOpen";
         document.addEventListener("gameSetDailyLoginProduct",function(id){
