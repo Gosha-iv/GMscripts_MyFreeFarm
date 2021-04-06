@@ -17951,8 +17951,7 @@ try{
                                             tempZoneProductionDataSlot[0][0][iProd].push([iAmount,iPoints,iTime,NEVER]);
                                             zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
                                         }
-                                        }
-                                    else {
+                                    } else {
                                         for (slot=5;slot<=7;slot++){
                                             zoneNrS=zoneNrF+"."+slot;
                                             zones.setBlock(zoneNrS,"blpqs");
@@ -18348,12 +18347,23 @@ try{
                                         }
                                         zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
                                     }
+
+                                    //Block fishing
+                                    /*
+                                    for (slot=5;slot<=8;slot++){
+                                        zoneNrS=zoneNrF+"."+slot;
+                                        tempZoneProductionDataSlot=[[{},{}],0,0,true];
+                                        zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
+                                        zones.setBlock(zoneNrS,"blpqs");
+                                    }*/
+
                                     //fishing _ fisherman (slot 5 bis slot 8)
                                     for(var slot=1;slot<=4;slot++){
                                         zoneNrS=zoneNrF+"."+(slot+4);
                                         zones.setBlock(zoneNrS,"");
                                         tempZoneProductionDataSlot=[[{},{}],0,0,true];
-                                        if (slot >= 1 && unsafeWindow.fishing.data.data.fishingslots[slot].block){
+                                        if ((slot >= 1 && unsafeWindow.fishing.data.data.fishingslots[slot].block) ||
+                                            (slot == 1 && !unsafeWindow.fishing.data.data.fishingslots[slot]) ){
                                             zones.setBlock(zoneNrS,"b");
                                         } else {
                                             item = unsafeWindow.fishing.data.data.fishingslots[slot];
@@ -18383,6 +18393,7 @@ try{
                                         }
                                         zones.setProduction(zoneNrS,tempZoneProductionDataSlot.clone());
                                     }
+
                                     zones.setProduction(zoneNrF,tempZoneProductionData.clone());
                                     showGoToVetFarmi(); // Determine, if Discharge-Sick-Animals-Icon is shown
                                 }

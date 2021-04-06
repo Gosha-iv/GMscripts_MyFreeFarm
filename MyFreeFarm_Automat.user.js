@@ -2451,7 +2451,6 @@ try{
         //if((unsafeData.prodTyp[0][iProd]=="v")&&!(unsafeData.prodBlock[0][iProd]&&unsafeData.prodBlock[0][iProd].match(/l/))){
         if((unsafeData.PRODUCT2BUILDING[0][iProd]==fzZoneType)&&!(unsafeData.prodBlock[0][iProd]&&unsafeData.prodBlock[0][iProd].match(/[uvlq]/))){
             //Farm 5 nur exotische Produkte
-
             if ((zoneNrS==25||zoneNrS==26||zoneNrS==27||zoneNrS==28||zoneNrS==29||zoneNrS==30) && getZoneType(zoneNrS)!=10){
                 if ((unsafeData.prodTyp[0][iProd]!="ex")) {continue;}
             } else {
@@ -2465,6 +2464,7 @@ try{
             }
 
             newdiv=createElement("div",{"id":"divChooseItem"+zoneNrL+"Q"+queueNum+"I"+iProd,"class":"divChooseItem link v"+iProd,"product":iProd},appendTo);
+
             if (zoneNrF==25||zoneNrF==26||zoneNrF==27||zoneNrF==28||zoneNrF==29||zoneNrF==30){
             //if (unsafeWindow.farm==5){
                 newdiv.style.opacity=(unsafeData.prodStock[5][iProd]&&unsafeData.prodStock[5][iProd]>0)?1:0.4;
@@ -3044,6 +3044,17 @@ function drawFoodworldChooseItemBox(zoneNrS, zoneNrL, queueNum, appendTo){
                 }else{
                     newdiv.style.opacity=(unsafeData.prodStock[0][iProd]&&unsafeData.prodStock[0][iProd]>0)?1:0.4;
                 }
+
+                /*Coins Sign*/
+                if(unsafeData.prodRequire[0][iProd]){
+                    for(var i in unsafeData.prodRequire[0][iProd]){
+                        if(!unsafeData.prodRequire[0][iProd].hasOwnProperty(i)){continue;}
+                        if (unsafeData.prodRequire[0][iProd][i][1] == 0) {
+                            createElement("img",{src:GFX+"/menu/coins.gif","style":"position: relative; top: -8px; left: -8px; height: 16px; width: 16px;"},newdiv);
+                        }
+                    }
+                }
+
                 newdiv.addEventListener("click",function(){
                     var zoneNrS=this.parentNode.getAttribute("zoneNrS");
                     var zoneNrL=this.parentNode.getAttribute("zoneNrL");
@@ -3295,6 +3306,7 @@ function drawQueueMapStall1ItemBox(zoneNrS, zoneNrL, appendTo){
         appendTo.setAttribute("zoneNrS",zoneNrS);
         appendTo.setAttribute("zoneNrL",zoneNrL);
         var fzZoneType=getZoneType(zoneNrS);
+        var nr = parseInt(zoneNrS.match(/\d/),10);
         createElement("div",{"id":"divChooseTitle"+zoneNrL,"class":"queueTitle"},appendTo, getZoneName(0,zoneNrS,zoneNrL, null, 20, true, true));
 
         createElement("div",{"id":"divChooseEndTime"+zoneNrL,"class":"queueTime"},appendTo);
@@ -3327,7 +3339,7 @@ function drawQueueMapStall1ItemBox(zoneNrS, zoneNrL, appendTo){
                 if (fruitsShopProdTyp.indexOf(unsafeData.prodTyp[0][iProd])==-1){continue;}
 */
                 newdiv=createElement("div",{"id":"divChooseItem"+zoneNrL+"I"+iProd,"class":"divChooseItem link v"+iProd,"product":iProd},appendTo);
-                if(unsafeWindow.in_array(iProd,unsafeWindow.stall.data.data[1].wishlist.products)){
+                if(unsafeWindow.in_array(iProd,unsafeWindow.stall.data.data[nr].wishlist.products)){
                     createElement("img",{src:GFX+"star.png","style":"position: relative; top: -10px; left: -10px; height: 22px; width: 22px;"},newdiv);
 
                     //createElement("img",{src:GFX+"points.gif",style:"float:left;display:block;margin:0px 2px 0px 1px;width:12px;"},newdiv);
@@ -3442,7 +3454,7 @@ try{
                 }
             break;
             case 11: //map_stall1 / Obststand
-                if(unsafeWindow.in_array(zoneList[zoneNrL][0][0],unsafeWindow.stall.data.data[1].wishlist.products)){
+                if(unsafeWindow.in_array(zoneList[zoneNrL][0][0],unsafeWindow.stall.data.data[parseInt(zoneNrS.match(/\d/),10)].wishlist.products)){
                     if (!automatIcons[i][1].childNodes[0]){
                     createElement("img",{"class":"marker", src:GFX+"star.png","style":"position: relative; top: -10px; left: -10px; height: 22px; width: 22px;"},automatIcons[i][1]);
                     }
@@ -13930,7 +13942,7 @@ try{
 
                     container.insertBefore(newNode, container.firstChild);
                     container=null;help=null;
-                }catch(err){GM_logError("eventListener:gameFarmersmarketOpened"+id+"","","",err);}
+                }catch(err){GM_logError("eventListener:gameMapVehicle"+v+"","","",err);}
                 }
             }(v),false);
         }
